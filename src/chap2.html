@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapitre 2 — Modélisation du procédé d'hydrolyse en continu</title>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<main id="main-content">
+  <div class="chapter-page">
+
+    <div class="breadcrumb">
+      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="toc.html">Table des matières</a><span>›</span>
+      Chapitre 2
+    </div>
+
+    <span class="chapter-label">Chapitre 2</span>
+    <h1 class="chapter-title">Modélisation du procédé d'hydrolyse en continu</h1>
+
+    <p>Le procédé proposé à l'étude est le premier procédé d'hydrolyse thermique des boues conçu pour fonctionner en continu. Le débit et la siccité de la boue à traiter peuvent varier et être ajustés en fonctionnement continu.</p>
+
+    <p>Le réacteur est constitué de deux parties : une <strong>colonne verticale</strong> servant à l'injection et à la condensation de la vapeur, et une <strong>partie horizontale</strong> pour assurer le temps de réaction. Ces deux parties ont des contraintes spécifiques et seront abordées individuellement.</p>
+
+    <figure>
+      <img src="../images/Chap2/schemaexelys.png" alt="Schéma de principe du procédé proposé"/>
+      <figcaption><strong>Figure 2.1</strong> — Schéma de principe du procédé proposé à l'étude</figcaption>
+    </figure>
+
+    <!-- ── Section 2.1 ─────────────────────────────────────────────── -->
+    <h2 id="sec-colonne">2.1 Modélisation de la colonne d'injection de vapeur</h2>
+
+    <h3>2.1.1 Contexte et enjeux</h3>
+    <p>L'injection de vapeur dans la colonne de condensation est réalisée par une canne d'injection munie de multiples trous. De nombreuses incertitudes persistent sur la géométrie de cette canne :</p>
+    <ul>
+      <li>La géométrie de la canne d'injection est-elle optimale ?</li>
+      <li>Cette géométrie permet-elle de condenser rapidement la vapeur ?</li>
+      <li>Permet-elle d'atteindre une parfaite homogénéité des températures dans le réacteur ?</li>
+      <li>Est-il possible d'envisager un autre design de canne d'injection ?</li>
+      <li>Ce nouveau design pourrait-il être extrapolé à une taille de réacteur industrielle ?</li>
+    </ul>
+
+    <h3>2.1.2 Approche de modélisation</h3>
+    <p>La modélisation repose sur le code de calcul <strong>ANSYS Fluent</strong>. Pour la colonne d'injection verticale, un modèle diphasique gaz-liquide est développé, prenant en compte :</p>
+    <ul>
+      <li>La dynamique des poches de vapeur au sein du fluide (approche VOF — <em>Volume of Fluid</em>),</li>
+      <li>Le transfert de masse et de chaleur lors de la condensation de la vapeur,</li>
+      <li>Le comportement rhéologique non-newtonien de la boue (fluide viscoplastique).</li>
+    </ul>
+
+    <p>Le diamètre nominal du réacteur de l'unité pilote est de 100 mm (DN 100). Ces géométries seront ensuite extrapolées à une échelle industrielle en DN 450.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 2.1 — Hypothèses principales du modèle de la colonne d'injection de vapeur</caption>
+        <thead>
+          <tr><th>Paramètre</th><th>Valeur / Hypothèse</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Diamètre colonne (pilote)</td><td>DN 100 mm</td></tr>
+          <tr><td>Diamètre colonne (industriel)</td><td>DN 450 mm</td></tr>
+          <tr><td>Température vapeur injectée</td><td>~190 °C / 12 bar</td></tr>
+          <tr><td>Température cible dans le réacteur</td><td>165 °C / 8 bar</td></tr>
+          <tr><td>Comportement rhéologique boue</td><td>Fluide viscoplastique (Bingham)</td></tr>
+          <tr><td>Modèle diphasique</td><td>VOF (Volume of Fluid)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>2.1.3 Résultats — Échelle pilote</h3>
+
+    <figure>
+      <img src="../images/Chap2/colonne_init.png" alt="Colonne d'injection initiale"/>
+      <figcaption><strong>Figure 2.2</strong> — Géométrie initiale de la colonne d'injection (DN 100)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/Plan_colonne.JPG" alt="Plan de la colonne d'injection"/>
+      <figcaption><strong>Figure 2.3</strong> — Plan de la colonne d'injection vapeur</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/pochevapeur.png" alt="Simulation — Poche de vapeur dans la colonne"/>
+      <figcaption><strong>Figure 2.4</strong> — Simulation CFD — Dynamique de poche de vapeur dans la colonne</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/evolution_temperature_sortie_colonne.png" alt="Évolution de la température en sortie de colonne"/>
+      <figcaption><strong>Figure 2.5</strong> — Évolution de la température en sortie de colonne (simulation vs expérimental)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/evolution_temperature_milieu_colonne.png" alt="Évolution de la température au milieu de la colonne"/>
+      <figcaption><strong>Figure 2.6</strong> — Évolution de la température au milieu de la colonne</figcaption>
+    </figure>
+
+    <p>La confrontation des données obtenues par le modèle à celles obtenues expérimentalement sur l'unité pré-industrielle montre que le modèle <strong>sous-estime la température dans la colonne de l'ordre de 25 %</strong> par rapport à la valeur expérimentale. Cependant, moyennant cette marge d'erreur, le modèle actuel peut être utilisé qualitativement pour étudier et comparer différentes configurations.</p>
+
+    <p>Les résultats des simulations indiquent :</p>
+    <ul>
+      <li>Une dynamique de vapeur <strong>sous forme de poches</strong> au sein de la colonne,</li>
+      <li>Une condensation imparfaite illustrée par une sortie de vapeur en tête de colonne,</li>
+      <li>Un effet bénéfique du Venturi permettant de freiner la remontée directe de la vapeur au centre.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap2/emp_sondes_init.png" alt="Emplacement des sondes — configuration initiale"/>
+      <figcaption><strong>Figure 2.7</strong> — Emplacement des sondes de température (configuration initiale)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/Montee_temp_capteurs_TIT0002_TIT0005.png" alt="Montée en température — capteurs TIT0002 et TIT0005"/>
+      <figcaption><strong>Figure 2.8</strong> — Montée en température mesurée par les capteurs TIT0002 et TIT0005</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau2.png" alt="Tableau 2.2 — Paramètres du modèle colonne"/>
+      <figcaption><strong>Tableau 2.2</strong> — Paramètres et conditions aux limites du modèle colonne</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau3.png" alt="Tableau 2.3 — Propriétés de la boue"/>
+      <figcaption><strong>Tableau 2.3</strong> — Propriétés rhéologiques et thermiques de la boue</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau4.png" alt="Tableau 2.4 — Résultats simulations pilote"/>
+      <figcaption><strong>Tableau 2.4</strong> — Résultats des simulations à l'échelle pilote</figcaption>
+    </figure>
+
+    <!-- ── Section 2.2 ─────────────────────────────────────────────── -->
+    <h2 id="sec-reacteur">2.2 Modélisation du réacteur d'hydrolyse thermique</h2>
+
+    <figure>
+      <img src="../images/Chap2/Plan_reacteur.JPG" alt="Plan du réacteur horizontal"/>
+      <figcaption><strong>Figure 2.9</strong> — Plan du réacteur horizontal d'hydrolyse thermique</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/shemareacteur.png" alt="Schéma du réacteur d'hydrolyse"/>
+      <figcaption><strong>Figure 2.10</strong> — Schéma du réacteur d'hydrolyse (colonne verticale + partie horizontale)</figcaption>
+    </figure>
+
+    <p>La partie horizontale du réacteur assure le temps de contact entre la boue et les conditions d'hydrolyse (165 °C / 8 bar). La modélisation de cette partie vise à estimer la <strong>stratification thermique</strong> au sein du réacteur malgré son inclinaison et la présence d'ailettes internes.</p>
+
+    <h3>2.2.1 Résultats de simulation</h3>
+    <p>Les résultats obtenus pour les simulations mettent en évidence un phénomène de <strong>stratification thermique verticale de l'ordre de 10 à 15 °C</strong>, ceci malgré l'inclinaison du réacteur et la mise en place d'ailettes internes.</p>
+    <p>Ce phénomène est également mis en évidence expérimentalement par les thermocouples Nord/Sud du pilote avec un ordre de grandeur plus important (40–80 °C).</p>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau5.png" alt="Tableau 2.5 — Résultats stratification thermique"/>
+      <figcaption><strong>Tableau 2.5</strong> — Résultats de stratification thermique dans le réacteur (simulation)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau6.png" alt="Tableau 2.6 — Comparaison modèle/expérimental"/>
+      <figcaption><strong>Tableau 2.6</strong> — Comparaison modèle / mesures expérimentales</figcaption>
+    </figure>
+
+    <!-- ── Section 2.3 ─────────────────────────────────────────────── -->
+    <h2 id="sec-industriel">2.3 Application à l'échelle industrielle (DN 450)</h2>
+
+    <figure>
+      <img src="../images/Chap2/schema_reacteur_DN450.png" alt="Géométrie réacteur industriel DN 450"/>
+      <figcaption><strong>Figure 2.11</strong> — Géométrie du réacteur d'hydrolyse à l'échelle industrielle (DN 450)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/geometrie_react_taille_indus.png" alt="Géométrie à taille industrielle"/>
+      <figcaption><strong>Figure 2.12</strong> — Géométrie complète du réacteur à taille industrielle</figcaption>
+    </figure>
+
+    <p>Le modèle d'injection de vapeur développé est appliqué à une géométrie de taille industrielle. Les réacteurs modélisés passent d'un DN 100 à un DN 450. Les résultats obtenus à cette échelle sont cohérents avec l'échelle pilote :</p>
+    <ul>
+      <li>Un mélange de phases turbulent au niveau de l'injection,</li>
+      <li>Des dynamiques de vapeur sous forme de poches au sein de la colonne,</li>
+      <li>Un impact bénéfique du Venturi permettant de maintenir la vapeur dans la colonne.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap2/melangeur_statique.png" alt="Mélangeur statique"/>
+      <figcaption><strong>Figure 2.13</strong> — Mélangeur statique en tête de colonne (simulation DN 450)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/emplacement_mel_stat.png" alt="Emplacement mélangeur statique"/>
+      <figcaption><strong>Figure 2.14</strong> — Emplacement du mélangeur statique dans la colonne</figcaption>
+    </figure>
+
+    <p>Les simulations avec et sans mélangeur statique en tête de colonne montrent que sa présence induit un maintien de la vapeur dans la colonne et donc une augmentation de l'échange entre phases. En régime permanent, la température en tête de colonne est estimée à <strong>100 °C sans mélangeur</strong> contre <strong>130 °C avec mélangeur</strong>, soit un gain de 30 %.</p>
+
+    <figure>
+      <img src="../images/Chap2/schemaechange1.png" alt="Schéma d'échange thermique — configuration 1"/>
+      <figcaption><strong>Figure 2.15</strong> — Schéma d'échange thermique sans mélangeur statique</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/schemaechange2.png" alt="Schéma d'échange thermique — configuration 2"/>
+      <figcaption><strong>Figure 2.16</strong> — Schéma d'échange thermique avec mélangeur statique</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau7.png" alt="Tableau 2.7 — Résultats DN 450"/>
+      <figcaption><strong>Tableau 2.7</strong> — Résultats de simulation à l'échelle industrielle DN 450</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau8.png" alt="Tableau 2.8 — Comparaison configurations"/>
+      <figcaption><strong>Tableau 2.8</strong> — Comparaison des configurations avec/sans mélangeur statique</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau9.png" alt="Tableau 2.9"/>
+      <figcaption><strong>Tableau 2.9</strong> — Paramètres supplémentaires de la simulation industrielle</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau10.png" alt="Tableau 2.10"/>
+      <figcaption><strong>Tableau 2.10</strong> — Résultats complémentaires de simulation</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau11.png" alt="Tableau 2.11"/>
+      <figcaption><strong>Tableau 2.11</strong> — Synthèse des résultats de modélisation (chapitre 2)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau12.png" alt="Tableau 2.12"/>
+      <figcaption><strong>Tableau 2.12</strong> — Données complémentaires modélisation</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau13.png" alt="Tableau 2.13"/>
+      <figcaption><strong>Tableau 2.13</strong> — Données complémentaires modélisation (suite)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau14.png" alt="Tableau 2.14"/>
+      <figcaption><strong>Tableau 2.14</strong> — Résultats de simulation supplémentaires</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau15.png" alt="Tableau 2.15"/>
+      <figcaption><strong>Tableau 2.15</strong> — Résultats de simulation supplémentaires (suite)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau16.png" alt="Tableau 2.16"/>
+      <figcaption><strong>Tableau 2.16</strong> — Résultats de simulation supplémentaires (suite 2)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap2/tableau17.png" alt="Tableau 2.17"/>
+      <figcaption><strong>Tableau 2.17</strong> — Synthèse finale des simulations numériques</figcaption>
+    </figure>
+
+    <div class="callout">
+      <strong>Recommandation issue des simulations :</strong> Un organe d'injection-mélange en pied de colonne (mélangeur statique avec injecteur ou mélangeur dynamique spécifique) serait une voie d'amélioration à tester pour assurer la condensation de la vapeur dans la boue dès l'injection.
+    </div>
+
+    <!-- ── Conclusion ─────────────────────────────────────────────── -->
+    <div class="conclusion-block" id="sec-conclusion2">
+      <h3>Conclusion du chapitre 2</h3>
+      <p>Les phénomènes physiques en jeu dans ce procédé sont complexes (injection de vapeur à hautes vitesses dans de la boue très concentrée, phénomènes d'évaporation-condensation, fluide non-newtonien) et non directement observables.</p>
+      <p>Concernant la colonne d'injection, le modèle peut être utilisé <strong>qualitativement</strong> pour étudier et comparer différentes configurations, moyennant une marge d'erreur de ~25 %.</p>
+      <p>Concernant le réacteur, une stratification thermique verticale significative a été mise en évidence, corroborée expérimentalement. Ces modèles permettent d'étudier le comportement du procédé à l'échelle industrielle (DN 450) et de préparer les projets industriels en cours ou futurs.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="chap1.html"><span class="arrow">←</span> Chapitre 1</a>
+      <a href="chap3.html"><span class="arrow">→</span> Chapitre 3 — Validations expérimentales</a>
+    </div>
+
+  </div>
+</main>
+<script src="../layout.js"></script>
+</body>
+</html>

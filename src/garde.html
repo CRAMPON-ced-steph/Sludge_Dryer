@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page de garde — Hydrolyse thermique</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    .garde-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .garde-institution {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-faint);
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .garde-institution strong { color: var(--text-dim); }
+    .garde-separator { height: 1px; background: var(--border); margin: 28px 0; }
+    .garde-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--heading);
+      line-height: 1.2;
+      padding: 28px 0;
+    }
+    .garde-main-title em { color: var(--accent-pale); font-style: italic; }
+    .garde-thesis-type {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 40px;
+    }
+    .garde-author-block {
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      background: var(--bg-card);
+      margin: 32px 0;
+    }
+    .garde-author-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+    .garde-author-detail {
+      font-size: 0.82rem;
+      color: var(--text-faint);
+      line-height: 1.8;
+    }
+    .garde-jury {
+      margin-top: 40px;
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .garde-jury-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .jury-member {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dotted var(--border);
+      font-size: 0.84rem;
+    }
+    .jury-name { color: var(--text); }
+    .jury-role { color: var(--text-faint); font-size: 0.76rem; }
+    .remerciments-section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+<main id="main-content">
+  <div class="garde-wrapper">
+
+    <div class="garde-institution">
+      <strong>Conservatoire National des Arts et Métiers</strong><br/>
+      École Doctorale HESAM — Laboratoire LAFSET
+    </div>
+
+    <div class="garde-thesis-type" style="margin-top:24px;">Thèse présentée en vue de l'obtention du grade de Docteur</div>
+
+    <h1 class="garde-main-title">
+      Conception d'un procédé innovant<br/>
+      <em>d'hydrolyse thermique</em>
+    </h1>
+
+    <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:32px;">
+      Spécialité : Génie des procédés · Version 1.0
+    </p>
+
+    <div class="garde-author-block">
+      <div class="garde-author-name">Cédric CRAMPON</div>
+      <div class="garde-author-detail">
+        Laboratoire du froid et des systèmes énergétiques et thermiques (LAFSET)<br/>
+        France<br/>
+        <a href="mailto:cedric.crampon@gmail.com" style="color:var(--accent-pale);">cedric.crampon@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="garde-jury">
+      <div class="garde-jury-title">Composition du jury</div>
+      <div class="jury-member">
+        <span class="jury-name">M. Jean-Louis HAVET</span>
+        <span class="jury-role">Directeur de thèse — Professeur CNAM Paris</span>
+      </div>
+      <div class="jury-member">
+        <span class="jury-name">M. Brice TREMEAC</span>
+        <span class="jury-role">Directeur LAFSET</span>
+      </div>
+      <div class="jury-member">
+        <span class="jury-name">Mme Hélène CARRERE</span>
+        <span class="jury-role">Rapporteure</span>
+      </div>
+      <div class="jury-member">
+        <span class="jury-name">M. Nicolas ROCHE</span>
+        <span class="jury-role">Rapporteur</span>
+      </div>
+      <div class="jury-member">
+        <span class="jury-name">M. Michel BAUDU</span>
+        <span class="jury-role">Examinateur — Président du jury</span>
+      </div>
+    </div>
+
+    <!-- Remerciements intégrés -->
+    <div class="remerciments-section">
+      <h2>Remerciements</h2>
+      <p>Arrivé au bout du chemin de cette thèse préparée dans le cadre d'une validation des acquis de l'expérience (VAE), je mesure l'ampleur de la tâche accomplie dans laquelle je me suis lancé avec enthousiasme et passion. Je mesure la chance qui m'est offerte de travailler au sein d'une société qui innove continuellement pour se préparer à relever les défis environnementaux de demain.</p>
+      <p>Je commencerai par remercier ceux qui m'ont donné la chance d'accéder à une fonction me permettant d'apprendre quotidiennement et de pouvoir chercher et développer des concepts innovants ainsi que ceux qui ont cru et croient encore dans les projets que je propose. Je remercie également l'ensemble de ma hiérarchie de m'avoir permis de réaliser cette VAE.</p>
+      <p>Je remercie infiniment <strong>M. Jean-Louis HAVET</strong>, professeur au CNAM Paris et directeur du présent projet de doctorat, d'avoir accepté ma candidature et de m'avoir permis d'évoluer. Ses nombreux conseils méthodologiques m'ont guidé et m'ont poussé à me dépasser.</p>
+      <p>Je remercie <strong>M. Brice TREMEAC</strong>, directeur du Laboratoire du froid et des systèmes énergétiques et thermiques (LAFSET), de m'avoir accueilli dans son unité de recherche.</p>
+      <p>Je voudrais remercier <strong>Mme Hélène CARRERE</strong> ainsi que <strong>M. Nicolas ROCHE</strong> d'avoir accepté de relire cette thèse et d'en être rapporteurs. Je tiens à remercier <strong>M. Michel BAUDU</strong> d'avoir accepté de participer à ce jury en tant qu'examinateur et d'en avoir également assuré la présidence.</p>
+      <p>Je tiens à remercier Mme Marie-Eve DAUSSET, conseillère en VAE, pour ses conseils et l'efficacité dans le traitement de mon dossier ainsi que le CNAM dans sa globalité qui m'a tant apporté au cours de ces formations et de ces années, du diplôme d'ingénieur à la soutenance de cette thèse.</p>
+      <p>Mon parcours professionnel a été jalonné de belles rencontres, de personnes avec qui j'ai eu la chance de pouvoir échanger régulièrement et qui ont bien voulu partager leurs connaissances et leurs expériences. Ce fut particulièrement vrai avec <strong>M. Eric GUIBELIN</strong>, expert boue et odeur, qui a exploré le domaine des biosolides pendant plus de 30 ans.</p>
+      <p>Enfin, je remercie ma chère épouse pour son soutien quotidien et je lui demande de m'excuser de toutes ces soirées où j'ai été si absorbé par mes lectures scientifiques et la réalisation de ce manuscrit.</p>
+    </div>
+
+    <div class="page-nav">
+      <span></span>
+      <a href="resume.html"><span class="arrow">→</span> Résumé / Abstract</a>
+    </div>
+
+  </div>
+</main>
+<script src="../layout.js"></script>
+</body>
+</html>

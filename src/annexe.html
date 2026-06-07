@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Annexes — Hydrolyse thermique</title>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<main id="main-content">
+  <div class="chapter-page">
+
+    <div class="breadcrumb">
+      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="toc.html">Table des matières</a><span>›</span>
+      Annexes
+    </div>
+
+    <h1 class="chapter-title">Annexes</h1>
+
+    <!-- ── Annexe A ─────────────────────────────────────────────── -->
+    <h2>Annexe A — Modèle théorique simplifié de la colonne d'injection</h2>
+
+    <p>Parallèlement au développement du modèle numérique de la colonne sous Fluent, une approche théorique simple a été développée afin d'estimer la température liquide en sortie de colonne.</p>
+
+    <h3>A.1 Approche à phases parfaitement mélangées</h3>
+
+    <p>On considère la colonne comme un système dans lequel entre une certaine quantité d'eau liquide et de vapeur, avec condensation totale de la quantité de vapeur. On cherche à déterminer la température de sortie de l'effluent d'eau liquide.</p>
+
+    <p>Le bilan enthalpique simplifié est :</p>
+    <div class="equation-block">
+      <span class="eq-content">m<sub>v</sub> L + m<sub>v</sub> C<sub>p,L</sub> (T<sub>v</sub> − T) = m<sub>L</sub> C<sub>p,L</sub> (T − T<sub>L</sub>)</span>
+      <span class="eq-number">(A.1)</span>
+    </div>
+
+    <p>Avec les notations :</p>
+    <ul>
+      <li>m<sub>v</sub> : débit massique vapeur en entrée [kg/h]</li>
+      <li>T<sub>v</sub> : température vapeur en entrée [K]</li>
+      <li>m<sub>L</sub> : débit massique liquide en entrée [kg/h]</li>
+      <li>T : température eau en sortie [K]</li>
+      <li>T<sub>L</sub> : température eau en entrée [K]</li>
+      <li>L : chaleur latente [J/kg]</li>
+      <li>C<sub>p,L</sub> : capacité thermique massique du liquide [J/(kg·K)]</li>
+    </ul>
+
+    <p><strong>Application numérique</strong> (conditions opératoires de l'unité pré-industrielle) :</p>
+    <ul>
+      <li>Débit massique eau : 65,86 kg/h à T<sub>L</sub> = 297 K</li>
+      <li>Débit massique vapeur : 16,25 kg/h à T<sub>v</sub> = 464 K</li>
+      <li>Pression colonne : 9 bar</li>
+    </ul>
+    <p>Résultat : T<sub>sortie</sub> = <strong>148 °C</strong> par cette approche simplifiée. La température mesurée expérimentalement dans ces conditions est de l'ordre de 170 °C. La différence s'explique par les pertes thermiques et les hypothèses simplificatrices du modèle à phases parfaitement mélangées.</p>
+
+    <h3>A.2 Approche par discrétisation de la colonne</h3>
+
+    <p>La seconde approche théorique est basée sur une discrétisation de la colonne en tranches suivant z (côte de la colonne). Cette approche permet de mieux prendre en compte les variations locales de température et de phase le long de la colonne.</p>
+
+    <p>Le principe consiste à diviser la colonne en N tranches de hauteur Δz, et d'appliquer un bilan local de masse et d'énergie à chaque tranche en tenant compte du taux de condensation de la vapeur à chaque niveau.</p>
+
+    <!-- ── Annexe B ─────────────────────────────────────────────── -->
+    <h2>Annexe B — Géométries alternatives d'injecteurs vapeur</h2>
+
+    <p>Diverses géométries alternatives à la canne d'injection initiale ont été modélisées sous Fluent. Ces variantes comprennent notamment :</p>
+    <ul>
+      <li><strong>Canne avec trous plus petits</strong> — augmentation du nombre de trous pour réduire le diamètre et augmenter la vitesse de sortie,</li>
+      <li><strong>Canne avec orientation radiale</strong> — injection de vapeur orientée vers la paroi du réacteur pour favoriser la condensation,</li>
+      <li><strong>Canne multi-niveaux</strong> — répartition des points d'injection sur plusieurs niveaux de la colonne.</li>
+    </ul>
+    <p>Dans tous les cas, ces injecteurs statiques ne donnent pas satisfaction pour des raisons similaires à la géométrie initiale : la siccité élevée des boues et les faibles vitesses d'écoulement empêchent une condensation rapide et homogène de la vapeur.</p>
+
+    <!-- ── Annexe C ─────────────────────────────────────────────── -->
+    <h2>Annexe C — Nomenclature et abréviations</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau A.1 — Abréviations et symboles utilisés dans le manuscrit</caption>
+        <thead>
+          <tr><th>Symbole</th><th>Signification</th><th>Unité</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>DCO</td><td>Demande Chimique en Oxygène</td><td>—</td></tr>
+          <tr><td>DBO</td><td>Demande Biochimique en Oxygène</td><td>—</td></tr>
+          <tr><td>MES</td><td>Matières solides en suspension</td><td>g/L</td></tr>
+          <tr><td>MS</td><td>Matière Sèche</td><td>%</td></tr>
+          <tr><td>MV</td><td>Matières Volatiles</td><td>%</td></tr>
+          <tr><td>EPS</td><td>Substances Polymériques Extracellulaires</td><td>—</td></tr>
+          <tr><td>ETM</td><td>Éléments Traces Métalliques</td><td>—</td></tr>
+          <tr><td>HPA</td><td>Hydrocarbures Polycycliques Aromatiques</td><td>—</td></tr>
+          <tr><td>PCB</td><td>Polychlorobiphényles</td><td>—</td></tr>
+          <tr><td>DLD</td><td>Digestion–Lyse–Digestion</td><td>—</td></tr>
+          <tr><td>LD</td><td>Lyse–Digestion (configuration classique)</td><td>—</td></tr>
+          <tr><td>CFD</td><td>Coupled Fluid Dynamics (simulation numérique)</td><td>—</td></tr>
+          <tr><td>DN</td><td>Diamètre Nominal</td><td>mm</td></tr>
+          <tr><td>EH</td><td>Équivalent Habitant</td><td>—</td></tr>
+          <tr><td>VOF</td><td>Volume of Fluid (méthode CFD)</td><td>—</td></tr>
+          <tr><td>DTS</td><td>Distribution des Temps de Séjour</td><td>—</td></tr>
+          <tr><td>E(t)</td><td>Fonction de distribution du temps de séjour</td><td>1/min</td></tr>
+          <tr><td>C(t)</td><td>Concentration du traceur à l'instant t</td><td>mS/cm</td></tr>
+          <tr><td>V<sub>max</sub>/V</td><td>Ratio vitesse maximale / vitesse moyenne</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="page-nav">
+      <a href="concl.html"><span class="arrow">←</span> Conclusion générale</a>
+      <a href="biblio.html"><span class="arrow">→</span> Bibliographie</a>
+    </div>
+
+  </div>
+</main>
+<script src="../layout.js"></script>
+</body>
+</html>

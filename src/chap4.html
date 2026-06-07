@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapitre 4 — Attente réglementaire et énergétique</title>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<main id="main-content">
+  <div class="chapter-page">
+
+    <div class="breadcrumb">
+      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="toc.html">Table des matières</a><span>›</span>
+      Chapitre 4
+    </div>
+
+    <span class="chapter-label">Chapitre 4</span>
+    <h1 class="chapter-title">Attente réglementaire et énergétique</h1>
+
+    <p>Avant de considérer que la technologie développée puisse concurrencer ou remplacer des technologies fonctionnant par bâchées, deux aspects importants doivent être traités : les <strong>aspects réglementaires</strong> (hygiénisation) et les <strong>aspects énergétiques</strong> (consommation de vapeur).</p>
+
+    <!-- ── Section 4.1 ─────────────────────────────────────────────── -->
+    <h2 id="sec-sejour">4.1 Vérification du temps de séjour hydraulique</h2>
+
+    <h3>4.1.1 Contexte réglementaire — Certification Class A (US EPA)</h3>
+
+    <p>Les performances d'hygiénisation sont l'un des éléments clefs des technologies d'hydrolyse thermique. La réglementation américaine de l'US EPA (<em>Environmental Protection Agency</em>) définit la certification de plus haut niveau d'hygiénisation : la <strong>Class A</strong>. Cette certification requiert :</p>
+    <ul>
+      <li>Une température de traitement d'au moins <strong>165 °C</strong>,</li>
+      <li>Un temps de séjour minimum de <strong>20 minutes</strong> pour chaque particule de boue traversant le procédé,</li>
+      <li>Un abattement des éléments pathogènes démontré.</li>
+    </ul>
+
+    <p>Dans le cas d'un procédé continu, contrairement aux procédés par bâchées où le temps de séjour est le temps du cycle, il est indispensable de démontrer que la <em>plus rapide</em> des particules a bien séjourné au moins 20 minutes dans le réacteur.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_1.png" alt="Profil de vitesse — écoulement laminaire vs flux piston"/>
+      <figcaption><strong>Figure 4.1</strong> — Profils de vitesse : flux piston (a), laminaire newtonien (b), intermédiaire boue (c)</figcaption>
+    </figure>
+
+    <h3>4.1.2 Méthode de traçage hydraulique</h3>
+
+    <p>Le traçage hydraulique consiste à injecter un traceur de concentration connue à l'entrée du réacteur et à suivre l'évolution de sa concentration en sortie. Le traceur retenu est le <strong>chlorure de sodium (NaCl)</strong>, dont la concentration peut être mesurée par conductivité <em>in situ</em>.</p>
+
+    <p>La fonction de Distribution du Temps de Séjour E(t) est définie par :</p>
+
+    <div class="equation-block">
+      <span class="eq-content">E(t) = C(t) / ∫₀^∞ C(t) dt</span>
+      <span class="eq-number">(4.1)</span>
+    </div>
+
+    <p>avec C(t) la concentration du traceur mesurée en sortie du réacteur à chaque instant t.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_2.png" alt="Dispositif de traçage hydraulique"/>
+      <figcaption><strong>Figure 4.2</strong> — Dispositif expérimental de traçage hydraulique (NaCl)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/profilsVitesse_cnam.jpg" alt="Profils de vitesse mesurés"/>
+      <figcaption><strong>Figure 4.3</strong> — Profils de vitesse mesurés dans le réacteur pilote</figcaption>
+    </figure>
+
+    <h3>4.1.3 Résultats du traçage</h3>
+
+    <p><strong>Tests en eau :</strong> Les résultats montrent que l'écoulement de l'eau ne correspond pas à un flux piston (comme initialement supposé lors du dimensionnement), mais s'apparente à un <strong>écoulement laminaire</strong> avec un profil de vitesse parabolique.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.1 — Résultats comparatifs des traçages en eau (NaCl, débit 92 l/h)</caption>
+        <thead>
+          <tr>
+            <th>Masse NaCl [g]</th>
+            <th>Temps de rétention mini [min]</th>
+            <th>Temps au pic [min]</th>
+            <th>Temps passage total [min]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>150</td><td>9</td><td>2</td><td>21</td></tr>
+          <tr><td>300</td><td>12</td><td>3</td><td>24</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Le calcul du profil de vitesse pour le réacteur pilote (DN 100, longueur 10 m, débit 90 l/h) donne :</p>
+    <ul>
+      <li>Vitesse moyenne V ≈ 0,0032 m/s</li>
+      <li>Vitesse maximale V<sub>max</sub> = 2V ≈ 0,0064 m/s (écoulement laminaire newtonien)</li>
+      <li>Temps minimal théorique ≈ 26 minutes</li>
+    </ul>
+
+    <p><strong>Tests en boue :</strong> Avec la boue, le ratio V<sub>max</sub>/V moyen mesuré est de l'ordre de <strong>1,8</strong>, soit un profil intermédiaire entre le flux piston (ratio = 1) et l'écoulement laminaire newtonien (ratio = 2). Ceci s'explique par le comportement tribologique de la boue pâteuse (légère viscoplasticité) qui évolue vers un comportement rhéofluidisant une fois chauffée.</p>
+
+    <figure>
+      <img src="../images/Chap4/dts2.JPG" alt="Courbe DTS — Distribution des Temps de Séjour"/>
+      <figcaption><strong>Figure 4.4</strong> — Courbe de Distribution des Temps de Séjour E(t) mesurée</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/chap4_3.png" alt="Résultats traçage — eau"/>
+      <figcaption><strong>Figure 4.5</strong> — Courbes de traçage hydraulique en eau (NaCl)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/chap4_4.png" alt="Résultats traçage — boue"/>
+      <figcaption><strong>Figure 4.6</strong> — Courbes de traçage hydraulique en boue</figcaption>
+    </figure>
+
+    <div class="callout">
+      <strong>Conséquence pour le dimensionnement :</strong> Pour garantir un temps de séjour minimum de 20 minutes à chaque particule, le réacteur continu doit être dimensionné sur un temps de séjour hydraulique de 36 minutes (= 20 min × 1,8) ; et de 54 minutes pour garantir 30 minutes de traitement minimum.
+    </div>
+
+    <!-- ── Section 4.2 ─────────────────────────────────────────────── -->
+    <h2 id="sec-pathogenes">4.2 Abattement des éléments pathogènes</h2>
+
+    <figure>
+      <img src="../images/Chap4/Tab_analyse_amont_THP.png" alt="Tableau — Analyses amont du THP"/>
+      <figcaption><strong>Tableau 4.2</strong> — Analyses microbiologiques en amont du THP</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/Tab_analyse_aval_THP.png" alt="Tableau — Analyses aval du THP"/>
+      <figcaption><strong>Tableau 4.3</strong> — Analyses microbiologiques en aval du THP (après hydrolyse)</figcaption>
+    </figure>
+
+    <h3>4.2.1 Méthodes d'analyse</h3>
+
+    <p>Les éléments pathogènes analysés et les méthodes employées sont résumés dans le tableau suivant :</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.2 — Méthodes d'analyse des éléments pathogènes</caption>
+        <thead>
+          <tr><th>Élément pathogène</th><th>Méthode</th><th>Unité</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Coliformes totaux</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td>Coliformes thermo tolérants</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td>Entérovirus</td><td>Norme XP T 90 451</td><td>Ufp/10 g MS</td></tr>
+          <tr><td>Œufs d'helminthes</td><td>FD X33 040 méthode B</td><td>n/10 g MS</td></tr>
+          <tr><td>Listeria</td><td>NF V 08 055</td><td>n/25 g MB</td></tr>
+          <tr><td><em>E. coli</em></td><td>XP X33 019</td><td>n/g MB</td></tr>
+          <tr><td>Salmonelles</td><td>XP X33 018</td><td>n/10 g MS</td></tr>
+          <tr><td><em>Clostridium perfringens</em></td><td>Semi-quantitative milieu liquide</td><td>n/g BB</td></tr>
+          <tr><td>Staphylocoques</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td>Moisissures</td><td>Ensemencement milieu solide</td><td>n/g BB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>4.2.2 Résultats — Performances d'hygiénisation</h3>
+
+    <p>Après un traitement à <strong>165 °C pendant au moins 20 minutes</strong>, tous les éléments pathogènes sont détruits avec des abattements pouvant atteindre <strong>7 log</strong>.</p>
+
+    <div class="callout">
+      <strong>Conclusion hygiénisation :</strong> L'homogénéité des températures (assurée par le mélangeur dynamique), le temps de séjour hydraulique respecté, et l'intégralité des éléments pathogènes détruits concluent à la bonne performance d'hygiénisation du procédé. Les critères de la certification <strong>Class A de l'US EPA</strong> sont respectés, ce qui implique a fortiori le respect des normes européennes plus permissives.
+    </div>
+
+    <!-- ── Section 4.3 ─────────────────────────────────────────────── -->
+    <h2 id="sec-echangeur">4.3 Récupération d'énergie — Échangeur boue/boue</h2>
+
+    <h3>4.3.1 Contexte énergétique</h3>
+
+    <p>L'hydrolyse thermique consomme de la vapeur vive produite à partir du biogaz. Dans le contexte des appels d'offres internationaux, il est demandé aux procédés de consommer le moins de vapeur possible. La consommation de vapeur d'un procédé continu <strong>sans récupération d'énergie</strong> est pénalisante par rapport aux procédés par bâchées qui récupèrent la vapeur de revaporisation (flash).</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_5.png" alt="Schéma échangeur boue/boue"/>
+      <figcaption><strong>Figure 4.7</strong> — Schéma de l'échangeur boue/boue (côté calande et côté tubes)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/chap4_6.png" alt="Échangeur boue/boue — installation"/>
+      <figcaption><strong>Figure 4.8</strong> — Installation de l'échangeur boue/boue sur le pilote</figcaption>
+    </figure>
+
+    <h3>4.3.2 Échangeur boue/boue testé</h3>
+
+    <p>Un système d'échangeur thermique boue/boue a été conçu et testé. Côté calande : boue hydrolysée chaude (~160 °C en entrée). Côté tubes : boue froide déshydratée à préchauffer. Les performances mesurées :</p>
+    <ul>
+      <li>Chute de pression : <strong>1 bar</strong> (conditions nominales)</li>
+      <li>Gain de température sur les boues entrantes : <strong>+60 °C</strong></li>
+      <li>Aucun problème majeur d'encrassement détecté en conditions pilotes</li>
+    </ul>
+
+    <h3>4.3.3 Bilan énergétique comparatif</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.3 — Comparaison de la consommation de vapeur selon la configuration</caption>
+        <thead>
+          <tr>
+            <th>Configuration</th>
+            <th>Siccité boue</th>
+            <th>Consommation vapeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LD sans échangeur</td><td>~16 %</td><td>~1,5 t vapeur / t MS</td></tr>
+          <tr><td>LD avec échangeur boue/boue</td><td>~16 %</td><td><strong>~0,9 t vapeur / t MS</strong></td></tr>
+          <tr><td>DLD avec échangeur boue/boue</td><td>23–28 %</td><td><strong>~0,5 t vapeur / t MS</strong></td></tr>
+          <tr><td>Procédés batch concurrents (avec flash)</td><td>~16 %</td><td>~0,8–1,0 t vapeur / t MS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>4.3.4 Proposition : chaudière de récupération</h3>
+
+    <p>Une alternative technique consiste à utiliser une <strong>chaudière de récupération (Waste Heat Boiler)</strong> pour générer de la vapeur basse pression en récupérant l'énergie des boues hydrolysées. Ce schéma permettrait de :</p>
+    <ul>
+      <li>Préchauffer les boues entrantes via un mélangeur dynamique basse pression (3 bar),</li>
+      <li>Réduire la consommation de vapeur vive principale,</li>
+      <li>Rendre la consommation d'énergie indépendante de la siccité des boues.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap4/chap4_7.png" alt="Résultats performances échangeur"/>
+      <figcaption><strong>Figure 4.9</strong> — Performances mesurées de l'échangeur boue/boue</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/chap4_8.png" alt="Bilan énergétique avec échangeur"/>
+      <figcaption><strong>Figure 4.10</strong> — Bilan énergétique avec échangeur boue/boue</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/Waste_Heat_Boiler.png" alt="Principe du procédé avec chaudière de récupération"/>
+      <figcaption><strong>Figure 4.11</strong> — Principe du procédé avec récupération d'énergie par une chaudière de récupération vapeur</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap4/chap4_9.png" alt="Schéma procédé avec WHB"/>
+      <figcaption><strong>Figure 4.12</strong> — Schéma du procédé intégrant la chaudière de récupération (WHB)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap4/tableau19.png" alt="Tableau 4.4 — Bilan énergétique comparatif"/>
+      <figcaption><strong>Tableau 4.4</strong> — Bilan énergétique comparatif des configurations</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap4/chap4_14.png" alt="Tableau 4.5 — Résultats Class A"/>
+      <figcaption><strong>Tableau 4.5</strong> — Résultats de conformité Class A US EPA</figcaption>
+    </figure>
+
+    <!-- ── Conclusion ─────────────────────────────────────────────── -->
+    <div class="conclusion-block" id="sec-conclusion4">
+      <h3>Conclusions du chapitre 4</h3>
+      <h4>Concernant la Class A</h4>
+      <p>Les éléments pathogènes sont totalement détruits avec des performances pouvant atteindre 7 log. Le temps de séjour est d'au moins 20 minutes comme requis par la réglementation. L'homogénéité des températures, le temps de séjour respecté et l'abattement des éléments pathogènes confirment la conformité à la Class A de l'US EPA.</p>
+      <h4>Concernant l'échangeur</h4>
+      <p>L'échangeur boue/boue a fonctionné sans problème majeur. La configuration DLD couplée à cet échangeur permet de déshydrater les boues à 23–28 % de siccité, ce qui est comparatif ou supérieur aux procédés batch du marché. La consommation de vapeur passe de 0,9 à 0,5 t/t MS par rapport à une configuration LD classique.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="chap3.html"><span class="arrow">←</span> Chapitre 3</a>
+      <a href="concl.html"><span class="arrow">→</span> Conclusion générale</a>
+    </div>
+
+  </div>
+</main>
+<script src="../layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapitre 3 — Validations expérimentales du procédé</title>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<main id="main-content">
+  <div class="chapter-page">
+
+    <div class="breadcrumb">
+      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="toc.html">Table des matières</a><span>›</span>
+      Chapitre 3
+    </div>
+
+    <span class="chapter-label">Chapitre 3</span>
+    <h1 class="chapter-title">Validations expérimentales du procédé</h1>
+
+    <p>En parallèle de l'approche théorique reposant sur une modélisation numérique des phénomènes d'évapo-condensation, une <strong>unité pré-industrielle</strong> a été conçue et réalisée.</p>
+
+    <p>Cette unité pré-industrielle a trois principaux objectifs :</p>
+    <ul>
+      <li>Alimenter en données le modèle numérique afin de le calibrer et de vérifier l'écart entre modèle et réalité expérimentale.</li>
+      <li>Mesurer les températures extérieures du réacteur et les comparer avec les températures internes du fluide afin de modéliser les déformations potentielles du réacteur.</li>
+      <li>Valider le nouveau principe d'une configuration <strong>DLD (Digestion–Lyse–Digestion)</strong> et s'assurer que tous les paramètres de l'hydrolyse et de la digestion sont convenables.</li>
+    </ul>
+
+    <!-- ── Section 3.1 ─────────────────────────────────────────────── -->
+    <h2 id="sec-pilote">3.1 Présentation de l'unité pré-industrielle</h2>
+
+    <p>L'unité pré-industrielle est conçue de manière à être totalement autonome de la station d'épuration sur laquelle elle se trouve. Les seules interactions entre l'unité et l'usine sont les échanges de fluides et gaz :</p>
+    <ul>
+      <li>Alimentation en boues primaires et biologiques (séparément, avec proportion constante),</li>
+      <li>Réinjection du biogaz produit dans le gazomètre de l'usine après analyse en ligne,</li>
+      <li>Utilisation d'eau potable pour le générateur vapeur,</li>
+      <li>Eau industrielle pour la dilution de la boue hydrolysée avant injection dans le digesteur.</li>
+    </ul>
+
+    <p>L'unité est dimensionnée pour traiter une quantité de boue équivalente à une station de traitement d'eau de <strong>15 000 habitants équivalents</strong>.</p>
+
+    <figure>
+      <img src="../images/Chap3/vue_installation2.jpg" alt="Vue générale de l'unité pré-industrielle"/>
+      <figcaption><strong>Figure 3.1</strong> — Vue générale de l'unité pré-industrielle sur site</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/image_pilote1.png" alt="Unité pré-industrielle — vue 1"/>
+      <figcaption><strong>Figure 3.2</strong> — Vue de détail de l'unité pré-industrielle</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/image_pilote2.png" alt="Unité pré-industrielle — vue 2"/>
+      <figcaption><strong>Figure 3.3</strong> — Réacteur d'hydrolyse thermique de l'unité pilote</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/image_pilote3.png" alt="Unité pré-industrielle — vue 3"/>
+      <figcaption><strong>Figure 3.4</strong> — Colonne d'injection vapeur et réacteur horizontal</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/image_pilote4.png" alt="Unité pré-industrielle — vue 4"/>
+      <figcaption><strong>Figure 3.5</strong> — Instrumentation et régulation de l'unité pilote</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/md_site.png" alt="Mélangeur dynamique — installation sur site"/>
+      <figcaption><strong>Figure 3.6</strong> — Installation du mélangeur dynamique sur le pilote</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/emp_sonde_T.png" alt="Emplacement des sondes de température"/>
+      <figcaption><strong>Figure 3.7</strong> — Emplacement des sondes de température dans le réacteur</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/points_prelevement.png" alt="Points de prélèvement"/>
+      <figcaption><strong>Figure 3.8</strong> — Points de prélèvement pour analyses de performance</figcaption>
+    </figure>
+
+    <!-- ── Section 3.2 ─────────────────────────────────────────────── -->
+    <h2 id="sec-injection">3.2 Validation du système d'injection de vapeur</h2>
+
+    <h3>3.2.1 Système d'injection initial — Canne statique</h3>
+
+    <p>Le système d'injection initial est une canne plongeant dans la colonne verticale, munie de trous de 3 mm de diamètre répartis sur le pourtour. La vitesse de vapeur en sortie de trou est limitée à 20 m/s (recommandation industrielle) afin d'éviter vibrations et abrasion.</p>
+
+    <p>Les modélisations numériques montrent qu'avec ce type d'injecteur, des poches de vapeur ne se condensent pas totalement dans la colonne. Les mesures expérimentales de température confirment ce phénomène :</p>
+    <ul>
+      <li>Gradient de température entre haut et bas de colonne observé,</li>
+      <li>Présence de vapeur non condensée détectée par les mesures de température en tête de colonne.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap3/inj_simple.png" alt="Canne d'injection simple"/>
+      <figcaption><strong>Figure 3.9</strong> — Canne d'injection statique initiale</figcaption>
+    </figure>
+
+    <h3>3.2.2 Alternatives d'injection étudiées</h3>
+
+    <p>Deux alternatives aux injecteurs statiques ont été étudiées :</p>
+    <ul>
+      <li><strong>Combiné injecteur vapeur + mélangeur statique :</strong> présente deux points bloquants — la siccité élevée des boues qui rend difficile l'injection de vapeur, et les faibles vitesses d'écoulement qui ne permettent pas un écoulement turbulent suffisant.</li>
+      <li><strong>Mélangeur dynamique :</strong> un équipement permettant, au sein d'un même dispositif, d'injecter la vapeur et de la mélanger avec la boue grâce à un rotor tournant à 900–1 500 tr/min.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap3/komax.png" alt="Mélangeur statique Komax"/>
+      <figcaption><strong>Figure 3.10</strong> — Mélangeur statique Komax (alternative étudiée)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/multi_inj.png" alt="Système multi-injecteurs"/>
+      <figcaption><strong>Figure 3.11</strong> — Système d'injection multi-points étudié</figcaption>
+    </figure>
+
+    <h3>3.2.3 Validation du mélangeur dynamique</h3>
+
+    <p>L'utilisation d'un <strong>mélangeur dynamique</strong> comme système d'injection vapeur a été testée et validée. Ce mélangeur dynamique est composé d'une chambre recevant les deux fluides (vapeur et boue) au sein de laquelle un rotor assure un parfait mélange en fonction de leurs caractéristiques respectives.</p>
+
+    <p>Les avantages du mélangeur dynamique par rapport aux injecteurs statiques :</p>
+    <ul>
+      <li>Ne dépend pas de la siccité des boues entrantes (point limitant des technologies statiques),</li>
+      <li>Assure la condensation de la vapeur dès l'injection,</li>
+      <li>Limite les gradients thermiques au sein du réacteur, réduisant les contraintes mécaniques,</li>
+      <li>Design facilement extrapolable à une taille de réacteur industrielle.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap3/rotor_md.png" alt="Rotor du mélangeur dynamique"/>
+      <figcaption><strong>Figure 3.12</strong> — Rotor du mélangeur dynamique</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/image_install_md_new.png" alt="Installation mélangeur dynamique"/>
+      <figcaption><strong>Figure 3.13</strong> — Installation du mélangeur dynamique sur le pilote</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/emp_multisondes.png" alt="Emplacement multi-sondes après MD"/>
+      <figcaption><strong>Figure 3.14</strong> — Emplacement des multi-sondes de température après le mélangeur dynamique</figcaption>
+    </figure>
+
+    <div class="callout">
+      <strong>Résultat clé :</strong> Avec le mélangeur dynamique, les températures au sein du condenseur s'homogénéisent <em>dès la sortie du mélangeur</em> et restent homogènes le long du réacteur. L'hétérogénéité observée avec la canne statique (40–80 °C d'écart) est supprimée.
+    </div>
+
+    <!-- ── Section 3.3 ─────────────────────────────────────────────── -->
+    <h2 id="sec-performances">3.3 Performances de l'hydrolyse — Configuration DLD</h2>
+
+    <h3>3.3.1 Principes de la configuration DLD</h3>
+
+    <figure>
+      <img src="../images/Chap3/config_LD.png" alt="Configuration LD — Lyse puis Digestion"/>
+      <figcaption><strong>Figure 3.15</strong> — Configuration classique LD (Lyse–Digestion)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/config_DLD.png" alt="Configuration DLD — Digestion, Lyse, Digestion"/>
+      <figcaption><strong>Figure 3.16</strong> — Configuration DLD (Digestion–Lyse–Digestion)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/config_DL.png" alt="Configuration DL"/>
+      <figcaption><strong>Figure 3.17</strong> — Configuration DL (Digestion–Lyse)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/bilan_simplifie_DLD.jpg" alt="Bilan simplifié — Configuration DLD"/>
+      <figcaption><strong>Figure 3.18</strong> — Bilan simplifié de la configuration DLD</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/bilan_simplifie_LD.jpg" alt="Bilan simplifié — Configuration LD"/>
+      <figcaption><strong>Figure 3.19</strong> — Bilan simplifié de la configuration LD classique</figcaption>
+    </figure>
+
+    <p>La configuration <strong>DLD (Digestion–Lyse–Digestion)</strong> consiste à placer l'unité d'hydrolyse thermique <em>entre</em> deux digesteurs. La boue issue d'un premier digesteur est hydrolysée thermiquement, puis injectée dans un second digesteur. Cette configuration permet de :</p>
+    <ul>
+      <li>Améliorer la biodégradabilité de la matière organique restante après première digestion,</li>
+      <li>Augmenter la production de biogaz de façon plus significative qu'une configuration classique Lyse–Digestion (LD),</li>
+      <li>Améliorer la déshydratabilité des boues finales (siccité supérieure à 20 %).</li>
+    </ul>
+
+    <h3>3.3.2 Résultats de performance</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 3.1 — Comparaison des performances Hydrolyse + Configuration DLD vs LD classique</caption>
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Configuration LD classique</th>
+            <th>Configuration DLD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rendement d'abattement des matières volatiles (MV)</td>
+            <td>~58 %</td>
+            <td><strong>68 %</strong></td>
+          </tr>
+          <tr>
+            <td>Solubilisation de la DCO particulaire</td>
+            <td>—</td>
+            <td><strong>28 %</strong></td>
+          </tr>
+          <tr>
+            <td>Augmentation de la production de biogaz</td>
+            <td>référence</td>
+            <td><strong>+25–26 %</strong></td>
+          </tr>
+          <tr>
+            <td>Siccité après déshydratation</td>
+            <td>~18 %</td>
+            <td><strong>23–28 %</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Les performances de l'hydrolyse thermique continue ont été stables sur la période d'exploitation de référence, ce qui confirme la robustesse du procédé continu en configuration DLD.</p>
+
+    <figure>
+      <img src="../images/Chap3/chap3_result1.png" alt="Résultats expérimentaux — Figure 1"/>
+      <figcaption><strong>Figure 3.20</strong> — Évolution des performances d'hydrolyse sur la période d'exploitation</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/chap3_result2.png" alt="Résultats expérimentaux — Figure 2"/>
+      <figcaption><strong>Figure 3.21</strong> — Abattement des matières volatiles (MV) en configuration DLD</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/chap3_result3.png" alt="Résultats expérimentaux — Figure 3"/>
+      <figcaption><strong>Figure 3.22</strong> — Solubilisation de la DCO particulaire</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/chap3_result4.png" alt="Résultats expérimentaux — Figure 4"/>
+      <figcaption><strong>Figure 3.23</strong> — Production de biogaz — comparaison LD vs DLD</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/chap3_result5.png" alt="Résultats expérimentaux — Figure 5"/>
+      <figcaption><strong>Figure 3.24</strong> — Siccité des boues en sortie de déshydratation</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap3/graphe_barber.png" alt="Graphe de Barber"/>
+      <figcaption><strong>Figure 3.25</strong> — Graphe de Barber — biodégradabilité des boues</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../Tableaux/Chap3/tableau18.png" alt="Tableau 3.2 — Résultats analytiques DLD"/>
+      <figcaption><strong>Tableau 3.2</strong> — Résultats analytiques complets de la configuration DLD</figcaption>
+    </figure>
+
+    <!-- ── Conclusion ─────────────────────────────────────────────── -->
+    <div class="conclusion-block" id="sec-conclusion3">
+      <h3>Conclusion du chapitre 3</h3>
+      <p>Le suivi des températures a démontré que l'utilisation d'une canne d'injection statique ne permet pas d'assurer la bonne condensation de la vapeur dans la boue. En remplacement, l'utilisation d'un <strong>mélangeur dynamique</strong> a donné entière satisfaction.</p>
+      <p>Le suivi des performances de l'installation pilote a permis de valider l'intérêt de la configuration DLD en termes d'abattement de la matière organique (+10 points par rapport au LD) et de production de biogaz (+25 %), ainsi que la stabilité à long terme de l'hydrolyse continue.</p>
+      <p>La solubilisation de 28 % de la DCO particulaire et l'augmentation de 26 % de la production de biogaz confirment la performance du procédé.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="chap2.html"><span class="arrow">←</span> Chapitre 2</a>
+      <a href="chap4.html"><span class="arrow">→</span> Chapitre 4 — Aspects réglementaires</a>
+    </div>
+
+  </div>
+</main>
+<script src="../layout.js"></script>
+</body>
+</html>
