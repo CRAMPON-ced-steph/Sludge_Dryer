@@ -7,9 +7,10 @@
     </div>
     <ul class="nav-tree">
       <li><a href="garde.html"  class="nav-link nav-top">Page de garde</a></li>
-      <li><a href="resume.html" class="nav-link nav-top">Résumé / Abstract</a></li>
-      <li><a href="toc.html"    class="nav-link nav-top">Table des matières</a></li>
-      <li><a href="intro.html"  class="nav-link nav-top">Introduction</a></li>
+      <li><a href="resume.html"    class="nav-link nav-top">Résumé / Abstract</a></li>
+      <li><a href="preambule.html" class="nav-link nav-top">Préambule</a></li>
+      <li><a href="toc.html"       class="nav-link nav-top">Table des matières</a></li>
+      <li><a href="intro.html"     class="nav-link nav-top">Introduction</a></li>
 
       <li class="nav-section">
         <span class="nav-chapter-label">Chapitre 1</span>
@@ -31,7 +32,13 @@
       <li><a href="concl.html"  class="nav-link nav-top">Conclusion générale</a></li>
       <li><a href="annexe.html" class="nav-link nav-top">Annexes</a></li>
       <li><a href="biblio.html" class="nav-link nav-top">Bibliographie</a></li>
-    </ul>`;
+    </ul>
+    <div class="sidebar-footer">
+      <button class="btn-pdf" onclick="window.print()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Exporter en PDF
+      </button>
+    </div>`;
 
   /* ── Inject sidebar ────────────────────────────────────────────────── */
   const sidebar = document.createElement('nav');

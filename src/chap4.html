@@ -11,7 +11,7 @@
   <div class="chapter-page">
 
     <div class="breadcrumb">
-      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="../index.html">Accueil</a><span>›</span>
       <a href="toc.html">Table des matières</a><span>›</span>
       Chapitre 4
     </div>
@@ -19,244 +19,852 @@
     <span class="chapter-label">Chapitre 4</span>
     <h1 class="chapter-title">Attente réglementaire et énergétique</h1>
 
-    <p>Avant de considérer que la technologie développée puisse concurrencer ou remplacer des technologies fonctionnant par bâchées, deux aspects importants doivent être traités : les <strong>aspects réglementaires</strong> (hygiénisation) et les <strong>aspects énergétiques</strong> (consommation de vapeur).</p>
+    <p>Dans le chapitre 2 sont modélisés les phénomènes d'évapo-condensation au sein d'un condenseur vertical afin d'estimer si une canne statique d'injection vapeur pourrait assurer le transfert convenable de masse et d'énergie de la vapeur au sein de la boue aboutissant à une homogénéité des températures.</p>
+
+    <p>Dans le chapitre 3, il est démontré expérimentalement que, par la complexité de la matrice boue, une canne d'injection statique n'est pas suffisante pour assurer la condensation de la vapeur et l'homogénéité des températures. Une solution pressentie au chapitre 2, à savoir l'utilisation d'un mélangeur dynamique, a pu ainsi être testée et validée expérimentalement. L'homogénéité des températures assurée, les performances de solubilisation et son impact sur la production de biogaz ont pu être mesurées expérimentalement.</p>
+
+    <p>Cependant, avant de considérer que la technologie développée puisse concurrencer voire remplacer des technologies fonctionnant par bâchées, deux aspects importants doivent être traités à savoir les aspects réglementaires et énergétiques.</p>
 
     <!-- ── Section 4.1 ─────────────────────────────────────────────── -->
-    <h2 id="sec-sejour">4.1 Vérification du temps de séjour hydraulique</h2>
+    <h2 id="sec-enjeux">4.1 Les enjeux réglementaire et énergétique</h2>
 
-    <h3>4.1.1 Contexte réglementaire — Certification Class A (US EPA)</h3>
+    <h3>4.1.1 Contexte réglementaire</h3>
 
-    <p>Les performances d'hygiénisation sont l'un des éléments clefs des technologies d'hydrolyse thermique. La réglementation américaine de l'US EPA (<em>Environmental Protection Agency</em>) définit la certification de plus haut niveau d'hygiénisation : la <strong>Class A</strong>. Cette certification requiert :</p>
-    <ul>
-      <li>Une température de traitement d'au moins <strong>165 °C</strong>,</li>
-      <li>Un temps de séjour minimum de <strong>20 minutes</strong> pour chaque particule de boue traversant le procédé,</li>
-      <li>Un abattement des éléments pathogènes démontré.</li>
-    </ul>
+    <p>Les performances d'hygiénisation sont l'un des éléments clefs des technologies d'hydrolyse. Ce type de traitement thermique permet de détruire les éléments pathogènes et ainsi d'envisager toute sorte d'exutoire pour les boues.</p>
 
-    <p>Dans le cas d'un procédé continu, contrairement aux procédés par bâchées où le temps de séjour est le temps du cycle, il est indispensable de démontrer que la <em>plus rapide</em> des particules a bien séjourné au moins 20 minutes dans le réacteur.</p>
+    <p>Cette notion d'hygiénisation permet de valider la pertinence du procédé car, implicitement, une boue non hygiénisée implique soit une température de réaction non atteinte et donc une mauvaise condensation de la vapeur, soit un chemin préférentiel avec potentiellement des zones mortes dans le réacteur, soit un temps de réaction trop court.</p>
 
-    <figure>
-      <img src="../images/Chap4/chap4_1.png" alt="Profil de vitesse — écoulement laminaire vs flux piston"/>
-      <figcaption><strong>Figure 4.1</strong> — Profils de vitesse : flux piston (a), laminaire newtonien (b), intermédiaire boue (c)</figcaption>
-    </figure>
+    <p>Vérifier l'hygiénisation pour un procédé continu signifie vérifier l'homogénéité des températures, ce qui a été vu précédemment au chapitre 3, mais aussi <strong>le temps de séjour hydraulique</strong> et <strong>l'abattement des éléments pathogènes</strong>.</p>
 
-    <h3>4.1.2 Méthode de traçage hydraulique</h3>
+    <h4>Vérification du temps de séjour hydraulique</h4>
 
-    <p>Le traçage hydraulique consiste à injecter un traceur de concentration connue à l'entrée du réacteur et à suivre l'évolution de sa concentration en sortie. Le traceur retenu est le <strong>chlorure de sodium (NaCl)</strong>, dont la concentration peut être mesurée par conductivité <em>in situ</em>.</p>
+    <p>Le concept de distribution du temps de résidence a été introduit afin de caractériser l'écoulement d'un réacteur dès 1953. Ce temps de résidence consiste à injecter un traceur, dont la concentration est connue, à l'entrée d'un réacteur et à suivre l'évolution de sa concentration en sortie de celui-ci.</p>
 
-    <p>La fonction de Distribution du Temps de Séjour E(t) est définie par :</p>
+    <p>La fonction de distribution de temps de séjour E(t) est définie par :</p>
 
-    <div class="equation-block">
-      <span class="eq-content">E(t) = C(t) / ∫₀^∞ C(t) dt</span>
+    <div class="equation">
+      <span class="eq-body">E(t) = C(t) / ∫<sub>0</sub><sup>∞</sup> C(t) dt</span>
       <span class="eq-number">(4.1)</span>
     </div>
 
     <p>avec C(t) la concentration du traceur mesurée en sortie du réacteur à chaque instant t.</p>
 
-    <figure>
-      <img src="../images/Chap4/chap4_2.png" alt="Dispositif de traçage hydraulique"/>
-      <figcaption><strong>Figure 4.2</strong> — Dispositif expérimental de traçage hydraulique (NaCl)</figcaption>
-    </figure>
+    <p>L'injection du traceur peut se faire par une impulsion ou bien en échelon. Pour un écoulement en flux piston, le signal de sortie serait un dirac. Dans la réalité, les réacteurs ne sont jamais des pistons parfaits. Ainsi, comme montré à la figure 4.1, la réponse à une impulsion en entrée de réacteur (courbe rouge) sera un signal de sortie s'apparentant à une courbe en forme de cloche plus ou moins étalée (courbe bleue).</p>
 
     <figure>
-      <img src="../images/Chap4/profilsVitesse_cnam.jpg" alt="Profils de vitesse mesurés"/>
-      <figcaption><strong>Figure 4.3</strong> — Profils de vitesse mesurés dans le réacteur pilote</figcaption>
+      <img src="../images/Chap4/dts2.JPG" alt="DTS : réponse impulsionnelle"/>
+      <figcaption><strong>Figure 4.1</strong> — DTS : réponse impulsionnelle</figcaption>
     </figure>
 
-    <h3>4.1.3 Résultats du traçage</h3>
+    <p>La méthode de la distribution de temps de séjour repose sur trois hypothèses qui sont un régime d'écoulement permanent, un fluide incompressible, un écoulement déterministe ne faisant pas intervenir de processus aléatoires macroscopiques. Or, la boue est un fluide compressible dont le comportement initial est viscoplastique. Les DTS effectuées sur le système ne satisferont pas ces trois conditions opératoires prérequises.</p>
 
-    <p><strong>Tests en eau :</strong> Les résultats montrent que l'écoulement de l'eau ne correspond pas à un flux piston (comme initialement supposé lors du dimensionnement), mais s'apparente à un <strong>écoulement laminaire</strong> avec un profil de vitesse parabolique.</p>
+    <p>Pour le dimensionnement du pilote il a été considéré que l'écoulement de la boue à travers le système serait de type flux piston. Comme rappelé par la figure 4.2, un écoulement en flux piston correspond à un profil de vitesse plat alors qu'un écoulement laminaire a un profil de vitesse parabolique. Les caractéristiques rhéologiques des boues, ainsi que les faibles vitesses d'écoulement du fluide de l'ordre de 2 à 6 mm/s, conduisent à envisager un écoulement laminaire. <strong>La question est de démontrer que la plus rapide des particules de boue, celle au sommet de cette parabole, a bien un temps de séjour d'au moins 20 minutes dans le système.</strong></p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_15.png" alt="Types d'écoulement"/>
+      <figcaption><strong>Figure 4.2</strong> — Types d'écoulement</figcaption>
+    </figure>
+
+    <p>Le choix d'un traceur n'est pas anodin. Le traceur :</p>
+    <ul>
+      <li>Doit être différent du milieu analysé ou déjà présent dans le milieu mais en faible quantité,</li>
+      <li>Ne doit pas voir ses propriétés modifiées ou altérées par le milieu,</li>
+      <li>Ne doit pas réagir avec le milieu,</li>
+      <li>Doit être compatible avec le milieu et l'environnement,</li>
+      <li>Ne doit pas être dangereux,</li>
+      <li>Doit pouvoir se manipuler facilement.</li>
+    </ul>
+
+    <p>Lopes précise qu'il doit de plus n'avoir que peu ou pas d'impact sur le milieu et être facilement analysable.</p>
+
+    <p>La problématique est de déterminer la méthode la mieux adaptée à des boues municipales à haute siccité soumises à une forte pression et une haute température et dont la rhéologie évoluera au cours de son séjour dans le réacteur.</p>
+
+    <p>La littérature ne fait pas état d'un traçage sur des boues pâteuses qui de plus vont être déstructurées, chauffées et hydrolysées. Cependant, on trouve de nombreux travaux sur le traçage des boues rouges issues du procédé Bayer. Ainsi, comme listé dans le tableau 4.1, les traceurs utilisés pour suivre ces boues rouges sont de la poudre de fer, du chlorure de lithium, un acide carboxylique, du nitrate de sodium, du sulfate de baryum ou bien un radio-isotope.</p>
 
     <div class="table-wrapper">
       <table>
-        <caption>Tableau 4.1 — Résultats comparatifs des traçages en eau (NaCl, débit 92 l/h)</caption>
+        <caption>Tableau 4.1 — Méthodes de traçage utilisées dans l'industrie pour le procédé Bayer</caption>
         <thead>
           <tr>
-            <th>Masse NaCl [g]</th>
-            <th>Temps de rétention mini [min]</th>
-            <th>Temps au pic [min]</th>
+            <th>Type de traceur</th>
+            <th>Nature du traceur</th>
+            <th>Méthodologie de détection</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Poudre de fer</td><td>solide</td><td>Détection électromagnétique</td></tr>
+          <tr><td>Chlorure de lithium</td><td>liquide</td><td>Spectrométrie d'adsorption atomique</td></tr>
+          <tr><td>Acide carboxylique</td><td>liquide</td><td>Chromatographie gazeuse</td></tr>
+          <tr><td>Nitrate de sodium</td><td>liquide</td><td>Chromatographie</td></tr>
+          <tr><td>Sulfate de baryum</td><td>solide</td><td>Rayon X</td></tr>
+          <tr><td>Radio-isotopes</td><td>solide</td><td>Radiodétection</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Des travaux sur le traçage de procédés liés aux eaux usées ont aussi été menés. Le tableau 4.2 liste les techniques employées dans le cadre d'un suivi des eaux usées, à savoir le fluorure, de l'encre, un radio-isotope ou bien du chlorure de sodium.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.2 — Méthodes de traçage utilisées dans le traitement des eaux usées</caption>
+        <thead>
+          <tr>
+            <th>Type de traceur</th>
+            <th>Nature du traceur</th>
+            <th>Méthodologie de détection</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Radio-isotopes</td><td>solide</td><td>Radiodétection</td></tr>
+          <tr><td>Fluorure</td><td>liquide</td><td>Non-spécifié</td></tr>
+          <tr><td>Encre</td><td>liquide</td><td>Fluorimétrie</td></tr>
+          <tr><td>Chlorure de sodium</td><td>liquide</td><td>Conductivité</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Chacune de ces méthodes est évaluée ci-dessous.</p>
+
+    <p><strong>La détection électromagnétique</strong> ne peut être satisfaisante car la détection sur un réacteur sous pression n'est pas envisageable. De plus, il faudrait ajouter un traceur métallique dans des boues qui peuvent déjà contenir du fer.</p>
+
+    <p><strong>La spectrométrie d'absorption atomique</strong> via l'injection de chlorure de lithium se pratique sur des digesteurs de boue municipale car la dose de traceur nécessaire est faible. Néanmoins, son coût est élevé et la détection se fait par analyse en laboratoire et non <em>in-situ</em> ce qui ne permet pas de réajuster les tests. Cette méthode fonctionne sur des boues peu concentrées, sur des temps longs.</p>
+
+    <p><strong>L'acide carboxylique</strong> et <strong>le nitrate de sodium</strong> nécessitent la mise en place d'un chromatographe ce qui est non applicable sur la boue. Quant au <strong>sulfate de baryum</strong>, la mise en place d'une détection par rayon X nécessite des habilitations particulières ainsi que des coûts d'installation élevés.</p>
+
+    <p>Sur des boues municipales, <strong>la fluorimétrie</strong> n'aurait que peu de chance de fonctionner sachant que l'ajout d'encre ne changerait pas la couleur de la boue.</p>
+
+    <p><strong>La radio détection</strong> serait envisageable sur des boues refroidies et diluées mais à un coût élevé.</p>
+
+    <p>Reste le <strong>chlorure de sodium</strong> qui pourrait être utilisé pour modifier la conductivité de la boue. La mesure de la conductivité peut se faire en ligne et est peu coûteuse.</p>
+
+    <p>Au choix du traceur s'ajoute la nécessité de trouver une méthode facilement implémentable sur un réacteur en pression et température, peu coûteuse, permettant une mesure en continu du marqueur en sortie de réacteur, un marqueur n'impactant pas la boue. Il faut aussi que la méthode soit facilement reproductible et facile à mettre en place.</p>
+
+    <h4>Vérification de l'abattement des éléments pathogènes</h4>
+
+    <p>Les marchés de l'hydrolyse thermique les plus actifs se situent en Amérique et en Asie. Sur ces marchés, les procédés d'hydrolyse thermique doivent permettre d'obtenir une hygiénisation parfaite des boues telle que définie par la réglementation Américaine de l'US EPA servant de référence hors Europe.</p>
+
+    <p>Cette réglementation définit une hygiénisation dite « Class A » imposant que chaque particule de boue ait eu un temps de traitement à 140 °F, soit 60 °C, pendant au moins 20 minutes. Pour les procédés discontinus tels que le procédé BioThelys ou le procédé CAMBI, le temps de traitement est imposé par le cycle global et les bâchées. Dans le cas d'un procédé continu, il faut prouver qu'il n'y a pas formation de chemin préférentiel et que la particule de boue traversant le plus rapidement le procédé a un temps de séjour minimal de 20 minutes. Pour cela, il convient de contrôler les deux notions liées que sont :</p>
+    <ul>
+      <li>l'hydraulique du réacteur. Le contrôle de l'hydraulique sert à s'assurer qu'il n'y a pas la présence d'un chemin préférentiel dans le réacteur ce qui ne permettrait pas d'assurer que la particule de boue la plus rapide ait le temps de séjour minimum requis de 20 minutes.</li>
+      <li>le temps de séjour de la boue dans le réacteur. Le contrôle du temps de séjour est important car, pour garantir que la particule de boue traversant le plus rapidement le réacteur a un temps de séjour suffisant, et donc un temps de traitement dans les conditions voulues de pression et de température, pour assurer les performances de l'hydrolyse thermique.</li>
+    </ul>
+
+    <p>À ces considérations de temps de séjour et d'hydraulique s'ajoutent des limites réglementaires d'éléments pathogènes présents dans les boues traitées.</p>
+
+    <p>Ces valeurs limites imposées par la « Class A » sont indiquées dans le tableau 4.3. Six paramètres sont suivis à savoir les salmonelles dont la concentration doit être inférieure à 3 NPP pour 4 g de MS. La concentration en enterovirus doit être inférieure à 1 PFU pour 4 g de MS. Les œufs d'helminthes sont exprimés en unité pour 4 g de MS. Les coliformes fécaux doivent être inférieurs à 1000 NPP par g de MS. L'abattement des MV doit être supérieur à 38 %.</p>
+
+    <p>La réglementation anglaise « UK enhanced treated sludge » est moins contraignante et impose des échantillons sans salmonelle et, pour les <em>Escherichia coli</em>, un abattement correspondant à une réduction de 6 log et une concentration inférieure à 1000 NPP par g MS.</p>
+
+    <p>En France, l'arrêté du 8 janvier 1998 impose de limiter à 8 NPP pour 10 g de MS les salmonelles, d'être sous les 3 PFU pour 10 g de MS pour les entérovirus et d'être sous les 3 unités pour 10 g de MS pour les œufs d'helminthes.</p>
+
+    <p>Le respect de l'US EPA entraîne implicitement le respect des réglementations anglaise et française.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Tableau 4.3</strong> — Limites réglementaires des éléments pathogènes</caption>
+        <thead>
+          <tr>
+            <th>Germes (pour les boues hygiénisées)</th>
+            <th>Class US EPA [40 CFR Part 503]</th>
+            <th>UK « Enhanced Treated Sludge »</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salmonelles</td>
+            <td style="text-align:center;">&lt; 3 NPP / 4 g MS</td>
+            <td style="text-align:center;">0 / 2 g MS</td>
+          </tr>
+          <tr>
+            <td>Enterovirus</td>
+            <td style="text-align:center;">&lt; 1 PFU / 4 g MS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Œufs d'helminthe viables</td>
+            <td style="text-align:center;">&lt; 1 / 4 g MS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><em>Escherichia coli</em></td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">&gt; 6 log réduction et &lt; 1 000 / g MS</td>
+          </tr>
+          <tr>
+            <td>Coliformes fécaux</td>
+            <td style="text-align:center;">&lt; 1 000 NPP / g MS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Abattement des MV</td>
+            <td style="text-align:center;">&gt; 38 %</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La vérification des performances d'hygiénisation ne peut reposer que sur des analyses. Pour cela, une campagne d'analyse va être réalisée avant et après hydrolyse. Afin de s'assurer de la représentativité du résultat, une série de 10 échantillons sera prélevée à quelques jours d'intervalle.</p>
+
+    <p>Lors de la prise d'échantillon, il conviendra de définir puis de suivre un protocole visant à s'assurer que les échantillons prélevés ne seront pas contaminés lors de l'échantillonnage ce qui viendrait fausser les résultats.</p>
+
+    <h3>4.1.2 Attente énergétique</h3>
+
+    <p>Les deux principaux procédés ayant des références industrielles fonctionnent par bâchées. Leur consommation énergétique est liée à la siccité des boues en entrée et à leur capacité à récupérer de la vapeur de revaporisation. Cette capacité de récupération d'énergie est liée à leur taille et à la durée de leurs cycles.</p>
+
+    <p>L'un des avantages d'un procédé fonctionnant en continu est de n'avoir qu'un réacteur sans avoir à se préoccuper ni de la gestion des cycles, ni des phases de décompression, ni de la gestion de la phase flash. Or, pour les procédés batch précédents, en dépressurisant de 7 à 1 bar, la vapeur de flash recirculée servant à préchauffer les boues en entrée représente 30 % des besoins énergétiques des procédés. Cette énergie est constamment récupérée ce qui n'est pas le cas avec le procédé continu qui ne dispose pas de récupération de vapeur flash. Pour conserver une consommation vapeur par tonne de matière sèche traitée équivalente, la siccité calculée à l'entrée du procédé continu ne devrait plus être de 16 % mais de 23 %.</p>
+
+    <p>Cependant, selon leur nature, il n'est pas toujours possible de déshydrater certaines boues jusqu'à 23 % de siccité ou bien est-ce au prix d'une consommation excessive de polymère. Dans une configuration DLD, les boues étant digérées, cette siccité est atteignable. Par contre, il sera peu probable d'obtenir plus de 20 % de siccité avec des boues biologiques ce qui pénalisera la configuration LD.</p>
+
+    <p>Pour envisager le déploiement d'un procédé d'hydrolyse thermique en continu il est nécessaire de se pencher sur la question de son efficacité énergétique quelle que soit la siccité de la boue et plus particulièrement pour des siccités sous les 23 %.</p>
+
+    <p>Plusieurs solutions sont envisagées pour optimiser l'efficacité énergétique du procédé. La récupération de vapeur de revaporisation n'est pas permise car elle enfreindrait des brevets existants. La mise en place d'une chaudière de récupération pour produire de la vapeur vive basse pression en récupérant l'énergie dégagée lors du refroidissement des boues hydrolysées est envisageable mais le coût conséquent d'une telle solution favorise la recherche d'une solution alternative. Des échangeurs à surface raclée présentent de nombreux avantages mais leur conception actuelle ne leur permet pas d'accepter des pressions de plus de 10 bar. La piste d'un échangeur boue-boue de type tubes et calandre acceptant de forte viscosité sera donc étudiée.</p>
+
+    <p>Les difficultés à surmonter pour ce type d'échangeur sont nombreuses, à savoir :</p>
+    <ul>
+      <li>La forte viscosité des boues, liée à la haute siccité des boues traitées et à leur nature collante, engendre de fortes pertes de charge,</li>
+      <li>Une faible vitesse d'écoulement induisant une sédimentation de la matière en suspension aboutissant à un colmatage de l'échangeur ainsi qu'un coefficient de convection faible.</li>
+    </ul>
+
+    <p><strong>Le principal point bloquant</strong> pour la mise en œuvre d'un échangeur boue-boue est leur haute viscosité. Il faudrait abaisser cette viscosité de manière à assurer un écoulement homogène dans l'échangeur tout en minimisant les pertes de charge.</p>
+
+    <p>Selon un dossier des techniques de l'ingénieur concernant la rhéologie des fluides thixotropiques, il est possible de déstructurer un fluide thixotropique en le soumettant à un haut gradient de vitesse. La première piste explorée consiste donc à déstructurer la boue pâteuse et à mesurer l'impact sur les pertes de charge.</p>
+
+    <p>Il est connu que la viscosité des fluides est thermodépendante. Une seconde piste consisterait à chauffer légèrement la boue à la vapeur de manière à abaisser davantage la viscosité. Il est aisé de calculer que la température maximale de préchauffage doit être de 40 °C pour conserver un intérêt économique à l'échangeur.</p>
+
+    <p>L'idée majeure pour la réalisation de cet échange est donc de limiter les pertes de charge en adaptant les propriétés physiques de la boue à l'échangeur et non l'inverse grâce à deux effets combinés, à savoir :</p>
+    <ul>
+      <li>Un effet mécanique pour déstructurer la boue via une agitation à haute vitesse,</li>
+      <li>Un effet thermique pour diminuer la viscosité en préchauffant la boue de 20 à 40 °C.</li>
+    </ul>
+
+    <p><strong>Le second point</strong> qui pourrait devenir bloquant est la rapidité d'encrassement de la partie calandre de l'échangeur. Cet encrassement peut être estimé par la loi de CAMP qui définit la vitesse minimale nécessaire pour maintenir ou remettre une particule en suspension dans un fluide. Cette vitesse minimale est définie par :</p>
+
+    <div class="equation">
+      <span class="eq-body">v<sub>t</sub> = ( 8 · β · g · d / f · (ρ<sub>d</sub> − ρ) / ρ )<sup>0,5</sup></span>
+      <span class="eq-number">(4.2)</span>
+    </div>
+
+    <p>avec :</p>
+    <ul>
+      <li>v<sub>t</sub>, la vitesse requise pour maintenir une particule en mouvement en m/s,</li>
+      <li>β prenant la valeur de 0,04 pour un grain de sable uniforme, 0,06 pour des particules hétérogènes, 0,8 pour des dépôts de boue de longue,</li>
+      <li>f, le coefficient de friction, d'une valeur pouvant varier de 0,01, pour des grains fins, à 0,03, pour des grains plus gros. Pour ce calcul, il sera considéré un coefficient à 0,03,</li>
+      <li>ρ<sub>d</sub>, la densité de la particule (d'une valeur de 2650 dans le cas du sable) en kg/m³,</li>
+      <li>g, la gravité de 9,81 m²/s,</li>
+      <li>ρ, la masse volumique de l'eau, en kg/m³,</li>
+      <li>d, le diamètre des particules en mm.</li>
+    </ul>
+
+    <p>Suivant cette formule, il est possible de calculer la vitesse du fluide à maintenir côté calandre de l'échangeur afin d'empêcher la sédimentation des particules de sable. Le tableau 4.4 présente le calcul de cette vitesse de fluide à maintenir pour des particules de sable allant de 0,1 à 500 microns. Ces vitesses calculées vont de 0,004 à 0,29 m/s.</p>
+
+    <p>L'échangeur tubes et calandre sélectionné est d'une hauteur de 1,5 m avec un diamètre en DN 80 munie de 6 faisceaux en DN16. Pour un débit d'alimentation de 80 l/h, la vitesse calculée dans la calandre sera de 0,0047 m/s. Ainsi, d'après les valeurs du tableau 4.4, toute particule de sable supérieure à 0,1 micron pourrait potentiellement venir encrasser la calandre de l'échangeur.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.4 — Vitesse à maintenir dans la calandre pour éviter toute sédimentation</caption>
+        <thead>
+          <tr>
+            <th>Diamètre de la particule de sable (μm)</th>
+            <th>Masse volumique du sable (kg/m³)</th>
+            <th>Vitesse du fluide (m/s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>500</td><td>2650</td><td>0,29</td></tr>
+          <tr><td>400</td><td>2650</td><td>0,26</td></tr>
+          <tr><td>300</td><td>2650</td><td>0,23</td></tr>
+          <tr><td>200</td><td>2650</td><td>0,19</td></tr>
+          <tr><td>100</td><td>2650</td><td>0,13</td></tr>
+          <tr><td>80</td><td>2650</td><td>0,12</td></tr>
+          <tr><td>50</td><td>2650</td><td>0,09</td></tr>
+          <tr><td>40</td><td>2650</td><td>0,08</td></tr>
+          <tr><td>30</td><td>2650</td><td>0,07</td></tr>
+          <tr><td>20</td><td>2650</td><td>0,06</td></tr>
+          <tr><td>10</td><td>2650</td><td>0,04</td></tr>
+          <tr><td>5</td><td>2650</td><td>0,03</td></tr>
+          <tr><td>2,5</td><td>2650</td><td>0,02</td></tr>
+          <tr><td>1</td><td>2650</td><td>0,013</td></tr>
+          <tr><td>0,5</td><td>2650</td><td>0,009</td></tr>
+          <tr><td>0,25</td><td>2650</td><td>0,007</td></tr>
+          <tr><td>0,1</td><td>2650</td><td>0,004</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Le tableau 4.5 explicite l'estimation de la quantité de sable pouvant potentiellement sédimenter dans la calandre de l'échangeur. Selon un dossier technique de Canler pour le Ministère de l'Agriculture, la quantité de sable non retenue par les dessableurs de l'usine peut varier de 8 à 15 litres par équivalent habitant et par an [l/EH/an]. En prenant comme hypothèse une valeur de 6 l/EH/an, et en considérant que l'unité pilote est de 15 000 EH, à 90 % de taux de rétention, on arrive à une quantité de sable pouvant venir encrasser l'échangeur de 25 l par jour.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.5 — Encrassement journalier attendu de la calandre</caption>
+        <thead>
+          <tr>
+            <th>Critère</th>
+            <th>Valeur</th>
+            <th>Unité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Taille de la station</td><td>15 000</td><td>Éq habitant</td></tr>
+          <tr><td>Quantité de sable attendue par équivalent habitant</td><td>6</td><td>l/éq hab/an</td></tr>
+          <tr><td>Quantité de sable journalière</td><td>247</td><td>l/d</td></tr>
+          <tr><td>Taux de rétention du sable</td><td>90</td><td>%</td></tr>
+          <tr><td>Quantité de sable restant dans la boue</td><td>25</td><td>l/d</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Sachant que le volume utile précédemment calculé de la calandre est de 57 l, si un encrassement a lieu, il devrait se produire rapidement. Ainsi, il sera nécessaire de prévoir un nettoyage à grande eau côté tubes et côté calandre régulièrement pour parer à ce potentiel encrassement.</p>
+
+    <!-- ── Section 4.2 ─────────────────────────────────────────────── -->
+    <h2 id="sec-methode">4.2 Matériel et méthode</h2>
+
+    <h3>4.2.1 Vérification de l'efficacité du traitement thermique</h3>
+
+    <p>Un traitement thermique est considéré comme efficace lorsque le temps de séjour minimal requis par la réglementation est respecté et que les éléments pathogènes en sortie du procédé sont détruits. Dans le cas d'un fonctionnement continu, il faut vérifier que la plus rapide des particules de boue traversant le procédé respecte le temps de séjour minimal requis. Ce temps de séjour ne peut être contrôlé que par la mise en place d'un traçage. L'abattement des éléments pathogènes, quant à lui, ne peut être contrôlé que par des analyses de laboratoire.</p>
+
+    <h4>Choix du traceur</h4>
+
+    <p>De tous les traceurs listés, le chlorure de sodium et son impact sur la conductivité semble intéressant. Il convient donc de s'assurer que cette modification de conductivité est réelle et qu'elle sera détectable par une sonde placée <em>in-situ</em>. Pour cela, un échantillon de 200 ml de boue hydrolysée à 10 % de siccité est pris et mélangé dans un bêcher avec du NaCl. La conductivité mesurée augmente de 10 mS par tranche de 0,5 g de chlorure de sodium.</p>
+
+    <p>La conductivité de la boue est, tout comme celle de l'eau, impactée par la salinité du mélange. Ainsi, en injectant une quantité déterminée de chlorure de sodium à l'entrée du réacteur à un instant initial t<sub>0</sub>, le temps nécessaire pour que la mesure de conductivité de la sonde en sortie du réacteur soit impactée par la présence de sel doit être mesurable.</p>
+
+    <p>Bien que pour des questions de corrosion il soit déconseillé d'introduire des chlorures dans un réacteur en INOX, le NaCl semble un traceur acceptable pour cette application car le milieu ne contient pas d'oxygène, ces chlorures ne restent pas dans le réacteur, le temps de séjour est court, les essais sont ponctuels.</p>
+
+    <h4>Installation et méthode pour le traçage</h4>
+
+    <p>La figure 4.3 indique l'emplacement de la sonde de conductivité. Cette sonde de conductivité est placée en sortie de réacteur afin de détecter le traceur juste avant la dilution et le refroidissement des boues. Son fond d'échelle est de 0 à 600 mS/cm. La mesure de conductivité est compensée en fonction de la température de la sonde qui est aussi suivie en continu.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_1.png" alt="Emplacement de la sonde de conductivité située en sortie du réacteur"/>
+      <figcaption><strong>Figure 4.3</strong> — Emplacement de la sonde de conductivité située en sortie du réacteur</figcaption>
+    </figure>
+
+    <h4>Protocole mis en œuvre pour le traçage</h4>
+
+    <p>Le test est effectué lorsque l'installation est stabilisée à son fonctionnement nominal et que les conditions de pression et température sont atteintes. Pour cela, le réacteur est démarré puis, une fois en boue, en pression et à température de consigne, il est arrêté sous pression afin de pouvoir relancer rapidement le procédé sans phase de remontée en pression du réacteur ce qui pourrait biaiser les résultats.</p>
+
+    <p>Le but est d'injecter le traceur dans la chambre du mélangeur dynamique. Afin d'injecter le traceur dans le système, le mélangeur dynamique est isolé par la fermeture de vannes quart de tour puis dépressurisé via une troisième vanne quart de tour évacuant les boues et la vapeur revaporisée vers l'extérieur. Une fois le traceur introduit dans le mélangeur dynamique, ce dernier est refermé puis remis en réseau avec le réacteur. Suivant cette démarche, l'injection du traceur est réalisée de manière impulsionnelle. Le système est ensuite relancé ainsi que l'enregistrement des données ce qui indique l'instant t<sub>0</sub>.</p>
+
+    <h4>Protocole de prélèvement pour l'analyse des éléments pathogènes</h4>
+
+    <p>Lors du prélèvement il faut s'assurer que l'échantillon ne soit pas contaminé par la boue restant sur le point de prélèvement lui-même. La méthode définie et utilisée est la suivante : le point de prélèvement est nettoyé à l'eau, nettoyé à la javel puis passé à la flamme. Un premier litre est extrait et jeté. Un second litre est extrait pour réaliser l'analyse bactériologique.</p>
+
+    <p>Les méthodes d'analyse des différents éléments pathogènes analysés et les unités associées sont récapitulées dans le tableau 4.6.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.6 — Méthodes d'analyse des éléments pathogènes</caption>
+        <thead>
+          <tr>
+            <th>Éléments pathogènes analysés</th>
+            <th>Méthode employée</th>
+            <th>Unité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Coliformes totaux</td><td>Méthode interne par filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td>Coliformes thermo tolérants</td><td>Méthode interne par filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td>Entérovirus</td><td>Selon la norme XP T 90 451</td><td>Ufp/10 g MS</td></tr>
+          <tr><td>Microorganismes revivifiables à 22 °C</td><td>Méthode par inclusion dans la gélose</td><td>n/g MB</td></tr>
+          <tr><td>Microorganismes revivifiables à 36 °C</td><td>Méthode par inclusion dans la gélose</td><td>n/g MB</td></tr>
+          <tr><td>Œufs d'helminthes</td><td>FD X33 040 méthode B</td><td>n/10 g MS</td></tr>
+          <tr><td>Listeria</td><td>NF V 08 055</td><td>n/25 g MB</td></tr>
+          <tr><td><em>E. coli</em> par microplaques</td><td>XP X33 019</td><td>n/g MB</td></tr>
+          <tr><td>Salmonelles</td><td>XP X33 018</td><td>n/10 g MS</td></tr>
+          <tr><td>Staphylocossus</td><td>Méthode réalisée par filtration sur membrane</td><td>n/g MB</td></tr>
+          <tr><td><em>Clostridium perfringens</em></td><td>Méthode semi-quantitative en milieu liquide</td><td>n/g BB</td></tr>
+          <tr><td>Moisissures</td><td>Méthode par ensemencement en milieu solide</td><td>n/g BB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Ces analyses sont confiées à un laboratoire agréé utilisant ces méthodes normées. Ces éléments pathogènes sont exprimés en nombre par gramme de matière brute (donc humide) ou de matière sèche à l'exception des entérovirus qui sont exprimés en Unité Formant Plage.</p>
+
+    <h3>4.2.2 Amélioration de l'efficacité énergétique du procédé</h3>
+
+    <p>Le choix est fait de tester la mise en place d'un échangeur tubes et calandre. L'idée est de conditionner les boues fraîches en les déstructurant mécaniquement et en les chauffant à 40 °C afin de diminuer leur viscosité. Côté calandre, un lavage à grande eau devra être mis en place pour évacuer tout sédiment. Pour vérifier la viabilité de cette configuration d'échangeur, deux tests seront mis en œuvre. Le premier est un test petite échelle. Si ce dernier est concluant, l'installation pilote sera modifiée pour tester cette configuration à pleine échelle.</p>
+
+    <h4>Test préliminaire d'un échange sur un tube simple</h4>
+
+    <p>Afin de tester l'impact de la déstructuration des boues et de leur préchauffage sur leur viscosité, et donc sur la perte de charge attendue au travers d'un échangeur, le montage expérimental schématisé à la figure 4.4 est réalisé.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_paillase.png" alt="Installation paillasse pour tester l'impact de la déstructuration et du préchauffage de la boue sur un tube unique de 1,5 m de long en DN 16"/>
+      <figcaption><strong>Figure 4.4</strong> — Installation paillasse pour tester l'impact de la déstructuration et du préchauffage de la boue sur un tube unique de 1,5 m de long en DN 16</figcaption>
+    </figure>
+
+    <p>Ce montage est constitué d'un tuyau en DN 16 de 1,5 mètre de long monté en dérivation sur le mélangeur dynamique de l'unité pilote. Une sonde de température ainsi que deux manomètres situés en entrée et en sortie du tube sont installés. La sonde de température sert au contrôle de la température de préchauffage. Les manomètres permettent de relever la différence de pression et donc la perte de charge du faisceau.</p>
+
+    <p>La dimension du tuyau de 1,5 m de long en DN 16 correspond aux dimensions d'un faisceau de tube de l'échangeur tube et calandre envisagé. Ainsi, il sera vérifié si les phénomènes de déstructuration et de préchauffe pourraient être cumulatifs.</p>
+
+    <h4>Mise en œuvre du test pleine échelle</h4>
+
+    <p>Suite aux tests préliminaires sur un faisceau de tube unique, il parait nécessaire de tester la solution technique sur un véritable échangeur commercial afin de :</p>
+    <ul>
+      <li>vérifier la chute de pression réelle induite par la section plate reliant les faisceaux de tubes et confirmer l'impact de la déstructuration et du préchauffage des boues,</li>
+      <li>vérifier l'énergie récupérée,</li>
+      <li>vérifier le temps de fonctionnement avant colmatage.</li>
+    </ul>
+
+    <p>Les modifications réalisées sur l'unité pilote sont schématisées sur la figure 4.5.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_principe2.png" alt="Mise en oeuvre d'un échangeur boue-boue situé en amont du procédé d'hydrolyse thermique"/>
+      <figcaption><strong>Figure 4.5</strong> — Mise en œuvre d'un échangeur boue-boue situé en amont du procédé d'hydrolyse thermique. Ce système est constitué d'un mélangeur dynamique [5] recevant de la vapeur vive [100] couplé à un échangeur tubes et calandre recevant la boue hydrolysée [11] côté calandre. Sortie échangeur, la boue [12] est envoyée vers le digesteur.</figcaption>
+    </figure>
+
+    <p>Le mode de fonctionnement de l'installation change légèrement. Ainsi, les boues déshydratées venant d'une centrifugeuse [1] arrivent toujours dans une trémie d'alimentation [2]. Par la suite, les boues brutes provenant de la trémie [2] sont reprises par la pompe d'alimentation [3] et ne sont pas envoyées directement dans le réacteur [10] comme précédemment, mais sont envoyées dans un mélangeur dynamique [5]. Ce mélangeur dynamique [5] permet de déstructurer la boue grâce à un mixage haute vitesse et de la préchauffer à 40 °C avec de la vapeur vive [100]. La boue ainsi conditionnée arrive à l'entrée de l'échangeur [6] côté tubes. Au travers l'échangeur, la boue passe de 40 à 90 °C grâce à l'énergie récupérée sur la boue hydrolysée. La boue chauffée [7] à 90 °C est ensuite envoyée dans un mélangeur dynamique pour monter sa température de 90 à 165 °C par l'ajout de vapeur vive [101]. La boue est ensuite maintenue à cette température pendant le temps de séjour désiré dans le réacteur [10].</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap5/echangeur_inst_glob.png" alt="Installation de la dérivation vers l'échangeur"/>
+        <figcaption><strong>Figure 4.6</strong> — Installation de la dérivation vers l'échangeur</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap5/echangeur_sect_plat.png" alt="Section plane de l'échangeur tubes et calandre"/>
+        <figcaption><strong>Figure 4.7</strong> — Section plane de l'échangeur tubes et calandre</figcaption>
+      </figure>
+    </div>
+
+    <p>L'échangeur tubes et calandre est composé de 6 tubes en DN 16 d'une longueur de 1,5 mètre. Ce qui change par rapport au faisceau unique, et qui va être quantifié en mesurant en continu la différence de pression amont-aval du côté tubes de l'échangeur, est la section plate reliant les tubes. Cette section plate qui doit répartir le flux de boue entre les tuyaux va représenter une forte perte de charge additionnelle.</p>
+
+    <p>Deux modes de fonctionnement sont mis en place afin de tester le comportement du système dans les deux cas de figure. Ces deux modes de fonctionnement sont :</p>
+    <ol>
+      <li>Le démarrage de l'unité avec utilisation directe de l'échangeur ;</li>
+      <li>L'envoi des boues hydrolysées vers l'échangeur une fois qu'une température de consigne de 140 °C est atteinte.</li>
+    </ol>
+
+    <!-- ── Section 4.3 ─────────────────────────────────────────────── -->
+    <h2 id="sec-resultats">4.3 Résultats et discussions</h2>
+
+    <h3>4.3.1 Résultats du traçage</h3>
+
+    <p>Avant de procéder au traçage sur de la boue, un traçage est réalisé avec de l'eau industrielle afin de vérifier si le choix du traceur est pertinent et si la sonde de conductivité installée détecte une variation de conductivité. Seront donc menés deux essais en eau ainsi que cinq essais en boue. La température de la sonde sera incluse dans les graphiques car sa température impacte la mesure.</p>
+
+    <p><strong>Résultats en eau :</strong></p>
+
+    <p>Ce premier test en eau est réalisé après avoir nettoyé le réacteur évitant ainsi tout dépôt pouvant venir perturber l'écoulement. La charge utilisée en chlorure de sodium est de 150 g. Le débit d'eau est de 92 l/h. La figure 4.8 présente le résultat du test avec le suivi de la conductivité de l'eau ainsi que le suivi de la température de la tête de mesure.</p>
+
+    <p>La conductivité initiale de l'eau industrielle est de l'ordre de 4 mS/cm. Cette valeur est constante jusqu'à la huitième minute où la sonde commence à détecter une variation de conductivité. En deux minutes cette conductivité passe de 4 à 11–11,5 mS/cm ce qui correspond au pic de concentration qui dure 4 minutes. Par la suite, la conductivité redescend linéairement à sa valeur initiale en 16 minutes.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_2.png" alt="Premier test de traçage en eau [débit 92 l/h, NaCl 150 g]"/>
+      <figcaption><strong>Figure 4.8</strong> — Premier test de traçage en eau [débit 92 l/h, NaCl 150 g]</figcaption>
+    </figure>
+
+    <p>La figure 4.9 permet aussi de constater que l'intégralité du traceur sort du système en 21 minutes (entre la neuvième et la trentième minute).</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_2e.png" alt="E(t) du premier test de traçage en eau [débit 92 l/h, NaCl 150 g]"/>
+      <figcaption><strong>Figure 4.9</strong> — E(t) du premier test de traçage en eau [débit 92 l/h, NaCl 150 g]</figcaption>
+    </figure>
+
+    <p>Afin de confirmer ce résultat, un second test identique est effectué avec cette fois 300 g de NaCl. La forme de la DTS obtenue est semblable au précédent test. Le tableau 4.7 présente les écarts entre les deux essais.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.7 — Comparatif des résultats des traçages en eau</caption>
+        <thead>
+          <tr>
+            <th>Taux de NaCl [g]</th>
+            <th>Débit [l/h]</th>
+            <th>Temps rétention mini [min]</th>
+            <th>Temps pic [min]</th>
             <th>Temps passage total [min]</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>150</td><td>9</td><td>2</td><td>21</td></tr>
-          <tr><td>300</td><td>12</td><td>3</td><td>24</td></tr>
+          <tr><td>150</td><td>92</td><td>9</td><td>2</td><td>21</td></tr>
+          <tr><td>300</td><td>92</td><td>12</td><td>3</td><td>24</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p>Le calcul du profil de vitesse pour le réacteur pilote (DN 100, longueur 10 m, débit 90 l/h) donne :</p>
-    <ul>
-      <li>Vitesse moyenne V ≈ 0,0032 m/s</li>
-      <li>Vitesse maximale V<sub>max</sub> = 2V ≈ 0,0064 m/s (écoulement laminaire newtonien)</li>
-      <li>Temps minimal théorique ≈ 26 minutes</li>
-    </ul>
+    <p>Ce second test confirme le profil ainsi que l'ordre des temps de séjour. Le traceur a mis 11 minutes pour traverser le réacteur. Il faut attendre encore 24 minutes pour que le traceur sorte complètement du réacteur.</p>
 
-    <p><strong>Tests en boue :</strong> Avec la boue, le ratio V<sub>max</sub>/V moyen mesuré est de l'ordre de <strong>1,8</strong>, soit un profil intermédiaire entre le flux piston (ratio = 1) et l'écoulement laminaire newtonien (ratio = 2). Ceci s'explique par le comportement tribologique de la boue pâteuse (légère viscoplasticité) qui évolue vers un comportement rhéofluidisant une fois chauffée.</p>
+    <p>Lors des deux tests en eau, le débit d'eau est de 90 l/h pour un temps de séjour de l'ordre de 10 minutes. Le réacteur a été dimensionné en considérant le fluide comme parfait et donc l'écoulement comme un flux piston avec un ratio V<sub>max</sub>/V = 1. Si cela était le cas, compte tenu du débit et des dimensions de l'unité, la DTS commencerait à 60 minutes. Comme il est rappelé par la figure 4.10, le profil de vitesse d'un fluide Newtonien tel que de l'eau lors d'un écoulement laminaire est parabolique avec un ratio V<sub>max</sub>/V de 2.</p>
 
     <figure>
-      <img src="../images/Chap4/dts2.JPG" alt="Courbe DTS — Distribution des Temps de Séjour"/>
-      <figcaption><strong>Figure 4.4</strong> — Courbe de Distribution des Temps de Séjour E(t) mesurée</figcaption>
+      <img src="../images/Chap4/profilsVitesse_cnam.jpg" alt="Représentation des profils de vitesse de différents régimes d'écoulement"/>
+      <figcaption><strong>Figure 4.10</strong> — Représentation des profils de vitesse de différents régimes d'écoulement</figcaption>
     </figure>
 
-    <figure>
-      <img src="../images/Chap4/chap4_3.png" alt="Résultats traçage — eau"/>
-      <figcaption><strong>Figure 4.5</strong> — Courbes de traçage hydraulique en eau (NaCl)</figcaption>
-    </figure>
+    <p>Compte tenu de ce ratio, des dimensions du réacteur, du débit et de la DTS mesurée, il est aisé de déterminer la V<sub>max</sub>. Ainsi, pour un réacteur d'un diamètre de 0,1 m, un débit volumique Q<sub>v</sub> de 0,09 m³/h, une longueur de réacteur de 10 m, on détermine une vitesse moyenne V comme suit :</p>
 
-    <figure>
-      <img src="../images/Chap4/chap4_4.png" alt="Résultats traçage — boue"/>
-      <figcaption><strong>Figure 4.6</strong> — Courbes de traçage hydraulique en boue</figcaption>
-    </figure>
-
-    <div class="callout">
-      <strong>Conséquence pour le dimensionnement :</strong> Pour garantir un temps de séjour minimum de 20 minutes à chaque particule, le réacteur continu doit être dimensionné sur un temps de séjour hydraulique de 36 minutes (= 20 min × 1,8) ; et de 54 minutes pour garantir 30 minutes de traitement minimum.
+    <div class="equation">
+      <span class="eq-body">S = πD²/4 = π × 0,1²/4 = 0,078 m²&emsp;&emsp;Q<sub>v</sub> = 0,09/3600 m³/s&emsp;&emsp;V = Q<sub>v</sub>/S = 0,0032 m/s</span>
+      <span class="eq-number">(4.3)</span>
     </div>
 
-    <!-- ── Section 4.2 ─────────────────────────────────────────────── -->
-    <h2 id="sec-pathogenes">4.2 Abattement des éléments pathogènes</h2>
+    <p>En considérant que le traceur commence à être détecté quand le sommet de la parabole du profil de vitesse arrive à la sonde, soit pour la V<sub>max</sub>, le temps nécessaire à la plus rapide des particules du traceur pour parcourir la longueur du réacteur de 10 mètres est de :</p>
+
+    <div class="equation">
+      <span class="eq-body">t = L / V<sub>max</sub> = 10 / (2 × 0,0032) = 1571 s, soit 26 minutes</span>
+      <span class="eq-number">(4.4)</span>
+    </div>
+
+    <p>En considérant un rapport V<sub>max</sub>/V de 2, le traceur devrait commencer à être détecté au bout de 26 minutes. Or, le traceur commence à être mesuré après 10 minutes soit un temps bien en dessous de ce qui est attendu.</p>
+
+    <p>Ce temps de séjour faible ne peut s'expliquer par un ratio V<sub>max</sub>/V au-delà de 2 du fait de la faible vitesse d'écoulement et de la nature du fluide. Un tel écart semble aussi difficilement attribuable à un chemin préférentiel dû à la géométrie du procédé. Une hypothèse vraisemblable serait que le traceur soit entraîné par la vapeur lors du redémarrage du fait que l'eau, non visqueuse, ne présente aucune résistance à la vapeur et ne vient donc pas la freiner. Si c'est le cas, ceci ne devrait pas se produire avec la boue présentant une haute viscosité.</p>
+
+    <p><strong>Résultats en boue :</strong></p>
+
+    <p>Après les premiers essais concluants à l'eau, il convient de réaliser le traçage en boue. Les conditions opératoires sont identiques aux essais en eau. Le résultat du traçage pour le premier essai en boue est présenté à la figure 4.11.</p>
 
     <figure>
-      <img src="../images/Chap4/Tab_analyse_amont_THP.png" alt="Tableau — Analyses amont du THP"/>
-      <figcaption><strong>Tableau 4.2</strong> — Analyses microbiologiques en amont du THP</figcaption>
+      <img src="../images/Chap4/chap4_4.png" alt="Premier test de traçage en boue [débit 120 l/h, NaCl 300 g]"/>
+      <figcaption><strong>Figure 4.11</strong> — Premier test de traçage en boue [débit 120 l/h, NaCl 300 g]</figcaption>
     </figure>
+
+    <p>Après un redémarrage à t = 0 le traceur traverse le réacteur en 22 minutes et met 25 minutes pour sortir totalement du système.</p>
+
+    <p>Il est à noter que, suite à l'arrêt du système pour introduire le traceur, la conductivité mesurée ne retrouve sa valeur initiale qu'à partir du moment où la sonde atteint une température de l'ordre de 100 °C. Cette observation se produit sur tous les essais.</p>
 
     <figure>
-      <img src="../images/Chap4/Tab_analyse_aval_THP.png" alt="Tableau — Analyses aval du THP"/>
-      <figcaption><strong>Tableau 4.3</strong> — Analyses microbiologiques en aval du THP (après hydrolyse)</figcaption>
+      <img src="../images/Chap4/chap4_4e.png" alt="E(t) du premier test de traçage en boue [débit 120 l/h, NaCl 300 g]"/>
+      <figcaption><strong>Figure 4.12</strong> — E(t) du premier test de traçage en boue [débit 120 l/h, NaCl 300 g]</figcaption>
     </figure>
 
-    <h3>4.2.1 Méthodes d'analyse</h3>
-
-    <p>Les éléments pathogènes analysés et les méthodes employées sont résumés dans le tableau suivant :</p>
+    <p>Le tableau 4.8 résume les résultats obtenus lors des autres essais. Sont indiqués la quantité de traceur, le débit, le temps de rétention minimale de la boue qui correspond à la particule traversant le plus rapidement le réacteur, le temps nécessaire à ce que tout le traceur soit évacué du système, ainsi que le ratio V<sub>max</sub>/V calculé.</p>
 
     <div class="table-wrapper">
       <table>
-        <caption>Tableau 4.2 — Méthodes d'analyse des éléments pathogènes</caption>
-        <thead>
-          <tr><th>Élément pathogène</th><th>Méthode</th><th>Unité</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Coliformes totaux</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
-          <tr><td>Coliformes thermo tolérants</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
-          <tr><td>Entérovirus</td><td>Norme XP T 90 451</td><td>Ufp/10 g MS</td></tr>
-          <tr><td>Œufs d'helminthes</td><td>FD X33 040 méthode B</td><td>n/10 g MS</td></tr>
-          <tr><td>Listeria</td><td>NF V 08 055</td><td>n/25 g MB</td></tr>
-          <tr><td><em>E. coli</em></td><td>XP X33 019</td><td>n/g MB</td></tr>
-          <tr><td>Salmonelles</td><td>XP X33 018</td><td>n/10 g MS</td></tr>
-          <tr><td><em>Clostridium perfringens</em></td><td>Semi-quantitative milieu liquide</td><td>n/g BB</td></tr>
-          <tr><td>Staphylocoques</td><td>Filtration sur membrane</td><td>n/g MB</td></tr>
-          <tr><td>Moisissures</td><td>Ensemencement milieu solide</td><td>n/g BB</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>4.2.2 Résultats — Performances d'hygiénisation</h3>
-
-    <p>Après un traitement à <strong>165 °C pendant au moins 20 minutes</strong>, tous les éléments pathogènes sont détruits avec des abattements pouvant atteindre <strong>7 log</strong>.</p>
-
-    <div class="callout">
-      <strong>Conclusion hygiénisation :</strong> L'homogénéité des températures (assurée par le mélangeur dynamique), le temps de séjour hydraulique respecté, et l'intégralité des éléments pathogènes détruits concluent à la bonne performance d'hygiénisation du procédé. Les critères de la certification <strong>Class A de l'US EPA</strong> sont respectés, ce qui implique a fortiori le respect des normes européennes plus permissives.
-    </div>
-
-    <!-- ── Section 4.3 ─────────────────────────────────────────────── -->
-    <h2 id="sec-echangeur">4.3 Récupération d'énergie — Échangeur boue/boue</h2>
-
-    <h3>4.3.1 Contexte énergétique</h3>
-
-    <p>L'hydrolyse thermique consomme de la vapeur vive produite à partir du biogaz. Dans le contexte des appels d'offres internationaux, il est demandé aux procédés de consommer le moins de vapeur possible. La consommation de vapeur d'un procédé continu <strong>sans récupération d'énergie</strong> est pénalisante par rapport aux procédés par bâchées qui récupèrent la vapeur de revaporisation (flash).</p>
-
-    <figure>
-      <img src="../images/Chap4/chap4_5.png" alt="Schéma échangeur boue/boue"/>
-      <figcaption><strong>Figure 4.7</strong> — Schéma de l'échangeur boue/boue (côté calande et côté tubes)</figcaption>
-    </figure>
-
-    <figure>
-      <img src="../images/Chap4/chap4_6.png" alt="Échangeur boue/boue — installation"/>
-      <figcaption><strong>Figure 4.8</strong> — Installation de l'échangeur boue/boue sur le pilote</figcaption>
-    </figure>
-
-    <h3>4.3.2 Échangeur boue/boue testé</h3>
-
-    <p>Un système d'échangeur thermique boue/boue a été conçu et testé. Côté calande : boue hydrolysée chaude (~160 °C en entrée). Côté tubes : boue froide déshydratée à préchauffer. Les performances mesurées :</p>
-    <ul>
-      <li>Chute de pression : <strong>1 bar</strong> (conditions nominales)</li>
-      <li>Gain de température sur les boues entrantes : <strong>+60 °C</strong></li>
-      <li>Aucun problème majeur d'encrassement détecté en conditions pilotes</li>
-    </ul>
-
-    <h3>4.3.3 Bilan énergétique comparatif</h3>
-
-    <div class="table-wrapper">
-      <table>
-        <caption>Tableau 4.3 — Comparaison de la consommation de vapeur selon la configuration</caption>
+        <caption>Tableau 4.8 — Comparatif des résultats des traçages en boue</caption>
         <thead>
           <tr>
-            <th>Configuration</th>
-            <th>Siccité boue</th>
-            <th>Consommation vapeur</th>
+            <th>N° test</th>
+            <th>NaCl [g]</th>
+            <th>Débit [l/h]</th>
+            <th>Temps rétention mini [min]</th>
+            <th>Temps passage total [min]</th>
+            <th>V<sub>max</sub>/V calculé</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>LD sans échangeur</td><td>~16 %</td><td>~1,5 t vapeur / t MS</td></tr>
-          <tr><td>LD avec échangeur boue/boue</td><td>~16 %</td><td><strong>~0,9 t vapeur / t MS</strong></td></tr>
-          <tr><td>DLD avec échangeur boue/boue</td><td>23–28 %</td><td><strong>~0,5 t vapeur / t MS</strong></td></tr>
-          <tr><td>Procédés batch concurrents (avec flash)</td><td>~16 %</td><td>~0,8–1,0 t vapeur / t MS</td></tr>
+          <tr><td>1</td><td>300</td><td>120</td><td>22</td><td>30</td><td>1,8</td></tr>
+          <tr><td>2</td><td>400</td><td>96</td><td>29</td><td>30</td><td>1,7</td></tr>
+          <tr><td>3</td><td>400</td><td>110</td><td>24</td><td>28</td><td>1,8</td></tr>
+          <tr><td>4</td><td>400</td><td>96</td><td>26</td><td>24</td><td>1,9</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3>4.3.4 Proposition : chaudière de récupération</h3>
+    <p>Le croisement des débits et des DTS permet de calculer le ratio V<sub>max</sub>/V de chaque essai. Pour un fluide pseudo plastique, le ratio V<sub>max</sub>/V est de l'ordre de 1,5 alors que pour un fluide Newtonien ce rapport est de l'ordre de 2. Les ratios V<sub>max</sub>/V calculés présentés dans le tableau 4.8 sont entre ces deux valeurs et varient de 1,7 à 1,9. Ainsi, il est possible que le fluide initialement pâteux soit rapidement fluidisé par les actions combinées du cisaillement mécanique du mélangeur dynamique et de la température.</p>
 
-    <p>Une alternative technique consiste à utiliser une <strong>chaudière de récupération (Waste Heat Boiler)</strong> pour générer de la vapeur basse pression en récupérant l'énergie des boues hydrolysées. Ce schéma permettrait de :</p>
-    <ul>
-      <li>Préchauffer les boues entrantes via un mélangeur dynamique basse pression (3 bar),</li>
-      <li>Réduire la consommation de vapeur vive principale,</li>
-      <li>Rendre la consommation d'énergie indépendante de la siccité des boues.</li>
-    </ul>
+    <p>La moyenne des temps de rétention minimale des quatre essais est de 25 minutes pour un débit moyen de 105,5 l/h. Le rapport V<sub>max</sub>/V calculé dans ces conditions est de 1,79. À ce débit et pour un écoulement en flux piston ayant un rapport V<sub>max</sub>/V de 1, ce temps de rétention minimal serait de 45 minutes.</p>
+
+    <p><strong>Ainsi, pour un procédé continu, il est nécessaire de dimensionner le réacteur en tenant compte d'un ratio V<sub>max</sub>/V de 1,8 pour garantir les 20 minutes de temps de traitement en vue de respecter la réglementation.</strong> Ce résultat confirme également l'hypothèse d'un entraînement du traceur lors des essais en eau.</p>
+
+    <p>Se pose la question de l'encrassement du réacteur qui pourrait diminuer le temps de séjour. Il faudra donc revoir la géométrie du procédé de manière à éviter tout encrassement ou dépôt. Une géométrie verticale présenterait l'intérêt d'empêcher ces dépôts et donc de maintenir le temps de séjour. Cet avantage s'ajoute aux précédentes considérations concernant l'homogénéité des températures dans la partie verticale ainsi que la déformation mécanique du réacteur.</p>
+
+    <h3>4.3.2 Résultats de la campagne d'analyse des éléments pathogènes</h3>
+
+    <p>Les performances d'abattement des éléments pathogènes se mesurent en log décimal ce qui correspond à une réduction d'un facteur 1000. Compte tenu de la température élevée, il est attendu un abattement total des éléments pathogènes.</p>
+
+    <p>L'unique moyen de vérifier les performances d'abattement consiste à réaliser des analyses en laboratoire. Ainsi, au-delà du soin apporté à la prise d'échantillonnage, 10 campagnes d'analyse seront faites pour éviter tout biais.</p>
+
+    <p>Le tableau 4.9 présente les résultats de ces analyses sur les boues non traitées. Le tableau 4.10 présente les résultats obtenus après traitement.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Tableau 4.9</strong> — Analyse des éléments pathogènes en amont de l'hydrolyse thermique</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Paramètres microbiologiques<br>sur Boues et Solides</th>
+            <th rowspan="2">Unités</th>
+            <th colspan="10" style="text-align:center;">Numéro de l'échantillon</th>
+          </tr>
+          <tr>
+            <th style="text-align:center;">1</th>
+            <th style="text-align:center;">2</th>
+            <th style="text-align:center;">3</th>
+            <th style="text-align:center;">4</th>
+            <th style="text-align:center;">5</th>
+            <th style="text-align:center;">6</th>
+            <th style="text-align:center;">7</th>
+            <th style="text-align:center;">8</th>
+            <th style="text-align:center;">9</th>
+            <th style="text-align:center;">10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enterovirus</td><td>ufp/10g MS</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+          </tr>
+          <tr>
+            <td>Entérocoques</td><td>nb/g MB</td>
+            <td>89 000</td><td>25 000</td><td>NR</td><td>55 000</td><td>38 000</td>
+            <td>7 400</td><td>4 300</td><td>860 000</td><td>25 000</td><td>300 000</td>
+          </tr>
+          <tr>
+            <td>Micro-org. Revivifiables à 22°C</td><td>nb/g MB</td>
+            <td>450 000 000</td><td>pas mesuré</td><td>9 500 000</td><td>30 900 000</td><td>157 500 000</td>
+            <td>352 500 000</td><td>1 005 000 000</td><td>255 000 000</td><td>12 500 000</td><td>45 500 000</td>
+          </tr>
+          <tr>
+            <td>Micro-org. Revivifiables à 36°C</td><td>nb/g MB</td>
+            <td>250 000 000</td><td>pas mesuré</td><td>127 500 000</td><td>24 800 000</td><td>157 500 000</td>
+            <td>200 000 000</td><td>470 000 000</td><td>377 500 000</td><td>24 100 000</td><td>48 900 000</td>
+          </tr>
+          <tr>
+            <td>Œufs d'helminthes</td><td>nb/10g MB</td>
+            <td>absence</td><td>absence</td><td>11</td><td>11</td><td>100</td>
+            <td>4</td><td>5</td><td>absence</td><td>9</td><td>absence</td>
+          </tr>
+          <tr>
+            <td>Listeria</td><td>nb/25g MB</td>
+            <td>89 000</td><td>aucun</td><td>Présence</td><td>Présence</td><td>aucun</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+          </tr>
+          <tr>
+            <td><em>E. coli</em> par microplaques</td><td>nb/g MB</td>
+            <td>7 860 000</td><td>8 150 000</td><td>260 000</td><td>154 000</td><td>80 000</td>
+            <td>25 400</td><td>39 300</td><td>3 160 000</td><td>20 700</td><td>465 000</td>
+          </tr>
+          <tr>
+            <td>Salmonelles</td><td>nb/10g MS</td>
+            <td>&gt; 2 400</td><td>NR</td><td>&gt; 2 400</td><td>&gt; 2 400</td><td>2 400</td>
+            <td>&gt; 2 400</td><td>1 100</td><td>NR</td><td>2 400</td><td>4</td>
+          </tr>
+          <tr>
+            <td>Clostridium perfringens</td><td>nb/g BB</td>
+            <td>&gt; 25 000</td><td>&gt; 3</td><td>25</td><td>&lt; 3</td><td>&gt; 25 000</td>
+            <td>250</td><td>250</td><td>&lt; 3</td><td>25</td><td>&lt; 3</td>
+          </tr>
+          <tr>
+            <td>Staphylocoques pathogènes</td><td>nb/g BB</td>
+            <td>&lt; 250</td><td>pas mesuré</td><td>&lt; 3</td><td>2 600</td><td>79 600</td>
+            <td>&lt; 25 000</td><td>&lt; 25 000</td><td>&lt; 2 500</td><td>&lt; 2 500</td><td>&lt; 2 500</td>
+          </tr>
+          <tr>
+            <td>Levures et moisissures</td><td>nb/g BB</td>
+            <td>210</td><td>pas mesuré</td><td>1 000</td><td>1 500</td><td>946</td>
+            <td>520</td><td>360</td><td>7 900</td><td>480</td><td>7 000</td>
+          </tr>
+          <tr>
+            <td>Coliformes totaux</td><td>nb/g MB</td>
+            <td>pas mesuré</td><td>2 550 000</td><td>93 000</td><td>100 000</td><td>1 375 000</td>
+            <td>275 000</td><td>125 000</td><td>2 525 000</td><td>34 000</td><td>275 000</td>
+          </tr>
+          <tr>
+            <td>Coliformes thermotolérants</td><td>nb/g MB</td>
+            <td>pas mesuré</td><td>380 000</td><td>16 000</td><td>13 000</td><td>23 000</td>
+            <td>19 000</td><td>32 000</td><td>2 525 000</td><td>32 000</td><td>250 000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Tableau 4.10</strong> — Analyse des éléments pathogènes en aval de l'hydrolyse thermique</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Paramètres microbiologiques<br>sur Boues et Solides</th>
+            <th rowspan="2">Unités</th>
+            <th colspan="10" style="text-align:center;">Numéro de l'échantillon</th>
+          </tr>
+          <tr>
+            <th style="text-align:center;">1</th>
+            <th style="text-align:center;">2</th>
+            <th style="text-align:center;">3</th>
+            <th style="text-align:center;">4</th>
+            <th style="text-align:center;">5</th>
+            <th style="text-align:center;">6</th>
+            <th style="text-align:center;">7</th>
+            <th style="text-align:center;">8</th>
+            <th style="text-align:center;">9</th>
+            <th style="text-align:center;">10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enterovirus</td><td>ufp/10g MS</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+          </tr>
+          <tr>
+            <td>Entérocoques</td><td>nb/g MB</td>
+            <td>0</td><td>25</td><td>NR</td><td>&lt; 250</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Micro-org. Revivifiables à 22°C</td><td>nb/g MB</td>
+            <td>68 000</td><td>pas mesuré</td><td>0</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>0</td><td>175</td><td>0</td>
+          </tr>
+          <tr>
+            <td>Micro-org. Revivifiables à 36°C</td><td>nb/g MB</td>
+            <td>91 000</td><td>pas mesuré</td><td>0</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>0</td><td>&lt; 25</td><td>0</td>
+          </tr>
+          <tr>
+            <td>Œufs d'helminthes</td><td>nb/10g MB</td>
+            <td>absence</td><td>absence</td><td>9</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>absence</td><td>0</td><td>absence</td>
+          </tr>
+          <tr>
+            <td>Listeria</td><td>nb/25g MB</td>
+            <td>0</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+            <td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td><td>aucun</td>
+          </tr>
+          <tr>
+            <td><em>E. coli</em> par microplaques</td><td>nb/g MB</td>
+            <td>&lt; 15</td><td>14</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td>
+            <td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td>
+          </tr>
+          <tr>
+            <td>Salmonelles</td><td>nb/10g MS</td>
+            <td>240</td><td>NR</td><td>&lt; 4</td><td>20</td><td>4</td>
+            <td>&lt; 4</td><td>&lt; 4</td><td>NR</td><td>9</td><td>4</td>
+          </tr>
+          <tr>
+            <td>Clostridium perfringens</td><td>nb/g BB</td>
+            <td>&lt; 3</td><td>3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+            <td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+          </tr>
+          <tr>
+            <td>Staphylocoques pathogènes</td><td>nb/g BB</td>
+            <td>&lt; 25</td><td>pas mesuré</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+            <td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Levures et moisissures</td><td>nb/g BB</td>
+            <td>0</td><td>pas mesuré</td><td>&lt; 5</td><td>&lt; 5</td><td>&lt; 5</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 3</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Coliformes totaux</td><td>nb/g MB</td>
+            <td>pas mesuré</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Coliformes thermotolérants</td><td>nb/g MB</td>
+            <td>pas mesuré</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Réduction des Entérocoques :</strong> La réduction des entérocoques n'est pas un paramètre requis par les réglementations. Sur l'échantillon 8, on passe d'un taux de 860 000 à moins de 25 nb/g MS ce qui est sous le seuil de détection et représente une réduction de 6 Log. Tous les éléments pathogènes de ce type présents dans la boue sont détruits.</p>
+
+    <p><strong>Réduction des E. coli :</strong> La réduction des E. coli varie de 4 à 7 Log. Tous les éléments pathogènes de ce type présents dans la boue sont détruits. Un abattement sur cet élément n'est pas requis aux US. Par contre, en UK, il est demandé un abattement supérieur à 6 Log ce qui est obtenu.</p>
+
+    <p><strong>Réduction des Salmonelles :</strong> La réduction des Salmonelles varie en moyenne de 3 log. Deux analyses portant sur les échantillons 2 et 8 donnent un résultat incohérent par rapport aux autres résultats d'analyse. Les causes potentielles sont soit un mauvais échantillonnage, soit une recontamination en laboratoire, soit un problème lors de l'analyse. À ces exceptions près, toutes les valeurs analysées sont sous les 3 NPP / 4 g MS. Ainsi, le critère fixé par la norme de l'US EPA est respecté. La réglementation anglaise impose que la boue n'ait plus aucune trace de ce pathogène (absence totale) ce qui est le cas.</p>
+
+    <p><strong>Réduction du <em>Clostridium perfringens</em> :</strong> Le <em>Clostridium perfringens</em> est l'élément pathogène le plus résistant à la température avec des parois cellulaires résistant jusqu'à 140 °C. Bien qu'il ne soit pas suivi par les réglementations, son abattement est synonyme d'un effet d'hygiénisation efficace du traitement. Sur les 10 échantillons, tous les éléments présents sont complètement détruits. La réduction se situe entre 1 à 4 log.</p>
+
+    <p><strong>Réduction des staphylocoques :</strong> Là encore il s'agit d'un élément non suivi par les réglementations. La réduction des staphylocoques des échantillons varie de 2 à 5 log. Tous les éléments présents sont complètement détruits.</p>
+
+    <p><strong>Réduction des œufs d'helminthes :</strong> On ne les trouve que rarement en Europe et bien plus souvent en Amérique latine. Les œufs d'helminthes ne sont pratiquement pas présents dans les échantillons mais les rares œufs sont bien détruits par le traitement thermique. La réglementation de l'US EPA impose une concentration inférieure à 1/4 g MS ce qui est atteint.</p>
+
+    <h3>4.3.3 Résultats du conditionnement des boues : déstructuration et préchauffage</h3>
+
+    <p>Sur la base du montage de la figure 4.4, les boues digérées à 27 % de siccité sont conditionnées en deux étapes à savoir un mixage à haute vitesse dans un mélangeur dynamique visant à déstructurer mécaniquement la boue puis un réchauffage à 40 °C via une injection de vapeur vive, avant de passer au travers d'un faisceau de tube de 1,5 mètre de longueur, en DN16.</p>
+
+    <p>Ce qui est recherché ici est l'évaluation et la vérification de l'effet cumulatif de chacune de ces étapes sur la viscosité de la boue et donc sur la perte de charge dans le faisceau.</p>
 
     <figure>
-      <img src="../images/Chap4/chap4_7.png" alt="Résultats performances échangeur"/>
-      <figcaption><strong>Figure 4.9</strong> — Performances mesurées de l'échangeur boue/boue</figcaption>
+      <img src="../images/Chap5/echangeur_result_prelim.png" alt="Résultats préliminaires sur un tube unique pour évaluer l'effet de la déstructuration et de la préchauffe sur la perte de charge"/>
+      <figcaption><strong>Figure 4.13</strong> — Résultats préliminaires sur un tube unique pour évaluer l'effet de la déstructuration et de la préchauffe sur la perte de charge</figcaption>
     </figure>
 
-    <figure>
-      <img src="../images/Chap4/chap4_8.png" alt="Bilan énergétique avec échangeur"/>
-      <figcaption><strong>Figure 4.10</strong> — Bilan énergétique avec échangeur boue/boue</figcaption>
-    </figure>
+    <p>À un débit de 66 l/h, la perte de charge initiale à travers le faisceau de tube est de 4 bar soit 2,66 bar/m. Dans les mêmes conditions, mixer la boue permet de diviser par deux cette perte de charge. On passe ainsi de 4 à 2 bar soit 1,33 bar/m. L'ajout de la vapeur pour amener la boue à 40 °C permet de passer de 2 à 1,1 bar soit 0,73 bar/m.</p>
+
+    <p>À un débit de 100 l/h, les effets sont identiques. La perte de charge initiale est de 5,2 bar, puis passe à 3,2 bar par l'action mécanique et à 1,9 bar une fois ajouté l'effet de la chaleur. Les deux effets mécaniques et thermiques sont cumulatifs quel que soit le débit.</p>
 
     <figure>
-      <img src="../images/Chap4/Waste_Heat_Boiler.png" alt="Principe du procédé avec chaudière de récupération"/>
-      <figcaption><strong>Figure 4.11</strong> — Principe du procédé avec récupération d'énergie par une chaudière de récupération vapeur</figcaption>
+      <img src="../images/Chap5/result_rheogramme.png" alt="Comparaison des rhéogrammes d'une boue que l'on vient destructurer puis destructurer et préchauffer à 40 °C"/>
+      <figcaption><strong>Figure 4.14</strong> — Comparaison des rhéogrammes d'une boue que l'on vient déstructurer puis déstructurer et préchauffer à 40 °C</figcaption>
     </figure>
 
-    <figure>
-      <img src="../images/Chap4/chap4_9.png" alt="Schéma procédé avec WHB"/>
-      <figcaption><strong>Figure 4.12</strong> — Schéma du procédé intégrant la chaudière de récupération (WHB)</figcaption>
-    </figure>
+    <p>Quelle que soit la contrainte de cisaillement appliquée, la viscosité des boues réagit de la même manière que le test <em>in-situ</em> précédent à savoir une diminution successive suivant les deux effets cumulés. Ces deux tests montrent que l'effet mécanique et l'effet thermique sont cumulatifs. Il est donc possible de diminuer la viscosité de la boue avant d'entrer dans un échangeur grâce à ces deux effets combinés.</p>
+
+    <h3>4.3.4 Résultats de l'échangeur pilote</h3>
+
+    <p>Pour rappel, le système mis en place pour permettre l'échange thermique est composé d'un mélangeur dynamique, pour assurer le cisaillement de la boue ainsi que le mélange avec la vapeur vive, et d'un échangeur tubes et calandre. La perte de charge amont-aval de l'échangeur côté tubes est suivie en continu. Le montage est testé suivant 3 modes de fonctionnement présentés à la figure 4.15.</p>
 
     <figure>
-      <img src="../Tableaux/Chap4/tableau19.png" alt="Tableau 4.4 — Bilan énergétique comparatif"/>
-      <figcaption><strong>Tableau 4.4</strong> — Bilan énergétique comparatif des configurations</figcaption>
+      <img src="../images/Chap5/echangeur_result1.png" alt="Fluctuation de la perte de charge de l'échangeur côté tubes en fonction de la température d'arrivée de la boue côté calandre selon 3 modes de démarrage"/>
+      <figcaption><strong>Figure 4.15</strong> — Fluctuation de la perte de charge de l'échangeur côté tubes en fonction de la température d'arrivée de la boue côté calandre selon 3 modes de démarrage</figcaption>
     </figure>
 
-    <figure>
-      <img src="../Tableaux/Chap4/chap4_14.png" alt="Tableau 4.5 — Résultats Class A"/>
-      <figcaption><strong>Tableau 4.5</strong> — Résultats de conformité Class A US EPA</figcaption>
-    </figure>
+    <p><strong><u>Lors de la première période</u> :</strong> la boue hydrolysée est orientée vers l'échangeur lorsqu'elle atteint une température minimale de 100 °C. Par la suite, cette température monte progressivement jusqu'à 160 °C une fois le procédé d'hydrolyse stabilisé. En fin de journée, de la 5<sup>ème</sup> à la 9<sup>ème</sup> heure de l'essai, la perte de charge varie de 1 à 1,7 bar.</p>
+
+    <p>Entre la 9<sup>ème</sup> et la 12<sup>ème</sup> heure, la perte de charge connaît un pic jusqu'à 3,5 bar avant de retomber et de se stabiliser autour de 2,3 bar entre la 12<sup>ème</sup> et la 20<sup>ème</sup> heure. Ces variations peuvent s'expliquer par le fait que le réseau amenant les boues hydrolysées chaudes à l'échangeur n'est pas calorifugé. Avec une isolation, la perte de charge devrait rester autour de 1–1,5 bar.</p>
+
+    <p><strong><u>Lors de la seconde période</u> :</strong> la boue est envoyée vers l'échangeur lorsqu'elle atteint la température de 170 °C. Contrairement à la première période, la température de la boue hydrolysée entrée calandre reste à une température constante de 140 °C. Dans ces conditions, la chute de pression se stabilise à 1,5 bar en journée puis remonte à 2 bar lorsque la température passe de 140 à 130 °C.</p>
+
+    <p><strong><u>Lors de la troisième période</u> :</strong> le procédé d'échange est démarré à la 57<sup>ème</sup> heure avec de la boue froide à 30 °C. La perte de charge observée amont-aval échangeur connaît un pic jusqu'à 5,3 bar soit le double de celle obtenue pour un faisceau unique de 2,5 bar. Ceci signifie que, comparé au test préliminaire sur un tube unique, la géométrie de l'échangeur, et notamment la section plate, double les pertes de charge. Une fois que les boues hydrolysées à la sortie du réacteur atteignent les 160 °C, la chute de pression retombe à 1 bar.</p>
+
+    <p>En faisant passer de la boue froide au travers l'échangeur en la déstructurant mécaniquement mais sans la chauffer immédiatement, la perte de charge monte à 5,5 bar. En extrapolant ce résultat sur la base des observations du test sur le faisceau de tube, sans déstructuration des boues, une perte de charge de plus de 10 bar pourrait se produire. Ce mode de fonctionnement n'est pas à recommander car, bien que transitoire, une montée en pression de plus de 10 bar aura un impact sur les équipements et les classes de tuyauterie.</p>
+
+    <p><strong><u>Les performances d'échange</u> :</strong> L'échangeur installé a une puissance de 8 kW. Le tableau 4.11 récapitule les mesures réalisées sur l'échangeur afin d'en déterminer les performances.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Tableau 4.11 — Estimation des performances de l'échangeur</caption>
+        <tbody>
+          <tr><td>Débit de boue fraîche</td><td>85 l/h</td></tr>
+          <tr><td>Capacité calorifique</td><td>4 kJ/kg.°C</td></tr>
+          <tr><td>T entrée du fluide côté tube</td><td>3 °C</td></tr>
+          <tr><td>T sortie du fluide côté tube</td><td>106 °C</td></tr>
+          <tr><td>Puissance récupérée</td><td>7,18 kW</td></tr>
+          <tr><td>Débit fluide secondaire</td><td>106,25 l/h</td></tr>
+          <tr><td>T entrée fluide secondaire</td><td>168 °C</td></tr>
+          <tr><td>T sortie fluide secondaire</td><td>107,18 °C</td></tr>
+          <tr><td>Puissance cédée</td><td>7,18 kW</td></tr>
+          <tr><td>Différence de température côté tubes</td><td>76 °C</td></tr>
+          <tr><td>Différence de température côté calandre</td><td>60,82 °C</td></tr>
+          <tr><td>Efficacité de l'échangeur</td><td>89,7 %</td></tr>
+          <tr><td>Coefficient d'échange global</td><td>209 W.m⁻².K⁻¹</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>L'échangeur permet de réchauffer la boue de 30 à 106 °C. Ce faisant, en préchauffant une boue à 27 % de siccité de 30 à 106 °C, la consommation de vapeur vive passe de 0,9 à 0,4 tonne de vapeur par tonne de matière sèche soit une consommation bien en deçà de tout autre procédé d'hydrolyse thermique. Ces résultats sont à considérer pour un échangeur non encrassé. La boue ayant un fort pouvoir encrassant, il conviendra d'effectuer des cycles automatiques de nettoyage pour maintenir une récupération d'énergie optimale.</p>
 
     <!-- ── Conclusion ─────────────────────────────────────────────── -->
     <div class="conclusion-block" id="sec-conclusion4">
-      <h3>Conclusions du chapitre 4</h3>
-      <h4>Concernant la Class A</h4>
-      <p>Les éléments pathogènes sont totalement détruits avec des performances pouvant atteindre 7 log. Le temps de séjour est d'au moins 20 minutes comme requis par la réglementation. L'homogénéité des températures, le temps de séjour respecté et l'abattement des éléments pathogènes confirment la conformité à la Class A de l'US EPA.</p>
-      <h4>Concernant l'échangeur</h4>
-      <p>L'échangeur boue/boue a fonctionné sans problème majeur. La configuration DLD couplée à cet échangeur permet de déshydrater les boues à 23–28 % de siccité, ce qui est comparatif ou supérieur aux procédés batch du marché. La consommation de vapeur passe de 0,9 à 0,5 t/t MS par rapport à une configuration LD classique.</p>
+      <h2>4.4 Conclusions</h2>
+
+      <h3>Concernant la Class A</h3>
+
+      <p>À l'exception de deux échantillons dont le résultat sur la salmonelle ne semble pas cohérent avec les autres séries d'analyses, les éléments pathogènes sont totalement détruits avec des performances pouvant aller jusqu'à 7 log. En ce sens, les performances d'hygiénisation correspondent à ce qui est attendu avec un procédé d'hydrolyse thermique.</p>
+
+      <p>Le temps de séjour du réacteur est inférieur à celui calculé en considérant le profil d'écoulement comme celui d'un flux piston. Ce phénomène pourrait s'expliquer par un écoulement tribologique des boues pâteuses (glissement avec un léger frottement) qui redevient rapidement laminaire une fois la boue cisaillée et chauffée (la boue liquide étant rhéofluidisante). Avec un rapport V<sub>max</sub>/V moyen de l'ordre de 1,8, l'écoulement s'approche d'un régime laminaire. Ceci aura un impact sur les futurs dimensionnements car pour être sûr que chaque particule de boue soit traitée pendant le temps souhaité, allant de 20 à 30 minutes, il faudra se baser sur la vitesse maximale. Ceci revient à dimensionner le réacteur continu sur un temps de séjour de 36 minutes, pour avoir 20 minutes minimum de traitement pour la particule traversant le plus rapidement le réacteur, soit 54 minutes, pour avoir 30 minutes de temps de réaction minimum sur cette même particule.</p>
+
+      <p>Les essais montrent que le temps de séjour est d'au moins 20 minutes comme demandé par la réglementation pour obtenir la « Class A ». Se pose la question de l'encrassement et du temps de séjour dans un réacteur encrassé diminuant d'autant le temps de séjour ainsi que le temps d'homogénéisation du réacteur horizontal de 2 heures. Il faudra donc revoir la géométrie du procédé de manière à éviter tout encrassement ou dépôt. Un réacteur entièrement vertical pourrait avoir un effet positif sur l'encrassement, sur l'homogénéité des températures ainsi que sur les déformations mécaniques.</p>
+
+      <p>Néanmoins, l'homogénéité des températures en régime stabilisé, le temps de séjour respecté et l'abattement de tous les éléments pathogènes amènent à considérer que ce procédé satisfait aux exigences réglementaires.</p>
+
+      <h3>Concernant l'échangeur</h3>
+
+      <p>Cet échangeur de chaleur standard a, dans des conditions pilotes, fonctionné sans problème majeur. Dans des conditions normales, à savoir une température de boue hydrolysée en entrée de calandre de 160 °C, la chute de pression est de 1 bar et le gain de température de 60 °C sur les boues digérées.</p>
+
+      <p>Avec une configuration DLD, il est possible de déshydrater les boues à 23–28 % de siccité. Cela signifie que, avec ou sans échangeur, la consommation de vapeur est égale ou inférieure aux autres procédés du marché. À l'inverse, avec une configuration LD, il est difficile de déshydrater les boues (notamment des boues biologiques) et, le plus souvent, les boues seront déshydratées à 18 % MS rendant le procédé moins compétitif en termes de consommation de vapeur.</p>
+
+      <p>La configuration LD couplée à cet échangeur devrait permettre de consommer 0,9 tonne de vapeur par tonne de matière sèche pour des boues à 16 % de siccité ce qui correspond aux consommations vapeur d'un procédé récupérant de la vapeur de revaporisation. La grande interrogation reste le comportement d'une telle solution à échelle réelle.</p>
+
+      <p>Une alternative technique possible consisterait à utiliser une chaudière de récupération afin de générer de la vapeur basse pression en récupérant l'énergie des boues hydrolysées.</p>
+
+      <p>Au final, le procédé global pourrait être tel que schématisé à la figure 4.16. Ainsi, la boue [1] arrive dans une trémie d'alimentation [2] avant d'être reprise par une pompe [3] venant alimenter un réseau basse pression. La boue traverse ce réseau sur lequel se trouve un mélangeur dynamique [4] recevant de la vapeur basse pression [15] issue de la chaudière de récupération à environ 3 bar. Une fois mélangée avec cette vapeur, la boue alimente une trémie tampon [6]. La boue préchauffée est ensuite reprise par la pompe [7] venant alimenter le procédé d'hydrolyse et montée à 9 bar. La boue préchauffée est amenée à 165 °C par un ajout de vapeur vive [9] dans le mélangeur dynamique [8] avant de rentrer dans le réacteur [11] via la canalisation [10] pour assurer le temps de séjour. En sortie du réacteur, la boue hydrolysée via la canalisation [12] passe alors au travers de la chaudière de récupération et échange sa chaleur avec un serpentin alimenté en eau déminéralisée et produisant la vapeur basse pression. En sortie de la chaudière de récupération, la boue hydrolysée est reprise par la pompe [16] de maintien de pression pour alimenter le digesteur [17].</p>
+
+      <figure>
+        <img src="../images/Chap4/Waste_Heat_Boiler.png" alt="Principe du procédé avec récupération d'énergie par une chaudière de récupération vapeur"/>
+        <figcaption><strong>Figure 4.16</strong> — Principe du procédé avec récupération d'énergie par une chaudière de récupération vapeur</figcaption>
+      </figure>
+
+      <p>Cette proposition permettrait de préchauffer les boues entrantes par l'énergie récupérée lors du refroidissement des boues sortantes. Cette solution permet, tout comme avec l'utilisation d'un flash tank recirculant de la vapeur de revaporisation, de récupérer de l'énergie en boucle. La consommation d'énergie du procédé continu est ainsi optimisée et indépendante de la siccité des boues.</p>
     </div>
 
     <div class="page-nav">
       <a href="chap3.html"><span class="arrow">←</span> Chapitre 3</a>
-      <a href="concl.html"><span class="arrow">→</span> Conclusion générale</a>
+      <a href="concl.html">Conclusion générale <span class="arrow">→</span></a>
     </div>
 
   </div>

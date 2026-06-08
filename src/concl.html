@@ -11,7 +11,7 @@
   <div class="chapter-page">
 
     <div class="breadcrumb">
-      <a href="../../index.html">Accueil</a><span>›</span>
+      <a href="../index.html">Accueil</a><span>›</span>
       <a href="toc.html">Table des matières</a><span>›</span>
       Conclusion générale
     </div>
@@ -20,59 +20,90 @@
 
     <p>Ce travail avait pour objectif de <strong>concevoir un procédé innovant d'hydrolyse thermique fonctionnant en continu</strong> et de valider ses performances de traitement.</p>
 
-    <p>Pour ce faire, une phase d'étude de l'injection de vapeur haute vitesse et des mécanismes de sa condensation au sein d'un fluide viscoplastique a été menée à l'aide d'outils de simulations numériques. Pour accompagner ces simulations, calibrer le modèle puis valider expérimentalement les conclusions ainsi que les performances de traitement, une unité pré-industrielle permettant de traiter une quantité de boue équivalente à une usine de 15 000 habitants a été construite.</p>
+    <p>Pour ce faire, une phase d'étude de l'injection de vapeur haute vitesse et des mécanismes de sa condensation au sein d'un fluide viscoplastique a été menée à l'aide d'outils de simulations numériques. Pour accompagner ces simulations, calibrer le modèle puis valider expérimentalement les conclusions des simulations ainsi que les performances de traitement, une unité pré-industrielle permettant de traiter une quantité de boue équivalente à une usine de traitement d'eau de 15 000 habitants a été construite.</p>
 
-    <h2>Bilan des résultats</h2>
+    <p>Différentes problématiques ont été étudiées, testées et solutionnées de manière à créer un procédé fiable puis à valider plusieurs points clés.</p>
 
-    <h3>Sur la modélisation de l'injection de vapeur</h3>
-    <p>Le procédé a été modélisé sous Fluent en deux parties : une partie verticale pour l'injection et la condensation de la vapeur, et une partie horizontale pour le temps de traitement.</p>
-    <p>Le modèle de la colonne sous-estime la température de l'ordre de 25 % par rapport aux valeurs expérimentales. Malgré cet écart, il a pu être utilisé qualitativement pour étudier et comparer différentes configurations d'injecteur vapeur. Les résultats ont indiqué une dynamique de vapeur sous forme de poches et une condensation imparfaite illustrée par une sortie de vapeur en tête de colonne.</p>
-    <p>Le modèle du réacteur horizontal a mis en évidence un phénomène de stratification thermique vertical de l'ordre de 10 à 15 °C, corroboré expérimentalement (40–80 °C mesuré sur le pilote).</p>
+    <p>Le principal point concernait donc l'injection et la condensation de la vapeur au sein d'un fluide non newtonien, à savoir de la boue. L'injection de vapeur à haute vitesse dans une boue concentrée ainsi que les phénomènes d'évaporation-condensation se sont révélés très complexes à modéliser et ne font l'objet d'aucun état de l'art.</p>
 
-    <h3>Sur le système d'injection de vapeur</h3>
-    <p>Les simulations et observations ont montré que les systèmes statiques d'injection de vapeur ne pouvaient pas répondre aux besoins. Le choix d'un <strong>mélangeur dynamique</strong> s'est imposé. Sa validation expérimentale a été assurée par :</p>
-    <ul>
-      <li>La montée en température progressive et homogène du réacteur,</li>
-      <li>L'élimination des gradients thermiques Nord/Sud (40–80 °C en canne statique → homogène avec mélangeur dynamique).</li>
-    </ul>
-    <p>De plus, le mélangeur dynamique permet de ne plus être limité par la siccité des boues entrantes, et facilite l'extrapolation à l'échelle industrielle sans recalcul du design.</p>
+    <p>Pour aborder et mieux cerner les phénomènes physiques et le comportement attendu du procédé, une approche basée sur des modélisations numériques a été mise en œuvre afin de décrire au mieux ces phénomènes. Le procédé a été modélisé sous Fluent en deux parties, une partie verticale pour l'injection et la condensation de la vapeur et une partie horizontale pour le temps de traitement.</p>
 
-    <h3>Sur les performances de l'hydrolyse — Configuration DLD</h3>
-    <ul>
-      <li>Rendement d'abattement des MV : 68 % (vs 58 % en configuration LD classique)</li>
-      <li>Solubilisation de la DCO particulaire : 28 %</li>
-      <li>Augmentation de la production de biogaz : +26 %</li>
-    </ul>
+    <p>Concernant la colonne d'injection de vapeur, la confrontation des données obtenues par le modèle à celles obtenues expérimentalement sur l'unité pré-industrielle a montré que le modèle établi sous-estime la température dans la colonne de l'ordre de 25 % par rapport aux valeurs expérimentales. Malgré cet écart, le modèle a pu être utilisé qualitativement pour étudier et comparer différentes configurations d'injecteur vapeur. Les résultats des simulations ont indiqué une dynamique de vapeur sous forme de poches et une condensation imparfaite illustrée par une sortie de vapeur en tête de la colonne.</p>
 
-    <h3>Sur l'hygiénisation — Certification Class A</h3>
-    <p>Le traçage hydraulique a révélé un ratio V<sub>max</sub>/V moyen de l'ordre de 1,8 pour la boue, proche d'un régime laminaire. Après un traitement à 165 °C pendant au moins 20 minutes, tous les éléments pathogènes sont détruits (abattements jusqu'à 7 log). Les critères de la Class A de l'US EPA sont respectés.</p>
+    <p>Concernant le réacteur d'hydrolyse thermique, les résultats obtenus par les simulations ont mis en évidence un phénomène de stratification thermique vertical de l'ordre de 10 à 15 °C, ceci malgré l'inclinaison du réacteur et la mise en place d'ailettes internes. Ce phénomène est également mis en évidence expérimentalement par les sondes de température de l'unité pré-industrielle avec un ordre de grandeur plus important (40–80 °C).</p>
 
-    <h3>Sur la récupération d'énergie</h3>
-    <p>Un système d'échangeur boue/boue a été mis en œuvre avec succès. La consommation de vapeur du procédé continu passe de 0,9 à 0,5 t vapeur / t MS, ce qui le rend compétitif avec les procédés batch du marché.</p>
+    <p>Le développement de ces deux modèles permet alors, moyennant les précisions énoncées, d'étudier le comportement du procédé à échelle industrielle ayant un diamètre en DN 450. Les résultats obtenus à cette échelle se sont avérés cohérents avec l'échelle pilote, à savoir une dispersion de la vapeur sous forme de poches au sein de la colonne et un phénomène de remontée directe de la vapeur au centre de la colonne d'injection.</p>
 
+    <p>Lors des simulations à l'échelle pilote et industrielle, il est apparu que la présence de poches de vapeur jusqu'en tête de colonne impliquait qu'il faille optimiser cette injection vapeur. Ceci a été corroboré avec les observations issues du pilote et a mené à la refonte du système d'injection. Au final, le système d'injection statique de vapeur a été remplacé avec succès par un combiné injecteur vapeur – mélangeur dynamique.</p>
+
+    <p>La solution consistant à remplacer l'injecteur statique par un combiné injecteur–mélangeur dynamique a été validée expérimentalement par la montée en température progressive du réacteur et l'homogénéité des températures qui a ainsi pu être obtenue.</p>
+
+    <p>De plus, l'emploi d'un tel dispositif pour injecter la vapeur permet de ne plus se soucier de questions liées à l'homothétie du design d'un injecteur simple et de l'homogénéité des températures, notamment lors d'un changement de taille du réacteur. Il permet aussi de ne plus être limité par la siccité des boues entrantes qui était un point limitant de ces technologies car limitant les transferts de vapeur du fait de leur viscosité.</p>
+
+    <p>L'homogénéité des températures étant obtenue, les performances de l'hydrolyse ainsi que celle de la configuration DLD (Digestion Lyse Digestion) en termes d'abattement de la matière organique et de production de biogaz ont pu être validées. Cette configuration DLD présente de meilleures performances d'abattement que dans le cas d'une configuration classique dite LD. Ainsi, on passe d'un rendement d'abattement des MV en LD de 58 % à un rendement en DLD de 68 % ce qui correspond à une diminution de boue de 10 %. La solubilisation de 28 % de la DCO particulaire a permis une augmentation de 26 % de la quantité de biogaz.</p>
+
+    <p>Au-delà de la réduction du volume des boues, de la réduction de la taille du digesteur, de l'augmentation de la production de biogaz, c'est aussi l'effet d'hygiénisation qui est apprécié et recherché lors de l'installation d'une hydrolyse. Ainsi, pour prouver les performances d'hygiénisation, en plus de l'homogénéité de températures du réacteur, il a fallu mettre en œuvre des mesures et un protocole pour déterminer le temps de séjour hydraulique réel du fluide et réaliser une campagne d'analyses bactériologiques.</p>
+
+    <p>La mise en place d'un traçage hydraulique a permis de caractériser le régime d'écoulement de la boue au sein du réacteur qui, contrairement à ce qui était initialement considéré, n'était pas un flux piston mais se rapprochait d'un écoulement laminaire avec un profil de vitesse parabolique ayant un ratio V<sub>max</sub>/V de 1,8.</p>
+
+    <p>La campagne d'analyses a pu démontrer les excellentes performances d'abattements des éléments pathogènes. Après un traitement à 165 °C pendant au moins 20 minutes, tous ces éléments sont détruits avec des abattements pouvant atteindre 7 log.</p>
+
+    <p>Homogénéité des températures, temps de séjour hydraulique respecté et intégralité des éléments pathogènes détruits concluent à la bonne performance d'hygiénisation du procédé et au respect des critères d'hygiénisation d'une réglementation restrictive telle que la « Class A » de l'US EPA. De facto, les performances d'hygiénisation sont respectées en Europe.</p>
+
+    <p>La configuration étudiée lors des essais expérimentaux du procédé était celle dite DLD (Digestion – Lyse – Digestion) permettant d'augmenter la production de biogaz nette. Après digestion, les boues sont plus facilement déshydratables, au-delà de 20 % de siccité, mais dans une configuration classique Lyse–Digestion, les boues sont généralement déshydratables jusqu'à 18 %. Dès lors, le fait de ne pas récupérer de vapeur flash réduit la production de biogaz nette d'où l'intérêt d'une récupération d'énergie pour préchauffer les boues en entrée.</p>
+
+    <p>Un système d'échangeur boue/boue a été mis en œuvre avec succès. Il est donc possible de récupérer et de réinjecter en continu de l'énergie dans le procédé. Ceci est rendu possible par l'action combinée d'une destruction mécanique de la boue et d'un préchauffage de la boue. La question de la mise à l'échelle industrielle reste cependant ouverte. Au final, un nouveau procédé d'hydrolyse thermique a été conçu présentant une grande flexibilité en termes de débit et de charges traitées, bien moins complexe que les procédés fonctionnant par bâchées, tout en diminuant la consommation énergétique de 0,9 à 0,5 tonnes de vapeur par tonnes de matière sèche.</p>
+
+    <!-- ── Perspectives ───────────────────────────────────────────── -->
     <h2>Perspectives</h2>
 
-    <h3>Au niveau technologique</h3>
-    <p>Il faudra maintenir une veille technologique dans l'optique d'améliorer la fiabilité et la consommation d'énergie du procédé :</p>
-    <ul>
-      <li>Amélioration du système d'injection de vapeur — <strong>vannes d'injection vapeur</strong> adaptées aux fluides à haute viscosité (alternative au mélangeur dynamique, qui est un élément tournant nécessitant maintenance),</li>
-      <li>Optimisation de la récupération d'énergie — <strong>chaudière de récupération</strong> (Waste Heat Boiler) pour produire de la vapeur basse pression à partir des boues hydrolysées chaudes,</li>
-      <li>Évolution de la géométrie du réacteur vers un réacteur entièrement vertical pour améliorer l'homogénéité des températures et réduire les risques d'encrassement,</li>
-      <li>Application du mélangeur dynamique aux procédés batch existants pour améliorer leurs performances d'injection vapeur.</li>
-    </ul>
+    <p>Le développement de cette technologie d'hydrolyse thermique en continu représente une avancée dans le domaine du traitement des boues mais n'est pas en soi une finalité car de nombreuses perspectives restent à étudier tant du point de vue <strong>technologique</strong> que <strong>réglementaire</strong>.</p>
 
-    <h3>Au niveau réglementaire</h3>
-    <p>La validation de la Class A US EPA a été démontrée à l'échelle pré-industrielle. La prochaine étape est de confirmer ces performances à l'<strong>échelle industrielle réelle</strong>, avec des débits et des configurations de réacteurs plus importantes. Des questions d'encrassement et d'évolution du temps de séjour sur le long terme restent ouvertes.</p>
+    <h3>Au niveau technologique</h3>
+
+    <p>Il faudra maintenir une veille technologique dans l'optique d'améliorer la fiabilité et la consommation d'énergie du procédé en améliorant davantage l'injection de la vapeur ainsi que la récupération d'énergie. De plus, il serait intéressant d'appliquer l'utilisation d'un mélangeur dynamique aux procédés fonctionnant par bâchées.</p>
+
+    <p><strong>Concernant l'injection vapeur</strong>, il est apparu lors de la réalisation de ce travail que les systèmes statiques d'injection de vapeur vive ne pouvaient répondre à nos besoins. C'est ainsi que le choix d'utiliser un mélangeur dynamique s'est imposé. Le mélangeur dynamique a donné satisfaction cependant c'est un élément tournant qui consomme une certaine quantité d'électricité et qui nécessite une maintenance synonyme d'arrêts de production.</p>
+
+    <p>Les vannes d'injection vapeur sont déjà utilisées pour la montée en température de fluide non visqueux. Ces équipements seront amenés à évoluer et à s'adapter à des fluides à haute viscosité tels que la boue. Un modèle ayant été développé, il sera alors intéressant de simuler puis tester les performances de transfert d'une telle vanne sur une installation réelle et de pouvoir les comparer avec celles d'un mélangeur dynamique.</p>
+
+    <p><strong>Concernant la recherche de l'amélioration de l'efficacité énergétique du procédé</strong>, des échangeurs à surface raclée ont été envisagés mais ils n'ont pas été retenus car leur conception ne leur permettait pas d'accepter des pressions de plus de 10 bar côté tubes et côté calandre ce qui était insuffisant pour les besoins du procédé.</p>
+
+    <p>Ces équipements seront probablement amenés à évoluer. Un échangeur de ce type résistant à 25 bar permettrait de se passer d'un mélangeur dynamique et de la consommation de vapeur vive de préchauffage de la solution d'échange retenue lors de ce développement.</p>
+
+    <p>Toujours d'un point de vue de la technologie, il devrait être possible <strong>d'appliquer le mode d'injection développé dans cette recherche à une technologie fonctionnant par bâchée</strong>.</p>
+
+    <p>Les procédés d'hydrolyse thermique fonctionnant par bâchés ont une consommation de vapeur vive directement liée à la siccité de la boue en entrée. La siccité en entrée des procédés est actuellement limitée à 16 % voire 18 % de siccité car la vapeur basse pression doit pouvoir être injectée et la boue préchauffée doit pouvoir être pompée.</p>
+
+    <p>Il est apparu lors de ces travaux que l'utilisation d'un mélangeur dynamique permettait d'injecter de la vapeur sans limitation de siccité et d'homogénéiser le mélange boue-vapeur. Il serait intéressant d'appliquer ce mode d'injection à ces procédés fonctionnant par bâchés pour permettre une injection de cette vapeur basse pression et obtenir directement une boue à température homogène quelle que soit la siccité. L'augmentation de la siccité rendue ainsi possible combinée à la récupération d'énergie de la vapeur de revaporisation pourraient permettre d'optimiser la consommation énergétique globale tout en optimisant leur dimensionnement.</p>
+
+    <h3>Les réglementations et les nouvelles préoccupations environnementales</h3>
+
+    <p>Les réglementations seront amenées à évoluer pour prendre en compte de nouvelles préoccupations environnementales. L'hydrolyse thermique pourrait être une technologie clé des nouvelles considérations environnementales émergentes. Deux domaines semblent particulièrement pertinents pour l'hydrolyse thermique à savoir : <strong>la récupération du phosphore</strong> et <strong>les micro-plastiques</strong>.</p>
+
+    <p><strong>Le phosphore</strong> est principalement issu de mines situées en Chine, aux USA, au Maroc et en Finlande. Le phosphore consommé en Europe est donc majoritairement importé.</p>
+
+    <p>La Suisse, l'Allemagne et l'Autriche ont modifié leur législation afin de promouvoir la récupération du phosphore présent dans les boues de station d'épuration. La récupération du phosphore dans les boues est un sujet soutenu par le « European Sustainable Phosphorus Plateform ». Cette récupération matière est donc potentiellement amenée à se généraliser.</p>
+
+    <p>Actuellement, la récupération du phosphore est réalisable sur des boues digérées mais avec des rendements relativement faibles compris entre 10 % et 30 %. Ces 10 à 30 % correspondent à la fraction du phosphore total arrivant dans le digesteur qui vont se solubiliser au sein de ce même digesteur en PO<sub>4</sub><sup>3−</sup>. De plus, une fraction de ce PO<sub>4</sub><sup>3−</sup> va précipiter dans le digesteur et ne sera donc pas récupérable. Ces faibles rendements ne permettent pas de rendre économiquement viable cette valorisation même en l'optimisant via l'ajout d'un traitement complémentaire chimique et/ou biologique.</p>
+
+    <p>Il est connu que l'hydrolyse thermique solubilise une partie du phosphore. Cependant, il serait intéressant d'étudier à quel pH la réaction d'hydrolyse thermique permettrait un relargage optimal du phosphore et l'impact sur les autres éléments dont l'ammoniac, le soufre et la DCO. Une hydrolyse à bas pH par ajout d'acide sulfurique dans la boue permettrait potentiellement de minéraliser la boue et de solubiliser davantage de phosphore. En sortie d'hydrolyse, il sera nécessaire d'ajouter une base pour remonter le pH et précipiter le phosphore. Ceci reste à étudier.</p>
+
+    <p><strong>Les micro-plastiques</strong> dans l'environnement interpellent depuis longtemps mais ils sont une nouvelle source de préoccupation en sortie de station d'épuration. Sont considérés comme micro-plastiques tout fragment plastique d'une taille inférieure à 5 mm.</p>
+
+    <p>Des études ont estimé que le taux de captation de ces micro-plastiques par les procédés de traitement d'eau actuels atteignait jusqu'à 99 %. Ces micro-plastiques se retrouvent inévitablement dans les boues. Une fois déshydratées, si elles ne sont pas incinérées, ces boues retournent dans l'environnement avec leur charge polluante en micro-plastiques.</p>
+
+    <p>Il serait intéressant d'étudier le devenir de ces micro-plastiques lorsqu'ils passent au travers une hydrolyse thermique ce qui nécessiterait aussi de définir des méthodes d'analyse de ces composés plastiques dans une matrice boue à haute siccité. Plusieurs pH, temps de contact et températures pourraient être considérés. Il faudrait aussi s'assurer que ce plastique dégradé ne forme pas de composés toxiques.</p>
 
     <div class="conclusion-block" style="margin-top:48px;">
       <h3>En synthèse</h3>
-      <p>Au final, un nouveau procédé d'hydrolyse thermique continue a été conçu, présentant une grande flexibilité en termes de débit et de charges traitées, bien moins complexe que les procédés fonctionnant par bâchées, tout en diminuant la consommation énergétique de <strong>0,9 à 0,5 t vapeur / t MS</strong>.</p>
-      <p>Ce procédé satisfait aux exigences réglementaires les plus strictes (Class A US EPA) et ouvre la voie à des applications industrielles d'hydrolyse thermique continue dans le traitement des boues urbaines.</p>
+      <p>L'hydrolyse thermique permet de diminuer les quantités de boue, d'améliorer la siccité finale des boues augmentant leur pouvoir calorifique, d'optimiser la récupération d'énergie en produisant du biogaz, de favoriser la récupération du phosphore.</p>
+      <p>Il est fort probable que les futures filières de traitement des boues soient alors composées d'une hydrolyse thermique, d'un digesteur et d'une incinération pour assurer l'élimination des micro-plastiques et autres polluants tels que les perturbateurs endocriniens ainsi qu'une élimination totale de la boue. Ceci est d'autant plus probable que ces deux procédés sont complémentaires dans le sens où l'énergie récupérée sur les fumées de l'incinérateur peut couvrir les besoins thermiques de l'hydrolyse.</p>
     </div>
 
     <div class="page-nav">
       <a href="chap4.html"><span class="arrow">←</span> Chapitre 4</a>
-      <a href="annexe.html"><span class="arrow">→</span> Annexes</a>
+      <a href="annexe.html">Annexes <span class="arrow">→</span></a>
     </div>
 
   </div>

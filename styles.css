@@ -391,6 +391,12 @@ figure {
   text-align: center;
 }
 
+figure.fig-std {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 figure img {
   max-width: 100%;
   border-radius: var(--radius);
@@ -580,5 +586,151 @@ h1.landing-title em { color: var(--accent-pale); font-style: italic; }
   .page-nav a {
     text-align: center;
     justify-content: center;
+  }
+}
+
+/* ── Sidebar footer / PDF button ───────────────────────────────────────── */
+.sidebar-footer {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.btn-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 9px 14px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent-pale);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-pdf:hover {
+  background: rgba(74, 144, 217, 0.14);
+  color: #fff;
+  border-color: var(--accent-hover);
+}
+
+/* ── Print / PDF ────────────────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 22mm 20mm;
+  }
+
+  /* Hide chrome */
+  #sidebar,
+  #menu-toggle,
+  .page-nav,
+  .breadcrumb,
+  .sidebar-footer { display: none !important; }
+
+  /* Reset layout */
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10.5pt;
+    line-height: 1.65;
+    display: block;
+  }
+
+  #main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    min-height: unset;
+  }
+
+  .chapter-page { max-width: 100%; }
+
+  /* Headings */
+  .chapter-label { color: #555 !important; }
+
+  h1.chapter-title,
+  h1.landing-title {
+    color: #111 !important;
+    border-bottom-color: #bbb !important;
+    font-size: 18pt;
+  }
+
+  h2 {
+    color: #111 !important;
+    border-bottom-color: #bbb !important;
+    font-size: 13pt;
+    page-break-after: avoid;
+  }
+
+  h3 { color: #222 !important; font-size: 11pt; page-break-after: avoid; }
+  h4 { color: #333 !important; font-size: 10.5pt; page-break-after: avoid; }
+
+  /* Body text */
+  p, li { color: #111 !important; orphans: 3; widows: 3; }
+  strong { color: #000 !important; }
+  a { color: #111 !important; text-decoration: none !important; }
+
+  /* Tables */
+  .table-wrapper {
+    border: none !important;
+    overflow: visible;
+    page-break-inside: avoid;
+  }
+
+  table { width: 100%; font-size: 9pt; }
+
+  caption {
+    background: #f4f4f4 !important;
+    color: #333 !important;
+    border-bottom-color: #ccc !important;
+  }
+
+  th {
+    background: #eee !important;
+    color: #000 !important;
+    border-bottom-color: #bbb !important;
+    font-size: 8pt;
+  }
+
+  td {
+    color: #111 !important;
+    border-bottom-color: #ddd !important;
+  }
+
+  tr:last-child td { border-bottom: 0.5pt solid #ddd !important; }
+  tbody tr:hover { background: none !important; }
+
+  /* Figures */
+  figure { page-break-inside: avoid; margin: 16px 0; }
+  figure img { border: 0.5pt solid #ccc !important; max-width: 100%; }
+  figcaption { color: #555 !important; }
+
+  /* Equations */
+  .equation { color: #111 !important; }
+  .equation-block {
+    background: #f8f8f8 !important;
+    border-color: #ccc !important;
+    color: #111 !important;
+  }
+  .eq-number { color: #555 !important; }
+
+  /* Conclusion / callout blocks */
+  .conclusion-block,
+  .callout {
+    background: #f8f8f8 !important;
+    border-color: #bbb !important;
+    color: #111 !important;
+  }
+  .conclusion-block h3 { color: #333 !important; }
+
+  /* Fig rows */
+  .fig-row {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
