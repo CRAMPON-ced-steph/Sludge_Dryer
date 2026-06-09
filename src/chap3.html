@@ -1071,46 +1071,1061 @@
 
 <div class="en-block">
   <div class="chapter-page">
+
     <div class="breadcrumb">
       <a href="../index.html">Home</a><span>›</span>
       <a href="toc.html">Table of contents</a><span>›</span>
       Chapter 3
     </div>
+
     <span class="chapter-label">Chapter 3</span>
-    <h1 class="chapter-title">Experimental validation of the process</h1>
+    <h1 class="chapter-title">Experimental Validations of the Process</h1>
 
-    <p>This chapter presents the experimental validation of the continuous thermal hydrolysis process on a pre-industrial pilot unit. Three years of operation provided data to validate the process design choices made from numerical modelling, characterise the DLD configuration performance, and confirm the hygienisation capabilities.</p>
+    <p>In parallel with the theoretical approach based on numerical modelling of evaporation-condensation phenomena, a pre-industrial unit has been designed and built.</p>
 
-    <h2 id="sec-pilote">3.1 Presentation of the pre-industrial unit</h2>
-    <p>The pre-industrial unit was designed to process sludge quantities equivalent to a 15,000 population-equivalent wastewater treatment plant. It was installed on an operating wastewater treatment plant in the Île-de-France region, allowing tests with real sludge under representative conditions.</p>
-    <h3 id="sec-dimensionnement">3.1.1 Sizing of the experimental installation</h3>
-    <p>The pilot unit comprises: a sludge feed system, a steam injection column (DN65), a horizontal hydrolysis reactor (DN150, 4 m), two heat exchangers, and instrumentation (temperature, pressure, flow sensors). The unit was designed to operate at 160–180 °C and 6–10 bar with sludge dryness of 8–16%.</p>
-    <h3 id="sec-configurations">3.1.2 Process configurations including thermal hydrolysis</h3>
-    <p>Three configurations were tested: Lysis–Digestion (LD), Digestion–Lysis (DL), and Digestion–Lysis–Digestion (DLD). The DLD configuration, with pre-digestion followed by hydrolysis and post-digestion, showed the best overall performance in terms of biogas production and volatile solids reduction.</p>
+    <p>This pre-industrial unit has three main objectives. It must enable:</p>
+    <ul>
+      <li>Feeding data into the numerical model of Chapter 2 in order to calibrate it as accurately as possible, to verify and validate the gap between the model and experimental reality.</li>
+      <li>Measuring the external temperatures of the reactor and comparing them with the internal fluid temperatures in order to model potential deformations of the reactor and thereby validate its geometry.</li>
+      <li>Validating the new principle of a configuration known as DLD (Digestion – Lysis – Digestion). This involves operating the unit to ensure that all the parameters of the hydrolysis and digestion are suitable, and ultimately that the overall mass balance of the hydrolysis process and the DLD configuration corresponds to what is expected.</li>
+    </ul>
 
-    <h2 id="sec-methodes">3.2 Materials and methods</h2>
-    <h3 id="sec-evapocondensation">3.2.1 Verification of steam evaporation-condensation</h3>
-    <p>The transition from static injector to dynamic mixer was validated by temperature profile monitoring across the reactor. Sixteen temperature probes along the reactor length confirmed homogeneous temperature distribution with the dynamic mixer.</p>
-    <h3 id="sec-deformations">3.2.2 Modelling of reactor deformations</h3>
-    <p>Thermal expansion of the reactor under operating conditions was modelled and measured. Differential expansion between the inner tube and outer shell required flexible connections and specific mechanical design to prevent leaks and mechanical stress.</p>
-    <h3 id="sec-validation-dld">3.2.3 Validation of the DLD configuration</h3>
-    <p>DLD configuration validation was performed through: sludge characterisation (volatile solids, COD, dewaterability), biogas production measurements, and bacteriological analysis. Hydraulic tracer studies (sodium chloride) characterised the actual residence time distribution.</p>
+    <!-- ── Section 3.1 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-pilote">3.1 Presentation of the Pre-Industrial Unit</h2>
 
-    <h2 id="sec-resultats">3.3 Results and discussion</h2>
-    <h3 id="sec-temperatures">3.3.1 Temperature monitoring</h3>
-    <p>With the dynamic mixer, temperature homogeneity across the reactor cross-section was achieved within ±3 °C, compared to ±40–80 °C with the static injector. This validated the dynamic mixer as the key enabling technology for uniform thermal treatment.</p>
-    <h3 id="sec-deformation-resultats">3.3.2 Reactor deformation</h3>
-    <p>Measured thermal deformations were consistent with the mechanical model predictions. The flexible connection system successfully accommodated the differential expansion without mechanical failure over three years of operation.</p>
-    <h3 id="sec-performances-dld">3.3.3 Process performance in the DLD configuration</h3>
-    <p>The DLD configuration delivered: 28% solubilisation of particulate COD; 68% volatile solids reduction (vs. 58% for LD); +26% biogas production; sludge dewaterability above 20% dry solids after digestion. Hydraulic tracing revealed a laminar flow profile with V<sub>max</sub>/V = 1.8, not plug flow as initially assumed.</p>
+    <p>The pre-industrial unit is designed to be entirely autonomous from the wastewater treatment plant (WWTP) on which it is located. The only interactions between the unit and the plant are fluid and gas exchanges. A quantity of primary sludge and biological sludge are extracted separately before being mixed in order to maintain their respective proportions constant in the mixture regardless of the plant's sludge production. The biogas produced by the unit is re-injected into the plant's gas holder after online analysis. Also noteworthy is the use of drinking water for the steam generator as well as industrial water consumption to ensure dilution of the hydrolysed sludge before injection into the digester.</p>
 
-    <h2 id="sec-conclusion">3.4 Conclusion</h2>
-    <p>The use of a dynamic mixer for steam injection eliminates concerns related to injector geometry scaling and temperature homogeneity, as well as the dryness limitation that was the key constraint of static injection technologies. It also limits thermal gradients within the reactor, positively impacting mechanical stresses and limiting deformations due to reactor thermal expansion.</p>
-    <p>The pilot plant monitoring validated the DLD configuration advantage in terms of organic matter reduction and biogas production, and confirmed the long-term effectiveness of continuous hydrolysis COD solubilisation at an average of 28%. The DLD configuration achieved 68% organic matter reduction — an improvement over the classical LD configuration's maximum of ~58% — and increased biogas production by over 25% while reducing dry matter output proportionally.</p>
+    <p>The pre-industrial unit shown in Figure 3.1 has the capacity to treat the sludge produced by a wastewater treatment plant serving 15,000 people (or population equivalents).</p>
+
+    <figure id="en-fig-unite">
+      <img src="../images/Chap3/vue_installation2.jpg" alt="Overview of the pre-industrial experimental unit"/>
+      <figcaption><strong>Figure 3.1</strong> — Overview of the pre-industrial experimental unit</figcaption>
+    </figure>
+
+    <p>This pre-industrial research unit is composed of:</p>
+    <ul>
+      <li>Two digesters, of 150 m³ at [1] and 50 m³ at [2] respectively, shown in Figure 3.1,</li>
+      <li>2 sludge storage tanks of 20 m³ at [3], shown in Figure 3.1,</li>
+      <li>A centrifuge at [4a] and its polymer preparation workshop at [4b], shown in Figure 3.3,</li>
+      <li>A 4 m³ buffer hopper at [5], Figure 3.1,</li>
+      <li>The vertical section of the thermal hydrolysis process acting as a condenser at [6a], Figure 3.1,</li>
+      <li>The horizontal section of the process serving as a reactor, also shown at [6b], Figures 3.1 and 3.2,</li>
+      <li>A cooling heat exchanger at [6c], located at the reactor [6b] outlet, together with an industrial dilution water addition point at [6d] upstream of the exchanger, Figure 3.2,</li>
+      <li>At [7], an electric steam generator capable of producing steam at 13 bar for the hydrolysis reaction, Figure 3.1,</li>
+      <li>At [8], a laboratory housing the supervision system as well as the analytical equipment, Figure 3.1.</li>
+    </ul>
+
+    <div class="fig-row">
+      <figure id="en-fig-reacteur">
+        <img src="../images/Chap3/image_pilote3b.png" alt="View of the reactor"/>
+        <figcaption><strong>Figure 3.2</strong> — View of the reactor</figcaption>
+      </figure>
+      <figure id="en-fig-deshydrat">
+        <img src="../images/Chap3/image_pilote5.jpg" alt="Dewatering workshop"/>
+        <figcaption><strong>Figure 3.3</strong> — Dewatering workshop</figcaption>
+      </figure>
+    </div>
+
+    <p>The operation of the unit in the DLD configuration is as follows. Primary and biological sludge are received from the wastewater treatment plant and injected into a first storage tank [3]. The sludge is recirculated in the storage tank to homogenise the mixture. The sludge blend is then sent to a first digestion stage [1] for a period of 15 days. This step allows a large proportion of the organic matter to be digested. The digested sludge is then thickened by a centrifuge [4] to 23% dry solids content, i.e. 230 g/l of dry matter, before being hydrolysed. The thickened sludge arrives in a buffer hopper [5] which feeds the thermal hydrolysis process. The sludge is injected into the vertical section of the reactor [6a], acting as a condenser, where it comes into contact with live steam. The second section of the reactor [6b] provides the contact time for the hydrolysis reaction. Once hydrolysed, the sludge is diluted with industrial water [6d] to adjust its suspended solids concentration to 100–120 g/l, i.e. 10–12% dry solids content, so as to maintain mixing in the second digester and to ensure that the ammonia concentration does not inhibit the methanogenesis reaction. The diluted sludge is also cooled by a heat exchanger [6c] to 40 °C, corresponding to the operating temperature of the second digester [2]. The sludge is digested a second time for 15 days before being returned to the second storage tank [3] for re-injection into the plant's sludge treatment cycle.</p>
+
+    <!-- ── Section 3.1.1 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-dimensionnement">3.1.1 Sizing of the Experimental Installation</h3>
+
+    <p>Table 3.1 summarises the sizing of the structures mentioned above. It also indicates the loads and flow rates to be maintained for the configuration studied. The values presented are those calculated by the unit manufacturer. This work focuses on the relevance of the DLD configuration; however, the unit is designed to be able to study the LD and DL configurations as required.</p>
+
+    <p>All equipment and configurations are designed to receive hydraulic flow rates and dry matter loads on a continuous basis. All installations must operate continuously, without any stoppage that could disturb the digester biology, in order to achieve process stabilisation that allows conclusions to be drawn on the relevance or otherwise of the configuration studied. The sizing is initially based on an assumption of 23% dry solids content at the centrifuge outlet. During the experiments, the sludge will be dewatered to 28% dry solids content, which will have an impact on the entire unit. The increase in sludge dry solids content will reduce the mass of sludge to be hydrolysed, which will require increasing the feed flow rate at the inlet of the first digester to maintain the overall continuous operation of the installation. In doing so, the hydraulic retention times of the digesters will be reduced compared to those initially planned.</p>
+
+    <div class="table-wrapper">
+      <table id="en-tab-dimensionnement">
+        <caption><strong>Table 3.1</strong> — Summary of pilot unit sizing for the 3 planned configurations</caption>
+        <thead>
+          <tr>
+            <th colspan="2" rowspan="2">Operating mode</th>
+            <th colspan="2">DL configuration</th>
+            <th>DLD configuration</th>
+            <th colspan="2">LD configuration</th>
+          </tr>
+          <tr>
+            <th>D1 = DL</th>
+            <th>D2 = Reference</th>
+            <th>D1 – L – D2</th>
+            <th>D1 = Reference</th>
+            <th>D2 = LD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">Feed flow rate (kg DS/d)</td>
+            <td style="text-align:center;">400</td>
+            <td style="text-align:center;">125</td>
+            <td style="text-align:center;">350</td>
+            <td style="text-align:center;">375</td>
+            <td style="text-align:center;">300</td>
+          </tr>
+          <tr>
+            <td colspan="2">Feed flow rate (m³/d)</td>
+            <td style="text-align:center;">8</td>
+            <td style="text-align:center;">2.5</td>
+            <td style="text-align:center;">7</td>
+            <td style="text-align:center;">7.5</td>
+            <td style="text-align:center;">6</td>
+          </tr>
+          <tr>
+            <td rowspan="5">Digester 1</td>
+            <td>Volume (m³)</td>
+            <td style="text-align:center;">150</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">105</td>
+            <td style="text-align:center;">150</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td>Hydraulic retention time (days)</td>
+            <td style="text-align:center;">15</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">15</td>
+            <td style="text-align:center;">20</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td>Solids retention time (days)</td>
+            <td style="text-align:center;">35</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">15</td>
+            <td style="text-align:center;">20</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td>Feed flow rate (l/h)</td>
+            <td style="text-align:center;">420</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">300</td>
+            <td style="text-align:center;">315</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td>Biogas production (Nm³/d)</td>
+            <td style="text-align:center;">104</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">100</td>
+            <td style="text-align:center;">75</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td rowspan="5">Digester 2</td>
+            <td>Volume (m³)</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">50</td>
+            <td style="text-align:center;">40</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">50</td>
+          </tr>
+          <tr>
+            <td>Hydraulic retention time (days)</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">20</td>
+            <td style="text-align:center;">15</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">15</td>
+          </tr>
+          <tr>
+            <td>Dilution water (m³/d)</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">0.4</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">0.8</td>
+          </tr>
+          <tr>
+            <td>Feed flow rate (l/h)</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">105</td>
+            <td style="text-align:center;">90</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">140</td>
+          </tr>
+          <tr>
+            <td>Biogas production (Nm³/d)</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">25</td>
+            <td style="text-align:center;">55</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">110</td>
+          </tr>
+          <tr>
+            <td rowspan="7">Hydrolysis process</td>
+            <td>Diameter</td>
+            <td style="text-align:center;">DN 100</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">DN 100</td>
+            <td style="text-align:center;">DN 100</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">DN 100</td>
+          </tr>
+          <tr>
+            <td>Feed flow rate (l/h)</td>
+            <td style="text-align:center;">55</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">50</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">66</td>
+          </tr>
+          <tr>
+            <td>Velocity (mm/s)</td>
+            <td style="text-align:center;">2.95</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">2.4</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">3.60</td>
+          </tr>
+          <tr>
+            <td>Length (m)</td>
+            <td style="text-align:center;">10</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">10</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">10</td>
+          </tr>
+          <tr>
+            <td>Residence time (min)</td>
+            <td style="text-align:center;">57</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">71</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">46</td>
+          </tr>
+          <tr>
+            <td>Steam flow rate (kg/h)</td>
+            <td style="text-align:center;">35</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">30</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">40</td>
+          </tr>
+          <tr>
+            <td>Cooling temperature (°C)</td>
+            <td style="text-align:center;">165</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">55</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">56</td>
+          </tr>
+          <tr>
+            <td>Dewatering</td>
+            <td>Polymer consumption (kg a.m./d)</td>
+            <td colspan="2" style="text-align:center;">3.5</td>
+            <td style="text-align:center;">2.8</td>
+            <td colspan="2" style="text-align:center;">3.0</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Returns to WWTP</td>
+            <td>Digested sludge (m³/d)</td>
+            <td colspan="2" style="text-align:center;">4.4</td>
+            <td style="text-align:center;">2</td>
+            <td colspan="2" style="text-align:center;">4.4</td>
+          </tr>
+          <tr>
+            <td>Centrate (m³/d)</td>
+            <td colspan="2" style="text-align:center;">3.5</td>
+            <td style="text-align:center;">5.9</td>
+            <td colspan="2" style="text-align:center;">4.4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Section 3.1.2 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-configurations">3.1.2 The Different Configurations Including Thermal Hydrolysis</h3>
+
+    <p>Thermal hydrolysis processes are in principle placed upstream of a digester. The conventional application route is therefore an LD configuration. However, other configurations are envisaged.</p>
+
+    <p><strong>The LD configuration (Lysis – Digestion):</strong></p>
+
+    <p>Thermal hydrolysis is applied to all or part of the sludge stream before digestion. In this configuration, shown in Figure 3.4, sludge can enter the digester at twice the concentration, thus halving the volume of the structure. Moreover, hydrolysis reduces the quantity of sludge and guarantees its sanitisation while increasing biogas production. It is therefore possible to relieve a saturated digester and double its treatment capacity. The installation of an additional digester can thus be avoided. This configuration is the most common and has numerous industrial installations.</p>
+
+    <figure id="en-fig-conf-ld">
+      <img src="../images/Chap3/config_LD.png" alt="Schematic of the Lysis–Digestion (LD) configuration"/>
+      <figcaption><strong>Figure 3.4</strong> — Schematic of the Lysis–Digestion (LD) configuration</figcaption>
+    </figure>
+
+    <p><strong>The DLD configuration (Digestion – Lysis – Digestion):</strong></p>
+
+    <p>Thermal hydrolysis is applied to all the digested sludge from a first digester. Once hydrolysed, the sludge is diluted and cooled before continuing its degradation in a second digester.</p>
+
+    <p>This configuration, shown in Figure 3.5, is intended to be optimal in terms of energy because it consumes less steam while further reducing sludge volume, producing biogas in a proportion that can be valorised via cogeneration into electricity. It should also allow maximum reduction of the quantities of sludge to be evacuated.</p>
+
+    <figure id="en-fig-conf-dld">
+      <img src="../images/Chap3/config_DLD.png" alt="Schematic of the Digestion–Lysis–Digestion (DLD) configuration"/>
+      <figcaption><strong>Figure 3.5</strong> — Schematic of the Digestion–Lysis–Digestion (DLD) configuration</figcaption>
+    </figure>
+
+    <p><strong>The DL configuration (Digestion – Lysis):</strong></p>
+
+    <p>This configuration, shown in Figure 3.6, approaches a degraded DLD configuration. The hydrolysis reactor is installed on a sludge recirculation loop associated with a single digester. Thermal hydrolysis is applied to a fraction of the digested sludge. This configuration is intended to give the operator great operational flexibility, allowing the digestion capacity to be adjusted according to needs, by using a smaller-scale hydrolysis unit. The digestion capacity of an existing installation can be increased by up to 30%.</p>
+
+    <figure id="en-fig-conf-dl">
+      <img src="../images/Chap3/config_DL.png" alt="Schematic of the Digestion–Lysis (DL) configuration"/>
+      <figcaption><strong>Figure 3.6</strong> — Schematic of the Digestion–Lysis (DL) configuration</figcaption>
+    </figure>
+
+    <p><strong>Advantages and disadvantages of each configuration:</strong></p>
+
+    <p>Each of these configurations has advantages and disadvantages. In addition to these standard configurations, it is possible to envisage so-called "partial lysis" configurations consisting of lysing only the biological sludge, which has a low methanogenic potential. Primary sludge digests naturally very well.</p>
+
+    <p>To summarise the advantages and disadvantages of each configuration, it is necessary to compare them according to quantitative criteria (electricity production, final sludge volume, digester size, dewatering workshop size, polymer consumption, hydrolysis reactor size) and qualitative criteria (sanitisation and available space on site).</p>
+
+    <p>As an illustration, consider a wastewater treatment plant producing 100 tonnes of dry solids per day. 60% of this sludge is primary sludge (having 75% volatile solids) and 40% is biological sludge (having 73% volatile solids). The temperature of the water and sludge is assumed to be 12 °C.</p>
+
+    <p>The pre-dewatering of sludge before hydrolysis, as well as the final dry solids content of the sludge and the polymer consumption, are defined according to the sludge characteristics.</p>
+
+    <p>Figure 3.7 presents the simplified mass balance of a digester. Considering a sludge quantity of 100 tDS/day at 5% dry solids content, i.e. 2,000 t of wet sludge, a residence time in the digester of 20 days and a volatile solids removal efficiency of 50%, we arrive at a digester of 40,000 m³ producing 28,300 Nm³/day of biogas and allowing sludge to be discharged at 25% dry solids content (i.e. 60.5 tDS/day and 242 t of wet sludge/day).</p>
+
+    <figure id="en-fig-bilan-D">
+      <img src="../images/Chap3/bilan_simplifie_D.jpg" alt="Simplified mass balance of anaerobic digestion"/>
+      <figcaption><strong>Figure 3.7</strong> — Simplified mass balance of anaerobic digestion</figcaption>
+    </figure>
+
+    <p>Mass balance 3.8 uses the same sludge quantity but in an LD configuration. Due to thermal lysis, the residence time in the digester can be reduced to 15 days, which reduces the digester size to 15,000 m³. The volatile solids removal is also improved by the lysis and rises to 59%. The final dry solids content is also improved and can reach 32%. Thus, biogas production increases and the final sludge volume is further reduced, dropping from 60 to 46 tDS/day, i.e. 145 t of wet sludge/day. Installing a thermal hydrolysis unit upstream of an existing digester allows entry at least twice as concentrated while reducing the residence time, thereby doubling its capacity, producing more biogas and further reducing the final sludge quantity.</p>
+
+    <p>Since the entire sludge is treated, the dewatered sludge is considered sanitised.</p>
+
+    <figure id="en-fig-bilan-LD">
+      <img src="../images/Chap3/bilan_simplifie_LD.jpg" alt="Simplified mass balance of a lysis–digestion configuration"/>
+      <figcaption><strong>Figure 3.8</strong> — Simplified mass balance of a lysis–digestion configuration</figcaption>
+    </figure>
+
+    <p>Primary sludge offers little benefit from hydrolysis except for sanitisation purposes; an alternative is to treat only the biological sludge. Mass balance 3.9 presents this configuration, still on the basis of the previous assumptions. The calculations show that the digester size, biogas production and final sludge volume are all affected, but that the reactor size and its steam consumption are lower.</p>
+
+    <figure id="en-fig-bilan-LDpartiel">
+      <img src="../images/Chap3/bilan_simplifie_LDpartiel.jpg" alt="Simplified mass balance of a partial lysis–digestion configuration"/>
+      <figcaption><strong>Figure 3.9</strong> — Simplified mass balance of a partial lysis–digestion configuration</figcaption>
+    </figure>
+
+    <p>Mass balance 3.10 uses the same sludge quantity but in a DL configuration, which has never been implemented. A fraction of the already digested sludge is hydrolysed and then recirculated within the same digester. This configuration would theoretically allow the volatile solids removal to be increased to 59%, thus increasing biogas production and increasing the outlet dry solids content, reducing the final sludge volume. However, since the inlet sludge is a mixture of fresh sludge at 5% DS and hydrolysed sludge at 8% DS, the digester size is slightly increased.</p>
+
+    <p>Installed on a digester operating below capacity, i.e. not treating its nominal sludge volume, this configuration would maximise biogas production while further reducing the final sludge volume. It would also allow lower steam consumption and a smaller reactor size, but since only a fraction of the sludge would be treated, the final sludge would not be considered sanitised.</p>
+
+    <figure id="en-fig-bilan-DL">
+      <img src="../images/Chap3/bilan_simplifie_DL.jpg" alt="Simplified mass balance of a digestion–lysis configuration"/>
+      <figcaption><strong>Figure 3.10</strong> — Simplified mass balance of a digestion–lysis configuration</figcaption>
+    </figure>
+
+    <p>Mass balance 3.11 uses the same sludge quantity as previously. The sludge is digested a first time in a first digestion stage, reducing the quantity of sludge to be hydrolysed due to the volatile solids removal in the digester and the increase in dry solids content made possible by this reduction in volatile solids. Thus, the size of the hydrolysis reactor and the steam consumption of the process are reduced. After treatment, the sludge is digested again in a second digestion stage. The assumption for the volatile solids removal for the entire configuration is here considered to be 64%. This removal will be verified experimentally in this work.</p>
+
+    <p>This configuration would allow more biogas to be produced, further reduce sludge volume from 2,000 to 123 tonnes of raw sludge per day. It would allow the size of the thermal hydrolysis reactor to be reduced, consume less steam, produce more biogas, but it would require the implementation of a new digester. Since the entire sludge is treated, the dewatered sludge is considered sanitised.</p>
+
+    <figure id="en-fig-bilan-DLD">
+      <img src="../images/Chap3/bilan_simplifie_DLD.jpg" alt="Simplified mass balance of a digestion–lysis–digestion configuration"/>
+      <figcaption><strong>Figure 3.11</strong> — Simplified mass balance of a digestion–lysis–digestion configuration</figcaption>
+    </figure>
+
+    <p>Table 3.2 summarises the points calculated in the simplified mass balances. Depending on the need for sanitisation or not, the existence or not of a digester, and the site's need to increase biogas production, reduce its final sludge volume, or other local context, one or other of the configurations can be chosen.</p>
+
+    <p>Based on an assumption of 64% volatile solids removal, the DLD configuration is the one that allows sludge sanitisation, reduces the reactor size by 40%, reduces the final sludge volume by 51% more than would have been achieved with a single digester, increases biogas production by 31%, and therefore electricity production, compared to a single digester, while containing polymer consumption. This volatile solids removal and this increase in biogas production will be verified in this work.</p>
+
+    <div class="table-wrapper" id="en-tab-comparaison">
+      <p><strong>Table 3.2</strong> — Quantitative comparison of the different configurations</p>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Simple digestion</th>
+            <th>Partial LD</th>
+            <th>LD</th>
+            <th>DL</th>
+            <th>Partial DLD</th>
+            <th>DLD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sanitisation</td>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+            <td>no</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>Digester size (base 100: digester at 20 days)</td>
+            <td>100</td>
+            <td>61</td>
+            <td>41</td>
+            <td>113</td>
+            <td>61</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td>THP size</td>
+            <td>/</td>
+            <td>56</td>
+            <td>100</td>
+            <td>52</td>
+            <td>83</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Sludge volume reduction vs. simple digestion</td>
+            <td>/</td>
+            <td>−22 %</td>
+            <td>−40 %</td>
+            <td>−36 %</td>
+            <td>−48 %</td>
+            <td>−51 %</td>
+          </tr>
+          <tr>
+            <td>Biogas production vs. simple digestion</td>
+            <td>/</td>
+            <td>12 %</td>
+            <td>21 %</td>
+            <td>18 %</td>
+            <td>13 %</td>
+            <td>31 %</td>
+          </tr>
+          <tr>
+            <td>Electricity production vs. simple digestion</td>
+            <td>/</td>
+            <td>+6 %</td>
+            <td>−9 %</td>
+            <td>+18 %</td>
+            <td>+13 %</td>
+            <td>+31 %</td>
+          </tr>
+          <tr>
+            <td>Polymer consumption vs. simple digestion</td>
+            <td>/</td>
+            <td>+104 %</td>
+            <td>+176 %</td>
+            <td>+105 %</td>
+            <td>+128 %</td>
+            <td>+78 %</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Section 3.2 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-methodes">3.2 Materials and Methods</h2>
+
+    <!-- ── Section 3.2.1 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-evapocondensation">3.2.1 Verification of Steam Evaporation-Condensation</h3>
+
+    <p>The injection of steam and above all its condensation is the first point to be studied and improved. This is why numerical simulations using Ansys-Fluent, based on the Euler-Euler multiphase flow model, are carried out.</p>
+
+    <p>The experimental component is important for validating the steam injection mode, both from a modelling and experimental perspective. This experimental validation is based on a temperature mapping of the reactor established from temperature probe measurements located along the entire length of the reactor, making it possible to verify temperature homogeneity.</p>
+
+    <p>Figure 3.12 shows the initial injection lance tested on the pre-industrial research unit. The design of this injection lance is empirical. Holes of 3 mm diameter are distributed around the lance so that the steam velocity is below 20 m/s at the outlet of each hole. This 3 mm diameter is arbitrary and should allow steam injection when the process is running while limiting sludge backflow into the lance during shutdown phases. This sludge backflow is expected because, when the reactor under pressure is shut down, it will have a residual pressure higher than that of the steam line. Moreover, the residual steam contained in this steam line during a shutdown, upon cooling, will condense, creating a vacuum in the line and thus drawing the sludge from the reactor into the steam line.</p>
+
+    <p>The maximum steam velocity of 20 m/s is set based on recommendations from the literature. Above this velocity, vibrations appear in steam networks as well as an abrasion phenomenon due to steam friction (particularly in the case of wet steam).</p>
+
+    <p>The steam velocity at the outlet of the injection lance is expected to be reduced following its impact on the reactor walls before dissipating its energy into the sludge. The steam is injected at the centre of the pipe, co-currently with the sludge flow arriving from the right-hand pipe.</p>
+
+    <figure id="en-fig-inj-simple">
+      <img src="../images/Chap3/inj_simple.png" alt="Initial steam injection system"/>
+      <figcaption><strong>Figure 3.12</strong> — Initial steam injection system</figcaption>
+    </figure>
+
+    <p>The simulations show that with this type of injector, steam pockets may not condense completely in the condensation column. It is therefore necessary to consider alternative solutions to this geometry. Modifications to this injection lance are presented in the appendix. Like the initial geometry, these static injectors modelled in the appendix do not give satisfaction for identical reasons. Two alternatives remain to be considered, namely combined steam injector–static mixer units and the use of a dynamic mixer.</p>
+
+    <p><strong>Alternative steam injection modes considered:</strong></p>
+
+    <p>Regarding the combined steam injector–static mixer units such as the one shown in Figure 3.13, they present two blocking points linked to the technology itself, namely:</p>
+    <ul>
+      <li>The high dry solids content of the sludge, and therefore its viscosity, which makes steam injection difficult;</li>
+      <li>The low flow velocities of the sludge which do not allow turbulent flow to be created at the injector, which is necessary for the sludge–steam mixture to form correctly and for the steam to condense.</li>
+    </ul>
+
+    <p>The use of a dynamic mixer appears to overcome these two operational limitations imposed by the dry solids content and viscosity of the sludge. Figure 3.14 shows this type of equipment which allows, within a single piece of equipment, the injection of a secondary fluid — in our case steam — and its mixing with a primary fluid, namely the sludge.</p>
+
+    <div class="fig-row">
+      <figure id="en-fig-komax">
+        <img src="../images/Chap3/komax.png" alt="Combined steam injector – static mixer"/>
+        <figcaption><strong>Figure 3.13</strong> — Combined steam injector – static mixer</figcaption>
+      </figure>
+      <figure id="en-fig-indag">
+        <img src="../images/Chap3/indag.png" alt="Dynamic mixer"/>
+        <figcaption><strong>Figure 3.14</strong> — Dynamic mixer</figcaption>
+      </figure>
+    </div>
+
+    <p>This dynamic mixer, shown in Figures 3.14 and 3.15, consists of a chamber receiving both fluids in which a rotor rotating at a speed ranging from 900 to 1,500 rpm ensures thorough mixing depending on their respective characteristics.</p>
+
+    <p>The rotor geometry used is that of Figure 3.16. According to the supplier of this equipment, the use of blades at a 45-degree angle maximises agitation and achieves effective mixing of the viscous fluid while limiting rotor fouling.</p>
+
+    <p>At the dynamic mixer outlet, the sludge–steam mixture upstream of the reactor must be homogeneous and single-phase. This homogeneity will be verified experimentally on the pilot unit.</p>
+
+    <p><strong>Steam injection modes tested:</strong></p>
+
+    <p>Two steam injection modes are tested on the pre-industrial unit, namely the injection lance of Figure 3.12 and the dynamic mixer of Figure 3.15 fitted with the rotor of Figure 3.16.</p>
+
+    <figure id="en-fig-md-site">
+      <img src="../images/Chap3/image_install_md_new.png" alt="Installation of the dynamic mixer on the pre-industrial unit"/>
+      <figcaption><strong>Figure 3.15</strong> — Installation of the dynamic mixer on the pre-industrial unit in parallel with the reactor sludge feed line</figcaption>
+    </figure>
+
+    <figure id="en-fig-rotor">
+      <img src="../images/Chap3/rotor_md.png" alt="Geometry of the rotor used for sludge–steam mixing"/>
+      <figcaption><strong>Figure 3.16</strong> — Geometry of the rotor used for sludge–steam mixing</figcaption>
+    </figure>
+
+    <p>The dynamic mixer assembly is shown in Figure 3.15. Initially, the sludge in the storage hopper [0] is pumped and sent to the reactor following pipes [1], [2] and [3]. It is at the end of pipe [3] that the injection lance as shown in Figure 3.12 is located. In order to be able to switch from one injection system to the other, the dynamic mixer is installed upstream of the injection lance, in parallel with the sludge feed line to the steam injection lance. Switching from one system to the other is done by means of manual valves on pipes [4], [2] and [7], making it possible to switch from the dynamic mixer to the injection lance and vice versa. Two manual valves not shown allow the steam to be directed towards the lance or the mixer. When the mixer is in use, the sludge arrives via pipe [1] and is then sent to the dynamic mixer [5] via pipe [4]. The sludge enters the dynamic mixer at the top and comes into contact with live steam injected laterally [6]. The two fluids are mixed at 1,500 rpm by means of the rotor of Figure 3.16 and then sent to the reactor via pipe [7].</p>
+
+    <p><strong>Means of controlling steam condensation:</strong></p>
+
+    <p>At the time of unit design, the evaporation-condensation phenomena were not considered because, through lack of knowledge, it was assumed that the steam would condense instantaneously. Thus, only 9 temperature probes were planned to monitor the operation of the installation and analyse the thermal gradients along the horizontal section of the reactor. As shown in Figure 3.17, the unit was equipped with only a single probe T1 at the top of the injection column, four probes T2, T3, T4 and T5 at the inlet of the horizontal reactor, two probes T6 and T7 at the top and bottom of the middle, and two probes T8 and T9 at the reactor outlet.</p>
+
+    <p>In order to control steam condensation within a pressurised reactor containing sludge, it became necessary to map the temperatures as precisely as possible along the vertical section of the reactor serving as the steam injection and condensation column. The condensation column with its single probe is therefore under-instrumented for the needs of the study. To supplement the existing instrumentation, multi-point temperature probes were installed along the condenser as well as at the middle and outlet of the reactor. The location of these probes, named Multi T1 to Multi T7, is also shown in diagram 3.17. Thus instrumented, it is possible to verify and compare the behaviour of the injection lance and the dynamic mixer.</p>
+
+    <figure id="en-fig-sondes">
+      <img src="../images/Chap3/emp_sonde_T2.png" alt="Location of temperature probes"/>
+      <figcaption><strong>Figure 3.17</strong> — Location of initial temperature probes (T1–T9), additional temperature probes (Multi T1–T7) and the dynamic mixer</figcaption>
+    </figure>
+
+    <p>These multi-point probes, shown in Figure 3.18, have a custom-made design. Each blue transmitter is connected to four PT100 probes. The spacing between these probes is designed to start two centimetres from the reactor wall and to measure a temperature profile every two centimetres.</p>
+
+    <p>In order to gain precision and response time, the thermowell fingers of the probes are removed. Sealing is ensured at the transmitter level. In total, 4 transmitters each fitted with 4 PT100 probes are installed in the condenser, corresponding to an addition of 16 temperature probes. In the reactor, 2 transmitters each fitted with 4 PT100 probes are installed, i.e. 8 probes added in the reactor.</p>
+
+    <figure id="en-fig-multisonde">
+      <img src="../images/Chap3/mult_sonde.png" alt="Presentation of the multi-point probes and their in-situ location"/>
+      <figcaption><strong>Figure 3.18</strong> — Presentation of the multi-point probes and their location <em>in situ</em></figcaption>
+    </figure>
+
+    <!-- ── Section 3.2.2 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-deformations">3.2.2 Modelling of Reactor Deformations</h3>
+
+    <p>Any temperature gradient within a reactor can, under the effect of material thermal expansion, generate mechanical stresses that deform the structure of a reactor. Thus, modelling of reactor deformations is envisaged in order to verify the impact of imperfect steam condensation during the start-up phase and with a view to scaling up to industrial scale, and to question the retained geometry.</p>
+
+    <p>To address this point:</p>
+    <ul>
+      <li>Spot temperature measurements will be taken on the external section of the reactor when it is operating stably. These measurements will be made using a contact probe.</li>
+      <li>A process model will be produced using AutoPipe-Bentley software.</li>
+    </ul>
+
+    <p><strong>Reactor skin temperature measurements</strong> require the thermal insulation of the reactor to be removed in order to measure the temperature at the north, south, east and west points at the inlet, middle and outlet of the reactor. As shown on the images in Figures 3.19, the measured points of the external skin temperature of the reactor are taken at the level of the internal temperature measurements so as to be able to cross-reference the internal and external temperatures when modelling the stresses. It also appears that the measurement points are also located close to the reactor supports. The reactor rests on un-insulated metal supports which, by conduction, may accentuate a thermal gradient and therefore the thermal stresses.</p>
+
+    <figure id="en-fig-defor-3">
+      <img src="../images/Annexe/defor_3.png" alt="Skin temperature at the reactor outlet"/>
+      <figcaption><strong>Figure 3.19</strong> — Skin temperature at the reactor outlet</figcaption>
+    </figure>
+
+    <p><strong>Reactor modelling</strong> is done using AutoPipe software, which is a programme for sizing pipe networks and calculating mechanical stresses related to the thermal and mechanical stresses of an installation. Figure 3.20 describes the simulation elements with sections identical to the dimensions of the pre-industrial unit, 2.5 m in length connected by PN40 flanges, as well as the nodes. The reactor support is also indicated in green.</p>
+
+    <div class="table-wrapper">
+      <table id="en-tab-autopipe">
+        <caption><strong>Table 3.3</strong> — Modelling operating conditions</caption>
+        <thead>
+          <tr>
+            <th>AutoPIPE</th>
+            <th colspan="2">Calculation code EN 13480</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Design pressure PS</td>
+            <td colspan="2">18 barg</td>
+          </tr>
+          <tr>
+            <td>Design temperature TS</td>
+            <td colspan="2">207°C</td>
+          </tr>
+          <tr>
+            <td rowspan="2">"Thermal bowing in service" effect</td>
+            <td>Upper generating temperature</td>
+            <td style="text-align:center;">165°C</td>
+          </tr>
+          <tr>
+            <td>Lower generating temperature</td>
+            <td style="text-align:center;">85°C</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Density</td>
+            <td>In-service situation (Steam + sludge)</td>
+            <td style="text-align:center;">1 000 kg/m³</td>
+          </tr>
+          <tr>
+            <td>Plugging situation (Sludge)</td>
+            <td style="text-align:center;">1 000 kg/m³</td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td colspan="2">1.4404 per EN10217-7 (Stainless steel 316 L)</td>
+          </tr>
+          <tr>
+            <td>Corrosion allowance</td>
+            <td colspan="2">0 mm</td>
+          </tr>
+          <tr>
+            <td>Insulation thickness</td>
+            <td colspan="2">100 mm / 80 kg/m³</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure id="en-fig-defor-5">
+      <img src="../images/Chap3/defor_5.JPG" alt="Node numbering and geometry creation"/>
+      <figcaption><strong>Figure 3.20</strong> — Node numbering and geometry creation</figcaption>
+    </figure>
+
+    <p>Once the reactor diameter is entered, we arrive at the model of Figure 3.21 which corresponds to the actual installation in operation.</p>
+
+    <figure id="en-fig-defor-6">
+      <img src="../images/Chap3/defor_6.JPG" alt="Modelling carried out to estimate support reactions"/>
+      <figcaption><strong>Figure 3.21</strong> — Modelling carried out to estimate support reactions based on the dimensions of the pre-industrial unit</figcaption>
+    </figure>
+
+    <p>The nodes, materials used, stresses at each point, the location of lateral guides allowing the structure to move only in the desired direction, the addition of a fixed support at the inlet of the horizontal section to ensure rigidity with the vertical section, and the addition of a guide at the outlet to leave the reactor free to expand longitudinally are also defined. A so-called "thermal bowing" effect is imposed on the structure via a temperature gradient of 85 °C imposed between the top and bottom of the reactor at each segment.</p>
+
+    <!-- ── Section 3.2.3 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-validation-dld">3.2.3 Validation of the DLD Configuration</h3>
+
+    <p>Validating the performance of the DLD configuration requires operation of the pre-industrial unit. In order to carry out the mass balance, it is necessary to analyse data from numerous sensors placed on the pre-industrial unit and to combine these with sludge sample analyses.</p>
+
+    <p>The data from these sensors are extracted from the supervision system via a data acquisition software of the "Open Platform Communication client" type, making it possible to communicate with the OPC server but also to retrieve and format the data.</p>
+
+    <p>In parallel, laboratory analyses will be conducted on-site at the installation points shown in Figure 3.22 to characterise the process performance in terms of VS removal and biogas production, and to monitor the biological health of the digesters.</p>
+
+    <figure id="en-fig-prelevement">
+      <img src="../images/Chap3/points_prelevement.png" alt="Sampling points"/>
+      <figcaption><strong>Figure 3.22</strong> — Sampling points</figcaption>
+    </figure>
+
+    <p>The biological analysis programme consists of monitoring:</p>
+    <ul>
+      <li>At points 1 to 6: DS, SS, VS, COD, sCOD, N, NH₄, P, PO₄</li>
+      <li>At point 7: DS, SS, VS</li>
+    </ul>
+
+    <p>All flow rates and installation parameters are recorded continuously on a minute-by-minute basis. Using OPC software, data reports from the 2,000 parameters of the pre-industrial unit are automatically generated. Of these 2,000 parameters, 400 allow daily monitoring of installation performance and a further 1,600 allow any failure to be scrutinised and analysed in order to make the process more reliable and achieve stable operation.</p>
+
+    <p>Since the quantity of data is very large, a Visual Basic Application programme will be developed to automate all processing, format the data by workshop, calculate key indicators, plot operating curves and establish mass balances.</p>
+
+    <!-- ── Section 3.3 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-resultats">3.3 Results and Discussion</h2>
+
+    <!-- ── Section 3.3.1 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-temperatures">3.3.1 Temperature Monitoring</h3>
+
+    <p>Since the process studied operates at high temperature and pressure, temperature monitoring and mapping appears to be the only means available to evaluate the heat transfer, and therefore the proper condensation, of steam into the sludge.</p>
+
+    <p><strong>Condenser temperature monitoring with the injection lance:</strong></p>
+
+    <p>The first tests of the pre-industrial unit serve to evaluate the effectiveness of the steam injection lance and, in parallel, to feed the numerical model. The unit is therefore started in its initial configuration. The temperatures monitored are the nine probes initially planned. Figure 3.23 presents the results obtained from the first day of testing.</p>
+
+    <figure id="en-fig-result1">
+      <img src="../images/Chap3/chap3_result1b.png" alt="Temperature profiles with the original steam injector"/>
+      <figcaption><strong>Figure 3.23</strong> — Temperature profiles with the original steam injector</figcaption>
+    </figure>
+
+    <p>This graph is split into two phases. A first phase corresponding to the ramp-up of the process and then a second phase corresponding to steady-state operation.</p>
+
+    <p><strong>During phase 1</strong>, after starting the pilot at time t₀, the temperature T2 located at the inlet of the horizontal reactor indicates a temperature of 120 °C after 5 minutes and then 175 °C after 15 minutes. Thus, after a short time, this probe measures a temperature close to that of the steam injected at 10 bar, i.e. 180 °C. Subsequently, the T2 reading remains stable at a value of around 175 °C.</p>
+
+    <p>If we now observe probe T3, located at the inlet of the horizontal reactor 6 cm below probe T2, we note that the temperature after 5 minutes is 23.4 °C and then 39.2 °C after 15 minutes.</p>
+
+    <p>The lateral probes T4 and T5, located at the reactor inlet, measure temperatures close to that of T3 throughout the temperature ramp-up of the reactor.</p>
+
+    <p>Probe T6, located in the middle of the reactor at the top, is the second probe whose temperature rise is rapid. It reaches a value of 157 °C after 51 minutes. At the same instant, probe T7 located 6 cm below measures a temperature of 56.4 °C. Thus, in the middle of the reactor and over a 6 cm gap, the temperature difference is nearly 100 °C, which is not without consequence for the mechanical stresses due to the thermal expansion of the reactor.</p>
+
+    <p>Regarding probes T8 and T9 located at the reactor outlet, it appears that after 2 hours and 15 minutes, probe T8 is at 96 °C and T9 at 88 °C. These probes only detect a temperature of 160 °C after more than 4 hours, which corresponds to 8 times the initial residence time of a hydrolysis that must be completed in 30 minutes.</p>
+
+    <p><strong>During phase 2</strong>, where the curves stabilise above 150 °C, temperature differences persist within the horizontal section of the reactor of the order of 25–30 °C.</p>
+
+    <p>During this start-up phase 1, the speed at which probe T2 sees a high temperature, the temperature differences of more than 100 °C between T2 and T3, as well as the rapid temperature rise of T6 and the differences between T6 and T7 even up to 1 hour 30, can only be explained by the fact that the steam does not condense in the condensation column. It is likely that once the steam is injected, it creates a preferential pathway through the sludge, reaches T2, and then continues to create a steam jet along the entire length of the reactor, thereby preferentially heating probes T6 and T8. The sludge-steam mixture is therefore inhomogeneous at the outlet of the condensation column.</p>
+
+    <p>The venturi present in the middle of the column clearly does not achieve this homogeneity. The venturi system apparently has no positive impact on the condensation of steam in the sludge. In this respect, the experiment contradicts the numerical simulations which suggested that the venturi might retain the steam pockets, which is not the case.</p>
+
+    <p>During phase 2, after a start-up duration of 5 hours, which for a process with an initial residence time of 30 minutes is long, the differences between probes 6 centimetres apart remain of the order of 25 °C.</p>
+
+    <p>Following these initial findings, it appears necessary to:</p>
+    <ul>
+      <li>Further instrument the reactor, and in particular the steam injection column, in order to improve understanding of the phenomena,</li>
+      <li>Test an alternative steam injection system, namely the dynamic mixer.</li>
+    </ul>
+
+    <p>The significant temperature differences on a reactor with a diameter of 100 millimetres raise two questions, namely: what will happen to these temperature differences when scaling up to industrial size? Due to the mechanical stresses that these temperature differences generate, is the process geometry appropriate?</p>
+
+    <p><strong>Temperature monitoring with and without the dynamic mixer:</strong></p>
+
+    <p>Installed throughout the column, the additional probes measuring the temperature profiles make it possible to compare the effectiveness of the steam injection methods. Thus, the following are observed: the measurement closest to the injection point; the measurements at the column outlet; the measurements at the middle and outlet of the reactor.</p>
+
+    <p>Curve 3.24 compares the monitoring of this first temperature located at the inlet of the vertical reactor for the two steam injection methods, namely the injection lance and a dynamic mixer.</p>
+
+    <figure id="en-fig-result2">
+      <img src="../images/Chap3/chap3_result2.png" alt="Impact of the dynamic mixer on mixture homogeneity in the condenser"/>
+      <figcaption><strong>Figure 3.24</strong> — Impact of the dynamic mixer on mixture homogeneity in the condenser</figcaption>
+    </figure>
+
+    <p>Just as was observed by the T2 probe measurement, with the steam injection lance, the measurement tagged "PROFIL 1PV" very quickly reaches the steam temperature. Thus, the temperature reading of the red curve rises from 20 to 180 °C in 1 minute.</p>
+
+    <p>When the steam is now injected into a high-speed dynamic mixer running at 1,500 rpm, it can be observed on the blue curve that the temperature rise is more gradual. Once at steady state, the points on the blue curve stabilise around the setpoint temperature of 165 °C, but the measured temperature gradually increases to this setpoint over 15–20 minutes, whereas without the mixer this probe detects a temperature of more than 170 °C in less than one minute. <strong>A positive effect of the dynamic mixer is therefore observed from the injection point.</strong></p>
+
+    <p>Like Figure 3.24, the curves in Figure 3.25 compare the temperature profiles obtained at the outlet of the vertical section, with the injection lance and then with the dynamic mixer. A gradual temperature rise followed by stabilisation is again apparent. Thus, over the entire height of the reactor, the temperature rise is gradual, which rules out any preferential pathway. Indeed, when the dynamic mixer is in operation, the temperature profiles "PROFIL5" PV.SV.TV.QV.md take more than 15 minutes to reach 160 °C, which is consistent with the hydraulics of the system. In contrast, when the process operates with the injection lance, the temperature profiles "PROFIL5" PV.SV.TV.QV.ci reach a temperature of 180 °C, i.e. the temperature of the steam injected at 10 bar.</p>
+
+    <figure id="en-fig-result3">
+      <img src="../images/Chap3/chap3_result3bb.png" alt="Impact of the dynamic mixer on mixture homogeneity via temperature profile measurements at the top of the vertical reactor"/>
+      <figcaption><strong>Figure 3.25</strong> — Impact of the dynamic mixer on mixture homogeneity via temperature profile measurements at the top of the vertical reactor</figcaption>
+    </figure>
+
+    <p>As visible in Figure 3.26, this temperature homogeneity is also and especially found in the centre and at the outlet of the reactor. This temperature homogeneity again occurs after a gradual rise at the centre and outlet of the reactor.</p>
+
+    <figure id="en-fig-result5">
+      <img src="../images/Chap3/chap3_result5.png" alt="Temperature homogeneity achieved at the middle and outlet of the horizontal reactor"/>
+      <figcaption><strong>Figure 3.26</strong> — Temperature homogeneity achieved at the middle and outlet of the horizontal reactor over a long period thanks to the use of the dynamic mixer</figcaption>
+    </figure>
+
+    <p>This ramp-up is more gradual than in the vertical section. It can be observed on this figure that the measurements located in the upper part of the horizontal reactor, namely "PROFIL 6 PV" and "PROFIL6 SV" as well as "PROFIL 7 PV" and "PROFIL7 SV", also reach the setpoint temperature more quickly. This phenomenon could be explained by the arrival of hot sludge onto cold sludge previously remaining in the reactor, causing temperature stratification during the start-up phase. These differences are 30 to 40 °C. It takes two hours for all temperatures to be around 165 °C, which is problematic because this represents a non-negligible quantity of sludge that has not reached its treatment temperature or its 30-minute reaction time. This raises questions about the shape of the reactor and its horizontal section.</p>
+
+    <p>In view of the results obtained, the use of a dynamic mixer for injecting steam and mixing it with sludge so as to promote its condensation is a satisfactory solution. Its use ensures temperature homogeneity in the vertical reactor (in approximately 15 minutes) as well as within the horizontal reactor (in approximately 1 h 30).</p>
+
+    <!-- ── Section 3.3.2 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-deformation-resultats">3.3.2 Reactor Deformation</h3>
+
+    <p>On a DN 100 process, thanks to the dynamic mixer, temperatures homogenise rapidly, uniformly in the vertical section, after having shown a thermal gradient in the horizontal section. This thermal gradient, although temporary, is sufficient to induce mechanical stresses on the structure, particularly during the start-up phase. It seems appropriate to simulate the thermal deformation of the reactor in order to estimate its impact on the structure. This could call into question the current geometry of the process. To study this point, spot measurements of the reactor skin temperature are taken and cross-referenced with internal temperatures.</p>
+
+    <p><strong>Spot measurements</strong> of the skin temperature, cross-referenced with those internal to the reactor, are presented in Table 3.4. The skin measurements are named T1 to T12. External measurement T1 is taken at the level of internal measurement TIT 0002. The same applies to measurements T2, T3 and T4. The temperatures measured on the outer perimeter of the reactor from T5 to T8 are averaged and compared with the average temperature of the profile 6 probes. The same applies to measurements T9 to T12 and the profile 7 probes.</p>
+
+    <div class="table-wrapper" id="en-tab-defor">
+      <p><strong>Table 3.4</strong> — Difference between measured skin temperatures and internal process temperatures</p>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>TIT 0002 – T1</th>
+            <th>TIT 0003 – T2</th>
+            <th>TIT 0004 – T3</th>
+            <th>TIT 0005 – T4</th>
+            <th>Profile 6 – (T5-8)</th>
+            <th>Profile 7 – T(9-12)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Minimum ΔT [°C]</td>
+            <td>6</td>
+            <td>2</td>
+            <td>7</td>
+            <td>6</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Average ΔT [°C]</td>
+            <td>29</td>
+            <td>36</td>
+            <td>26.5</td>
+            <td>31.1</td>
+            <td>23.7</td>
+            <td>21.1</td>
+          </tr>
+          <tr>
+            <td>Maximum ΔT [°C]</td>
+            <td>53</td>
+            <td>61</td>
+            <td>66</td>
+            <td>64</td>
+            <td>42</td>
+            <td>37.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>When the reactor is stabilised, which corresponds to the minimum values in the table, the temperature differences are less than 10 °C.</p>
+
+    <p>During start-up, which corresponds to the maximum values in the table, it appears that the differences between the interior of the reactor and the skin are of the order of 37 to 66 °C for a DN 100 reactor. The most significant differences appear to be located at the level of the supports, metal elements which, through their direct contact with the reactor metal, could promote heat exchange by conduction.</p>
+
+    <p><strong>Reactor deformation</strong> is simulated on the basis of a thermal gradient imposed between the top and bottom of the reactor. The measurements of Table 3.4 from the experiment show a maximum observed difference of 66 °C. The temperature difference used for the simulation corresponds to these 66 °C arbitrarily increased by 20%.</p>
+
+    <p>Figure 3.27 shows the modelling of the reactor curvature generated by the temperature difference. The simulation shows that the horizontal section of the reactor deforms, imposing stresses on the vertical section. The reactor also undergoes a maximum deformation at its centre, at node CB08, of 23.09 mm in the longitudinal direction and 53.01 mm in the height direction, giving a cumulative deformation of 57.82 mm.</p>
+
+    <figure id="en-fig-deformation">
+      <img src="../images/Chap3/defor_8.JPG" alt="Assessment of reactor deformation under thermal stress"/>
+      <figcaption><strong>Figure 3.27</strong> — Assessment of reactor deformation under thermal stress</figcaption>
+    </figure>
+
+    <p>With such deformation, expansion absorbers must be planned on the full-scale reactor in order to keep it in its axis while allowing the reactor to expand.</p>
+
+    <p>Taking into account the gradual and homogeneous temperature rise of the sludge in the vertical section and the thermal expansion of the reactor, it would seem appropriate to reconsider the process geometry and move towards an entirely vertical design. A vertical design would guarantee temperature homogeneity but also ensure that expansion occurs in only one direction.</p>
+
+    <!-- ── Section 3.3.3 ─────────────────────────────────────────────── -->
+    <h3 id="en-sec-performances-dld">3.3.3 Process Performance in the DLD Configuration</h3>
+
+    <p>As mentioned in Chapter 2, thermal hydrolysis processes are used upstream of a digester. Carrying out continuous hydrolysis is a new approach. This study is an opportunity to test the relevance of a DLD configuration, to validate the performance of the hydrolysis process but also the overall performance of this configuration.</p>
+
+    <p>The unit has been in operation for three years during which several phases have been implemented. The first phase consisted of seeding the digesters solely with primary sludge, namely injecting fresh sludge into the digesters maintained under mesophilic conditions at 37 °C, in order to create the microbial population necessary for digestion. This step requires continuous feeding and continuous digester operation for a period of 2 to 3 times the digester volume, i.e. 50 to 90 days, as recommended by the literature.</p>
+
+    <p>This substantial start-up period of the digesters was used to work on the steam injection mode. Once this steam injection mode was defined, it was then possible to hydrolyse sludge over a period representing 2 times the volume of the second digester. Thus, from a feed composed of 100% primary sludge, the composition changed to a sludge feed of 40% primary sludge and 60% biological sludge, ending at a ratio of 45% primary and 55% biological. It was again necessary to wait for the microbial population of digester 1 to adapt to this sludge but also for the microbial population of the second digester to adapt to the hydrolysed sludge. In order to define the overall system performance, all equipment shown in Figure 3.22 must operate continuously for a minimum of 2 months. The parameters presented below are the result of this stabilised operation.</p>
+
+    <p><strong>Monitoring of Digester 1 parameters:</strong></p>
+
+    <p>The digesters reduce the pollutant mass load in terms of dry solids (DS), volatile solids (VS) and chemical oxygen demand (COD) while converting this pollutant load into biogas. These are the parameters that are monitored.</p>
+
+    <p>The dry solids content received by the first digester is a parameter that depends on the plant. For cost reasons related to digester size, this sludge is generally thickened to approximately 5% DS. This value is commonly accepted and found in the literature. Figure 3.28 shows the DS content of the sludge arriving at the installation.</p>
+
+    <figure id="en-fig-result6">
+      <img src="../images/Chap3/chap3_result6b.png" alt="Dry solids content — inlet and outlet of digester 1"/>
+      <figcaption><strong>Figure 3.28</strong> — Dry solids content — inlet and outlet of digester 1</figcaption>
+    </figure>
+
+    <p>The sludge leaving storage tank 1, and therefore arriving at the inlet of the first digester, has a stable average concentration of 6% DS. This value corresponds to a typical value. After a residence time of 12 days, the sludge concentration drops from 6 to 3.7%, giving a DS removal rate of 38%.</p>
+
+    <p>The VS measurement is made as a proportion of DS. Thus, for a given dry solids mass load, a fraction of this mass corresponds to volatile solids. It is primarily this fraction that will be converted into biogas. Monitoring this parameter is therefore important as it summarises the proper functioning of the digester. Figure 3.29 shows the monitoring of organic matter in the digester. The inlet volatile solids value depends on the plant's inlet effluent. This value is a given and has an average value of 75.1%, which is a typical value found in the literature.</p>
+
+    <figure id="en-fig-result7">
+      <img src="../images/Chap3/chap3_result7b.png" alt="VS% — inlet and outlet of digester 1"/>
+      <figcaption><strong>Figure 3.29</strong> — VS % — inlet and outlet of digester 1</figcaption>
+    </figure>
+
+    <p>The average volatile solids content at the reactor outlet is 55.2% VS. Knowing that over the period considered the average daily feed flow rate of digester 1 is 13,090 [l/day], the VS removal rate is calculated by the following expression (3.1):</p>
+
+    <div class="equation" id="en-eq-abat1">
+      <p><strong>(3.1)</strong></p>
+      <p>1 − (DS<sub>out</sub> × VS<sub>out</sub>) / (DS<sub>in</sub> × VS<sub>in</sub>)</p>
+      <p>= 1 − (13 090 [l/day] × 3.8 [% DS] × 55 [% VS]) / (13 090 [l/day] × 6.1 [% DS] × 75 [% VS])</p>
+      <p>= 55.2 [%]</p>
+    </div>
+
+    <p>This calculation can be done in this way because, since the first digester is particularly well mixed, no loss of mineral matter was observed during the emptying of the digester following the shutdown of the experimental unit.</p>
+
+    <p>In a reference article on digestion, Barber presents Figure 3.30. This curve corresponds to the removal of a mixture of primary and biological sludge according to different ratios. The primary sludge contains 72% VS and the biological sludge 82% VS. The removal performance is measured over a 14-day residence time. Thus, if we take a mixture of 55% primary – 45% biological, this curve indicates an expected removal of the order of 48–50%.</p>
+
+    <figure id="en-fig-barber">
+      <img src="../images/Chap3/graphe_barber.png" alt="Correlation between primary sludge fraction and VS reduction"/>
+      <figcaption><strong>Figure 3.30</strong> — Correlation between primary sludge fraction and VS reduction in a mesophilic digester over a hydraulic retention time of 15 days</figcaption>
+    </figure>
+
+    <p>A VS removal rate of 55% is therefore consistent with the state of the art. The performance of digester 1 is good or even slightly better than expected (since we have 55% removal in 12 days instead of 48–50% in 15 days). This could be explained by the small size of the digester and its strong mixing.</p>
+
+    <p>Two other parameters seem interesting to monitor at the digester level and also to evaluate the effect of hydrolysis, namely soluble COD and total COD.</p>
+
+    <p>Soluble COD represents the pollutant load in organic substances that will be consumed first by micro-organisms because this pollution is soluble. Figure 3.31 shows the monitoring of this COD load at the digester inlet and outlet. The inlet load is, like VS, a consequence of the plant's inlet effluent and the water treatment line that oxidises this pollutant load to a greater or lesser extent.</p>
+
+    <figure id="en-fig-result8">
+      <img src="../images/Chap3/chap3_result8b.png" alt="Soluble COD — inlet and outlet of digester 1"/>
+      <figcaption><strong>Figure 3.31</strong> — Soluble COD — inlet and outlet of digester 1</figcaption>
+    </figure>
+
+    <p>The average soluble COD load at the digester inlet is 8,673 mg/l. At the digester outlet, this value is 881 mg/l. Cross-referencing these concentrations with those of Figure 3.32 for total COD, whose concentration drops from 72,066 to 32,058 mg/l, we calculate that the soluble fraction drops from 12 to 2.7% of total COD. Through the effect of thermal hydrolysis, this soluble COD to total COD ratio should increase.</p>
+
+    <p>The calculated total COD removal is 55%, which is consistent and confirms the VS measurement and removal.</p>
+
+    <figure id="en-fig-result9">
+      <img src="../images/Chap3/chap3_result9b.png" alt="Total COD — inlet and outlet of digester 1"/>
+      <figcaption><strong>Figure 3.32</strong> — Total COD — inlet and outlet of digester 1</figcaption>
+    </figure>
+
+    <p><strong>Thermal lysis parameters:</strong></p>
+
+    <p>Regarding the thermal lysis parameters, two parameters are to be monitored. The main one is that of COD solubilisation. At the outlet of the first digestion stage, micro-organisms have consumed a large proportion of the soluble fraction of the pollutant load. The particulate fraction of COD cannot easily be degraded by bacteria. The action of hydrolysis will break down this particulate pollution, render it soluble and therefore more accessible to the micro-organisms in the digester. The performance of lysis depends on the solubilisation rate.</p>
+
+    <p>The second point monitored is the sludge dry solids content in order to determine the dry solids content admissible by the process while maintaining the solubilisation effect. The higher the admissible dry solids content, the lower the energy consumption will be.</p>
+
+    <p>Long-term monitoring of the process solubilisation yields an average total COD solubilisation of 27%. This means that 27% of the particulate pollution has been solubilised and is therefore made accessible to micro-organisms. This does not mean that there will be 27% more biogas.</p>
+
+    <p>Figure 3.33 presents the monitoring of this parameter which, over a one-month period necessary for establishing the overall mass balance, is stable.</p>
+
+    <figure id="en-fig-result11">
+      <img src="../images/Chap3/chap3_result11bb.png" alt="COD solubilisation during thermal hydrolysis"/>
+      <figcaption><strong>Figure 3.33</strong> — COD solubilisation during thermal hydrolysis</figcaption>
+    </figure>
+
+    <p>Many studies have been published to quantify the impact of thermal hydrolysis on COD solubilisation from different types of sludge. Thus, for primary sludge, solubilisation varies from 20 to 28%, for mixed municipal sludge from 20 to 45%, for activated municipal sludge from 35 to 60%, and for activated industrial sludge from 50 to 75%.</p>
+
+    <p>With an average of 27%, the solubilisation of the digested sludge is of the same order of magnitude as primary sludge or mixed municipal sludge.</p>
+
+    <p>A dewatering step is always necessary upstream of thermal hydrolysis to concentrate the sludge and thus avoid heating an excessively large volume of water. The optimal dry solids content is a compromise between the types of sludge treated, polymer consumption, steam consumption and the process capacity to treat the sludge.</p>
+
+    <p>During the operation of the industrial unit, monitoring of different sludge dry solids contents at the centrifuge outlet confirms that the process equipped with a dynamic mixer can accept sludge with a high dry solids content.</p>
+
+    <p>As shown in Figure 3.34, the sludge dry solids content varied from 25 to 33% without this affecting either the operation or the performance of the process. The grey area corresponds to the installation start-up phase which should not be taken into account. The dynamic mixing system can operate with water or with sludge at less than 25% DS. Tests with water are important because the process starts with hot water. The operation of the pre-industrial unit has ensured that this water–steam injection poses no difficulty.</p>
+
+    <figure id="en-fig-result21">
+      <img src="../images/Chap3/Chap3_result21.jpg" alt="Variation in dry solids content admitted into the thermal hydrolysis process"/>
+      <figcaption><strong>Figure 3.34</strong> — Variation in dry solids content admitted into the thermal hydrolysis process over the entire operating period of the pre-industrial unit</figcaption>
+    </figure>
+
+    <p>During the stabilised phase representative of normal DLD configuration operation, which will be used for the mass balance, the average dry solids content of the sludge leaving the centrifuge is 29.4%. This value, tracked in Figure 3.35, varies little.</p>
+
+    <figure id="en-fig-result10">
+      <img src="../images/Chap3/chap3_result10b.png" alt="Average dry solids content at the thermal hydrolysis process inlet"/>
+      <figcaption><strong>Figure 3.35</strong> — Average dry solids content at the thermal hydrolysis process inlet</figcaption>
+    </figure>
+
+    <p><strong>Digester 2 parameters:</strong></p>
+
+    <p>Located at the end of the DLD configuration chain, digester 2 is completely dependent on the proper operation of the upstream workshops. Thus, to ensure stability and optimal results at digester 2 level, it is necessary that:</p>
+    <ul>
+      <li>Storage tank 1 operates correctly and properly mixes the sludge,</li>
+      <li>Digester 1 is correctly fed and heated with sufficient mixing to ensure the expected methanisation performance,</li>
+      <li>Storage tank 2 operates correctly,</li>
+      <li>The dewatering workshop operates correctly,</li>
+      <li>The process feed hopper is maintained at a certain level in order to ensure a constant feed flow rate,</li>
+      <li>The dilution with industrial water downstream of the reactor is controlled so as not to enter the digester at too high a concentration.</li>
+    </ul>
+
+    <p>Monitoring the dry solids content at the inlet and outlet of the second digester is important because the inlet dry solids content is controlled but the removal of the second digestion stage is a point that must be established to determine the overall performance of the DLD configuration. Figure 3.36 shows the monitoring of these dry solids contents upstream and downstream of the digestion.</p>
+
+    <figure id="en-fig-result12">
+      <img src="../images/Chap3/chap3_result12b.png" alt="Dry solids content — inlet and outlet of digester 2"/>
+      <figcaption><strong>Figure 3.36</strong> — Dry solids content — inlet and outlet of digester 2</figcaption>
+    </figure>
+
+    <p>Over the stabilised period, the sludge enters at 12% and leaves at 8.8% DS, giving a dry solids removal of 26.5%. Thus, the overall dry solids removal for the unit is of the order of 55%, which is to be compared with a removal of around 45% found in a conventional LD configuration. The DLD configuration therefore allows 22% more sludge volume reduction than an LD configuration before final dewatering. This removal is corroborated by the performance measured on volatile solids. Figure 3.37 shows the monitoring of the VS content of the sludge. This enters at 55% VS, which is a typical value at the outlet of a single digestion stage and what is obtained after the first digester, but exits the second digester at 51% VS.</p>
+
+    <p>Thus, knowing that the average daily feed flow rate of the second digester over the period considered is 3,909 [l/day], the VS removal of the second digestion stage is determined by the following relation (3.2):</p>
+
+    <div class="equation" id="en-eq-abat2">
+      <p><strong>(3.2)</strong></p>
+      <p>1 − (DS<sub>out</sub> × VS<sub>out</sub>) / (DS<sub>in</sub> × VS<sub>in</sub>)</p>
+      <p>= 1 − (3 909 [l/day] × 8.8 [% DS] × 51 [% VS]) / (3 909 [l/day] × 12 [% DS] × 55 [% VS])</p>
+      <p>= 31.4 [%]</p>
+    </div>
+
+    <p>This VS removal of 31.4% from the second digestion stage is added to the 55% removal from the first digester.</p>
+
+    <figure id="en-fig-result13">
+      <img src="../images/Chap3/chap3_result13b.png" alt="VS% — inlet and outlet of digester 2"/>
+      <figcaption><strong>Figure 3.37</strong> — VS % — inlet and outlet of digester 2</figcaption>
+    </figure>
+
+    <p>Calculated by expression (3.3), the overall VS removal is of the order of 68.7%. Thus, 68.7% of VS from the 55% DS removal are converted into biogas.</p>
+
+    <div class="equation" id="en-eq-abat3">
+      <p><strong>(3.3)</strong></p>
+      <p>1 − (1 − % VS reduction in digester 1) × (1 − % VS reduction in digester 2)</p>
+      <p>= 1 − (1 − 55 [%]) × (1 − 31.4 [%])</p>
+      <p>= 68.7 [%]</p>
+    </div>
+
+    <p>The soluble COD at the inlet of digester 2 is mainly due to the action of thermal hydrolysis, which solubilises a fraction of the particulate pollution. Figure 3.38 traces the monitoring of this soluble COD. The average soluble COD at the digester 2 inlet is 28.2 g/l, whereas at the digester 1 outlet the average concentration is 0.9 g/l. Thermal hydrolysis has therefore solubilised 28% of the particulate COD. At the digester 2 outlet, the remaining soluble COD concentration is 12.2 g/l. Thus, half of the solubilised matter is consumed.</p>
+
+    <figure id="en-fig-result14">
+      <img src="../images/Chap3/chap3_result14b.png" alt="Soluble COD — inlet and outlet of digester 2"/>
+      <figcaption><strong>Figure 3.38</strong> — Soluble COD — inlet and outlet of digester 2</figcaption>
+    </figure>
+
+    <p>This remaining soluble COD is not assimilated by the microbial culture under anaerobic conditions even after a residence time of 13 days in the digester. These poorly biodegradable compounds arising from Maillard-type reactions between sugars and amino acids are unassimilated compounds that represent a pollutant load that can only be treated with great difficulty by the water treatment line. Due to this treatment difficulty, these compounds are referred to as recalcitrant.</p>
+
+    <p>The total COD monitoring of Figure 3.39 shows that the concentration drops from 102 to 95 g/l, i.e. a removal of 6.8%. The low removal in the second digestion stage is probably due to the fact that we are reaching the ultimate pollutant load and that the DLD configuration allows the limits of sludge degradation to be reached.</p>
+
+    <figure id="en-fig-result15">
+      <img src="../images/Chap3/chap3_result15b.png" alt="Total COD — inlet and outlet of digester 2"/>
+      <figcaption><strong>Figure 3.39</strong> — Total COD — inlet and outlet of digester 2</figcaption>
+    </figure>
+
+    <p><strong>Biogas composition:</strong></p>
+
+    <p>Analytical instruments allow the biogas composition to be monitored on both lines. Generally, at municipal wastewater treatment plants, the average quantity of CH₄ in the biogas produced is between 60 and 65%. The CH₄ content depends on the nature of the degraded VS, for example the degradation of one kilogram of lipid will produce more CH₄ than one kilogram of carbohydrate due to their COD/VS ratio, but especially on the rate of CO₂ solubilisation in the liquid phase. The higher the sludge pH, the more the CO₂ produced by anaerobic degradation is found as HCO₃⁻ and is therefore kept in solution. This is why it is expected that a digester located after thermal hydrolysis will operate at a higher pH than a conventional digester and will have biogas richer in CH₄.</p>
+
+    <p>A rapid decrease in the CH₄ percentage indicates a problem with the activity (inhibition) of the methanogenic biomass. In the event of inhibition, CH₄ decreases, indicating a blockage of methanogenesis. Since acidification and acidogenesis reactions continue, volatile fatty acid (VFA) production continues but these VFAs are not degraded in the system by methanogens, which acidifies the medium and ultimately causes a drop in pH.</p>
+
+    <p>The digester has a high buffer capacity. As such, any impact of a pH drop is only visible well after the beginning of the decrease in the CH₄ percentage in the biogas. This is why, in order to monitor the health of the digestion, an online measurement of CH₄ quality is made as it is the only immediate indicator, along with the biogas flow rate measurement, of a system disturbance.</p>
+
+    <p>Graph 3.40 is the result of monitoring the quality of the biogas produced in each of the digesters. Over the period, the average pH of digester 1 is 7.3 and that of digester 2 is 7.5. The pH of the second digester is, to within 2%, identical to that of the first digester.</p>
+
+    <figure id="en-fig-result16">
+      <img src="../images/Chap3/chap3_result16_17b.png" alt="Biogas composition of the digesters"/>
+      <figcaption><strong>Figure 3.40</strong> — Biogas composition of the digesters</figcaption>
+    </figure>
+
+    <p>The CH₄ percentage in the first digester averages 65.8% CH₄. In the second digester, this average rate rises to 66.7%. At the second digester level, the pH is not significantly higher than in the first digester and the biogas quality is similar in both digestion stages.</p>
+
+    <p><strong>Ammonia concentration in the digesters:</strong></p>
+
+    <p>The nitrogen content in the sludge to be treated is a parameter that needs to be known. Thermal hydrolysis very strongly solubilises nitrogen, mainly in the form of organic nitrogen and to a lesser extent in the form of ammoniacal nitrogen N-NH₄⁺. Although it is NH₃ that is the inhibiting factor for methanisation, ammoniacal nitrogen is used as a tracer due to the simplicity of its analytical monitoring.</p>
+
+    <p>Inhibition phenomena of anaerobic digestion by the NH₃ form (aqueous) are mentioned in the literature. A value of the order of 130 to 150 mg/l NH₃ is commonly accepted as the limit concentration not to be exceeded in order not to block the methanogenic phase.</p>
+
+    <p>Calculation of the ammoniacal nitrogen equilibrium and the calco-carbonic equilibrium of the digester allows a N-NH₄ equivalent concentration of 2.5 to 3 g/l to be calculated.</p>
+
+    <p>The second digester operates at a suspended solids concentration of 120 g/l instead of the conventional 50 g/l, which means that its ammoniacal nitrogen concentration can be particularly high. It is to overcome this phenomenon that dilution of the hydrolysed sludge with industrial water at the digestion inlet is carried out in order to maintain the N-NH₄ concentration below 2.5 g/l.</p>
+
+    <p>Figure 3.41 presents the analytical monitoring of the ammoniacal nitrogen concentration in the digesters. Over the stabilised period, the N-NH₄ concentration in the first digester is 1,189 mg/l, which corresponds to the expected typical values and is equivalent to a N-NH₃ of around 50 mg/l. The N-NH₄ concentration of the second digester is logically higher due to the increase in concentration but, at 1,956 mg/l, remains below 2,500 mg/l, equivalent to around 100 mg/l N-NH₃. At these values, the methanogenesis reaction is not blocked.</p>
+
+    <figure id="en-fig-result18">
+      <img src="../images/Chap3/chap3_result18b.png" alt="N-NH4 concentration in the digesters"/>
+      <figcaption><strong>Figure 3.41</strong> — N-NH₄ concentration in the digesters</figcaption>
+    </figure>
+
+    <p>Thus, it would be possible to increase the concentration at the digester 2 inlet and increase this concentration initially set at 120 g/l SS in order to further reduce the size of the digester. Indeed, at constant pollutant load, any increase in the concentration in the digester either increases the sludge residence time in the digester at constant digestion volume, or reduces the volume of a digester at equivalent residence time. NH₃ is not the only factor inhibiting biogas production. The sludge matrix is living, complex and can be affected by concentrations of molecules that may be inhibitory to the micro-organisms of anaerobic digestion. Among these substances, the following can be cited as more or less inhibitory depending on their concentration: Sodium, Potassium, Calcium, Magnesium, ammoniacal nitrogen, Sulphide (including hydrogen sulphide), Copper, Chromium (VI), Chromium (III), Nickel and Zinc. Organic inhibitors of the phenol type also exist.</p>
+
+    <p><strong>Alkalinity of the digesters:</strong></p>
+
+    <p>Alkalinity is a measure of the buffer capacity of the medium. Expressed in mg/l CaCO₃, it is due to calcium carbonates and bicarbonates, and to a lesser extent to volatile fatty acids which affect pH. The alkalinity of the digesters must be above 1 g/l for the carbonates to play their buffering role in the medium, stabilise pH and contribute to the equilibrium of the various dissolved carbon dioxide forms. An effluent rich in organic nitrogen will produce ammoniacal nitrogen in the digester, which will contribute to generating alkalinity and will thereby allow more stable digester operation. This is why alkalinity monitoring of the digesters is carried out in order to monitor its stability. As visible in Figure 3.42, digester 1 is in a well-established steady state with an average concentration of 4,707 mg/l CaCO₃.</p>
+
+    <figure id="en-fig-result19">
+      <img src="../images/Chap3/chap3_result19b.png" alt="Alkalinity of the digesters"/>
+      <figcaption><strong>Figure 3.42</strong> — Alkalinity of the digesters</figcaption>
+    </figure>
+
+    <p>This concentration is in line with the range of values accepted by the literature of 2,000 to 5,000 mg/l. Within the second digester, the average alkalinity is 12,048 mg/l CaCO₃. This high, stable value over the period is explained by the increase in DS concentration at the inlet of the second digester. It is consistent relative to the value of the first digester because, being twice as concentrated in DS, it is logical that the CaCO₃ concentration is also twice as high.</p>
+
+    <p><strong>Volatile Fatty Acids:</strong></p>
+
+    <p>Monitoring VFAs in isolation only has indicative value for the VFA stock present in the digesters. It is necessary to ensure that the concentration does not increase abruptly. The VFA/TAC ratio should be used as an indicator of the good biological/bacteriological activity of the digester.</p>
+
+    <p>Figure 3.43 again confirms the stability of digester operation.</p>
+
+    <figure id="en-fig-result20">
+      <img src="../images/Chap3/chap3_result20b.png" alt="Volatile fatty acid production in the digesters"/>
+      <figcaption><strong>Figure 3.43</strong> — Volatile fatty acid production in the digesters</figcaption>
+    </figure>
+
+    <p>The literature states that the VFA/TAC ratio should be between 0.2 and 0.5. Above 0.5, VFA production is high, implying an excessive supply of fermentable matter. Below this, VFA production is slightly too low, indicating a lack of biomass at the digester inlet.</p>
+
+    <p>Over the period studied, the average VFA concentration of digester 1 is 615 mg/l, giving a VFA/TAC ratio of 615/4,707 = 0.13. Due to the effect of thermal hydrolysis, the VFA content is higher in digester 2 while remaining stable. As seen previously, the TAC in this digester has itself greatly increased so that the VFA/TAC ratio is 2,178/12,048 = 0.17. At digester 1 level, a ratio below 0.2 can be explained by the good organic matter removal performance while remaining close to the lower limit of 0.2 generally recommended. At the second digester level, although matter is released by solubilisation through hydrolysis, the ratio remains close to but always slightly below 0.2. This is also explained by the performance of digester 1 which has a knock-on effect on the second digestion stage.</p>
+
+    <p><strong>Mass balance of the DLD configuration:</strong></p>
+
+    <p>All digester monitoring indicators confirm that their operation is stable over the period considered. It is therefore possible to establish a mass balance in order to cross-reference the analysed data, namely the various concentrations, with the measured data, namely sludge and gas flow rates. The ultimate objective of this mass balance is to verify the consistency between the analysed parameters, the measured parameters and the calculated and measured biogas production. The whole will validate the overall performance of the process and of the DLD configuration.</p>
+
+    <p>The mass balance in Figure 3.44 summarises the analysed and measured elements for each step of the DLD configuration. At the first digester level, over the mass balance period, the average daily feed of the digester is 13,090 [l/day]. The average inlet dry solids content is 6.1%. Thus, the dry solids load is 13,090 [l/d] × 0.061 [%] = 794 [kg/day] DS. The percentage of volatile solids in the dry solids is 74.99%. The VS load is therefore 795 [kg/day DS] × 0.75 [%] = 594 [kg VS/day]. The mineral matter corresponds to the difference between DS and VS. The mineral matter load is 198 [kg/day]. The average inlet soluble COD concentration is 8,673 [mg/l], i.e. a pollutant load of 13,090 [l/day] × 8,673 [mg/l] = 113.5 [kg/day]. On the same basis, the total COD load is 72,066 [mg/l] × 13,090 [l/day] = 943 [kg/day].</p>
+
+    <p>Following the same principle, at the digester 1 outlet, the soluble COD concentration of 881 [mg/l] gives a load of 12 [kg/d], the total COD concentration of 32,058 [mg/l] gives a load of 420 [kg/l], the dry solids content of 3.8% gives a load of 494 [kg/d] and the VS content of 55% gives a load of 272 [kg/d].</p>
+
+    <p>The estimated biogas production is calculated by the difference in VS load between inlet and outlet multiplied by the coefficient of 0.9 Nm³ of biogas per kg of VS consumed. The expected biogas is therefore of the order of (596 − 272) × 0.9 = 291.5 [Nm³/d]. The daily biogas production measured by mass flow meters is 295.8 [Nm³/d].</p>
+
+    <p>The differences between the measured and calculated biogas flow rates based on analyses are small. The calculated ratio of biogas production per kilogram of VS removed is 0.913, which is consistent with the 0.9 ratio determined by the Buswell formula in Chapter 1. An experimental ratio of 0.91 [Nm³/kg] VS is obtained for digester 1 and 0.95 for digester 2. Biogas production has therefore been close to the calculated stoichiometry.</p>
+
+    <p>The difference between this calculated and measured production on digester 1 being only 1.4%, its mass balance is consistent and corroborates the measured and calculated data. The VS removal of 54.5%, the DS removal of 37.8% and the total COD removal of 55.5% are reliable. It should be noted that at the digester outlet, the soluble COD load is low at only 12 [kg/d].</p>
+
+    <p>Before being hydrolysed, the hot sludge extracted from digester 1 passes through storage tank 2 before being dewatered. During this storage, the sludge can continue its degradation process, which requires checking the VS content. This VS content remaining at 55%, this biological activity has not impacted the sludge. The dry solids content achieved when dewatering the sludge by centrifuge allows the content to be increased from 3.8 to 29.5%. The extracted water, in other words the centrate, is returned to the head of the wastewater treatment plant. The sludge flow rate recorded at 29.5% dry solids content is 1,589 [l/d]. Thus, a slight mass discrepancy of around 5% is observed. This discrepancy is explained by the uncertainty in dry solids and flow rate measurements as well as by the capture rate of the centrifuge of around 96%, which implies a loss of matter with the centrate. Retaining the concentrations at the digester outlet and taking into account this 5% loss, a DS load entering the hydrolysis of 469 [kg/day], a VS load of 258 [kg/day], a mineral matter load of 211 [kg/day], a total COD load of 399 [kg/day] and a soluble COD load of 11 [kg/day] are calculated. These are the loads treated by the thermal hydrolysis process.</p>
+
+    <p>After thermal hydrolysis, and after diluting the sludge to bring its concentration to 120 [g/l] DS, the analyses allow a VS load of 258 [kg/day] to be determined, which remains unchanged. However, within this VS, a portion of the particulate fraction has been solubilised. Since analysis of soluble VS in sludge is not easy, soluble COD is used as an indicator. This soluble COD increases from 11 to 112 [kg/day] for a total COD of 399 [kg/day]. Thus, the solubilisation of organic matter is 112/399 = 28%. It is this solubilised pollution that will be attacked in the second digester. The DS, mineral matter and total COD loads are verified to ensure they are unchanged, which is the case.</p>
+
+    <p>At the digester 2 outlet, the dry solids content is 8.8% and VS 51%. The associated loads are 177 [kg/day] VS, 168 [kg/day] mineral matter, 345 [kg/day] DS, 371 [kg/day] total COD and 48 [kg/day] soluble COD.</p>
+
+    <p>The estimated biogas production at the second digester level is of the order of (258 − 177) × 0.9 = 73 [Nm³/d], whereas the measured daily biogas production is 77.1 [Nm³/d], representing a discrepancy between analysis and measurement of 5.3%. The calculated ratio of biogas production as a function of VS removed is 0.95, again a value close to the theoretical 0.9 derived from CHONS stoichiometry and the COD/VS ratio considered. The various removal rates of the second digester are 31.4% for VS, 26.5% for DS and 6.8% for total COD.</p>
+
+    <p>Across the entire DLD configuration, the overall VS removal is of the order of 68%, which is normally significantly better than a single digester whose removal is 45% or an LD configuration with 55%.</p>
+
+    <p>The performance of the first digestion stage was such that the VS removal achieved in 12 days was equivalent to that of a digester with a residence time of 24 days.</p>
+
+    <p>Thus, the increase in biogas production due to thermal hydrolysis was considered to be that measured at the second digester level. The calculated gain in biogas is 77/291.5 = 25% (26% based on measured biogas flow rates).</p>
+
+    <p>The advantage of the DLD configuration is that it allows, after a first digestion stage, biological sludge to be dewatered to more than 20% dry solids content, which is difficult to achieve without a prior digestion step given the very nature of biological sludge. This dry solids content gain allows, having less water to heat, the steam consumption per tonne of DS treated to be reduced. The sludge arriving more concentrated, this configuration reduces the reactor size. It achieves a VS removal of 68%, which leads to increased sludge volume reduction and an increase in biogas production of around 26%.</p>
+
+    <figure id="en-fig-result22">
+      <img src="../images/Chap3/chap3_result22bb.jpg" alt="Representative mass balance of the DLD configuration of the pilot unit"/>
+      <figcaption><strong>Figure 3.44</strong> — Representative mass balance of the DLD configuration of the pilot unit</figcaption>
+    </figure>
+
+    <!-- ── Conclusion ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-conclusion">3.4 Conclusion</h2>
+
+    <div class="conclusion-block">
+      <p>Temperature monitoring showed that the use of a steam injection lance does not ensure proper condensation of steam in the sludge. As a replacement for this system, the use of a dynamic mixer for injecting and mixing steam with sludge was tested and proved satisfactory. With this dynamic mixer, it appears that temperatures within the condenser homogenise from the mixer outlet and remain homogeneous along the reactor.</p>
+
+      <p>The use of such a device for steam injection eliminates concerns related to the scaling of a simple injector design and temperature homogeneity, and above all to the incoming sludge dry solids content, which is the limiting point of these technologies. It also limits thermal gradients within the reactor, which positively impacts mechanical stresses and limits deformations due to reactor thermal expansion.</p>
+
+      <p>Monitoring the performance of the pilot installation has validated the relevance of a DLD configuration in terms of organic matter removal and biogas production, while also confirming the proper long-term operation and efficiency of continuous hydrolysis COD solubilisation. This solubilisation averages 28%. The DLD configuration achieves an organic matter removal efficiency of 68%, representing an advance over the conventional LD configuration whose maximum removal is around 58%; it increases biogas production by more than 25% and reduces the quantity of dry solids to be evacuated by an equivalent amount.</p>
+    </div>
 
     <div class="page-nav">
-      <a href="chap2.html"><span class="arrow">←</span> Chapter 2</a>
-      <a href="chap4.html">Chapter 4 <span class="arrow">→</span></a>
+      <a href="chap2.html">← Chapter 2</a>
+      <a href="chap4.html">Chapter 4 →</a>
     </div>
   </div>
 </div>

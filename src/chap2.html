@@ -1307,45 +1307,1292 @@
 
 <div class="en-block">
   <div class="chapter-page">
+
     <div class="breadcrumb">
       <a href="../index.html">Home</a><span>›</span>
       <a href="toc.html">Table of contents</a><span>›</span>
       Chapter 2
     </div>
+
     <span class="chapter-label">Chapter 2</span>
     <h1 class="chapter-title">Modelling of the continuous thermal hydrolysis process</h1>
 
-    <p>The process proposed for study is the first thermal hydrolysis process designed to operate continuously. The reactor consists of two parts: a vertical column for steam injection and condensation, and a horizontal section to ensure reaction time. A first heat exchanger recovers energy to preheat the steam boiler feed water; a second cools the sludge to the desired digester temperature.</p>
-    <p>Steam injection into the condensation column was initially designed as a multi-hole injection lance. Key uncertainties remained regarding injector geometry: Is the current geometry optimal? Does it enable rapid steam condensation? Does it achieve temperature homogeneity throughout the reactor? Can alternative injector designs be considered and scaled up?</p>
-    <p><strong>For cost and schedule reasons, a numerical model was developed to simulate the expected evaporation-condensation phenomena rather than conducting a design of experiments programme.</strong></p>
+    <p>The process proposed for study is the first thermal hydrolysis process for sludge intended to operate continuously. The flow rate and dry solids content of the sludge to be treated can vary and be adjusted during continuous operation. Figure 2.1 represents the complete process, showing the arrival of dewatered sludge, the steam injection point, the reactor, a series of two heat exchangers, and a dilution water injection.</p>
 
-    <h2 id="sec-approche">2.1 Approach to the phenomena to be modelled</h2>
-    <h3 id="sec-colonne-vapeur">2.1.1 Steam injection column modelling</h3>
-    <p>Saturated steam is injected at the centre of the vertical section via an injection lance, bringing it into direct contact with sludge. The operating conditions range from 10–100 m/s steam velocity, 5–16 bar pressure, and sludge suspended solids concentrations of 100–200 g/L. A VOF (Volume of Fluid) two-phase model was selected with the Lee evaporation-condensation model under Ansys-Fluent.</p>
-    <h3 id="sec-reacteur-horizontal">2.1.2 Horizontal reactor modelling</h3>
-    <p>The horizontal reactor was modelled as a single-phase flow with a non-Newtonian fluid (Herschel-Bulkley viscosity model) to assess thermal stratification. Sludge rheological properties were characterised from literature data.</p>
-    <h3 id="sec-methodologies">2.1.3 Existing methodologies for the phenomena involved</h3>
-    <p>A review of existing multiphase flow and steam condensation modelling methodologies was carried out. The Lee model was selected as the standard evaporation-condensation model available in Fluent, with custom UDF (User Defined Function) modifications to improve condensation rate accuracy.</p>
+    <figure>
+      <img src="../images/Chap2/schemaexelys.png" alt="Process flow diagram of the proposed process under study"/>
+      <figcaption><strong>Figure 2.1</strong> — Process flow diagram of the proposed process under study</figcaption>
+    </figure>
 
-    <h2 id="sec-materiel-methode">2.2 Materials and methods</h2>
-    <h3 id="sec-simulation-colonne-pilote">2.2.1 Pilot unit steam injection column simulation</h3>
-    <p>The pilot injection column (DN65, 1.2 m height) was modelled in 3D with an Euler-Euler two-fluid approach. Multiple injector geometries were simulated: initial single-lance, Crown 1, Crown 2, and Komax-type devices. Boundary conditions were set from pilot unit operating data.</p>
-    <h3 id="sec-simulation-reacteur-pilote">2.2.2 Pilot unit reactor simulation</h3>
-    <p>The horizontal hydrolysis reactor (DN150, 4 m length, 5° inclination) was modelled to assess thermal stratification. Simulations compared configurations with and without internal fins and at various inclination angles.</p>
-    <h3 id="sec-extrapolation-industrielle">2.2.3 Scale-up to industrial size</h3>
-    <p>Scale-up simulations were performed for an industrial-scale reactor (DN450) to verify consistency with pilot-scale results and validate the geometric similarity of key phenomena.</p>
+    <p>The reactor consists of two parts: a vertical column serving for steam injection and condensation, and a horizontal section to ensure the reaction time. These two parts have specific constraints and will be addressed individually.</p>
 
-    <h2 id="sec-resultats">2.3 Results and discussion</h2>
-    <h3 id="sec-resultats-colonne">2.3.1 Pilot injector column simulation</h3>
-    <p>Simulations showed pocket-type steam dynamics and imperfect condensation, with steam escaping at the column top. The model underestimates column temperature by ~25% compared to experimental values but provides valid qualitative comparisons between injector designs. Crown 2 and Komax-type devices showed superior condensation performance.</p>
-    <h3 id="sec-resultats-reacteur">2.3.2 Pilot reactor simulation</h3>
-    <p>Thermal stratification of 10–15 °C was predicted by simulation, versus 40–80 °C measured experimentally. Internal fins and 5° inclination partially reduce stratification but do not eliminate it. The dynamic mixer injection system was identified as the solution.</p>
-    <h3 id="sec-extrapolation-resultats">2.3.3 Scale-up of the reactor to industrial scale</h3>
-    <p>Industrial-scale simulations (DN450) showed results consistent with pilot scale: pocket-type steam dispersion and direct steam rise at the column centre. The dynamic mixer solution remains applicable at industrial scale without geometry scaling constraints.</p>
+    <p>The first heat exchanger is used to recover energy to preheat the feed water for the steam boiler supplying the system. The second heat exchanger cools the sludge to reach the desired temperature in the digester. The dilution water is used to lower the temperature of the sludge, and thus to optimise the sizing of the second heat exchanger, and to control and adjust the suspended solids concentration of the sludge entering the digester to 100–120 g/l. As a reminder, beyond this value, digester mixing problems arise due to excessively high viscosity, as well as ammonia concentrations that can inhibit the methanogenic phase.</p>
 
-    <h2 id="sec-conclusion">2.4 Conclusion</h2>
-    <p>The numerical modelling approach enabled qualitative comparison of five injector designs and identification of the dynamic mixer as the optimal steam injection solution. Temperature homogeneity requirements cannot be met by static injectors alone. The modelling of evaporation-condensation phenomena is inherently complex, and further model refinements would be needed for fully quantitative results.</p>
-    <p>To go further, it would be worth comparing the simulations with another code such as Saturne, developed specifically for evaporation-condensation phenomena, or developing a custom Fluent module.</p>
+    <p>Steam injection into the condensation column is intended to be carried out by an injection lance fitted with multiple holes. However, many uncertainties remain regarding the geometry of this lance, namely:</p>
+    <ul>
+      <li>Is the geometry of the injection lance optimal?</li>
+      <li>Does this geometry allow steam to condense rapidly within the system?</li>
+      <li>Will it achieve perfect temperature homogeneity throughout the reactor? Any temperature gradient between the upper and lower parts of the reactor could cause mechanical stresses due to differential thermal expansion. Any temperature inhomogeneity could lead to imperfect sludge treatment.</li>
+      <li>Is it possible to envisage an alternative injection lance design?</li>
+      <li>Could this new design be scaled up to a larger reactor size?</li>
+    </ul>
+
+    <p>Furthermore, in the middle of the vertical section a restriction was arbitrarily installed in order to promote steam condensation. In the upper part, a spiral is intended to be fitted to complete steam condensation. The horizontal reactor was inclined at 5% to improve temperature homogeneity. These elements form part of the original patent but are not based on any scientific foundation [Hojsgaard, 2011]. Some of these points will be evaluated in this work.</p>
+
+    <p><strong>For reasons of cost and schedule, it was decided to develop a numerical model to simulate the expected evaporation-condensation phenomena rather than to conduct design of experiments.</strong></p>
+
+    <p>This approach requires understanding the interactions to be modelled and calibrating the model against reality. The construction of a pre-industrial pilot unit is planned with the aim of supporting the simulation phase in order to confirm the simulation results, and then, if a satisfactory geometry emerges, to test it and validate the efficiency of the sludge-steam transfer.</p>
+
+    <!-- ── Section 2.1 ──────────────────────────────────────────────── -->
+    <h2 id="en-sec-approche">2.1 Approach to the phenomena to be modelled</h2>
+
+    <!-- ── Subsection 2.1.1 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-colonne-vapeur">2.1.1 Modelling of the steam injection column</h3>
+
+    <p>Figure 2.2 schematically represents the saturated steam injection column under study and the interactions between the phases. Saturated steam is injected at the centre of the vertical section via an injection lance. The steam is thus brought into direct contact with the sludge.</p>
+
+    <figure>
+      <img src="../images/Chap2/colonnevapo.png" alt="Diagram of the column under study"/>
+      <figcaption><strong>Figure 2.2</strong> — Diagram of the column under study</figcaption>
+    </figure>
+
+    <p>The orders of magnitude of the operating conditions of the system to be studied are given in Table 2.1.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.1</strong> — Orders of magnitude of the operating conditions of the column</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Inlet velocity (m s⁻¹)</th>
+            <th>Pressure (bar)</th>
+            <th>Inlet temperature (°C)</th>
+            <th>Suspended solids concentration (g/L)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Saturated steam</td>
+            <td style="text-align:center;">10 to 100</td>
+            <td style="text-align:center;">5 to 16</td>
+            <td style="text-align:center;">T<sub>sat</sub></td>
+            <td style="text-align:center;">–</td>
+          </tr>
+          <tr>
+            <td>Sludge</td>
+            <td style="text-align:center;">10⁻³ to 10⁻¹</td>
+            <td style="text-align:center;">8 to 14</td>
+            <td style="text-align:center;">25</td>
+            <td style="text-align:center;">120 to 250</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The pressure applied to the sludge in the system must be able to vary from 5 to 14 bar, corresponding to hydrolysis temperatures of 150 and 195 °C.</p>
+
+    <p>The steam ejection velocity at the holes of the injection lance used as the baseline model is considered to range from 10 to 40 m·s⁻¹. The steam pressure varies from 8 to 14 bar. Part of this steam pressure is required to overcome the pressure losses due to the sludge, and the residual pressure serves to keep the reactor under pressure so that the treated fluid does not vaporise.</p>
+
+    <p>As illustrated in Figure 2.2, the system to be modelled is a multiphase flow subject to evaporation-condensation phenomena. The phases present are:</p>
+    <ul>
+      <li>Saturated water vapour</li>
+      <li>Wastewater treatment sludge (a mixture of water and bio-solids)</li>
+    </ul>
+
+    <p>The physical phenomena to be taken into account are:</p>
+    <ul>
+      <li>The equations governing the motion of each phase: sludge and saturated water vapour,</li>
+      <li>Turbulence models for each phase,</li>
+      <li>Energy transport and transfer equations (including the energy transfer due to evaporation-condensation phenomena),</li>
+      <li>The mass transfer model due to evaporation-condensation,</li>
+      <li>The determination of the interfacial area between the sludge and the water vapour,</li>
+      <li>The dependence of the physical properties of the phases on pressure and temperature,</li>
+      <li>The rheology of sludge and in particular its evolution due to evaporation-condensation phenomena.</li>
+    </ul>
+
+    <!-- ── Subsection 2.1.2 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-reacteur-horizontal">2.1.2 Modelling of the horizontal reactor</h3>
+
+    <p>Figure 2.3 schematically represents the thermal lysis reactor under study.</p>
+
+    <figure>
+      <img src="../images/Chap2/shemareacteur.png" alt="Orders of magnitude of the operating conditions of the reactor"/>
+      <figcaption><strong>Figure 2.3</strong> — Orders of magnitude of the operating conditions of the reactor</figcaption>
+    </figure>
+
+    <p>The orders of magnitude of the operating conditions of the system to be studied are given in Table 2.2. At this stage, the steam is assumed to be perfectly condensed. The sludge temperature is considered to be between 150 and 170 °C. The reactor is intended to be maintained at a pressure of 9 to 10 bar.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.2</strong> — Orders of magnitude of the operating conditions of the reactor</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Inlet velocity (m s⁻¹)</th>
+            <th>Pressure (bar)</th>
+            <th>Inlet temperature (°C)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sludge</td>
+            <td style="text-align:center;">5×10⁻³ to 10⁻¹</td>
+            <td style="text-align:center;">9 to 10</td>
+            <td style="text-align:center;">150 to 170</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Subsection 2.1.3 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-methodologies">2.1.3 Existing methodologies for the phenomena involved</h3>
+
+    <p>The phenomena at play in the column of the process under study are complex (high-velocity steam injection into highly concentrated sludge, evaporation-condensation phenomena). In order to develop a modelling approach for the injection column of the process, it proved necessary to carry out:</p>
+    <ul>
+      <li>A literature review on the modelling of evaporation-condensation phenomena,</li>
+      <li>A methodology developed on the basis of feedback from experts identified during the literature review, in order to model the phenomena at play in the column using the ANSYS-Fluent computational fluid dynamics code.</li>
+    </ul>
+
+    <p>In the following section, the various physical phenomena occurring in the column and the reactor are presented, along with how they are incorporated into the models used in this study (column model and reactor model).</p>
+
+    <h4 id="en-sec-modele-diphasique">2.1.3.1 Choice of the two-phase model</h4>
+
+    <p>It emerges from the state of the art that:</p>
+    <ul>
+      <li>The Euler-Euler two-phase approach is relatively common [LeMoullec, 2008; Olmos, 2003; Wang, 2009; Pfleger, 2001].</li>
+      <li>A few three-phase flow studies are beginning to emerge [Wang, 2010; Wang, 2009].</li>
+      <li>Three-phase (complex) problems can be simplified at other levels of the physics: for example, turbulent flows in 2D instead of 3D [Wang, 2009].</li>
+      <li>In contrast, the two-phase approach with heat transfer and phase change is far less common (no three-phase) [Lee, 1979].</li>
+      <li>All these flows are resolved in "rather simple" 3D geometries (pipes, tanks, counter-current fluids) [LeMoullec, 2010; Millies, 1999; Olmos, 2003].</li>
+      <li>For complex geometries in motion (stirring and impellers), the physics is simplified as much as possible while retaining the turbulence aspects (which contribute to mixing): single-phase turbulent flows, with two-phase mixing beginning to appear [Wang, 2010].</li>
+    </ul>
+
+    <p>The article by Jamaleddine deals with the evaporation of water vapour from the surface of particles [Jamaleddine, 2011]. Evaporation (mass and heat transfer) is treated by correlations based on dimensionless numbers (Nusselt, Sherwood, transfer coefficients) and a mass transfer term. <strong>The turbulence model used is a standard k-ε model.</strong></p>
+
+    <p>This article is a key reference. The study is structured under Fluent (models, equations and properties, mesh, experiment) and concerns the evaporation of solid sludge.</p>
+
+    <p>In his articles, LeMoullec develops a gas-liquid two-phase model in an activated sludge reactor, taking into account hydrodynamics, mass transfer and biological reactions. He bases his two-phase approach on an Euler-Euler model, incorporating a drag coefficient adapted for bubbles whose size he determined experimentally [LeMoullec, 2008, 2010, 2011].</p>
+
+    <p>In his articles, Wang develops a gas-liquid-solid three-phase model in a bioreactor, coupling hydrodynamics and biological reactions. Their system is treated in 2D but his approach is three-phase. He uses an Euler-Euler approach and, for turbulence, a standard k-ε model with additional terms added to account for the turbulence generated at the interfacial area [Wang, 2005; Wang, 2010].</p>
+
+    <p>It emerges from the state of the art on the two-phase aspect of the problem that the Euler-Euler model is recommended by the experts identified in the literature [LeMoullec, 2011, 2010, 2008; Olmos, 2003; Wang, 2009, 2010; Lee, 1979].</p>
+
+    <h4 id="en-sec-modele-turbulence">2.1.3.2 Choice of the turbulence model</h4>
+
+    <p>It emerges from the state of the art of the turbulence models studied that:</p>
+    <ul>
+      <li>Turbulence arises essentially from the two-phase aspects.</li>
+      <li>A term is added to refine the k-ε model (to account for the bubble-induced turbulence effect).</li>
+    </ul>
+
+    <p>The authors identified in the two-phase approach — Jamaleddine, LeMoullec and Wang — use a k-ε type turbulence model. Its use is recommended to simplify the problem as much as possible. LeMoullec also subsequently tests a Reynolds Stress Model (RSM) for a better treatment of turbulence. According to LeMoullec, this model is more difficult to converge and requires more computational resources [LeMoullec, 2011].</p>
+
+    <p>In their articles, LeMoullec and Wang use an added term to refine the k-ε model because of bubble formation (gas injection creates turbulent energy). If the gas has a high velocity, it strongly affects turbulence [LeMoullec, 2010; Wang, 2010].</p>
+
+    <p>It emerges from the state of the art on turbulence models that the k-ε model is recommended by the literature as a first approach.</p>
+
+    <h4 id="en-sec-aire-interfaciale">2.1.3.3 Determination of the interfacial area</h4>
+
+    <p>The conclusions emerging from the state of the art on interfacial area are:</p>
+    <ul>
+      <li>The interfacial area (contact angle and bubble shape) is a very specific problem, examined essentially at the microscopic scale. It is studied by experts at the bubble scale, which is not the macroscopic scale relevant to this study.</li>
+      <li>In general, microscopic aspects (interfacial area, triple point, contact angle) are very rarely addressed in these studies. Microscopic aspects have been absorbed into existing macroscopic models which are used as such.</li>
+    </ul>
+
+    <p>In their article, Millies and Mewes use a single interfacial area transport equation derived from a population balance accounting for bubble coalescence and breakup effects [Millies, 1999].</p>
+
+    <p>LeMoullec uses measured bubble size and shape in his simulation. The perspectives of this article highlight the need to account precisely for the interfacial area by considering a bubble size distribution rather than a single bubble size [LeMoullec, 2008].</p>
+
+    <p>It is necessary to know the interfacial area between the two phases precisely, since it directly governs the exchanges (mass and energy) between the two phases. The shape of the "bubble" interface also affects the calculation of drag forces and therefore the momentum exchanges between the phases.</p>
+
+    <p>It emerges from the state of the art on interfacial area that a single bubble size, of known dimensions and shape (ideally measurable), can be used as a first approach. However, for a precise treatment of the interfacial area, a bubble size distribution and its behaviour within the system must be accounted for.</p>
+
+    <p>In the modelling of the column, rather than simulating steam pockets, it was decided as a first approach to represent the vapour phase by a mono-dispersed bubble size distribution (a single bubble size). This bubble diameter was chosen arbitrarily: the same dimension as a hole in the steam injection system. Figure 2.4 schematically represents these two approaches, namely a flow regime with steam pockets and a mono-dispersed steam bubble flow regime.</p>
+
+    <figure>
+      <img src="../images/Chap2/pochevapeur.png" alt="Flow regime and corresponding interfacial area"/>
+      <figcaption><strong>Figure 2.4</strong> — Flow regime and corresponding interfacial area</figcaption>
+    </figure>
+
+    <p>By this simplification, an error is introduced on the interfacial area. This error increases as the actual flow regime deviates further from the simplified case of a mono-dispersed bubble size distribution.</p>
+
+    <h4 id="en-sec-transfert-matiere">2.1.3.4 Mass transfer model due to evaporation-condensation</h4>
+
+    <p>It emerges from the state of the art that evaporation and condensation are not treated simultaneously, even in single-phase flows, let alone in liquid-gas two-phase flows.</p>
+
+    <p>In general, authors use the Hertz-Knudsen equation. Ytrehus shows in his article [Ytrehus, 1996] that:</p>
+    <ul>
+      <li>Evaporation-condensation is a microscopic phenomenon well described by gas kinetics.</li>
+      <li>The Schrage-Hertz-Knudsen model is a simplified macroscopic model that necessarily contains approximations and requires parameterisation.</li>
+      <li>The most frequent use of evaporation models concerns sludge drying problems.</li>
+    </ul>
+
+    <p>The article by Jamaleddine deals with the evaporation of water vapour from the surface of particles. Evaporation (mass and heat transfer) is treated by correlations based on dimensionless numbers (Nusselt, Sherwood, transfer coefficients) and a mass transfer term close to (but different from) the Hertz-Knudsen equation [Jamaleddine, 2011].</p>
+
+    <p>The physical phenomena involving and producing mass transfer between the liquid phase and the vapour phase occur in a zone in the immediate vicinity of the interface. In this region, called the Knudsen layer, the vapour phase is in a thermodynamic state out of equilibrium [Knudsen, 1915].</p>
+
+    <p>To determine the net evaporation-condensation flux, statistical thermodynamics must be used. This kinetic approach, via the Boltzmann equation, yields formula (2.1) — known as the Hertz-Knudsen-Schrage equation — describing the net evaporation-condensation flux in the Knudsen layer [Wang, 2005]:</p>
+
+    <div class="equation">
+      <p><strong>(2.1)</strong></p>
+      <p>ṁ<sub>net</sub> = [2 / (2 − k<sub>c</sub>)] × [M / (2πR)]<sup>1/2</sup> × { k<sub>c</sub> × P<sub>v</sub> / T<sub>v</sub><sup>1/2</sup> − k<sub>E</sub> × P<sub>l</sub> / T<sub>l</sub><sup>1/2</sup> }</p>
+    </div>
+
+    <p>The definitions and units of the symbols appearing in equation (2.1) are given in Table 2.3:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.3</strong> — Definitions and units of the symbols in the Hertz-Knudsen-Schrage equation</caption>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Definition</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;">κ<sub>C</sub></td>
+            <td>Condensation coefficient</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">κ<sub>E</sub></td>
+            <td>Evaporation coefficient</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">ṁ<sub>net</sub></td>
+            <td>Net evaporation-condensation mass flux</td>
+            <td style="text-align:center;">kg·m⁻²·s⁻¹</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">M</td>
+            <td>Molar mass</td>
+            <td style="text-align:center;">kg·mol⁻¹</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">p</td>
+            <td>Pressure</td>
+            <td style="text-align:center;">Pa</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">T</td>
+            <td>Temperature</td>
+            <td style="text-align:center;">K</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">R</td>
+            <td>Universal gas constant</td>
+            <td style="text-align:center;">J·mol⁻¹·K⁻¹</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">l / v</td>
+            <td>Liquid phase / vapour phase</td>
+            <td style="text-align:center;">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The condensation coefficient k<sub>c</sub> in equation (2.1) is defined as follows:</p>
+
+    <div class="equation">
+      <p><strong>(2.2)</strong></p>
+      <p>k<sub>c</sub> = number of molecules absorbed into the liquid phase / number of molecules hitting the liquid phase from the gas phase</p>
+    </div>
+
+    <p>As schematically shown in Figure 2.5, vapour molecules impacting the interface can be reflected, replaced by a water molecule from the interface, or absorbed.</p>
+
+    <figure>
+      <img src="../images/Chap2/schemaechange1.png" alt="Molecular mechanisms of condensation at the liquid-vapour interface"/>
+      <figcaption><strong>Figure 2.5</strong> — Molecular mechanisms of condensation at the liquid-vapour interface</figcaption>
+    </figure>
+
+    <p>In the same way, the evaporation coefficient is defined by:</p>
+
+    <div class="equation">
+      <p><strong>(2.3)</strong></p>
+      <p>k<sub>E</sub> = number of molecules transferred to the gas phase / number of molecules emitted from the liquid phase</p>
+    </div>
+
+    <p>As schematically shown in Figure 2.6, liquid water molecules at the interface are emitted and can:</p>
+    <ul>
+      <li>Be reflected by water molecules in the vapour phase and re-enter the interface,</li>
+      <li>Be replaced by a water molecule from the vapour phase at the interface,</li>
+      <li>Be transferred into the vapour phase.</li>
+    </ul>
+
+    <figure>
+      <img src="../images/Chap2/schemaechange2.png" alt="Molecular mechanisms of evaporation at the liquid-vapour interface"/>
+      <figcaption><strong>Figure 2.6</strong> — Molecular mechanisms of evaporation at the liquid-vapour interface</figcaption>
+    </figure>
+
+    <p>For an interface in equilibrium, ṁ<sub>net</sub> = 0, since the number of evaporated molecules equals the number of condensed molecules (k<sub>E</sub> = k<sub>c</sub>). When the interface is in an out-of-equilibrium state, this identity no longer necessarily holds.</p>
+
+    <p>Determining the net flux (equation 2.1) requires knowledge of the temperatures and pressures of both phases in the immediate vicinity of the interface (Knudsen layer) and knowledge of the condensation and evaporation coefficients. These can be determined by molecular dynamics calculations or experimentally.</p>
+
+    <p>A simplified formulation of the net mass flux expression from equation (2.1) can be obtained. The net mass flux in equation (2.1) can be split into two terms, the first representing transfer by evaporation and the second transfer by condensation.</p>
+
+    <p>The source term for mass transfer by evaporation (kg·m⁻³·s⁻¹) is ultimately written as:</p>
+
+    <div class="equation">
+      <p><strong>(2.4)</strong></p>
+      <p>Γ<sub>l→v</sub> = ṁ<sub>l→v</sub> × A<sub>i</sub>/V<sub>cell</sub> = <em>coeff</em> × [ α<sub>v</sub> ρ<sub>v</sub> (T* − T<sub>sat</sub>) / T<sub>sat</sub> ]</p>
+      <p>with: <em>coeff</em> = [2K/(2−K)] × (6/d) × [M/(2πRT<sub>sat</sub>)]<sup>1/2</sup> × L × [ρ<sub>v</sub>ρ<sub>l</sub>/(ρ<sub>l</sub>−ρ<sub>v</sub>)]</p>
+    </div>
+
+    <div class="equation">
+      <p><strong>(2.5)</strong></p>
+      <p><em>coeff</em> = [2K/(2−K)] × (6/d) × [M/(2πRT<sub>sat</sub>)]<sup>1/2</sup> × L × [ρ<sub>v</sub>ρ<sub>l</sub>/(ρ<sub>l</sub>−ρ<sub>v</sub>)]</p>
+    </div>
+
+    <p>A source term for mass transfer by condensation (kg·m⁻³·s⁻¹) is written using an expression similar to that of equation (2.4).</p>
+
+    <p>In Fluent software, <strong>this coefficient is a constant parameter to be defined when setting up the calculation</strong>. Different values can be chosen for the term expressed by equation (2.5) for mass transfer by evaporation and by condensation.</p>
+
+    <p>The default value of these evaporation and condensation coefficients in Fluent is set to 0.1. This value is identical to that used by Lee [Lee, 1979]. This default value was retained in the simulations carried out in this study.</p>
+
+    <h4 id="en-sec-proprietes-physiques">2.1.3.5 Physical properties of the phases</h4>
+
+    <p>The following conclusions emerge from the state of the art on the physical properties of the phases.</p>
+
+    <p>The variation of physical parameters with temperature is not addressed except in studies concerning drying. Very few measurements of the thermal properties of sludge are encountered, which is consistent with the scarcity of recent two-phase simulations resolving energy transfers.</p>
+
+    <p>The most relevant articles are those by Laurent and Bougrier, which present characterisation results for sludge properties following thermal hydrolysis at temperatures close to those of a hydrolysis process [Laurent, 2011; Bougrier, 2008].</p>
+
+    <p>Accounting for the dependence of the physical properties of both phases on pressure and temperature is important when studying gas-liquid phase change phenomena. It is indeed necessary to know the dependence on T and P of quantities such as:</p>
+    <ul>
+      <li>Specific heat capacity c<sub>p</sub> (in J·kg⁻¹·K⁻¹),</li>
+      <li>Density ρ (in kg·m⁻³),</li>
+      <li>Thermal conductivity λ (in W·m⁻¹·K⁻¹),</li>
+      <li>Molecular viscosity ν (in kg·m⁻¹·s⁻¹).</li>
+    </ul>
+
+    <p>Accounting for the non-Newtonian behaviour of sludge is necessary to correctly describe the hydrodynamics of the system. This adds further complexity to the simulations.</p>
+
+    <p>Two additional difficulties arise in the system under study:</p>
+    <ul>
+      <li>The temperature is not uniform in the column. The rheological behaviour laws of sludge depend strongly on temperature (typically a sludge behaviour law is determined for a given temperature and suspended solids concentration),</li>
+      <li>The condensation of steam will lead to a decrease in the suspended solids concentration of the sludge, causing a change in its rheological law.</li>
+    </ul>
+
+    <p>Figure 2.7 shows rheograms of sludge for different suspended solids concentrations [Slatter, 1997]. The suspended solids concentrations of the samples tested and shown on this rheogram are 31.7 g/l for sample 1, 46.6 g/l for sample 2 and 66.2 g/l for sample 3. It should be noted that sludge is not a Newtonian fluid.</p>
+
+    <figure>
+      <img src="../images/Chap2/rheogramme.png" alt="Sludge rheograms for different suspended solids concentrations"/>
+      <figcaption><strong>Figure 2.7</strong> — Sludge rheograms for different suspended solids concentrations [Slatter, 1997]</figcaption>
+    </figure>
+
+    <p>Part of the study concerns the modelling of the steam injection column and the other part the modelling of the horizontal thermal lysis reactor located at the outlet of the column.</p>
+
+    <p>For the modelling of the injection column, although accounting for the dependence of phase properties on pressure and temperature is important, the phase change dynamics being very violent (very large velocity and temperature differences between the two phases), it proved necessary to simplify the model by treating the sludge as water and using constant values for the physical properties of the phases (values taken at the inlet pressure and temperature of the injection column). This approach represents a good precision-stability compromise for developing the injection column model.</p>
+
+    <p>For the modelling of the reactor section, the fluid system under study was simplified. The first assumption supposes that all the steam injected into the column condenses before reaching the top of the column, i.e., the horizontal thermal lysis reactor located at the column head contains only sludge. The second assumption considers Newtonian behaviour of the sludge, modelling it as water, but with the temperature dependence of physical properties taken into account in order to capture any potential thermal malfunction of the reactor.</p>
+
+    <p>The specific heat capacity of water is provided directly by Fluent in the form of a piecewise linear continuous function. The other properties are given by formulas (2.6), (2.7) and (2.8) obtained from the water tables used in engineering practice by Pezzani [Pezzani, 1992] and Perrot [Perrot, 2006]. The polynomial expressions are obtained by interpolating the point curves drawn by plotting the evolution of each of the three thermodynamic properties as a function of temperature.</p>
+
+    <div class="equation">
+      <p><strong>(2.6)</strong></p>
+      <p>ρ = 604,4 + 3,292 × T − 0,008 × T² + 4,77 × 10⁻⁶ × T³</p>
+    </div>
+
+    <div class="equation">
+      <p><strong>(2.7)</strong></p>
+      <p>λ = −0,514 + 0,0064 × T − 9,912 × 10⁻⁶ × T² + 3,441 × 10⁻⁹ × T³</p>
+    </div>
+
+    <div class="equation">
+      <p><strong>(2.8)</strong></p>
+      <p>μ = 0,13 − 0,0013 × T + 5,067 × 10⁻⁶ × T² − 8,6 × 10⁻⁹ × T³ + 5,47 × 10⁻¹² × T⁴</p>
+    </div>
+
+    <p>where ρ is the density (in kg·m⁻³), λ the thermal conductivity (in W·m⁻¹·K⁻¹), μ the dynamic viscosity (in kg·m⁻¹·s⁻¹) and T the temperature (in K).</p>
+
+    <!-- ── Section 2.2 ──────────────────────────────────────────────── -->
+    <h2 id="en-sec-materiel-methode">2.2 Materials and methods</h2>
+
+    <p>In view of the questions raised by the development of a model describing as accurately as possible the physical phenomena occurring in the injection column of the process, and the results of the literature review, it appears that attempting to address all physical topics simultaneously would be very complex.</p>
+
+    <p>The literature search makes it possible to develop two simplified modelling approaches for simulating the injection column and the reactor. These developments require validation by comparing simulations with experimental data from a pre-industrial pilot unit. Once validated, the model should be applicable to model and study industrial-scale cases.</p>
+
+    <p>The nominal diameter of the pilot unit reactor is 100 mm (DN 100). In the following study, these geometries are extrapolated to an industrial scale of DN 450. The dimensions of the horizontal and vertical sections are based on residence time considerations.</p>
+
+    <p>Whether at pilot or industrial scale, the meshes were modified to incorporate static mixers in order to study their usefulness.</p>
+
+    <p>In parallel with the development of the column model under Fluent, a simple theoretical approach is developed to estimate the liquid temperature at the column outlet. This theoretical model is described in the appendix.</p>
+
+    <!-- ── Subsection 2.2.1 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-simulation-colonne-pilote">2.2.1 Simulation of the injection column of the pilot unit</h3>
+
+    <p>The first objective of the study is to validate experimentally the modelling approach developed for the injection column.</p>
+
+    <p>Figure 2.8 shows the drawings of the injection system of the column of the pre-industrial research unit as initially planned. The dimensions expressed are in millimetres. From the flange, the lance plunges 142.7 mm into the condenser, and then 4 rows of 6 holes of 3 mm diameter allow steam injection.</p>
+
+    <figure>
+      <img src="../images/Chap2/plan_inj_init.png" alt="Drawing of the steam injection lance system of the vertical column"/>
+      <figcaption><strong>Figure 2.8</strong> — Drawing of the steam injection lance system of the vertical column</figcaption>
+    </figure>
+
+    <p>The modelling of the injection column is based on the dimensions of the pre-industrial unit shown in Figure 2.9, which is planned to provide data for the simulations and then to test and validate an injector geometry. The model assumptions for the column are summarised in Table 2.4.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.4</strong> — Model assumptions for the steam injection column</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>3D – Unsteady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Multiphase</td>
+            <td>Euler-Euler</td>
+          </tr>
+          <tr>
+            <td>Heat and mass transfer</td>
+            <td>Heat (Ranz-Marshall) + Mass (evaporation-condensation)</td>
+          </tr>
+          <tr>
+            <td>Phases</td>
+            <td>Liquid water (primary phase) / Steam (dispersed phase: bubble Ø 3 mm, Symmetric drag)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>At the foot of the injection column diagram (Figure 2.9), the steam injection lance schematised in Figure 2.8 can be distinguished.</p>
+
+    <figure>
+      <img src="../images/Chap2/Plan_colonne.JPG" alt="Drawing of the pilot unit injection column"/>
+      <figcaption><strong>Figure 2.9</strong> — Drawing of the pilot unit injection column planned to support the modelling work</figcaption>
+    </figure>
+
+    <p>The valve tagged EX-VM-0001 is not modelled as it will be removed during pilot operation. Also visible on this drawing are the sludge inlet and the steam injection lance. The design of the initial injection lance comes from the manufacturing drawing presented in Figure 2.8. Figure 2.10 shows the geometry of the column and the injection system of the pre-industrial unit column as modelled in Fluent. It shows how the injection lance from Figure 2.8 is positioned within the condenser.</p>
+
+    <figure>
+      <img src="../images/Chap2/geom_colonne_inj_alter.JPG" alt="Geometry of the vertical column and its steam injection system"/>
+      <figcaption><strong>Figure 2.10</strong> — Geometry of the vertical column and its steam injection system located at the bottom of the column</figcaption>
+    </figure>
+
+    <p>The operating conditions used in this section correspond to the data obtained during operation of the pre-industrial unit on 18/09/2012. This day is representative of the operating conditions observed over a long period. These data include a start-up phase followed by a phase where temperatures and flow rates are stabilised. To obtain the operating conditions and the temperature sensor values in the column, an average of these values was taken over a period of stable process operation.</p>
+
+    <p>The model parameters used for the column are also summarised in Table 2.5. The fluids considered are water and steam.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.5</strong> — Numerical model of the injection column</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>3D – Unsteady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Fluid</td>
+            <td>Liquid water (single-phase, constant properties)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The fluid properties and operating conditions are given in Table 2.6.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.6</strong> — Fluid properties and operating conditions of the injection column</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Liquid water</th>
+            <th>Water vapour</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>P (bar)</td>
+            <td style="text-align:center;">13</td>
+            <td style="text-align:center;">13</td>
+          </tr>
+          <tr>
+            <td>T (°C)</td>
+            <td style="text-align:center;">24</td>
+            <td style="text-align:center;">191</td>
+          </tr>
+          <tr>
+            <td>Q (kg h⁻¹)</td>
+            <td style="text-align:center;">65.8</td>
+            <td style="text-align:center;">16.2</td>
+          </tr>
+          <tr>
+            <td>V (m s⁻¹)</td>
+            <td style="text-align:center;">0.014</td>
+            <td style="text-align:center;">4.107</td>
+          </tr>
+          <tr>
+            <td>ρ (kg m⁻³)</td>
+            <td style="text-align:center;">997.8</td>
+            <td style="text-align:center;">6.6</td>
+          </tr>
+          <tr>
+            <td>μ (kg m⁻¹ s⁻¹)</td>
+            <td style="text-align:center;">9×10⁻⁴</td>
+            <td style="text-align:center;">1.54×10⁻⁵</td>
+          </tr>
+          <tr>
+            <td>C<sub>p</sub> (J kg⁻¹ K⁻¹)</td>
+            <td style="text-align:center;">4 178</td>
+            <td style="text-align:center;">2 866</td>
+          </tr>
+          <tr>
+            <td>λ (W m⁻¹ K⁻¹)</td>
+            <td style="text-align:center;">0.606</td>
+            <td style="text-align:center;">0.038</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The experimental data used (day of 18/09/2012) also include two measured temperatures positioned as indicated in Figure 2.10. The measured average values of these two temperatures used as references are given in Table 2.7. These average values are representative of stable process operation.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.7</strong> — Temperatures measured in the column</caption>
+        <thead>
+          <tr>
+            <th>Sensor</th>
+            <th>Average measured temperature (°C)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TIT0001 (mid-column)</td>
+            <td style="text-align:center;">149</td>
+          </tr>
+          <tr>
+            <td>TIT0002 (column head)</td>
+            <td style="text-align:center;">174</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Subsection 2.2.2 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-simulation-reacteur-pilote">2.2.2 Simulation of the pilot unit reactor</h3>
+
+    <p>The reactor section of the process is where thermal hydrolysis takes place. To achieve optimal treatment performance, it is necessary to:</p>
+    <ul>
+      <li>Avoid the formation of vertical thermal gradients,</li>
+      <li>Control the residence time,</li>
+      <li>Achieve an outlet temperature of 160 °C.</li>
+    </ul>
+
+    <p>The second objective of the study is to use the thermal lysis reactor model to:</p>
+    <ul>
+      <li>On the one hand, test different configurations in order to ensure proper reactor operation,</li>
+      <li>On the other hand, compare the results obtained by simulation with those from sensors during an experimental measurement campaign in order to validate the model used for the reactor.</li>
+    </ul>
+
+    <p>Concerning the study of the reactor section, Table 2.8 summarises the reactor model assumptions.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.8</strong> — Reactor model assumptions</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>3D – Unsteady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Fluid</td>
+            <td>Liquid water (single-phase, properties variable with T)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The reactor modelling follows the drawing of the pre-industrial unit presented in Figure 2.11.</p>
+
+    <figure>
+      <img src="../images/Chap2/Plan_reacteur.JPG" alt="Drawing of the pilot unit reactor"/>
+      <figcaption><strong>Figure 2.11</strong> — Drawing of the pilot unit reactor planned to support the modelling work</figcaption>
+    </figure>
+
+    <p>Only the first section of the reactor, which has four sections in total, is visible on this drawing. Different types of reactor simulations are carried out during the study:</p>
+    <ol>
+      <li>On the basis of the final drawings of the pre-industrial research unit, three reactor configurations (with or without a static mixer) are studied in order to assess their influence on the thermal gradients within the reactor.</li>
+      <li>Finally, the reactor model validation step takes place after obtaining the experimental data (temperature sensors within the reactor) by comparing the values obtained by simulation with experimental measurements.</li>
+    </ol>
+
+    <p>The dimensions and geometric characteristics of the reactor are given in Table 2.9.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.9</strong> — Geometry — Research unit reactor</caption>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th></th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">Diameters</td>
+            <td>Inlet D<sub>1</sub></td>
+            <td style="text-align:center;">DN 100</td>
+          </tr>
+          <tr>
+            <td>Reactor D<sub>2</sub></td>
+            <td style="text-align:center;">DN 100</td>
+          </tr>
+          <tr>
+            <td>Outlet d</td>
+            <td style="text-align:center;">DN 40</td>
+          </tr>
+          <tr>
+            <td colspan="2">Total length L (m)</td>
+            <td style="text-align:center;">10</td>
+          </tr>
+          <tr>
+            <td colspan="2">Inclination α (°)</td>
+            <td style="text-align:center;">3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>These elements correspond to the dimensions of the simplified geometry shown in Figure 2.12.</p>
+
+    <figure>
+      <img src="../images/Chap2/schema_reacteur_DN450.png" alt="Diagram of the pre-industrial research unit reactor showing the location of the various dimensions"/>
+      <figcaption><strong>Figure 2.12</strong> — Diagram of the pre-industrial research unit reactor showing the location of the various reactor dimensions</figcaption>
+    </figure>
+
+    <p>A first series of simulations is carried out on the reactor geometry in several configurations. In order to reduce vertical temperature gradients, simulations are performed adding a static mixer inside the reactor.</p>
+
+    <p>The reactor consists of four 2.5 m sections separated by flanges. The static mixer consists of 18 modules as schematised in Figure 2.13 and is placed on only one section at a time.</p>
+
+    <figure>
+      <img src="../images/Chap2/melangeur_statique.png" alt="Module of the static mixer tested within the reactor"/>
+      <figcaption><strong>Figure 2.13</strong> — Module of the static mixer tested within the reactor</figcaption>
+    </figure>
+
+    <p>The three reactor geometric configurations shown in Figure 2.14 are compared, namely:</p>
+    <ul>
+      <li>The current pre-industrial unit reactor without a static mixer,</li>
+      <li>The reactor with a mixer in the third section, further downstream in the reactor,</li>
+      <li>The reactor with a mixer in the second section, upstream in the reactor, at the outlet of the condensation column.</li>
+    </ul>
+    <p>For these three configurations, the temperature profiles within the reactor at positions 1, 2 and 3 will be compared.</p>
+
+    <figure>
+      <img src="../images/Chap2/emplacement_mel_stat.png" alt="Simulated reactor configurations"/>
+      <figcaption><strong>Figure 2.14</strong> — Simulated reactor configurations without static mixer, with a static mixer located downstream, with a static mixer located upstream of the reactor</figcaption>
+    </figure>
+
+    <p>The reactor model validation step takes place after obtaining the experimental data (temperature sensors within the reactor) by comparing simulation results with experimental measurements.</p>
+
+    <!-- ── Subsection 2.2.3 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-extrapolation-industrielle">2.2.3 Scale-up to industrial scale</h3>
+
+    <p>The pre-industrial research unit has a nominal diameter of 100 mm [DN100]. The diameter of an industrial installation will be at least 450 mm [DN 450]. The question of the impact of scale-up on the process operation — and therefore on steam injection and condensation — arises.</p>
+
+    <p>The numerical study at industrial scale therefore consists in applying the model in question but only to the vertical section, i.e., the condenser. The horizontal section, i.e., the reactor, is not modelled at industrial scale in what follows.</p>
+
+    <p>The geometry considered for studying this scale-up is based on the pilot-scale characteristics with the following adjustments:</p>
+    <ul>
+      <li>Accounting for a nominal diameter DN 450,</li>
+      <li>A single steam injection lance at the bottom, within the sludge feed pipe,</li>
+      <li>The presence of a DN200 Venturi,</li>
+      <li>The addition or not of a static mixer in the upper section.</li>
+    </ul>
+
+    <p>Figure 2.15 brings together these various elements and their dimensions in a configuration with a static mixer. Simulations without this element were also carried out in order to estimate its impact.</p>
+
+    <figure>
+      <img src="../images/Chap2/geometrie_react_taille_indus.png" alt="Geometry and dimensions of the process at industrial scale"/>
+      <figcaption><strong>Figure 2.15</strong> — Geometry and dimensions of the process at industrial scale</figcaption>
+    </figure>
+
+    <p>The steam injection method in this geometry remains a single injector as in the pilot case but with a larger number of perforations. Figure 2.16 shows this injector, which has 198 orifices of 3 mm diameter, arranged in 6 injection lines in a star pattern. The static mixer at the top of the condenser consists of 9 coils spaced 104 mm apart, with a hollow central core of 182 mm. Flow guides partition the bottom of each coil; as indicated in Figure 2.17, their height is 20 mm.</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/inj_taille_relle.png" alt="Details of the industrial-scale steam injection lance"/>
+        <figcaption><strong>Figure 2.16</strong> — Details of the industrial-scale steam injection lance</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/sprire_injec_taille_relle.png" alt="Details of the industrial-scale static mixer"/>
+        <figcaption><strong>Figure 2.17</strong> — Details of the industrial-scale static mixer</figcaption>
+      </figure>
+    </div>
+
+    <p>The model developed at pre-industrial scale is therefore applied to the industrial geometry of the process. The parameters are summarised in Table 2.14. The process is simulated with water rather than sludge conditions, but the relative results allow the behaviour of steam injection to be examined for an industrial-scale process.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.14</strong> — Numerical model of the industrial-scale condenser</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>Unsteady then Steady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Multiphase</td>
+            <td>Euler-Euler</td>
+          </tr>
+          <tr>
+            <td>Heat and mass transfer</td>
+            <td>Heat (Ranz-Marshall) + Mass (evaporation-condensation)</td>
+          </tr>
+          <tr>
+            <td>Fluids</td>
+            <td>Water + steam</td>
+          </tr>
+          <tr>
+            <td>Phases</td>
+            <td>Liquid water (primary phase) / Steam (Ø 3 mm, Symmetric drag)</td>
+          </tr>
+          <tr>
+            <td>Conditions</td>
+            <td>11 bar + Gravity</td>
+          </tr>
+          <tr>
+            <td>Boundary conditions</td>
+            <td>Inlets: imposed velocity — Outlet: free pressure</td>
+          </tr>
+          <tr>
+            <td>Discretisation</td>
+            <td>1<sup>st</sup> order</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The fluid properties and operating conditions are given in Table 2.15.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.15</strong> — Fluid properties and operating conditions of the industrial-scale reactor</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Liquid water</th>
+            <th>Water vapour</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>P (bar)</td>
+            <td style="text-align:center;">11</td>
+            <td style="text-align:center;">11</td>
+          </tr>
+          <tr>
+            <td>T (°C)</td>
+            <td style="text-align:center;">12</td>
+            <td style="text-align:center;">184</td>
+          </tr>
+          <tr>
+            <td>Q (kg h⁻¹)</td>
+            <td style="text-align:center;">2 900</td>
+            <td style="text-align:center;">1 149</td>
+          </tr>
+          <tr>
+            <td>V (m s⁻¹)</td>
+            <td style="text-align:center;">0.043</td>
+            <td style="text-align:center;">40</td>
+          </tr>
+          <tr>
+            <td>ρ (kg m⁻³)</td>
+            <td style="text-align:center;">999.6</td>
+            <td style="text-align:center;">5.6</td>
+          </tr>
+          <tr>
+            <td>μ (kg m⁻¹ s⁻¹)</td>
+            <td style="text-align:center;">1.24×10⁻³</td>
+            <td style="text-align:center;">1.50×10⁻⁵</td>
+          </tr>
+          <tr>
+            <td>C<sub>p</sub> (J kg⁻¹ K⁻¹)</td>
+            <td style="text-align:center;">4 189</td>
+            <td style="text-align:center;">2 642</td>
+          </tr>
+          <tr>
+            <td>λ (W m⁻¹ K⁻¹)</td>
+            <td style="text-align:center;">0.592</td>
+            <td style="text-align:center;">0.036</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The large velocity difference between the two phases present should be noted, as this is a source of complexity in this process. Both geometries, with and without a static mixer, are studied. As indicated in Table 2.14, an unsteady solver is first used to obtain the transient response of the system during start-up from a cold state. Then a steady-state solver gives the steady-state response of the system, which is no longer time-dependent.</p>
+
+    <!-- ── Section 2.3 ──────────────────────────────────────────────── -->
+    <h2 id="en-sec-resultats">2.3 Results and discussion</h2>
+
+    <!-- ── Subsection 2.3.1 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-resultats-colonne">2.3.1 Simulation of the pilot injector column</h3>
+
+    <p>A simulation is carried out under the operating conditions described in the previous section in transient regime, with the initial liquid temperature in the column equal to the liquid inlet temperature.</p>
+
+    <p>The objective is, beyond analysing the process start-up as estimated by the model, to compare the stabilised values from the modelling with the averages (taken over the stabilised time window) of the pilot temperature sensors TIT0001 and TIT0002, whose positions on the pilot unit are indicated in Figure 2.10.</p>
+
+    <p>The simulation runs until temperatures stabilise at the mid-point and at the column outlet. The following curve (Figure 2.18) represents the evolution of temperature at the middle of the column.</p>
+
+    <p>The blue curve represents the evolution of the simulated temperature and the red line the experimental temperature measured at the middle of the column (average taken over the stabilised time window).</p>
+
+    <p>It can be observed in Figure 2.18 that the simulated values oscillate from 30 minutes of physical time around a value that can be estimated at 130 °C, a difference of 19 °C compared to the experimental value of 149 °C.</p>
+
+    <p>In the same way, and for the same phenomena analysed, in Figure 2.19, an oscillation of the simulated values is observed from 30 minutes of physical time around a value that can be estimated at 130 °C, a difference of 44 °C with the experimental value of 174 °C.</p>
+
+    <figure>
+      <img src="../images/Chap2/evolution_temperature_milieu_colonne.png" alt="Evolution of simulated temperature at the middle of the column"/>
+      <figcaption><strong>Figure 2.18</strong> — Evolution of simulated temperature at the middle of the column and comparison with the average measured value at the same point in steady state</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/evolution_temperature_sortie_colonne.png" alt="Evolution of simulated temperature at the column outlet"/>
+      <figcaption><strong>Figure 2.19</strong> — Evolution of simulated temperature at the column outlet and comparison with the average measured value at the same point in steady state</figcaption>
+    </figure>
+
+    <p>Several observations emerge:</p>
+    <ol>
+      <li>After 30 minutes, whether at the middle or at the upper part of the condensation column, the model predicts temperature inhomogeneity. These temperatures vary from 100 to over 160 °C.</li>
+      <li>This inhomogeneity is due to the presence of steam pockets present throughout the condensation column.</li>
+      <li>These pockets imply that the steam only partially condenses.</li>
+      <li>Although considering these steam pockets as partially condensed, the simulated temperatures are still lower than the experimental values. It is difficult to determine the fraction of steam actually condensed.</li>
+      <li>The average values show respective differences of 19 and 44 °C which, given the simplifications and assumptions adopted, could be refined. <strong>All things considered, the model can serve as a basis for investigating the geometries under study.</strong></li>
+    </ol>
+
+    <p>In this section, data obtained by simulation are compared with those obtained experimentally under the same operating conditions in order to validate the model developed for the injection column. This comparison is made by comparing temperature values obtained by thermocouples at two points in the column: at the midpoint and at the top (Figure 2.10).</p>
+
+    <p>The results obtained by simulation show an underestimation of the temperature given by the thermocouples of the order of 25% in both cases (Figures 2.18 and 2.19). However, within this margin of error, the current model can be used qualitatively to study and compare different configurations.</p>
+
+    <!-- ── Subsection 2.3.2 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-resultats-reacteur">2.3.2 Simulation of the pilot reactor</h3>
+
+    <p>The objective of this section is to compare the numerical model developed with experimental temperature measurements on the reactor. A simulation is carried out under the operating conditions described previously.</p>
+
+    <p>Regarding the operating conditions for this comparison between model and experiment, the data from 16/08/2012 are used, and in particular the temperature rise at the reactor inlet measured by the two sensors TIT0002 and TIT0005 (see Figure 2.21). The positioning of the temperature probes on the reactor of the pilot unit is shown schematically in Figure 2.20.</p>
+
+    <figure>
+      <img src="../images/Chap2/emp_sondes_init.png" alt="Schematic representation of the modelled reactor showing the location and names of the sensors"/>
+      <figcaption><strong>Figure 2.20</strong> — Schematic representation of the modelled reactor showing the location and names of the sensors installed on the pre-industrial reactor</figcaption>
+    </figure>
+
+    <p>The results obtained after 30 min at the mid-point and at the reactor outlet are shown in Figure 2.21. Figure 2.22 shows the results obtained after 60 min at the mid-point and at the reactor outlet.</p>
+
+    <figure>
+      <img src="../images/Chap2/emplacement3_mel_stat_b.png" alt="Comparison of temperatures after 30 min"/>
+      <figcaption><strong>Figure 2.21</strong> — Comparison of temperatures obtained by the model and those measured at the mid-point and reactor outlet after 30 min [Sludge flow rate of 66 l/h at 28% dry solids content]</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/emplacement4_mel_stat.png" alt="Comparison of temperatures after 60 min"/>
+      <figcaption><strong>Figure 2.22</strong> — Comparison of temperatures obtained by the model and those measured at the mid-point and reactor outlet after 60 min [Sludge flow rate of 66 l/h at 28% dry solids content]</figcaption>
+    </figure>
+
+    <p>The black dots represent the vertical temperature profile obtained by simulation. The values given by the sensors located at the mid-point (sensor TIT0006 at the bottom of the reactor and sensor TIT0007 at the top of the reactor) and at the reactor outlet (sensor TIT0008 for the lower part and TIT0009 for the upper part) are indicated on each figure.</p>
+
+    <p>In Figure 2.21, the black dashed lines represent the simulated temperature profile after 30 minutes of physical time. This simulated temperature profile at the middle of the reactor is relatively homogeneous and shows a temperature difference between the top of the horizontal reactor (at D = 0.1 m) and the bottom (at D = 0 m) of 15 °C.</p>
+
+    <p>In comparison with the experimental average values of sensors TIT0007 and TIT0006, it appears that the model overestimates the lower reactor temperature by 12 °C compared to the actual TIT0007 measurement but greatly underestimates the actual temperature in the upper part. Thus, the difference between the upper value of the simulated profile and the TIT0006 measurement is 55 °C.</p>
+
+    <p>At the reactor outlet, after 30 minutes of physical time, the model yields a homogeneous temperature profile with virtually no temperature gradient. The simulated profile values, still shown as black dashed lines, approach the actual temperature measured by sensor TIT0008 in the upper part (to within approximately 5 °C). The actual TIT0009 value is, however, far below the model value with a difference of more than 30 °C.</p>
+
+    <p>Figure 2.22 shows the simulated temperature profiles after 60 minutes of physical time.</p>
+
+    <p>At the reactor midpoint, the simulated profile, situated around 110 °C, shows a temperature gradient between the top and bottom of the reactor of less than 10 °C. This result presents a significant discrepancy with the experimental values from sensors TIT0006 and TIT0007, which are close to 160 °C at the bottom for sensor TIT0007 and over 165 °C for sensor TIT0006 at the top. These two temperatures are of the same order at the reactor midpoint, which is no longer the case at the reactor outlet where the bottom sensor TIT0009 indicates 55 °C, the top TIT0008 indicates 130 °C, while the simulated profile is stable across the full reactor diameter at 112 °C.</p>
+
+    <p>In Figures 2.21 and 2.22, the model yields temperature profiles with small vertical thermal gradients, which do not corroborate the experimental values. The reactor model treats the sludge entering the reactor as water whose physical properties (density, specific heat capacity, thermal conductivity, viscosity) depend on temperature.</p>
+
+    <p>Although this model allows a slight vertical temperature inhomogeneity to be visualised at the mid-point and outlet of the reactor, it remains far from experimental reality. The rheology of the sludge is not taken into account but must have a significant impact on the flows and gradients.</p>
+
+    <p><strong>The interest of the static mixer:</strong></p>
+
+    <p>The impact of a static mixer within the horizontal reactor needs to be studied. Unlike the previous simulations, since the pre-industrial unit is not equipped with a static mixer, no experimental measurements can provide a context for the simulated results.</p>
+
+    <p>The model parameters used to carry out the simulations aimed at validating the reactor model are summarised in Table 2.10:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.10</strong> — Numerical model of the reactor</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>3D – Unsteady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Heat transfer</td>
+            <td>Convection + conduction</td>
+          </tr>
+          <tr>
+            <td>Fluid</td>
+            <td>Liquid water</td>
+          </tr>
+          <tr>
+            <td>Conditions</td>
+            <td>Gravity + 9 bar</td>
+          </tr>
+          <tr>
+            <td>Boundary conditions</td>
+            <td>Inlet: imposed velocity — Outlet: free pressure</td>
+          </tr>
+          <tr>
+            <td>Discretisation</td>
+            <td>2<sup>nd</sup> order</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>For the comparison between simulation and experimental measurements, the pilot data from 16/08/2012 are used. As shown in Figure 2.20, the reactor has 4 temperature sensors (North, South, East, West) at the inlet, with the North and South sensors named TIT0002 and TIT0005 respectively. Figure 2.23 shows the temperature evolution of these two sensors over two hours of operation.</p>
+
+    <p>To make a comparison between the model and the experiment, the reactor is modelled by taking the system inlet at the position of these sensors. The values indicated by the other sensors located at the mid-point (TIT0006 and TIT0007) and at the reactor end (TIT0008 and TIT0009) are used for comparison with the simulation.</p>
+
+    <p>The fluid inlet flow rate is 66 l/h, but with different temperatures for the upper and lower parts of the reactor inlet (Figure 2.20).</p>
+
+    <p>The inlet temperature conditions used for the simulation are those given by the two sensors TIT0002 and TIT0005, i.e., two temperature profiles as a function of time (Figure 2.23).</p>
+
+    <figure>
+      <img src="../images/Chap2/Montee_temp_capteurs_TIT0002_TIT0005.png" alt="Monitoring the temperature rise of sensors TIT0002 and TIT0005"/>
+      <figcaption><strong>Figure 2.23</strong> — Monitoring the temperature rise of sensors TIT0002 and TIT0005 located at the inlet of the horizontal reactor during a start-up phase in sludge [Sludge flow rate of 66 l/h at 28% dry solids content]</figcaption>
+    </figure>
+
+    <p>Table 2.11 summarises the operating conditions and boundary conditions of the simulations carried out for the reactor model validation.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.11</strong> — Operating conditions and boundary conditions — Model validation</caption>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General conditions</td>
+            <td>Gravity + 9 bar</td>
+          </tr>
+          <tr>
+            <td>Inlet velocity (m s⁻¹)</td>
+            <td style="text-align:center;">2.2×10⁻³</td>
+          </tr>
+          <tr>
+            <td>Inlet temperature</td>
+            <td>Two profiles (upper and lower part)</td>
+          </tr>
+          <tr>
+            <td>Initial temperature (°C)</td>
+            <td style="text-align:center;">24</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The model parameters used for the reactor simulations in different configurations are summarised in Table 2.12:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.12</strong> — Numerical model of the reactor studied in different configurations</caption>
+        <thead>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solver code</td>
+            <td>Fluent V13</td>
+          </tr>
+          <tr>
+            <td>Dimension / Time</td>
+            <td>3D – Unsteady</td>
+          </tr>
+          <tr>
+            <td>Turbulence</td>
+            <td>k-ε realizable</td>
+          </tr>
+          <tr>
+            <td>Heat transfer</td>
+            <td>Convection + conduction</td>
+          </tr>
+          <tr>
+            <td>Fluid</td>
+            <td>Liquid water</td>
+          </tr>
+          <tr>
+            <td>Conditions</td>
+            <td>Gravity + 9 bar</td>
+          </tr>
+          <tr>
+            <td>Boundary conditions</td>
+            <td>Inlet: imposed velocity — Outlet: free pressure</td>
+          </tr>
+          <tr>
+            <td>Discretisation</td>
+            <td>2<sup>nd</sup> order</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The operating conditions and boundary conditions of the simulations carried out on the reactor in different configurations are summarised in Table 2.13:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 2.13</strong> — Operating conditions and boundary conditions — Reactor</caption>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General conditions</td>
+            <td>Gravity + 9 bar</td>
+          </tr>
+          <tr>
+            <td>Inlet velocity (m s⁻¹)</td>
+            <td style="text-align:center;">2.2×10⁻³</td>
+          </tr>
+          <tr>
+            <td>Inlet temperature (°C)</td>
+            <td style="text-align:center;">170</td>
+          </tr>
+          <tr>
+            <td>Initial temperature (°C)</td>
+            <td style="text-align:center;">24</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The interest of adding a static mixer in the horizontal reactor to homogenise temperatures is studied at three locations. The vertical temperature profiles for these 3 configurations are shown at the various positions 1, 2 and 3 defined in Figure 2.14 within the reactor, and at different instants of the simulation in Figures 2.24 and 2.25.</p>
+
+    <figure>
+      <img src="../images/Chap2/emplacement1_mel_stat.png" alt="Simulated temperature profiles after 15 min"/>
+      <figcaption><strong>Figure 2.24</strong> — Simulated temperature profiles across the reactor height after 15 min of physical time at the 3 defined positions, with or without a static mixer</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../images/Chap2/emplacement2_mel_stat.png" alt="Simulated temperature profiles after 60 min"/>
+      <figcaption><strong>Figure 2.25</strong> — Simulated temperature profiles across the reactor height after 60 min of physical time at the 3 defined positions, with or without a static mixer</figcaption>
+    </figure>
+
+    <p>The profiles observed at position 1, after 15 minutes of physical time and regardless of the presence or absence of a static mixer or its position, show that the gradients have virtually the same profiles and the same temperature differences of the order of 20 °C. After 60 minutes, the situation remains the same with similar profiles but a temperature difference between the upper and lower parts of the reactor of the order of 10 °C.</p>
+
+    <p>The observations are of the same order at positions 2 and 3. The only minor difference comes from the temperature differences which, after 15 minutes, go from 20 °C at position 1 to 15 °C and 8 °C at positions 2 and 3 respectively. Similarly, after 60 minutes of physical time, these same differences go from 10 °C to 8 °C and 5 °C respectively.</p>
+
+    <p>Thus, the cases analysed indicate the presence of a temperature gradient across the reactor diameter. The differences in temperature ranges between the 3 cases at 15 and 60 minutes of physical time (relative position of one curve compared to another) would tend to diminish with the establishment of a steady state over longer physical times. The temperature gradients across the diameter being close between the 3 cases suggest that the static mixer studied has no significant beneficial influence on thermal stratification in the reactor. This phenomenon could be explained by the low fluid flow velocity.</p>
+
+    <p>On the basis of the final pilot drawings, different reactor configurations (with or without static mixer) were studied to assess their influence on thermal gradients within the reactor.</p>
+
+    <p>A comparison of the results obtained by simulation with those measured experimentally on site was carried out in order to validate the model developed for the thermal hydrolysis reactor. The simulation results show a slight vertical thermal stratification phenomenon of the order of 10 to 15 °C. This temperature stratification is also observed experimentally but with a larger order of magnitude of differences ranging from 40 to 80 °C.</p>
+
+    <p>This larger experimental discrepancy could be explained by the model simplifications which do not account for all the phenomena related to sludge rheology, which would be complex to implement in Fluent. <strong>It is also possible that part of the steam is not condensed at the condensation column outlet and that the sensors located in the upper part of the reactor are measuring the temperature of steam pockets, which would explain the large temperature gradients in a DN 100 reactor.</strong></p>
+
+    <p>The simplified water model has value since it allows the vertical thermal inhomogeneity phenomenon in the reactor to be highlighted, a phenomenon that cannot be countered by the use of a static mixer, probably due to excessively low flow velocities. Here again, switching to sludge with more complex rheologies should further accentuate this phenomenon.</p>
+
+    <!-- ── Subsection 2.3.3 ─────────────────────────────────────────── -->
+    <h3 id="en-sec-extrapolation-resultats">2.3.3 Scale-up of the reactor to industrial scale</h3>
+
+    <h4 id="en-sec-mise-en-regime">2.3.3.1 Expected start-up behaviour of an industrial unit</h4>
+
+    <p>In a first step, an unsteady solver is used to obtain the transient response from a cold initial state, for the water inlet conditions. The temperature and vapour volume fraction profiles are presented on a mid-plane cross-section in Figures 2.26 to 2.33 for physical simulation times of 2, 12, 30 and 80 seconds, respectively for each figure without and with a static mixer at the top of the condenser. The liquid residence time, calculated over the entire volume, is 700 seconds.</p>
+
+    <p>The heating of the system builds up progressively, but the profiles indicate that for the same physical time, the presence of the static mixer induces faster liquid heating. This can be explained by analysing the vapour volume fraction profiles in Figure 2.26. The dynamics of steam in the system take the form of pockets and tongues that rise directly to the centre of the condenser. The static mixer prevents this direct rise of steam as tongues, and increases the contact time between the liquid and the steam. This phenomenon is also induced by the presence of the Venturi, an area where high vapour volume fractions concentrate. The dynamic study of the injection zone shows a good distribution of flow across the entire periphery of the injector, and a high-velocity injection that appears to proceed correctly and uniformly on this device with strong local turbulence.</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_1.png" alt="Temperature profiles at t=2s"/>
+        <figcaption><strong>Figure 2.26</strong> — Temperature profiles at t = 2 s</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_2.png" alt="Vapour fraction profiles at t=2s"/>
+        <figcaption><strong>Figure 2.27</strong> — Vapour fraction profiles at t = 2 s</figcaption>
+      </figure>
+    </div>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_3.png" alt="Temperature profiles at t=12s"/>
+        <figcaption><strong>Figure 2.28</strong> — Temperature profiles at t = 12 s</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_4.png" alt="Vapour fraction profiles at t=12s"/>
+        <figcaption><strong>Figure 2.29</strong> — Vapour fraction profiles at t = 12 s</figcaption>
+      </figure>
+    </div>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_5.png" alt="Temperature profiles at t=30s"/>
+        <figcaption><strong>Figure 2.30</strong> — Temperature profiles at t = 30 s</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_6.png" alt="Vapour fraction profiles at t=30s"/>
+        <figcaption><strong>Figure 2.31</strong> — Vapour fraction profiles at t = 30 s</figcaption>
+      </figure>
+    </div>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_7.png" alt="Temperature profiles at t=80s"/>
+        <figcaption><strong>Figure 2.32</strong> — Temperature profiles at t = 80 s</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_8.png" alt="Vapour fraction profiles at t=80s"/>
+        <figcaption><strong>Figure 2.33</strong> — Vapour fraction profiles at t = 80 s</figcaption>
+      </figure>
+    </div>
+
+    <p>The absence of a static mixer, by reducing the contact times between the phases, induces longer-lasting vertical thermal gradients. Thus after 80 seconds, in Figure 2.32, the temperature profile appears nearly established in the case with a static mixer, whereas it is still strongly evolving in the case without a static mixer.</p>
+
+    <p>Rapidly, steam accumulates at the top of the condenser, until forming a pocket that escapes through the liquid outlet. The presence of the mixer tends to reduce this phenomenon by increasing the contact time between the phases.</p>
+
+    <p>Even though the high-velocity injection appears to proceed correctly, the post-injection presence of steam pockets up to the column head shows that mass transfer by condensation should nevertheless be further optimised.</p>
+
+    <p>The use of an injection-mixing device (static mixer combined with injector, specific pump, etc.) at the base of the column would be a good option to optimise the process.</p>
+
+    <h4 id="en-sec-regime-permanent">2.3.3.2 Steady state of the industrial unit</h4>
+
+    <p>The steady operating state, independent of time, is obtained via a steady-state solver. Figures 2.34 to 2.36 present the temperature, vapour volume fraction and inter-phase mass transfer profiles, respectively without and with a static mixer. Consistent with the previous transient analysis, these results indicate a positive impact of the Venturi in both configurations. The Venturi retains the water vapour and prevents direct steam rise. In the same way, the presence of the static mixer accentuates this effect and appears to make the process still more efficient.</p>
+
+    <p>The thermal profiles in Figure 2.34 indicate better liquid heating in the case with a static mixer, with liquid temperatures at the top of the order of 130 °C and 100 °C, with and without a static mixer respectively. The vertical gradients diminish, showing that the phenomena at play are very rapid and that the injection zone is critical for proper process operation.</p>
+
+    <p>There is no horizontal gradient, indicating good mixing and full utilisation of the column volume. The zones where mass transfer is greatest are located in the vicinity of the injector, in the Venturi zone and in the static mixer. All of these analyses demonstrate the positive impact of the top static mixer on process performance. The presence of steam pockets up to the column head even in steady state indicates that optimisation of the injection-mixing system should be studied using a suitable device.</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_9.png" alt="Temperature profiles in steady state"/>
+        <figcaption><strong>Figure 2.34</strong> — Temperature profiles in steady state</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap2/simul_col_reel_10.png" alt="Vapour fraction profiles in steady state"/>
+        <figcaption><strong>Figure 2.35</strong> — Vapour fraction profiles of an industrial-scale reactor in steady state</figcaption>
+      </figure>
+    </div>
+
+    <figure>
+      <img src="../images/Chap2/simul_col_reel_11.png" alt="Evaporation-condensation mass transfer profiles in steady state"/>
+      <figcaption><strong>Figure 2.36</strong> — Evaporation-condensation mass transfer profiles of an industrial-scale reactor in steady state</figcaption>
+    </figure>
+
+    <p>The scale-up from pilot geometry to industrial geometry shows that:</p>
+    <ul>
+      <li>The injector appears to function reasonably correctly with turbulent local phase mixing.</li>
+      <li>The Venturi proves necessary, particularly as the installation diameter increases, to prevent direct steam rise at the centre of the condenser. Its benefit will be validated on the experimental unit for time reasons.</li>
+      <li>The top static mixer is also beneficial for the contact time between phases, and therefore directly on liquid heating.</li>
+    </ul>
+
+    <p>Although the model shows a beneficial impact of the static mixer, it should be kept in mind that the actual sludge matrix will present high viscosity and therefore significant pressure losses that cannot be quantified and will be related to its geometry.</p>
+
+    <p>Even though the local phase mixing at the injector level appears satisfactory, it should be noted that steam pockets remain in the system and propagate up to the column head. Injection-mixing devices at the base of the column, such as a combined injector-mixer or a dynamic mixer, would help to improve the injection phase of the process and enable simplified injection and better steam condensation.</p>
+
+    <!-- ── Section 2.4 — Conclusion ──────────────────────────────────── -->
+    <h2 id="en-sec-conclusion">2.4 Conclusion</h2>
+
+    <div class="conclusion-block">
+      <p>The physical phenomena at play in a thermal hydrolysis process intended to operate continuously are complex (high-velocity steam injection into highly concentrated sludge, evaporation-condensation phenomena, non-Newtonian fluid, etc.) and not directly observable (the reactor being under pressure and the sludge being opaque).</p>
+
+      <p>Regarding the steam injection column, the comparison of the data obtained by the model with those obtained experimentally on the pre-industrial unit shows that it underestimates the temperature in the column by approximately 25% compared to the experimental value. However, within this margin of error, the current model can be used qualitatively to study and compare different configurations. The simulation results indicate pocket-type steam dynamics and imperfect condensation illustrated by steam exiting at the top of the column. The presence of this uncondensed steam will be confirmed experimentally on the basis of temperature measurements.</p>
+
+      <p>Regarding the thermal hydrolysis reactor, the simulation results highlight a vertical thermal stratification phenomenon of the order of 10 to 15 °C, despite the reactor inclination and the installation of internal fins. This phenomenon is also highlighted experimentally by the North/South thermocouples of the pilot unit with a larger order of magnitude (40 °C – 80 °C).</p>
+
+      <p>The development of these two models then allows, within the stated levels of accuracy, the study of the process at larger scales and in particular in preparation for ongoing or future industrial projects.</p>
+
+      <p>The steam injection model developed is applied to an industrial-scale geometry. The modelled reactors scale up from DN100 to DN 450. The results obtained at this scale prove consistent with the pilot scale, namely turbulent phase mixing at the injection point, pocket-type steam dynamics within the column and therefore a beneficial impact of the Venturi in slowing down the direct steam rise at the centre. Simulations with and without the top static mixer show that its presence induces, as does the Venturi, retention of steam in the column and therefore increased inter-phase exchange in transient and in steady state alike. In this latter regime, the temperature at the column head without and with a static mixer is estimated by the model at 100 °C and 130 °C respectively, a gain of 30%.</p>
+
+      <p>The presence of steam pockets at the column head remains a point to be improved. Beyond the impact of poor heat transfer on hydrolysis performance, uncondensed steam should induce a thermal gradient in the reactor between a vapour phase in the upper part and a liquid phase in the lower part. This phase difference could result in a significant temperature difference causing mechanical deformation of the reactor due to thermal expansion.</p>
+
+      <p>An injection-mixing device at the base of the column — such as a static mixer combined with injector or a specific dynamic injection mixer — would be one avenue for improvement to test, in order to ensure steam condensation in the sludge from the moment of injection.</p>
+
+      <p>The model developed allows relatively different injection column configurations to be studied (for example, a different static mixer, a second Venturi, a mixer at the base) and the impact on steam condensation and sludge heating to be visualised. Experimental validation is however necessary.</p>
+
+      <p><strong>Remarks:</strong> the temperature profiles modelled in Figure 2.32 for an industrial-scale condenser at a maximum time of 80 seconds differ from those obtained in Figures 2.18 and 2.19 over a period of several minutes. Three explanations could account for this discrepancy:</p>
+      <ul>
+        <li>a scale effect in the modelling, although some homothety should be expected,</li>
+        <li>slightly different operating conditions, although this should not lead to such a significant difference.</li>
+      </ul>
+
+      <p>Modelling evaporation-condensation phenomena is not straightforward and the commercial code used appears to show limitations when comparing two geometry sizes having similar phenomena and operating conditions.</p>
+
+      <p>To go further, it would be worth comparing the modelling with another code such as Saturne, developed specifically for the study of evaporation-condensation phenomena but which requires calibration with experimental results, or else developing a dedicated Fluent module.</p>
+    </div>
 
     <div class="page-nav">
       <a href="chap1.html"><span class="arrow">←</span> Chapter 1</a>

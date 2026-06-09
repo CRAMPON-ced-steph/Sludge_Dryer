@@ -873,44 +873,858 @@
 
 <div class="en-block">
   <div class="chapter-page">
+
     <div class="breadcrumb">
       <a href="../index.html">Home</a><span>›</span>
       <a href="toc.html">Table of contents</a><span>›</span>
       Chapter 4
     </div>
+
     <span class="chapter-label">Chapter 4</span>
     <h1 class="chapter-title">Regulatory and energy requirements</h1>
 
-    <p>This chapter addresses two key validation aspects of the continuous thermal hydrolysis process: compliance with the US EPA Class A pathogen reduction requirements, and optimisation of process energy consumption through a sludge-to-sludge heat exchanger.</p>
+    <p>In Chapter 2, the evaporation-condensation phenomena within a vertical condenser are modelled in order to estimate whether a static steam injection lance could ensure adequate mass and energy transfer from the steam into the sludge, resulting in temperature homogeneity.</p>
 
-    <h2 id="sec-enjeux">4.1 Regulatory and energy challenges</h2>
+    <p>In Chapter 3, it is demonstrated experimentally that, owing to the complexity of the sludge matrix, a static injection lance is not sufficient to ensure steam condensation and temperature homogeneity. A solution anticipated in Chapter 2, namely the use of a dynamic mixer, was thus tested and validated experimentally. With temperature homogeneity assured, the solubilisation performance and its impact on biogas production were measured experimentally.</p>
+
+    <p>However, before considering that the developed technology could compete with or replace batch-operated technologies, two important aspects must be addressed: the regulatory and energy aspects.</p>
+
+    <!-- ── Section 4.1 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-enjeux">4.1 Regulatory and energy challenges</h2>
+
     <h3>4.1.1 Regulatory context</h3>
-    <p>The US EPA 40 CFR Part 503 "Class A" standard is among the most restrictive biosolids hygienisation regulations worldwide. Class A requires all pathogens to be reduced to below detectable limits (salmonella &lt;3 MPN/4g TS; enteric viruses &lt;1 PFU/4g TS; viable helminth ova &lt;1/4g TS). Time-temperature combinations are specified: for example, 70 °C for ≥30 minutes or 50 °C for ≥20 days (thermophilic digestion).</p>
-    <p>European Directive 86/278/EEC defines sludge hygienisation requirements but is less prescriptive than US EPA Class A. Meeting Class A therefore guarantees compliance with European standards.</p>
+
+    <p>Sanitisation performance is one of the key elements of thermal hydrolysis technologies. This type of thermal treatment destroys pathogenic elements, thereby making any type of outlet for the sludge conceivable.</p>
+
+    <p>This notion of sanitisation validates the relevance of the process, because implicitly, a non-sanitised sludge implies either that the reaction temperature has not been reached — and therefore poor steam condensation — or a preferential pathway with potentially dead zones in the reactor, or an excessively short reaction time.</p>
+
+    <p>Verifying sanitisation for a continuous process means verifying temperature homogeneity, which was addressed previously in Chapter 3, but also <strong>the hydraulic residence time</strong> and <strong>the reduction of pathogenic elements</strong>.</p>
+
+    <h4>Verification of hydraulic residence time</h4>
+
+    <p>The concept of residence time distribution was introduced to characterise reactor flow as early as 1953. This residence time measurement involves injecting a tracer of known concentration at the inlet of a reactor and tracking the evolution of its concentration at the outlet.</p>
+
+    <p>The residence time distribution function E(t) is defined by:</p>
+
+    <div class="equation">
+      <span class="eq-body">E(t) = C(t) / ∫<sub>0</sub><sup>∞</sup> C(t) dt</span>
+      <span class="eq-number">(4.1)</span>
+    </div>
+
+    <p>where C(t) is the tracer concentration measured at the reactor outlet at each instant t.</p>
+
+    <p>The tracer injection can be carried out as a pulse or as a step change. For plug flow, the outlet signal would be a Dirac delta. In reality, reactors are never perfect plug-flow devices. Thus, as shown in Figure 4.1, the response to a pulse at the reactor inlet (red curve) will be an outlet signal resembling a more or less spread bell-shaped curve (blue curve).</p>
+
+    <figure>
+      <img src="../images/Chap4/dts2.JPG" alt="RTD: impulse response"/>
+      <figcaption><strong>Figure 4.1</strong> — RTD: impulse response</figcaption>
+    </figure>
+
+    <p>The residence time distribution method rests on three assumptions: steady-state flow, an incompressible fluid, and deterministic flow involving no macroscopic random processes. However, sludge is a compressible fluid whose initial behaviour is viscoplastic. The RTD tests performed on the system will not satisfy these three prerequisite operating conditions.</p>
+
+    <p>For the sizing of the pilot unit, it was assumed that the flow of sludge through the system would be of the plug-flow type. As illustrated in Figure 4.2, plug flow corresponds to a flat velocity profile, whereas laminar flow has a parabolic velocity profile. The rheological characteristics of sludge, combined with the low fluid flow velocities of the order of 2 to 6 mm/s, lead to the expectation of laminar flow. <strong>The question is to demonstrate that the fastest sludge particle — at the apex of this parabola — has a residence time of at least 20 minutes within the system.</strong></p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_15.png" alt="Types of flow"/>
+      <figcaption><strong>Figure 4.2</strong> — Types of flow</figcaption>
+    </figure>
+
+    <p>The choice of tracer is not trivial. The tracer:</p>
+    <ul>
+      <li>Must differ from the medium being analysed, or already be present in the medium but in small quantities,</li>
+      <li>Must not have its properties modified or altered by the medium,</li>
+      <li>Must not react with the medium,</li>
+      <li>Must be compatible with the medium and the environment,</li>
+      <li>Must not be hazardous,</li>
+      <li>Must be easy to handle.</li>
+    </ul>
+
+    <p>Lopes further specifies that it should have little or no impact on the medium and be easily analysable.</p>
+
+    <p>The challenge is to determine the method best suited to high dry-solids municipal sludge subjected to high pressure and high temperature, whose rheology will evolve during its residence in the reactor.</p>
+
+    <p>The literature does not report tracer studies on pasty sludge that is simultaneously being destructured, heated and hydrolysed. However, numerous studies on the tracing of red mud from the Bayer process can be found. As listed in Table 4.1, the tracers used to follow these red muds include iron powder, lithium chloride, a carboxylic acid, sodium nitrate, barium sulphate, or a radioisotope.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.1 — Tracing methods used in industry for the Bayer process</caption>
+        <thead>
+          <tr>
+            <th>Tracer type</th>
+            <th>Nature of tracer</th>
+            <th>Detection methodology</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Iron powder</td><td>solid</td><td>Electromagnetic detection</td></tr>
+          <tr><td>Lithium chloride</td><td>liquid</td><td>Atomic absorption spectrometry</td></tr>
+          <tr><td>Carboxylic acid</td><td>liquid</td><td>Gas chromatography</td></tr>
+          <tr><td>Sodium nitrate</td><td>liquid</td><td>Chromatography</td></tr>
+          <tr><td>Barium sulphate</td><td>solid</td><td>X-ray</td></tr>
+          <tr><td>Radioisotopes</td><td>solid</td><td>Radiodetection</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Studies on tracing in wastewater-related processes have also been conducted. Table 4.2 lists the techniques employed for wastewater monitoring, namely fluoride, ink, a radioisotope, or sodium chloride.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.2 — Tracing methods used in wastewater treatment</caption>
+        <thead>
+          <tr>
+            <th>Tracer type</th>
+            <th>Nature of tracer</th>
+            <th>Detection methodology</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Radioisotopes</td><td>solid</td><td>Radiodetection</td></tr>
+          <tr><td>Fluoride</td><td>liquid</td><td>Not specified</td></tr>
+          <tr><td>Ink</td><td>liquid</td><td>Fluorimetry</td></tr>
+          <tr><td>Sodium chloride</td><td>liquid</td><td>Conductivity</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Each of these methods is evaluated below.</p>
+
+    <p><strong>Electromagnetic detection</strong> cannot be satisfactory because detection on a pressurised reactor is not feasible. Moreover, a metallic tracer would have to be added to sludge that may already contain iron.</p>
+
+    <p><strong>Atomic absorption spectrometry</strong> via lithium chloride injection is practised on municipal sludge digesters because the required tracer dose is small. Nevertheless, its cost is high and detection requires laboratory analysis rather than <em>in-situ</em> measurement, which prevents real-time adjustment of tests. This method works on dilute sludge over long time periods.</p>
+
+    <p><strong>Carboxylic acid</strong> and <strong>sodium nitrate</strong> require the use of a chromatograph, which is not applicable to sludge. As for <strong>barium sulphate</strong>, X-ray detection requires special authorisations as well as high installation costs.</p>
+
+    <p>On municipal sludge, <strong>fluorimetry</strong> would have little chance of working, given that the addition of ink would not change the colour of the sludge.</p>
+
+    <p><strong>Radiodetection</strong> would be conceivable on cooled and diluted sludge, but at high cost.</p>
+
+    <p>That leaves <strong>sodium chloride</strong>, which could be used to modify the conductivity of the sludge. Conductivity measurement can be performed in-line and is inexpensive.</p>
+
+    <p>In addition to the choice of tracer, it is necessary to find a method that is easily implementable on a pressurised, high-temperature reactor, is low-cost, allows continuous measurement of the marker at the reactor outlet, and uses a marker that does not impact the sludge. The method must also be easily reproducible and straightforward to implement.</p>
+
+    <h4>Verification of pathogen reduction</h4>
+
+    <p>The most active markets for thermal hydrolysis are located in the Americas and Asia. In these markets, thermal hydrolysis processes must achieve complete sludge sanitisation as defined by the US EPA regulation, which serves as the reference outside Europe.</p>
+
+    <p>This regulation defines sanitisation termed "Class A", requiring that each sludge particle has been treated at 140 °F, i.e. 60 °C, for at least 20 minutes. For batch processes such as the BioThelys process or the CAMBI process, the treatment time is imposed by the overall cycle and the batch loads. In the case of a continuous process, it must be proven that no preferential pathway is formed and that the sludge particle traversing the process most rapidly has a minimum residence time of 20 minutes. To this end, two related concepts must be monitored:</p>
+    <ul>
+      <li>the reactor hydraulics. Monitoring the hydraulics serves to ensure that no preferential pathway exists in the reactor, which would prevent guaranteeing that the fastest sludge particle meets the minimum required residence time of 20 minutes.</li>
+      <li>the residence time of the sludge in the reactor. Monitoring the residence time is important in order to guarantee that the sludge particle traversing the reactor most rapidly has a sufficient residence time — and therefore a sufficient treatment time under the desired pressure and temperature conditions — to ensure thermal hydrolysis performance.</li>
+    </ul>
+
+    <p>In addition to these residence time and hydraulic considerations, regulatory limits on pathogenic elements present in the treated sludge must also be met.</p>
+
+    <p>These limit values imposed by "Class A" are indicated in Table 4.3. Six parameters are monitored: Salmonella, whose concentration must be below 3 MPN per 4 g TS; enteroviruses, whose concentration must be below 1 PFU per 4 g TS; viable helminth ova, expressed as units per 4 g TS; faecal coliforms, which must be below 1,000 MPN per g TS; and VS reduction, which must exceed 38%.</p>
+
+    <p>The UK "Enhanced Treated Sludge" regulation is less restrictive and requires samples to be free of Salmonella and, for <em>Escherichia coli</em>, a reduction corresponding to a 6-log reduction and a concentration below 1,000 MPN per g TS.</p>
+
+    <p>In France, the Order of 8 January 1998 requires limiting Salmonella to 8 MPN per 10 g TS, remaining below 3 PFU per 10 g TS for enteroviruses, and remaining below 3 units per 10 g TS for helminth ova.</p>
+
+    <p>Compliance with US EPA standards implicitly entails compliance with the UK and French regulations.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 4.3</strong> — Regulatory limits for pathogenic elements</caption>
+        <thead>
+          <tr>
+            <th>Pathogens (for sanitised sludge)</th>
+            <th>US EPA Class [40 CFR Part 503]</th>
+            <th>UK "Enhanced Treated Sludge"</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salmonella</td>
+            <td style="text-align:center;">&lt; 3 MPN / 4 g TS</td>
+            <td style="text-align:center;">0 / 2 g TS</td>
+          </tr>
+          <tr>
+            <td>Enteroviruses</td>
+            <td style="text-align:center;">&lt; 1 PFU / 4 g TS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Viable helminth ova</td>
+            <td style="text-align:center;">&lt; 1 / 4 g TS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><em>Escherichia coli</em></td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">&gt; 6 log reduction and &lt; 1,000 / g TS</td>
+          </tr>
+          <tr>
+            <td>Faecal coliforms</td>
+            <td style="text-align:center;">&lt; 1,000 MPN / g TS</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>VS reduction</td>
+            <td style="text-align:center;">&gt; 38 %</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Verification of sanitisation performance can only be based on analyses. To this end, an analytical campaign will be carried out before and after hydrolysis. To ensure the representativeness of the results, a series of 10 samples will be taken at intervals of a few days.</p>
+
+    <p>During sampling, a protocol must be defined and followed to ensure that the collected samples are not contaminated during the sampling procedure, which would skew the results.</p>
+
     <h3>4.1.2 Energy requirements</h3>
-    <p>Thermal hydrolysis is an energy-intensive process requiring steam (typically 0.8–1.0 t steam/t dry matter for batch processes). In the DLD configuration without energy recovery, net biogas production can be reduced. Energy self-sufficiency requires recovering heat from the hot treated sludge to preheat incoming sludge, reducing steam consumption to 0.5 t/t DM.</p>
 
-    <h2 id="sec-methode">4.2 Materials and methods</h2>
+    <p>The two main processes with industrial references operate in batch mode. Their energy consumption is related to the dry solids content of the inlet sludge and their capacity to recover flash steam. This energy recovery capacity is linked to their size and the duration of their cycles.</p>
+
+    <p>One advantage of a continuously operating process is that only one reactor is needed, without having to manage cycle timing, decompression phases, or the flash phase. However, for the preceding batch processes, by depressurising from 7 to 1 bar, the recirculated flash steam used to preheat the inlet sludge accounts for 30% of the energy requirements of these processes. This energy is continuously recovered, which is not the case with the continuous process, which has no flash steam recovery. To maintain an equivalent steam consumption per tonne of dry matter processed, the dry solids content calculated at the inlet of the continuous process would need to be not 16% but 23%.</p>
+
+    <p>However, depending on their nature, it is not always possible to dewater certain sludges to 23% dry solids content, or it is only achievable at the cost of excessive polymer consumption. In a DLD configuration, since the sludge is digested, this dry solids content is achievable. On the other hand, it will be difficult to obtain more than 20% dry solids content with biological sludge, which will penalise the LD configuration.</p>
+
+    <p>To consider the deployment of a continuous thermal hydrolysis process, it is necessary to address the question of its energy efficiency regardless of sludge dry solids content, and more particularly for dry solids contents below 23%.</p>
+
+    <p>Several solutions are considered to optimise the energy efficiency of the process. Flash steam recovery is not permitted as it would infringe existing patents. Installing a waste heat boiler to produce low-pressure live steam by recovering the energy released during the cooling of the hydrolysed sludge is feasible, but the significant cost of such a solution favours the search for an alternative. Scraped-surface heat exchangers offer many advantages but their current design does not allow them to accept pressures above 10 bar. The option of a shell-and-tube sludge-to-sludge heat exchanger capable of handling high viscosity will therefore be studied.</p>
+
+    <p>The difficulties to overcome for this type of heat exchanger are numerous, namely:</p>
+    <ul>
+      <li>The high viscosity of the sludge, linked to the high dry solids content of the treated sludge and its sticky nature, generates high pressure drops,</li>
+      <li>A low flow velocity inducing sedimentation of suspended matter, resulting in fouling of the heat exchanger as well as a low convection coefficient.</li>
+    </ul>
+
+    <p><strong>The main blocking point</strong> for implementing a sludge-to-sludge heat exchanger is the high viscosity. It would be necessary to reduce this viscosity so as to ensure homogeneous flow in the heat exchanger while minimising pressure drops.</p>
+
+    <p>According to a technical article from the Techniques de l'Ingénieur concerning the rheology of thixotropic fluids, it is possible to destructure a thixotropic fluid by subjecting it to a high velocity gradient. The first approach explored therefore consists in destructuring the pasty sludge and measuring the impact on pressure drops.</p>
+
+    <p>It is well known that fluid viscosity is temperature-dependent. A second approach would consist in slightly heating the sludge with steam to further reduce viscosity. It is straightforward to calculate that the maximum preheating temperature must be 40 °C to retain an economic benefit for the heat exchanger.</p>
+
+    <p>The key idea for achieving this heat exchange is therefore to limit pressure drops by adapting the physical properties of the sludge to the heat exchanger — not the reverse — through two combined effects, namely:</p>
+    <ul>
+      <li>A mechanical effect to destructure the sludge via high-speed agitation,</li>
+      <li>A thermal effect to reduce viscosity by preheating the sludge from 20 to 40 °C.</li>
+    </ul>
+
+    <p><strong>The second point</strong> that could become a blocking factor is the speed of fouling of the shell side of the heat exchanger. This fouling can be estimated using the CAMP law, which defines the minimum velocity required to maintain or resuspend a particle in a fluid. This minimum velocity is defined by:</p>
+
+    <div class="equation">
+      <span class="eq-body">v<sub>t</sub> = ( 8 · β · g · d / f · (ρ<sub>d</sub> − ρ) / ρ )<sup>0,5</sup></span>
+      <span class="eq-number">(4.2)</span>
+    </div>
+
+    <p>where:</p>
+    <ul>
+      <li>v<sub>t</sub> is the velocity required to keep a particle in motion, in m/s,</li>
+      <li>β takes the value of 0.04 for uniform sand grains, 0.06 for heterogeneous particles, 0.8 for long-standing sludge deposits,</li>
+      <li>f is the friction coefficient, with a value that can vary from 0.01 for fine grains to 0.03 for coarser grains. For this calculation, a coefficient of 0.03 is used,</li>
+      <li>ρ<sub>d</sub> is the particle density (a value of 2,650 in the case of sand) in kg/m³,</li>
+      <li>g is gravity, 9.81 m²/s,</li>
+      <li>ρ is the density of water, in kg/m³,</li>
+      <li>d is the particle diameter in mm.</li>
+    </ul>
+
+    <p>Using this formula, it is possible to calculate the fluid velocity to maintain on the shell side of the heat exchanger in order to prevent sedimentation of sand particles. Table 4.4 presents the calculation of this fluid velocity for sand particles ranging from 0.1 to 500 microns. The calculated velocities range from 0.004 to 0.29 m/s.</p>
+
+    <p>The selected shell-and-tube heat exchanger has a height of 1.5 m with a DN 80 shell diameter fitted with 6 DN16 tube bundles. For a feed flow rate of 80 l/h, the calculated velocity in the shell will be 0.0047 m/s. Thus, according to the values in Table 4.4, any sand particle larger than 0.1 microns could potentially foul the shell of the heat exchanger.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.4 — Velocity to maintain in the shell to prevent sedimentation</caption>
+        <thead>
+          <tr>
+            <th>Sand particle diameter (μm)</th>
+            <th>Sand density (kg/m³)</th>
+            <th>Fluid velocity (m/s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>500</td><td>2650</td><td>0.29</td></tr>
+          <tr><td>400</td><td>2650</td><td>0.26</td></tr>
+          <tr><td>300</td><td>2650</td><td>0.23</td></tr>
+          <tr><td>200</td><td>2650</td><td>0.19</td></tr>
+          <tr><td>100</td><td>2650</td><td>0.13</td></tr>
+          <tr><td>80</td><td>2650</td><td>0.12</td></tr>
+          <tr><td>50</td><td>2650</td><td>0.09</td></tr>
+          <tr><td>40</td><td>2650</td><td>0.08</td></tr>
+          <tr><td>30</td><td>2650</td><td>0.07</td></tr>
+          <tr><td>20</td><td>2650</td><td>0.06</td></tr>
+          <tr><td>10</td><td>2650</td><td>0.04</td></tr>
+          <tr><td>5</td><td>2650</td><td>0.03</td></tr>
+          <tr><td>2.5</td><td>2650</td><td>0.02</td></tr>
+          <tr><td>1</td><td>2650</td><td>0.013</td></tr>
+          <tr><td>0.5</td><td>2650</td><td>0.009</td></tr>
+          <tr><td>0.25</td><td>2650</td><td>0.007</td></tr>
+          <tr><td>0.1</td><td>2650</td><td>0.004</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Table 4.5 provides an estimate of the quantity of sand that could potentially settle in the heat exchanger shell. According to a technical report by Canler for the Ministry of Agriculture, the quantity of sand not retained by the plant's sand traps can vary from 8 to 15 litres per population equivalent per year [l/PE/yr]. Taking a value of 6 l/PE/yr as the assumption, and considering that the pilot unit represents 15,000 PE with a 90% retention rate, a quantity of sand that could foul the heat exchanger of 25 l per day is obtained.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.5 — Expected daily fouling of the shell</caption>
+        <thead>
+          <tr>
+            <th>Criterion</th>
+            <th>Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Plant size</td><td>15,000</td><td>Population equivalent</td></tr>
+          <tr><td>Expected sand quantity per population equivalent</td><td>6</td><td>l/PE/yr</td></tr>
+          <tr><td>Daily sand quantity</td><td>247</td><td>l/d</td></tr>
+          <tr><td>Sand retention rate</td><td>90</td><td>%</td></tr>
+          <tr><td>Sand remaining in sludge</td><td>25</td><td>l/d</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Given that the previously calculated useful volume of the shell is 57 l, if fouling occurs it should happen rapidly. It will therefore be necessary to plan for regular high-water flushing on both the tube side and shell side to guard against this potential fouling.</p>
+
+    <!-- ── Section 4.2 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-methode">4.2 Materials and methods</h2>
+
     <h3>4.2.1 Verification of thermal treatment efficiency</h3>
-    <p>Hydraulic residence time was characterised using sodium chloride tracer studies. Bacteriological analyses were performed on pilot unit sludge samples treated at 165 °C: total coliforms, E. coli, faecal enterococci, salmonella, Clostridium perfringens spores, enteric viruses (bacteriophages), and Ascaris helminth eggs.</p>
+
+    <p>A thermal treatment is considered effective when the minimum residence time required by regulation is met and the pathogenic elements at the process outlet are destroyed. In the case of continuous operation, it must be verified that the fastest sludge particle traversing the process respects the minimum required residence time. This residence time can only be monitored through tracer studies. The reduction of pathogenic elements, for its part, can only be monitored by laboratory analyses.</p>
+
+    <h4>Choice of tracer</h4>
+
+    <p>Of all the tracers listed, sodium chloride and its impact on conductivity seems interesting. It is therefore necessary to verify that this conductivity modification is real and that it will be detectable by a probe placed <em>in-situ</em>. To this end, a 200 ml sample of hydrolysed sludge at 10% dry solids content is taken and mixed in a beaker with NaCl. The measured conductivity increases by 10 mS per 0.5 g of sodium chloride.</p>
+
+    <p>The conductivity of sludge is, like that of water, affected by the salinity of the mixture. Thus, by injecting a determined quantity of sodium chloride at the reactor inlet at an initial instant t<sub>0</sub>, the time required for the conductivity reading of the outlet probe to be affected by the presence of salt must be measurable.</p>
+
+    <p>Although for corrosion reasons it is inadvisable to introduce chlorides into a stainless steel reactor, NaCl appears to be an acceptable tracer for this application because the medium contains no oxygen, the chlorides do not remain in the reactor, the residence time is short, and the tests are carried out punctually.</p>
+
+    <h4>Installation and method for tracer studies</h4>
+
+    <p>Figure 4.3 indicates the location of the conductivity probe. This conductivity probe is placed at the reactor outlet in order to detect the tracer just before dilution and cooling of the sludge. Its full scale is 0 to 600 mS/cm. The conductivity measurement is temperature-compensated based on the probe temperature, which is also monitored continuously.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_1.png" alt="Location of the conductivity probe situated at the reactor outlet"/>
+      <figcaption><strong>Figure 4.3</strong> — Location of the conductivity probe situated at the reactor outlet</figcaption>
+    </figure>
+
+    <h4>Protocol implemented for tracer studies</h4>
+
+    <p>The test is performed when the installation is stabilised at its nominal operating conditions and the pressure and temperature setpoints have been reached. To this end, the reactor is started up and then, once operating on sludge, at pressure and at the setpoint temperature, it is shut down under pressure so that the process can be quickly restarted without a reactor pressure ramp-up phase, which could bias the results.</p>
+
+    <p>The aim is to inject the tracer into the dynamic mixer chamber. In order to inject the tracer into the system, the dynamic mixer is isolated by closing quarter-turn valves and then depressurised via a third quarter-turn valve venting the sludge and flash steam to the outside. Once the tracer has been introduced into the dynamic mixer, it is closed again and reconnected to the reactor network. Following this approach, the tracer injection is carried out as a pulse. The system is then restarted along with data recording, which marks the instant t<sub>0</sub>.</p>
+
+    <h4>Sampling protocol for pathogen analysis</h4>
+
+    <p>During sampling it is essential to ensure that the sample is not contaminated by sludge remaining on the sampling point itself. The defined and applied method is as follows: the sampling point is cleaned with water, cleaned with bleach, then passed through a flame. A first litre is extracted and discarded. A second litre is extracted for bacteriological analysis.</p>
+
+    <p>The analysis methods for the various pathogenic elements analysed and their associated units are summarised in Table 4.6.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.6 — Analysis methods for pathogenic elements</caption>
+        <thead>
+          <tr>
+            <th>Pathogenic elements analysed</th>
+            <th>Method used</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Total coliforms</td><td>Internal method by membrane filtration</td><td>n/g wet matter</td></tr>
+          <tr><td>Thermotolerant coliforms</td><td>Internal method by membrane filtration</td><td>n/g wet matter</td></tr>
+          <tr><td>Enteroviruses</td><td>According to standard XP T 90 451</td><td>Ufp/10 g TS</td></tr>
+          <tr><td>Revivifiable micro-organisms at 22 °C</td><td>Agar inclusion method</td><td>n/g wet matter</td></tr>
+          <tr><td>Revivifiable micro-organisms at 36 °C</td><td>Agar inclusion method</td><td>n/g wet matter</td></tr>
+          <tr><td>Helminth ova</td><td>FD X33 040 method B</td><td>n/10 g TS</td></tr>
+          <tr><td>Listeria</td><td>NF V 08 055</td><td>n/25 g wet matter</td></tr>
+          <tr><td><em>E. coli</em> by microplate</td><td>XP X33 019</td><td>n/g wet matter</td></tr>
+          <tr><td>Salmonella</td><td>XP X33 018</td><td>n/10 g TS</td></tr>
+          <tr><td>Staphylococci</td><td>Method by membrane filtration</td><td>n/g wet matter</td></tr>
+          <tr><td><em>Clostridium perfringens</em></td><td>Semi-quantitative method in liquid medium</td><td>n/g wet matter</td></tr>
+          <tr><td>Moulds</td><td>Seeding method in solid medium</td><td>n/g wet matter</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>These analyses are entrusted to an accredited laboratory using these standardised methods. These pathogenic elements are expressed as number per gram of wet matter (i.e. humid) or dry matter, with the exception of enteroviruses which are expressed in plaque-forming units.</p>
+
     <h3>4.2.2 Improvement of process energy efficiency</h3>
-    <p>A sludge-to-sludge heat exchanger was designed, built and tested. The concept uses treated hot sludge (at ~165 °C) to preheat incoming cold sludge (at ~15–20 °C), reducing live steam consumption. A combined mechanical disruption + preheating approach was selected to handle the high-viscosity sludge.</p>
 
-    <h2 id="sec-resultats">4.3 Results and discussion</h2>
+    <p>The decision is taken to test the implementation of a shell-and-tube heat exchanger. The idea is to condition the fresh sludge by mechanically destructuring it and heating it to 40 °C in order to reduce its viscosity. On the shell side, a high-water flush will need to be implemented to remove any sediment. To verify the viability of this heat exchanger configuration, two tests will be carried out. The first is a small-scale test. If this proves conclusive, the pilot installation will be modified to test this configuration at full scale.</p>
+
+    <h4>Preliminary test on a single tube</h4>
+
+    <p>In order to test the impact of sludge destructuring and preheating on viscosity, and therefore on the expected pressure drop through a heat exchanger, the experimental setup schematised in Figure 4.4 is assembled.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_paillase.png" alt="Bench-scale installation for testing the impact of sludge destructuring and preheating on a single 1.5 m long DN 16 tube"/>
+      <figcaption><strong>Figure 4.4</strong> — Bench-scale installation for testing the impact of sludge destructuring and preheating on a single 1.5 m long DN 16 tube</figcaption>
+    </figure>
+
+    <p>This setup consists of a DN 16 pipe of 1.5 metres in length mounted as a bypass on the dynamic mixer of the pilot unit. A temperature probe and two pressure gauges located at the inlet and outlet of the tube are installed. The temperature probe serves to monitor the preheating temperature. The pressure gauges allow the pressure difference and therefore the pressure drop across the tube bundle to be recorded.</p>
+
+    <p>The pipe dimensions of 1.5 m length in DN 16 correspond to the dimensions of a tube bundle in the envisaged shell-and-tube heat exchanger. It will thus be verified whether the destructuring and preheating effects could be cumulative.</p>
+
+    <h4>Implementation of the full-scale test</h4>
+
+    <p>Following the preliminary tests on a single tube bundle, it appears necessary to test the technical solution on a real commercial heat exchanger in order to:</p>
+    <ul>
+      <li>verify the actual pressure drop induced by the flat section connecting the tube bundles and confirm the impact of sludge destructuring and preheating,</li>
+      <li>verify the recovered energy,</li>
+      <li>verify the operating time before fouling.</li>
+    </ul>
+
+    <p>The modifications made to the pilot unit are schematised in Figure 4.5.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_principe2.png" alt="Implementation of a sludge-to-sludge heat exchanger located upstream of the thermal hydrolysis process"/>
+      <figcaption><strong>Figure 4.5</strong> — Implementation of a sludge-to-sludge heat exchanger located upstream of the thermal hydrolysis process. This system consists of a dynamic mixer [5] receiving live steam [100] coupled to a shell-and-tube heat exchanger receiving hydrolysed sludge [11] on the shell side. At the heat exchanger outlet, the sludge [12] is sent to the digester.</figcaption>
+    </figure>
+
+    <p>The operating mode of the installation changes slightly. The dewatered sludge from a centrifuge [1] still arrives in a feed hopper [2]. The raw sludge from the hopper [2] is then taken up by the feed pump [3] and, rather than being sent directly to the reactor [10] as before, is sent to a dynamic mixer [5]. This dynamic mixer [5] destructures the sludge through high-speed mixing and preheats it to 40 °C with live steam [100]. The conditioned sludge arrives at the heat exchanger [6] inlet on the tube side. Through the heat exchanger, the sludge is heated from 40 to 90 °C thanks to the energy recovered from the hydrolysed sludge. The heated sludge [7] at 90 °C is then sent to a dynamic mixer to raise its temperature from 90 to 165 °C by adding live steam [101]. The sludge is then maintained at this temperature for the desired residence time in the reactor [10].</p>
+
+    <div class="fig-row">
+      <figure>
+        <img src="../images/Chap5/echangeur_inst_glob.png" alt="Installation of the bypass towards the heat exchanger"/>
+        <figcaption><strong>Figure 4.6</strong> — Installation of the bypass towards the heat exchanger</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Chap5/echangeur_sect_plat.png" alt="Flat section of the shell-and-tube heat exchanger"/>
+        <figcaption><strong>Figure 4.7</strong> — Flat section of the shell-and-tube heat exchanger</figcaption>
+      </figure>
+    </div>
+
+    <p>The shell-and-tube heat exchanger is composed of 6 DN 16 tubes of 1.5 metres in length. What differs from the single tube bundle, and what will be quantified by continuously measuring the upstream-downstream pressure difference on the tube side of the heat exchanger, is the flat section connecting the tubes. This flat section, which must distribute the sludge flow between the tubes, will represent a significant additional pressure drop.</p>
+
+    <p>Two operating modes are set up in order to test the behaviour of the system in both scenarios. These two operating modes are:</p>
+    <ol>
+      <li>Starting up the unit with direct use of the heat exchanger;</li>
+      <li>Sending the hydrolysed sludge to the heat exchanger once a setpoint temperature of 140 °C has been reached.</li>
+    </ol>
+
+    <!-- ── Section 4.3 ─────────────────────────────────────────────── -->
+    <h2 id="en-sec-resultats">4.3 Results and discussion</h2>
+
     <h3>4.3.1 Tracer study results</h3>
-    <p>Tracer studies confirmed a laminar flow profile (V<sub>max</sub>/V = 1.8) rather than plug flow. The minimum hydraulic residence time at the pilot scale exceeded 20 minutes at the operating flow rate, satisfying the minimum time-temperature requirement for Class A at 165 °C.</p>
-    <h3>4.3.2 Pathogen analysis campaign results</h3>
-    <p>After treatment at 165 °C for ≥20 minutes, all pathogen indicators were destroyed to below detection limits, with reductions reaching 7 log for most indicators. Results confirmed compliance with US EPA Class A requirements. By extension, European hygienisation performance is also met.</p>
-    <h3>4.3.3 Sludge conditioning results: mechanical disruption and preheating</h3>
-    <p>The combined mechanical disruption and preheating approach successfully fluidised the sludge at high dryness (16–20%), enabling pumping and heat exchange. Viscosity was reduced by over 80% through mechanical treatment, making heat exchange feasible.</p>
-    <h3>4.3.4 Pilot heat exchanger results</h3>
-    <p>The sludge-to-sludge heat exchanger was successfully operated, demonstrating continuous energy recovery. Steam consumption was reduced from ~0.9 to ~0.5 t/t DM. Industrial-scale implementation feasibility was confirmed in principle, though scale-up engineering work remains to be completed.</p>
 
-    <h2>4.4 Conclusions</h2>
-    <h3>Regarding Class A</h3>
-    <p>Temperature homogeneity, minimum hydraulic residence time compliance, and complete pathogen destruction collectively demonstrate that the continuous thermal hydrolysis process meets the criteria of the restrictive US EPA Class A standard, and by extension European hygienisation requirements.</p>
-    <h3>Regarding the heat exchanger</h3>
-    <p>The sludge-to-sludge heat exchanger system enables continuous energy recovery and reinjection into the process, reducing specific steam consumption from 0.9 to 0.5 t/t DM. The combined mechanical disruption and preheating approach is the key enabling technology for this energy recovery.</p>
+    <p>Before carrying out the tracer study on sludge, a tracer study is performed with industrial water in order to verify whether the choice of tracer is relevant and whether the installed conductivity probe detects a conductivity variation. Two tests in water and five tests in sludge will therefore be conducted. The probe temperature will be included in the graphs because its temperature affects the measurement.</p>
+
+    <p><strong>Results in water:</strong></p>
+
+    <p>This first water test is performed after cleaning the reactor, thereby avoiding any deposit that could disturb the flow. The sodium chloride load used is 150 g. The water flow rate is 92 l/h. Figure 4.8 presents the result of the test with the monitoring of water conductivity and the monitoring of the temperature of the measurement head.</p>
+
+    <p>The initial conductivity of the industrial water is of the order of 4 mS/cm. This value is constant until the eighth minute, when the probe begins to detect a conductivity variation. Within two minutes, this conductivity rises from 4 to 11–11.5 mS/cm, corresponding to the concentration peak, which lasts 4 minutes. Subsequently, the conductivity returns linearly to its initial value over 16 minutes.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_2.png" alt="First water tracer test [flow rate 92 l/h, NaCl 150 g]"/>
+      <figcaption><strong>Figure 4.8</strong> — First water tracer test [flow rate 92 l/h, NaCl 150 g]</figcaption>
+    </figure>
+
+    <p>Figure 4.9 also shows that all of the tracer exits the system within 21 minutes (between the ninth and the thirtieth minute).</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_2e.png" alt="E(t) of the first water tracer test [flow rate 92 l/h, NaCl 150 g]"/>
+      <figcaption><strong>Figure 4.9</strong> — E(t) of the first water tracer test [flow rate 92 l/h, NaCl 150 g]</figcaption>
+    </figure>
+
+    <p>To confirm this result, a second identical test is carried out with 300 g of NaCl this time. The shape of the RTD obtained is similar to the previous test. Table 4.7 presents the differences between the two trials.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.7 — Comparison of water tracer study results</caption>
+        <thead>
+          <tr>
+            <th>NaCl amount [g]</th>
+            <th>Flow rate [l/h]</th>
+            <th>Minimum retention time [min]</th>
+            <th>Peak time [min]</th>
+            <th>Total passage time [min]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>150</td><td>92</td><td>9</td><td>2</td><td>21</td></tr>
+          <tr><td>300</td><td>92</td><td>12</td><td>3</td><td>24</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>This second test confirms the profile and the order of magnitude of the residence times. The tracer took 11 minutes to traverse the reactor. A further 24 minutes must be waited for the tracer to exit the reactor completely.</p>
+
+    <p>During both water tests, the water flow rate is 90 l/h with a residence time of the order of 10 minutes. The reactor was sized by considering the fluid as ideal and therefore the flow as plug flow with a ratio V<sub>max</sub>/V = 1. If this were the case, given the flow rate and the dimensions of the unit, the RTD would start at 60 minutes. As recalled in Figure 4.10, the velocity profile of a Newtonian fluid such as water under laminar flow is parabolic with a V<sub>max</sub>/V ratio of 2.</p>
+
+    <figure>
+      <img src="../images/Chap4/profilsVitesse_cnam.jpg" alt="Representation of velocity profiles for different flow regimes"/>
+      <figcaption><strong>Figure 4.10</strong> — Representation of velocity profiles for different flow regimes</figcaption>
+    </figure>
+
+    <p>Given this ratio, the reactor dimensions, the flow rate and the measured RTD, it is straightforward to determine V<sub>max</sub>. Thus, for a reactor of diameter 0.1 m, a volumetric flow rate Q<sub>v</sub> of 0.09 m³/h, and a reactor length of 10 m, the mean velocity V is determined as follows:</p>
+
+    <div class="equation">
+      <span class="eq-body">S = πD²/4 = π × 0.1²/4 = 0.078 m²&emsp;&emsp;Q<sub>v</sub> = 0.09/3600 m³/s&emsp;&emsp;V = Q<sub>v</sub>/S = 0.0032 m/s</span>
+      <span class="eq-number">(4.3)</span>
+    </div>
+
+    <p>Considering that the tracer begins to be detected when the apex of the velocity parabola reaches the probe, i.e. at V<sub>max</sub>, the time required for the fastest tracer particle to travel the 10-metre length of the reactor is:</p>
+
+    <div class="equation">
+      <span class="eq-body">t = L / V<sub>max</sub> = 10 / (2 × 0.0032) = 1571 s, i.e. 26 minutes</span>
+      <span class="eq-number">(4.4)</span>
+    </div>
+
+    <p>Considering a V<sub>max</sub>/V ratio of 2, the tracer should start to be detected after 26 minutes. However, the tracer begins to be measured after 10 minutes, well below the expected value.</p>
+
+    <p>This short residence time cannot be explained by a V<sub>max</sub>/V ratio beyond 2 given the low flow velocity and the nature of the fluid. Such a discrepancy also seems difficult to attribute to a preferential pathway due to the geometry of the process. A plausible hypothesis is that the tracer is carried along by the steam during restart, because water, being non-viscous, presents no resistance to the steam and does not slow it down. If this is the case, this should not occur with sludge, which has high viscosity.</p>
+
+    <p><strong>Results in sludge:</strong></p>
+
+    <p>After the first conclusive water tests, the tracer study must be carried out in sludge. The operating conditions are identical to the water tests. The result of the tracer study for the first sludge trial is presented in Figure 4.11.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_4.png" alt="First sludge tracer test [flow rate 120 l/h, NaCl 300 g]"/>
+      <figcaption><strong>Figure 4.11</strong> — First sludge tracer test [flow rate 120 l/h, NaCl 300 g]</figcaption>
+    </figure>
+
+    <p>After a restart at t = 0, the tracer traverses the reactor in 22 minutes and takes 25 minutes to exit the system completely.</p>
+
+    <p>It should be noted that, following the system shutdown to introduce the tracer, the measured conductivity does not return to its initial value until the probe reaches a temperature of around 100 °C. This observation occurs in all trials.</p>
+
+    <figure>
+      <img src="../images/Chap4/chap4_4e.png" alt="E(t) of the first sludge tracer test [flow rate 120 l/h, NaCl 300 g]"/>
+      <figcaption><strong>Figure 4.12</strong> — E(t) of the first sludge tracer test [flow rate 120 l/h, NaCl 300 g]</figcaption>
+    </figure>
+
+    <p>Table 4.8 summarises the results obtained during the other trials. It indicates the tracer quantity, the flow rate, the minimum sludge retention time (corresponding to the particle traversing the reactor most rapidly), the time required for all tracer to be evacuated from the system, and the calculated V<sub>max</sub>/V ratio.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.8 — Comparison of sludge tracer study results</caption>
+        <thead>
+          <tr>
+            <th>Test no.</th>
+            <th>NaCl [g]</th>
+            <th>Flow rate [l/h]</th>
+            <th>Minimum retention time [min]</th>
+            <th>Total passage time [min]</th>
+            <th>Calculated V<sub>max</sub>/V</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>300</td><td>120</td><td>22</td><td>30</td><td>1.8</td></tr>
+          <tr><td>2</td><td>400</td><td>96</td><td>29</td><td>30</td><td>1.7</td></tr>
+          <tr><td>3</td><td>400</td><td>110</td><td>24</td><td>28</td><td>1.8</td></tr>
+          <tr><td>4</td><td>400</td><td>96</td><td>26</td><td>24</td><td>1.9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Cross-referencing flow rates and RTDs allows the V<sub>max</sub>/V ratio of each test to be calculated. For a pseudoplastic fluid, the V<sub>max</sub>/V ratio is of the order of 1.5, whereas for a Newtonian fluid this ratio is of the order of 2. The calculated V<sub>max</sub>/V ratios presented in Table 4.8 lie between these two values, ranging from 1.7 to 1.9. Thus, it is possible that the initially pasty fluid is rapidly fluidised by the combined actions of mechanical shear from the dynamic mixer and temperature.</p>
+
+    <p>The average minimum retention time across the four tests is 25 minutes at a mean flow rate of 105.5 l/h. The V<sub>max</sub>/V ratio calculated under these conditions is 1.79. At this flow rate, for plug flow with a V<sub>max</sub>/V ratio of 1, this minimum retention time would be 45 minutes.</p>
+
+    <p><strong>Thus, for a continuous process, the reactor must be sized taking into account a V<sub>max</sub>/V ratio of 1.8 in order to guarantee the 20-minute treatment time required to comply with regulation.</strong> This result also confirms the hypothesis of tracer being carried along by steam during the water tests.</p>
+
+    <p>The question of reactor fouling arises, as fouling could reduce the residence time. The geometry of the process will therefore need to be revised to avoid any fouling or deposition. A vertical geometry would offer the advantage of preventing such deposits, thereby maintaining the residence time. This advantage is in addition to the previous considerations regarding temperature homogeneity in the vertical section and mechanical deformation of the reactor.</p>
+
+    <h3>4.3.2 Results of the pathogen analysis campaign</h3>
+
+    <p>Pathogen reduction performance is measured in decimal log, corresponding to a reduction by a factor of 1,000. Given the high temperature, complete destruction of all pathogens is expected.</p>
+
+    <p>The only means of verifying reduction performance consists in carrying out laboratory analyses. Thus, beyond the care taken during sample collection, 10 analysis campaigns will be conducted to avoid any bias.</p>
+
+    <p>Table 4.9 presents the results of these analyses on untreated sludge. Table 4.10 presents the results obtained after treatment.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 4.9</strong> — Analysis of pathogenic elements upstream of thermal hydrolysis</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Microbiological parameters<br>on Sludge and Solids</th>
+            <th rowspan="2">Units</th>
+            <th colspan="10" style="text-align:center;">Sample number</th>
+          </tr>
+          <tr>
+            <th style="text-align:center;">1</th>
+            <th style="text-align:center;">2</th>
+            <th style="text-align:center;">3</th>
+            <th style="text-align:center;">4</th>
+            <th style="text-align:center;">5</th>
+            <th style="text-align:center;">6</th>
+            <th style="text-align:center;">7</th>
+            <th style="text-align:center;">8</th>
+            <th style="text-align:center;">9</th>
+            <th style="text-align:center;">10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enteroviruses</td><td>ufp/10g TS</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+          </tr>
+          <tr>
+            <td>Enterococci</td><td>n/g wet matter</td>
+            <td>89,000</td><td>25,000</td><td>NR</td><td>55,000</td><td>38,000</td>
+            <td>7,400</td><td>4,300</td><td>860,000</td><td>25,000</td><td>300,000</td>
+          </tr>
+          <tr>
+            <td>Revivifiable micro-org. at 22°C</td><td>n/g wet matter</td>
+            <td>450,000,000</td><td>not measured</td><td>9,500,000</td><td>30,900,000</td><td>157,500,000</td>
+            <td>352,500,000</td><td>1,005,000,000</td><td>255,000,000</td><td>12,500,000</td><td>45,500,000</td>
+          </tr>
+          <tr>
+            <td>Revivifiable micro-org. at 36°C</td><td>n/g wet matter</td>
+            <td>250,000,000</td><td>not measured</td><td>127,500,000</td><td>24,800,000</td><td>157,500,000</td>
+            <td>200,000,000</td><td>470,000,000</td><td>377,500,000</td><td>24,100,000</td><td>48,900,000</td>
+          </tr>
+          <tr>
+            <td>Helminth ova</td><td>n/10g wet matter</td>
+            <td>absent</td><td>absent</td><td>11</td><td>11</td><td>100</td>
+            <td>4</td><td>5</td><td>absent</td><td>9</td><td>absent</td>
+          </tr>
+          <tr>
+            <td>Listeria</td><td>n/25g wet matter</td>
+            <td>89,000</td><td>none</td><td>Present</td><td>Present</td><td>none</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+          </tr>
+          <tr>
+            <td><em>E. coli</em> by microplate</td><td>n/g wet matter</td>
+            <td>7,860,000</td><td>8,150,000</td><td>260,000</td><td>154,000</td><td>80,000</td>
+            <td>25,400</td><td>39,300</td><td>3,160,000</td><td>20,700</td><td>465,000</td>
+          </tr>
+          <tr>
+            <td>Salmonella</td><td>n/10g TS</td>
+            <td>&gt; 2,400</td><td>NR</td><td>&gt; 2,400</td><td>&gt; 2,400</td><td>2,400</td>
+            <td>&gt; 2,400</td><td>1,100</td><td>NR</td><td>2,400</td><td>4</td>
+          </tr>
+          <tr>
+            <td>Clostridium perfringens</td><td>n/g wet matter</td>
+            <td>&gt; 25,000</td><td>&gt; 3</td><td>25</td><td>&lt; 3</td><td>&gt; 25,000</td>
+            <td>250</td><td>250</td><td>&lt; 3</td><td>25</td><td>&lt; 3</td>
+          </tr>
+          <tr>
+            <td>Pathogenic staphylococci</td><td>n/g wet matter</td>
+            <td>&lt; 250</td><td>not measured</td><td>&lt; 3</td><td>2,600</td><td>79,600</td>
+            <td>&lt; 25,000</td><td>&lt; 25,000</td><td>&lt; 2,500</td><td>&lt; 2,500</td><td>&lt; 2,500</td>
+          </tr>
+          <tr>
+            <td>Yeasts and moulds</td><td>n/g wet matter</td>
+            <td>210</td><td>not measured</td><td>1,000</td><td>1,500</td><td>946</td>
+            <td>520</td><td>360</td><td>7,900</td><td>480</td><td>7,000</td>
+          </tr>
+          <tr>
+            <td>Total coliforms</td><td>n/g wet matter</td>
+            <td>not measured</td><td>2,550,000</td><td>93,000</td><td>100,000</td><td>1,375,000</td>
+            <td>275,000</td><td>125,000</td><td>2,525,000</td><td>34,000</td><td>275,000</td>
+          </tr>
+          <tr>
+            <td>Thermotolerant coliforms</td><td>n/g wet matter</td>
+            <td>not measured</td><td>380,000</td><td>16,000</td><td>13,000</td><td>23,000</td>
+            <td>19,000</td><td>32,000</td><td>2,525,000</td><td>32,000</td><td>250,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <caption><strong>Table 4.10</strong> — Analysis of pathogenic elements downstream of thermal hydrolysis</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Microbiological parameters<br>on Sludge and Solids</th>
+            <th rowspan="2">Units</th>
+            <th colspan="10" style="text-align:center;">Sample number</th>
+          </tr>
+          <tr>
+            <th style="text-align:center;">1</th>
+            <th style="text-align:center;">2</th>
+            <th style="text-align:center;">3</th>
+            <th style="text-align:center;">4</th>
+            <th style="text-align:center;">5</th>
+            <th style="text-align:center;">6</th>
+            <th style="text-align:center;">7</th>
+            <th style="text-align:center;">8</th>
+            <th style="text-align:center;">9</th>
+            <th style="text-align:center;">10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enteroviruses</td><td>ufp/10g TS</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+          </tr>
+          <tr>
+            <td>Enterococci</td><td>n/g wet matter</td>
+            <td>0</td><td>25</td><td>NR</td><td>&lt; 250</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Revivifiable micro-org. at 22°C</td><td>n/g wet matter</td>
+            <td>68,000</td><td>not measured</td><td>0</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>0</td><td>175</td><td>0</td>
+          </tr>
+          <tr>
+            <td>Revivifiable micro-org. at 36°C</td><td>n/g wet matter</td>
+            <td>91,000</td><td>not measured</td><td>0</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>0</td><td>&lt; 25</td><td>0</td>
+          </tr>
+          <tr>
+            <td>Helminth ova</td><td>n/10g wet matter</td>
+            <td>absent</td><td>absent</td><td>9</td><td>0</td><td>0</td>
+            <td>0</td><td>0</td><td>absent</td><td>0</td><td>absent</td>
+          </tr>
+          <tr>
+            <td>Listeria</td><td>n/25g wet matter</td>
+            <td>0</td><td>none</td><td>none</td><td>none</td><td>none</td>
+            <td>none</td><td>none</td><td>none</td><td>none</td><td>none</td>
+          </tr>
+          <tr>
+            <td><em>E. coli</em> by microplate</td><td>n/g wet matter</td>
+            <td>&lt; 15</td><td>14</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td>
+            <td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td><td>&lt; 15</td>
+          </tr>
+          <tr>
+            <td>Salmonella</td><td>n/10g TS</td>
+            <td>240</td><td>NR</td><td>&lt; 4</td><td>20</td><td>4</td>
+            <td>&lt; 4</td><td>&lt; 4</td><td>NR</td><td>9</td><td>4</td>
+          </tr>
+          <tr>
+            <td>Clostridium perfringens</td><td>n/g wet matter</td>
+            <td>&lt; 3</td><td>3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+            <td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+          </tr>
+          <tr>
+            <td>Pathogenic staphylococci</td><td>n/g wet matter</td>
+            <td>&lt; 25</td><td>not measured</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td>
+            <td>&lt; 3</td><td>&lt; 3</td><td>&lt; 3</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Yeasts and moulds</td><td>n/g wet matter</td>
+            <td>0</td><td>not measured</td><td>&lt; 5</td><td>&lt; 5</td><td>&lt; 5</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 3</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Total coliforms</td><td>n/g wet matter</td>
+            <td>not measured</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+          <tr>
+            <td>Thermotolerant coliforms</td><td>n/g wet matter</td>
+            <td>not measured</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+            <td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Reduction of Enterococci:</strong> The reduction of enterococci is not a parameter required by regulations. In sample 8, the level drops from 860,000 to less than 25 n/g TS, which is below the detection threshold and represents a 6-log reduction. All pathogenic elements of this type present in the sludge are destroyed.</p>
+
+    <p><strong>Reduction of E. coli:</strong> The reduction of E. coli varies from 4 to 7 log. All pathogenic elements of this type present in the sludge are destroyed. Reduction of this element is not required in the US. However, in the UK, a reduction greater than 6 log is required, which is achieved.</p>
+
+    <p><strong>Reduction of Salmonella:</strong> The reduction of Salmonella varies on average by 3 log. Two analyses, relating to samples 2 and 8, yield a result inconsistent with the other analysis results. The potential causes are either poor sampling, re-contamination in the laboratory, or a problem during analysis. Apart from these exceptions, all analysed values are below 3 MPN / 4 g TS. Thus, the criterion set by the US EPA standard is met. The UK regulation requires that the sludge have no trace of this pathogen (complete absence), which is the case.</p>
+
+    <p><strong>Reduction of <em>Clostridium perfringens</em>:</strong> <em>Clostridium perfringens</em> is the pathogenic element most resistant to temperature, with cell walls resisting up to 140 °C. Although it is not monitored by regulations, its reduction is indicative of an effective sanitisation effect of the treatment. Across the 10 samples, all elements present are completely destroyed. The reduction ranges from 1 to 4 log.</p>
+
+    <p><strong>Reduction of staphylococci:</strong> Again, this is an element not monitored by regulations. The reduction of staphylococci across samples varies from 2 to 5 log. All elements present are completely destroyed.</p>
+
+    <p><strong>Reduction of helminth ova:</strong> These are rarely found in Europe but far more often in Latin America. Helminth ova are practically not present in the samples, but the few ova found are indeed destroyed by the thermal treatment. The US EPA regulation requires a concentration below 1/4 g TS, which is achieved.</p>
+
+    <h3>4.3.3 Results of sludge conditioning: destructuring and preheating</h3>
+
+    <p>Based on the setup of Figure 4.4, digested sludge at 27% dry solids content is conditioned in two steps: high-speed mixing in a dynamic mixer aimed at mechanically destructuring the sludge, followed by reheating to 40 °C via live steam injection, before passing through a 1.5-metre-long tube bundle in DN16.</p>
+
+    <p>What is sought here is the evaluation and verification of the cumulative effect of each of these steps on sludge viscosity and therefore on the pressure drop in the tube bundle.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_result_prelim.png" alt="Preliminary results on a single tube to evaluate the effect of destructuring and preheating on pressure drop"/>
+      <figcaption><strong>Figure 4.13</strong> — Preliminary results on a single tube to evaluate the effect of destructuring and preheating on pressure drop</figcaption>
+    </figure>
+
+    <p>At a flow rate of 66 l/h, the initial pressure drop through the tube bundle is 4 bar, i.e. 2.66 bar/m. Under the same conditions, mixing the sludge halves this pressure drop, going from 4 to 2 bar, i.e. 1.33 bar/m. Adding steam to bring the sludge to 40 °C reduces it further from 2 to 1.1 bar, i.e. 0.73 bar/m.</p>
+
+    <p>At a flow rate of 100 l/h, the effects are identical. The initial pressure drop is 5.2 bar, then drops to 3.2 bar through mechanical action and to 1.9 bar once the thermal effect is added. The two mechanical and thermal effects are cumulative regardless of flow rate.</p>
+
+    <figure>
+      <img src="../images/Chap5/result_rheogramme.png" alt="Comparison of rheograms of a sludge subjected first to destructuring, then to destructuring and preheating to 40 °C"/>
+      <figcaption><strong>Figure 4.14</strong> — Comparison of rheograms of a sludge subjected first to destructuring, then to destructuring and preheating to 40 °C</figcaption>
+    </figure>
+
+    <p>Regardless of the applied shear stress, the viscosity of the sludge responds in the same way as the previous <em>in-situ</em> test: a successive decrease following the two cumulative effects. These two tests show that the mechanical effect and the thermal effect are cumulative. It is therefore possible to reduce the viscosity of the sludge before entering a heat exchanger through these two combined effects.</p>
+
+    <h3>4.3.4 Pilot heat exchanger results</h3>
+
+    <p>As a reminder, the system implemented to enable heat exchange consists of a dynamic mixer, to ensure sludge shearing and mixing with live steam, and a shell-and-tube heat exchanger. The upstream-downstream pressure drop of the heat exchanger on the tube side is monitored continuously. The setup is tested according to 3 operating modes presented in Figure 4.15.</p>
+
+    <figure>
+      <img src="../images/Chap5/echangeur_result1.png" alt="Fluctuation of the heat exchanger tube-side pressure drop as a function of the inlet sludge temperature on the shell side according to 3 start-up modes"/>
+      <figcaption><strong>Figure 4.15</strong> — Fluctuation of the heat exchanger tube-side pressure drop as a function of the inlet sludge temperature on the shell side according to 3 start-up modes</figcaption>
+    </figure>
+
+    <p><strong><u>During the first period</u>:</strong> the hydrolysed sludge is directed to the heat exchanger when it reaches a minimum temperature of 100 °C. Subsequently, this temperature gradually rises to 160 °C once the hydrolysis process is stabilised. At the end of the day, from the 5<sup>th</sup> to the 9<sup>th</sup> hour of the test, the pressure drop varies from 1 to 1.7 bar.</p>
+
+    <p>Between the 9<sup>th</sup> and 12<sup>th</sup> hour, the pressure drop peaks at 3.5 bar before falling back and stabilising around 2.3 bar between the 12<sup>th</sup> and 20<sup>th</sup> hour. These variations can be explained by the fact that the pipework bringing the hot hydrolysed sludge to the heat exchanger is not insulated. With insulation, the pressure drop should remain around 1–1.5 bar.</p>
+
+    <p><strong><u>During the second period</u>:</strong> the sludge is sent to the heat exchanger when it reaches 170 °C. Unlike the first period, the temperature of the hydrolysed sludge entering the shell remains at a constant temperature of 140 °C. Under these conditions, the pressure drop stabilises at 1.5 bar during the day, then rises to 2 bar when the temperature drops from 140 to 130 °C.</p>
+
+    <p><strong><u>During the third period</u>:</strong> the heat exchange process is started at the 57<sup>th</sup> hour with cold sludge at 30 °C. The observed upstream-downstream pressure drop across the heat exchanger peaks at 5.3 bar — twice that obtained for a single tube bundle of 2.5 bar. This means that, compared to the preliminary test on a single tube, the geometry of the heat exchanger — and notably the flat section — doubles the pressure drops. Once the hydrolysed sludge at the reactor outlet reaches 160 °C, the pressure drop falls back to 1 bar.</p>
+
+    <p>By passing cold sludge through the heat exchanger with mechanical destructuring but without immediate heating, the pressure drop rises to 5.5 bar. Extrapolating this result on the basis of observations from the tube bundle test, without sludge destructuring, a pressure drop of more than 10 bar could occur. This operating mode is not to be recommended because, although transient, a pressure rise of more than 10 bar will have an impact on the equipment and piping classes.</p>
+
+    <p><strong><u>Heat exchange performance</u>:</strong> The installed heat exchanger has a power of 8 kW. Table 4.11 summarises the measurements taken on the heat exchanger to determine its performance.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Table 4.11 — Estimation of heat exchanger performance</caption>
+        <tbody>
+          <tr><td>Fresh sludge flow rate</td><td>85 l/h</td></tr>
+          <tr><td>Heat capacity</td><td>4 kJ/kg.°C</td></tr>
+          <tr><td>Fluid inlet temperature on tube side</td><td>3 °C</td></tr>
+          <tr><td>Fluid outlet temperature on tube side</td><td>106 °C</td></tr>
+          <tr><td>Recovered power</td><td>7.18 kW</td></tr>
+          <tr><td>Secondary fluid flow rate</td><td>106.25 l/h</td></tr>
+          <tr><td>Secondary fluid inlet temperature</td><td>168 °C</td></tr>
+          <tr><td>Secondary fluid outlet temperature</td><td>107.18 °C</td></tr>
+          <tr><td>Power transferred</td><td>7.18 kW</td></tr>
+          <tr><td>Temperature difference on tube side</td><td>76 °C</td></tr>
+          <tr><td>Temperature difference on shell side</td><td>60.82 °C</td></tr>
+          <tr><td>Heat exchanger efficiency</td><td>89.7 %</td></tr>
+          <tr><td>Overall heat transfer coefficient</td><td>209 W.m⁻².K⁻¹</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The heat exchanger heats the sludge from 30 to 106 °C. In doing so, by preheating sludge at 27% dry solids content from 30 to 106 °C, steam consumption drops from 0.9 to 0.4 tonnes of steam per tonne of dry matter — well below any other thermal hydrolysis process. These results should be considered for an unfouled heat exchanger. Given the high fouling propensity of the sludge, automatic cleaning cycles will need to be implemented to maintain optimal energy recovery.</p>
+
+    <!-- ── Conclusion ─────────────────────────────────────────────── -->
+    <div class="conclusion-block" id="en-sec-conclusion4">
+      <h2>4.4 Conclusions</h2>
+
+      <h3>Regarding Class A</h3>
+
+      <p>With the exception of two samples whose Salmonella result does not appear consistent with the other series of analyses, the pathogenic elements are completely destroyed with performance reaching up to 7 log. In this respect, the sanitisation performance corresponds to what is expected from a thermal hydrolysis process.</p>
+
+      <p>The reactor residence time is shorter than that calculated by considering the flow profile as plug flow. This phenomenon could be explained by tribological flow of the pasty sludge (slip with slight friction) that rapidly reverts to laminar flow once the sludge is sheared and heated (the liquid sludge being shear-thinning). With an average V<sub>max</sub>/V ratio of around 1.8, the flow approximates a laminar regime. This will have an impact on future sizing calculations: to be certain that each sludge particle is treated for the desired time, ranging from 20 to 30 minutes, the maximum velocity must be used as the basis. This amounts to sizing the continuous reactor for a residence time of 36 minutes — to ensure a minimum of 20 minutes treatment for the fastest particle — or 54 minutes — to ensure a minimum of 30 minutes reaction time for that same particle.</p>
+
+      <p>The tests show that the residence time is at least 20 minutes as required by regulation to achieve "Class A". The question of fouling arises, and the residence time in a fouled reactor would be reduced accordingly, as would the temperature homogenisation time of the horizontal reactor of 2 hours. The geometry of the process will therefore need to be revised to avoid any fouling or deposition. A fully vertical reactor could have a positive effect on fouling, temperature homogeneity, and mechanical deformation.</p>
+
+      <p>Nevertheless, temperature homogeneity in steady-state operation, the compliant residence time, and the reduction of all pathogenic elements together lead to the conclusion that this process satisfies the regulatory requirements.</p>
+
+      <h3>Regarding the heat exchanger</h3>
+
+      <p>This standard heat exchanger, under pilot conditions, operated without major problems. Under normal conditions — i.e. a hydrolysed sludge temperature at the shell inlet of 160 °C — the pressure drop is 1 bar and the temperature gain on the digested sludge is 60 °C.</p>
+
+      <p>With a DLD configuration, it is possible to dewater the sludge to 23–28% dry solids content. This means that, with or without a heat exchanger, steam consumption is equal to or lower than other processes on the market. Conversely, with an LD configuration, it is difficult to dewater the sludge (notably biological sludge) and, most often, the sludge will be dewatered to 18% TS, making the process less competitive in terms of steam consumption.</p>
+
+      <p>The LD configuration coupled with this heat exchanger should allow steam consumption of 0.9 tonnes per tonne of dry matter for sludge at 16% dry solids content, which corresponds to the steam consumption of a process recovering flash steam. The major question remains the behaviour of such a solution at real scale.</p>
+
+      <p>A possible technical alternative would be to use a waste heat boiler to generate low-pressure steam by recovering the energy from the hydrolysed sludge.</p>
+
+      <p>Ultimately, the overall process could be as schematised in Figure 4.16. The sludge [1] arrives in a feed hopper [2] before being taken up by a pump [3] feeding a low-pressure network. The sludge passes through this network, on which a dynamic mixer [4] is located, receiving low-pressure steam [15] from the waste heat boiler at approximately 3 bar. Once mixed with this steam, the sludge feeds a buffer hopper [6]. The preheated sludge is then taken up by pump [7] feeding the hydrolysis process and raised to 9 bar. The preheated sludge is brought to 165 °C by adding live steam [9] in the dynamic mixer [8] before entering the reactor [11] via pipework [10] to ensure the residence time. At the reactor outlet, the hydrolysed sludge via pipework [12] then passes through the waste heat boiler and exchanges its heat with a coil supplied with demineralised water, producing low-pressure steam. At the waste heat boiler outlet, the hydrolysed sludge is taken up by the pressure-maintaining pump [16] to feed the digester [17].</p>
+
+      <figure>
+        <img src="../images/Chap4/Waste_Heat_Boiler.png" alt="Principle of the process with energy recovery via a waste heat boiler"/>
+        <figcaption><strong>Figure 4.16</strong> — Principle of the process with energy recovery via a waste heat boiler</figcaption>
+      </figure>
+
+      <p>This proposal would allow preheating of the incoming sludge using the energy recovered during the cooling of the outgoing sludge. This solution allows, just as with the use of a flash tank recirculating flash steam, energy to be recovered in a loop. The energy consumption of the continuous process is thus optimised and independent of the dry solids content of the sludge.</p>
+    </div>
 
     <div class="page-nav">
       <a href="chap3.html"><span class="arrow">←</span> Chapter 3</a>
