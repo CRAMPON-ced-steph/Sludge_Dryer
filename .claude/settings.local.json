@@ -8,5 +8,19 @@
       "Bash(grep -E \"\\\\.jsx$|\\\\.js$\")",
       "Bash(xargs -I {} sh -c 'echo \"=== {} ===\" && head -30 {}')"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd 'c:/Users/Parent/260607_Hazardous' && npm run dev & sleep 2 && start http://localhost:8081",
+            "async": true,
+            "statusMessage": "Lancement du serveur de visualisation..."
+          }
+        ]
+      }
+    ]
   }
 }
