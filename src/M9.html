@@ -95,6 +95,13 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+        .table-container { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff; border-radius: 8px; overflow: hidden; }
+        th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 15px; text-align: left; font-weight: 600; font-size: 0.9em; }
+        td { padding: 12px 15px; border-bottom: 1px solid #ddd; background-color: #fff; vertical-align: top; }
+        tr:hover td { background-color: #f5f5f5; }
+        tr:last-child td { border-bottom: none; }
+        .table-note { font-size: 0.85em; color: #666; font-style: italic; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -138,13 +145,13 @@ Les résidus solides de combustions (appelés cendres et mâchefer), d’épurat
 
 <p>Le module n°5 vous a déjà donné une première estimation des quantités générées par l’incinération d’une tonne de déchets dangereux.</p>
 
-<p>Il était indiqué que 1000 kg de déchets dangereux génèrent en moyenne 150 à 200 kg de mâchefers, plus 30 kg de ferraille, soit un total de 200 kg, représentant 20\</p>
+<p>Il était indiqué que 1000 kg de déchets dangereux génèrent en moyenne 150 à 200 kg de mâchefers, plus 30 kg de ferraille, soit un total de 200 kg, représentant 20%</p>
 
-<p>La variation des tonnages de mâchefers produits par les différent fours vient principalement des « menus » d’incinération des déchets qu’ils appliquent. Un incinérateur qui brûlera 50\</p>
+<p>La variation des tonnages de mâchefers produits par les différent fours vient principalement des « menus » d’incinération des déchets qu’ils appliquent. Un incinérateur qui brûlera 50%</p>
 
 <strong>Volume</strong>
 
-<p>La densité des mâchefers générés par l’incinération peut également varier selon le type de déchets dangereux incinérés. De l’ordre de 1000 kg/m3, cette densité peut atteindre 1200 kg/m3, après égouttage, déferraillage, concassage et criblage. Les mâchefers représentent ainsi, en volume, environ 10\</p>
+<p>La densité des mâchefers générés par l’incinération peut également varier selon le type de déchets dangereux incinérés. De l’ordre de 1000 kg/m3, cette densité peut atteindre 1200 kg/m3, après égouttage, déferraillage, concassage et criblage. Les mâchefers représentent ainsi, en volume, environ 10%</p>
 
 <p>On s’aperçoit donc que le traitement des déchets par incinération est un moyen permettant de les réduire considérablement :</p>
 
@@ -159,7 +166,21 @@ Les résidus solides de combustions (appelés cendres et mâchefer), d’épurat
 
 <p>Dans notre cas, les éléments constituant cette sorte de grave sont constitués de grains, dont la grosseur varie de 4 à 80 mm en moyenne. Ils sont constitués par un mélange hétérogène d’éléments de nature très variée, comme le montre le tableau ci-dessous.</p>
 
-<img src="../images/M9/M9_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Constituant</th><th>Proportion</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Verre</td><td>10–30%</td></tr>
+      <tr><td>Graves et sables</td><td>20–60%</td></tr>
+      <tr><td>Ferrailles et métaux</td><td>10–20%</td></tr>
+      <tr><td>Imbrûlés</td><td>1–5%</td></tr>
+      <tr><td>Eau</td><td>~20%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <h4>Définition des polluants dans les mâchefers</h4>
 
@@ -179,27 +200,42 @@ Les résidus solides de combustions (appelés cendres et mâchefer), d’épurat
 
 <p>Il se calcule par la division suivante :</p>
 
-<p>\[
+<p>%[
  x = {Poids perdu après 4 heures de combustion à 500°C}{Masse initiale des mâchefers secs}
-\]</p>
+%]</p>
 
 <p>Note importante</p>
 
 <p>Remarque importante</p>
 
-<p>Le taux d’imbrûlés doit être inférieur à 5\</p>
+<p>Le taux d’imbrûlés doit être inférieur à 5%</p>
 
 <p>Caractéristiques chimiques</p>
 
 <p>La composition chimique d’un mâchefer courant varie selon la production, mais les éléments présents restent globalement les mêmes. Seuls les pourcentages évoluent, dans une fourchette de valeur qui reste connue.</p>
 
-<p>Les corps les plus représentés sont les silicates (SiO2), les oxydes de fer (Fe2O3) et d’aluminium (Al2O3), ainsi que de la chaux. Ils constituent plus de 80\</p>
+<p>Les corps les plus représentés sont les silicates (SiO2), les oxydes de fer (Fe2O3) et d’aluminium (Al2O3), ainsi que de la chaux. Ils constituent plus de 80%</p>
 
-<p>En revanche, les métaux lourds sont en quantité assez minime (environ 1\</p>
+<p>En revanche, les métaux lourds sont en quantité assez minime (environ 1%</p>
 
-<p>Composition chimique moyenne des mâchefers (en \</p>
+<p>Composition chimique moyenne des mâchefers (en %</p>
 
-<img src="../images/M9/M9_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Composé</th><th>Teneur (%)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>SiO₂</td><td>45–55</td></tr>
+      <tr><td>Al₂O₃</td><td>7–15</td></tr>
+      <tr><td>Fe₂O₃</td><td>6–12</td></tr>
+      <tr><td>CaO</td><td>10–16</td></tr>
+      <tr><td>Autres métaux</td><td>10–16</td></tr>
+      <tr><td>Métaux lourds</td><td>~1</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <h4>Propriétés particulières des mâchefers</h4>
 
@@ -241,13 +277,15 @@ Les résidus solides de combustions (appelés cendres et mâchefer), d’épurat
 
 <p>Les mâchefers tombent dans le caisson d’eau et ils se refroidissent au contact de l’eau. Il se produit un dégagement de vapeur plus ou moins chargée de cendres fines. Par aspiration, cette vapeur rejoint le circuit des fumées. Les quantités d’eau évaporée dans le caisson et qui rejoignent les fumées sont loin d’être négligeable (500 à 1000 kg/h pour un incinérateur de 7 à 8 T/h).</p>
 
-<img src="../images/M9/M9_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
 <p>Les extracteurs à mâchefers ont constitués de deux chaînes en boucle qui entraînent des barres métalliques qui raclent le fond du caisson et remontent ainsi les mâchefers.</p>
 
 <p>Les extracteurs à mâchefers (également appelés redler) sont généralement au nombre de deux. Le redler « côté Four », qui fonctionne en continu et qui remonte les mâchefers sortant du four ; le redler « côté PC » qui remonte les cendres qui décantent dans la PC.</p>
 
-<img src="../images/M9/M9_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 
 <p>Les principaux paramètres dimensionnels d'un Redler sont les suivants :
 <ul>
@@ -256,7 +294,8 @@ Les résidus solides de combustions (appelés cendres et mâchefer), d’épurat
  <li>A : angle (30 à 40°)</li>
 </ul></p>
 
-<img src="../images/M9/M9_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <strong>Sécurité</strong>
 
@@ -277,7 +316,8 @@ Les mâchefers ne respectant pas les critères (en particulier COT) en sortie de
 
 <p>La photographie ci-dessous montre la manutention des mâchefers et l’alimentation d’équipement de tri par des bandes transporteuses.</p>
 
-<img src="../images/M9/M9_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>
 
 <h4>Élimination des mâchefers</h4>
 
@@ -297,9 +337,23 @@ Les mâchefers ne respectant pas les critères (en particulier COT) en sortie de
 
 <p>Le mot Refidd vient de l’abréviation des mots « Résidus d’Epuration des Fumées d’Incinération de Déchet Dangereux ». Par analogie d’autres usines d’incinération produisent des Refiom pour l’incinération d’Ordures Ménagères, de Refidas pour l’incinération de Déchets d’Activités de Soins et de Refib pour l’incinération des Boues de stations d’épuration.</p>
 
-<h4>Composition chimique moyenne des Refidd (en \
+<h4>Composition chimique moyenne des Refidd (en %
 
-<img src="../images/M9/M9_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Composé</th><th>Teneur (%)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>SiO₂</td><td>5–10</td></tr>
+      <tr><td>Sels (NaCl/KCl)</td><td>7–15</td></tr>
+      <tr><td>Ca(OH)₂</td><td>10–30</td></tr>
+      <tr><td>CaCl₂/CaSO₄</td><td>40–50</td></tr>
+      <tr><td>Métaux lourds</td><td>~1</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <p>{ Méthode de collecte et de stockage des résidus</h4></p>
 
@@ -329,21 +383,24 @@ Convoyeur à chaînes</p>
 
 <p>La figure ci-dessous montre le point de chargement des résidus d’épuration par des alvéoles (exemple : trémies sous le dépoussiéreur). Les alvéoles remplies sont transportées horizontalement et verticalement vers le point de stockage temporaire.</p>
 
-<img src="../images/M9/M9_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <p>Convoyeur à godets</p>
 
 <p>Le principe du convoyeur à godets, semblable au convoyeur à chaînes, consiste à entraîner des godets fixés sur une chaîne de manutention. Ils sont généralement utilisés comme élévateurs pour acheminer verticalement les Refidd ou les cendres vers le silo de stockage (voir schéma ci-contre).</p>
 
-<img src="../images/M9/M9_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
 
 <strong>Convoyeur à vis</strong>
 
-<p>Le convoyeur à vis est constitué d’une vis d’Archimède. Entre deux hélices, le résidu est acheminé d’un point à un autre. Le taux de remplissage de la vis peut atteindre 45\</p>
+<p>Le convoyeur à vis est constitué d’une vis d’Archimède. Entre deux hélices, le résidu est acheminé d’un point à un autre. Le taux de remplissage de la vis peut atteindre 45%</p>
 
 <p>Fréquemment utilisé, le convoyeur à vis donne de meilleurs résultats lorsqu’il déplace des produits de façon horizontale ou vers le bas. Il est souvent utilisé sous les trémies des dépoussiéreurs et des chaudières.</p>
 
-<img src="../images/M9/M9_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <strong>Transport pneumatique</strong>
 
@@ -361,12 +418,14 @@ Lorsque le niveau de Refidd mesuré par un indicateur de niveau est suffisamment
 
 <p>Les vitesses d’air peuvent atteindre 300 m par minute. La pression baisse rapidement entre le point de départ et le point d’arrivée de façon à obtenir une pression d’arrivée au silo légèrement plus élevée que la pression atmosphérique. L’air de transport est filtré avant d’être expulsée vers l’extérieur.</p>
 
-<img src="../images/M9/M9_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <p>Les systèmes pneumatiques sont très étanches et facilitent l’élévation des Refidd vers les points hauts. Leur mise au point initiale est parfois plus difficile, car ils sont dotés d’une instrumentation plus complexe que des convoyeurs mécaniques.
 Il faut surveiller l’érosion des conduites et ce particulièrement dans les coudes. En cas de blocage de conduite on réalisera soit un frappage mécanique (dans les coudes) soit une mise en pression pour libérer les bouchons.</p>
 
-<img src="../images/M9/M9_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <h4>Stabilisation des REFIDD</h4>
 
@@ -388,15 +447,18 @@ Le « stabilisat » est évacué en continu vers une benne, puis transporté jus
 
 <p>Les différents produits sont introduits après pesée en ligne dans un réacteur-malaxeur. Ce dernier effectue l’opération de mélange pendant quelques minutes, puis livre sa bâchée dans une benne, qui sera ensuite transporté jusqu’à l’ISDD.</p>
 
-<img src="../images/M9/M9_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
 
-<img src="../images/M9/M9_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
 
 <p>Les stabilisats sont analysés régulièrement pour vérifier qu’ils sont conformes aux normes de lixiviations.</p>
 
 <p>Le batch réalisé est immédiatement transporté sur le CSDU où il est mis en forme dans une alvéole.</p>
 
-<img src="../images/M9/M9_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 
 <h2>Traitement des rejets liquides</h2>
 
@@ -460,9 +522,41 @@ Elle est donnée en milligramme d’oxygène par litre consommé par les matièr
 
 <p>Les eaux de lavage d’un procédé humide épurées au niveau d’un poste de traitement doivent satisfaire aux exigences suivantes :</p>
 
-<img src="../images/M9/M9_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Paramètre</th><th>Valeur limite</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>pH</td><td>5,5–8,5</td></tr>
+      <tr><td>Hydrocarbures</td><td>&lt; 5 mg/l</td></tr>
+      <tr><td>DCO</td><td>&lt; 150 mg/l</td></tr>
+      <tr><td>MES</td><td>&lt; 30 mg/l</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 16</p>
 
-<img src="../images/M9/M9_17.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Paramètre</th><th>Valeur limite (mg/l)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Métaux lourds totaux</td><td>&lt; 15</td></tr>
+      <tr><td>&nbsp;&nbsp;dont Cr⁶⁺</td><td>&lt; 0,1</td></tr>
+      <tr><td>&nbsp;&nbsp;dont Cd</td><td>&lt; 0,2</td></tr>
+      <tr><td>&nbsp;&nbsp;dont Pb</td><td>&lt; 1</td></tr>
+      <tr><td>&nbsp;&nbsp;dont Hg</td><td>&lt; 0,05</td></tr>
+      <tr><td>Phénols</td><td>&lt; 0,5</td></tr>
+      <tr><td>Cyanures</td><td>&lt; 0,1</td></tr>
+      <tr><td>As (arsenic)</td><td>&lt; 0,5</td></tr>
+      <tr><td>Fluorures</td><td>&lt; 15</td></tr>
+      <tr><td>Chlorures</td><td>Selon arrêté préfectoral</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 17</p>
 
 <h3>Recyclage partiel ou total des eaux industrielles dans le process </h3>
 
@@ -471,7 +565,8 @@ Elle est donnée en milligramme d’oxygène par litre consommé par les matièr
 <p>Recyclage total des eaux industrielles dans le process
 Pour recycler totalement les eaux de process, il convient de prévoir un traitement des eaux industrielles.</p>
 
-<img src="../images/M9/M9_18.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_18.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 18</p>
 
 <p>Les eaux industrielles sont essentiellement composées de matières minérales et contiennent :</p>
 
@@ -490,7 +585,7 @@ Pour recycler totalement les eaux de process, il convient de prévoir un traitem
  <li>filtration.</li>
 </ul></p>
 
-<p>Après les traitements indiqués ci-dessus, le recyclage total des effluents est possible, la consommation d’eau, c’est-à-dire l’ajout nécessaire, ne serait que de 20 à 30\</p>
+<p>Après les traitements indiqués ci-dessus, le recyclage total des effluents est possible, la consommation d’eau, c’est-à-dire l’ajout nécessaire, ne serait que de 20 à 30%</p>
 
 <strong>Description des différents équipements nécessaires au traitement des effluents</strong>
 
@@ -511,7 +606,8 @@ Pour recycler totalement les eaux de process, il convient de prévoir un traitem
 
 <p>Filtration</p>
 
-<img src="../images/M9/M9_19.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_19.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 19</p>
 
 <p>Un filtre-presse se compose d’un grand nombre de corps filtrants en forme de plaque donnant une unité filtrante.</p>
 
@@ -522,7 +618,8 @@ Pour recycler totalement les eaux de process, il convient de prévoir un traitem
 <p>La boue est pressée entre deux corps filtrants qui forment comme un moule (à gâteau) à travers lesquels seule l’eau passe. Ainsi après filtration de l’eau, il reste un « gâteau » de boue qu’il faut démouler des corps filtrants.
 La filtration est la phase finale de la séparation boues/eau clarifiée.</p>
 
-<img src="../images/M9/M9_20.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_20.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 20</p>
 
 <strong>Traitement des rejets liquides</strong>
 
@@ -545,7 +642,8 @@ Les effluents traités passent dans le décanteur (9) qui est équipé d’un ra
 <p>L’épaississeur de boues a pour but d’améliorer la concentration en boues et de les stocker. Les boues soutirées par le bas de l’épaississeur alimentent le filtre-presse (12)de façon séquentielle. L’eau part vers la cuve effluent et les boues déshydratées, appelées gâteau, tombent dans une benne (13).
 Dans la cuve de remise à pH (11), l’acide chlorhydrique (14) est injectée pour ramener le pH entre 5,5 et 8. Ensuite, l’eau clarifiée est refroidie à environ 30 °C , dans un bac de contrôle (16), avant son rejet (15) vers l’extérieur.</p>
 
-<img src="../images/M9/M9_21.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_21.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 21</p>
 
 <strong>Rôle des réactifs dans le traitement des effluents liquides</strong>
 
@@ -565,7 +663,7 @@ L’ajout de lait de chaux permet :
 
 <strong>Chlorure ferrique</strong>
 
-<p>Le chlorure ferrique FeCl3 est une solution de couleur orange contenant 41\
+<p>Le chlorure ferrique FeCl3 est une solution de couleur orange contenant 41%
 Injecté en présence de la chaux, il se transforme en hydroxyde de fer Fe(OH)2.
 Sous forme d’hydroxyde, il se polymérise, c’est-à-dire que plusieurs Fe(OH)2 sont reliés pour former une chaîne. Il provoque ainsi la coagulation en adsorbant et en agglomérant des particules colloïdales organiques ou minérales dont le diamètre est inférieur au micron (0,000 001 m.).
 Le pH, contrôlé par ajout de lait de chaux, joue un rôle important sur la coagulation (pH légèrement basique).</p>
@@ -580,7 +678,8 @@ Le pH, contrôlé par ajout de lait de chaux, joue un rôle important sur la coa
 
 <p>Il a pour but de précipiter les métaux lourds.</p>
 
-<img src="../images/M9/M9_22.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M9/M9_22.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 22</p>
 <nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M8.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M10.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>

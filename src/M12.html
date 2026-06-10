@@ -95,12 +95,20 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+        .table-container { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff; border-radius: 8px; overflow: hidden; }
+        th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 15px; text-align: left; font-weight: 600; font-size: 0.9em; }
+        td { padding: 12px 15px; border-bottom: 1px solid #ddd; background-color: #fff; vertical-align: top; }
+        tr:hover td { background-color: #f5f5f5; }
+        tr:last-child td { border-bottom: none; }
+        .table-note { font-size: 0.85em; color: #666; font-style: italic; margin-top: 5px; }
     </style>
 </head>
 <body>
 <h1>Produire et utiliser de la vapeur</h1>
 
-<img src="../images/M12/M12_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <p>La combustion des déchets dégage beaucoup de chaleur et les gaz de combustion atteignent une température de l’ordre de 1 000 °C. La réglementation environnementale ne permet pas de rejeter directement à l’atmosphère des gaz à haute température, et elle exige qu’ils soient au préalable refroidis. Deux principaux moyens sont utilisés :</p>
 
@@ -167,7 +175,8 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
 
 <p>Les deux dernières, qui mettent en jeu des pompes ne sont pas détaillées dans ce module car elles ne sont pas utilisées dans nos usines.</p>
 
-<img src="../images/M12/M12_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <p>La circulation dans les tubes de la chaudière est dite naturelle parce qu’elle s’établit d’elle-même par le jeu des différences de densité entre l’eau qui descend du ballon et l’émulsion(mélange d’eau et de vapeur) qui monte au ballon : l’eau est plus lourde que l’émulsion.</p>
 
@@ -188,9 +197,21 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
 
 <p>Parmi les chaudières à tubes d’eau, il existe les chaudières horizontales et les chaudières.</p>
 
-<img src="../images/M12/M12_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
-<img src="../images/M12/M12_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Type de chaudière</th><th>Caractéristiques</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Horizontale</td><td>Meilleur accès, nettoyage et maintenance facilités</td></tr>
+      <tr><td>Verticale</td><td>Plus compacte, plus économique</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 
 <strong>Mode de support structural</strong>
 
@@ -211,7 +232,8 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
 
 <p>Le ballon a la forme d’un large cylindre horizontale disposé au sommet de la chaudière. Il reçoit l’eau en provenance de la pompe d’alimentation et assure une irrigation constante des tubes au contact des gaz de combustion. Il recueille la vapeur dont il assure une séparation complète de l’eau avant de diriger celle-ci vers le surchauffeur.</p>
 
-<img src="../images/M12/M12_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <p>Le ballon, muni de porte d’acier (trou d’homme) pour inspection, est équipé des éléments suivants :</p>
 
@@ -227,7 +249,7 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
  <li>la séparation de l’eau et de la vapeur ;</li>
  <li>l’alimentation en vapeur sèche (dépourvue de toute trace d’eau) du circuit de départ de vapeur ;</li>
  <li>l’alimentation en eau (dépourvue de vapeur) des tubes descendants ;</li>
- <li>un mini-stockage d’un volume (10\</li>
+ <li>un mini-stockage d’un volume (10%</li>
  <li>l’introduction des produits de traitement d’eau ;</li>
  <li>la purge de déconcentration (cf. module n° 14), pour l’élimination de minéraux comme la silice de l’eau.</li>
 </ul></p>
@@ -257,11 +279,14 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
 <p>En vaporisant l’eau ils permettent un refroidissement complet de toute l’enceinte du foyer, donc de maintenir la température du four autour de 1 000 °C. Cette température est importante à la fois pour éviter la surchauffe des gaz de combustion qui passeront dans les surchauffeurs, mais aussi de limiter la production de NOx 
 (cf. module n° 10).</p>
 
-<img src="../images/M12/M12_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>
 
-<img src="../images/M12/M12_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
-<img src="../images/M12/M12_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <p>Pour éviter la détérioration des tubes due à l’abrasion des cendres volantes et des flammes, on les recouvre sur quelques mètres au-dessus des grilles d’un béton réfractaire qui constitue une protection.</p>
 
@@ -276,7 +301,7 @@ Ce fluide caloporteur peut prendre différentes formes :</p>
 <h3>Evaporateurs</h3>
 
 <p>Sur certaines chaudières, en plus des murs membranes, il y a des panneaux de tubes évaporateurs dans le parcours des gaz de combustion. Ils se présentent comme les économiseurs. Ces échangeurs permettent la vaporisation de l’eau. L’eau qui rentre dans les évaporateurs vient du ballon de chaudière.
-Dans ces tubes se retrouve une émulsion eau/vapeur contenant jusqu’à 20\</p>
+Dans ces tubes se retrouve une émulsion eau/vapeur contenant jusqu’à 20%</p>
 
 <h3>Surchauffeurs</h3>
 
@@ -300,7 +325,8 @@ ballon de vapeur en haut de la chaudière.</p>
 <p>Leur rôle est de protéger la chaudière contre les surpressions et d’éviter ainsi les ruptures de canalisations.
 Lorsque la pression devient trop importante dans la chaudière, les soupapes s’ouvrent et laissent passer le surplus de vapeur. La pression diminue alors dans la chaudière.</p>
 
-<img src="../images/M12/M12_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
 
 <h3>Events</h3>
 
@@ -339,7 +365,8 @@ La fréquence de ramonage dépend du type de chaudière (horizontale ou vertical
 <p>Les rampes sont composées de tubes percés. Selon le procédé choisi, elles sont alimentées par de l’air comprimé ou par de la vapeur surchauffée. Elles peuvent être animées d’un mouvement de rotation qui permet d’atteindre toutes les zones à nettoyer.
 Les rampes sont rétractables dans les endroits où les températures sont élevées, supérieures à 400 °C.</p>
 
-<img src="../images/M12/M12_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <strong>Le grenaillage</strong>
 
@@ -354,7 +381,7 @@ Les billes sont triées et sont réemployées pour un nouveau cycle de nettoyage
 
 <p>Le circuit eau/vapeur est un circuit parfois fermé, parfois ouvert. Dans un circuit ouvert, la vapeur est transmise à un point d’utilisation et la vapeur condensée, après récupération d’énergie, n’est pas retournée vers la chaudière. C’est un système moins efficace car il y a perte de chaleur contenue dans les condensats (vapeur condensée) et une consommation importante d’eau qu’il faudra traiter.</p>
 
-<p>Dans un circuit fermé, le condensat est recirculé pour être transformé à nouveau en vapeur. Il y a toujours de légères pertes, de l’ordre de 2,5\</p>
+<p>Dans un circuit fermé, le condensat est recirculé pour être transformé à nouveau en vapeur. Il y a toujours de légères pertes, de l’ordre de 2,5%</p>
 
 <p>Le circuit eau/vapeur permet la récupération et le transport de l’énergie.</p>
 
@@ -381,7 +408,8 @@ La vapeur quitte le collecteur haute pression pour se diriger vers le turboalter
 
 <p>Ces gaz sont nuisibles à la chaudière car ils provoquent respectivement de la corrosion et de l’entartrage.</p>
 
-<img src="../images/M12/M12_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <h3>La chaudière</h3>
 
@@ -408,13 +436,15 @@ Elles collectent et redistribuent dans toute l’usine ces deux types de vapeurs
 
 <p>Elle transforme l’énergie de la vapeur en énergie mécanique (mouvement). L’élément particulier de la turbine est son régulateur de débit de vapeur, piloté par un automate. Il est constitué par un jeu de cames qui, selon leur ouverture, permettent l’entrée dans la turbine d’un débit très précis de vapeur.</p>
 
-<img src="../images/M12/M12_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <h3>Condenseurs</h3>
 
 <p>Les condenseurs permettent de transformer la vapeur en eau liquide. Cet organe du circuit réalise la transformation inverse à la chaudière. Il extrait l’énergie excédentaire pour réutiliser à nouveau l’eau dans le cycle de la chaudière.</p>
 
-<img src="../images/M12/M12_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
 
 <p>Il en existe différents types :</p>
 
@@ -451,7 +481,7 @@ Un flux d’air est dirigé sur les ailettes par convection. Pour améliorer leu
 
 <h2>Usure et entretien d’une chaudière</h2>
 
-<h3>Corrosion \& érosion</h3>
+<h3>Corrosion %& érosion</h3>
 
 <p>Au niveau de la chaudière, il peut y avoir des phénomènes de corrosion et d’érosion des tubes d’acier qui la composent, c’est-à-dire une attaque chimique et une usure des aciers.
 Cette attaque est présente des deux côtés des surfaces d’échange, du côté du circuit d’eau et du côté du circuit des gaz de combustion.</p>
@@ -560,11 +590,13 @@ Nous en déduisons que la seule chaleur récupérée par la turbine est une chal
 
 <p>Pour que le cycle puisse être bouclé, il faut condenser la vapeur en eau, et c’est lors de cette condensation que la chaleur latente est libérée. Or si elle est libérée à l’atmosphère par les aérocondenseurs, cette chaleur est perdue pour l’usine.</p>
 
-<img src="../images/M12/M12_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
 
 <h3>Cas 3 : production de vapeur et vente d’électricité et de chaleur</h3>
 
-<img src="../images/M12/M12_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 
 <p>Ce type de production, combinant les deux cas précédents, est aussi appelé cogénération.
 Il permet de diversifier l’offre du type d’énergie vendue. L’exploitant a donc une plus grande liberté de manœuvre, car, en cas de baisse de la vente de chaleur, il peut augmenter la production d’électricité.</p>
@@ -608,7 +640,19 @@ Dans vos usines, les valeurs de ces paramètres peuvent être différentes.</p>
 <p>Le tableau suivant donne les températures d'ébullition et la chaleur latente à diverses pressions.
 Sur cette base, à 42 bars, la température d'ébullition est de 255 °C et la chaleur latente de vaporisation pour 1 kg d'eau est égale à 470 Wh.</p>
 
-<img src="../images/M12/M12_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Pression relative (bar)</th><th>Temp. d'ébullition (°C)</th><th>Chaleur latente (Wh/kg)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>100</td><td>627</td></tr>
+      <tr><td>10</td><td>184</td><td>556</td></tr>
+      <tr><td>42</td><td>255</td><td>470</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 16</p>
 
 <p>Sur cette base, nous pouvons définir la chaleur latente de vaporisation de toute masse d'eau à diverses pressions.
 Chaleur latente = masse d'eau x chaleur latente pour 1 kg
@@ -636,7 +680,8 @@ Chaleur latente = masse d'eau x chaleur latente pour 1 kg
 
 <p>Noms des différents changements de phase :</p>
 
-<img src="../images/M12/M12_17.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M12/M12_17.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 17</p>
 
 <p>Par exemple, lorsqu'un solide devient liquide, ce changement est connu sous le nom de fusion ou fusion.</p>
 

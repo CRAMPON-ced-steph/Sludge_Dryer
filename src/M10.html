@@ -95,6 +95,13 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+        .table-container { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff; border-radius: 8px; overflow: hidden; }
+        th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 15px; text-align: left; font-weight: 600; font-size: 0.9em; }
+        td { padding: 12px 15px; border-bottom: 1px solid #ddd; background-color: #fff; vertical-align: top; }
+        tr:hover td { background-color: #f5f5f5; }
+        tr:last-child td { border-bottom: none; }
+        .table-note { font-size: 0.85em; color: #666; font-style: italic; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -121,7 +128,7 @@ Il respecte a minima les exigences de l'arrêté ministériel sur l'incinératio
 <p>Article 9</p>
 
 <p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
-Les installations d’incinération sont exploitées de manière à atteindre un niveau d’incinération tel que la teneur en carbone organique total (COT) des cendres et mâchefers soit inférieure à 3\
+Les installations d’incinération sont exploitées de manière à atteindre un niveau d’incinération tel que la teneur en carbone organique total (COT) des cendres et mâchefers soit inférieure à 3%
 tcolorbox</p>
 
 <p>La qualité des mâchefers doit être contrôlée régulièrement, par les opérateurs de l'incinérateur (aspect visuel lors des contrôles) et par le laboratoire.</p>
@@ -186,11 +193,32 @@ Le traitement des gaz de combustion est obligatoire pour les installations d’i
 <p>Les installations d’incinération d’ordures ménagères existantes doivent appliquer depuis 1991 des valeurs limites d’émission de polluants. Depuis février 1997, les nouvelles installations doivent appliquer des valeurs limites d’émission encore plus sévères.</p>
 
 <p>Valeur limite d’émission : c’est une teneur ou concentration à ne pas dépasser. 
-Elle doit être exprimée en mg/Nm3 ramené à 11\</p>
+Elle doit être exprimée en mg/Nm3 ramené à 11%</p>
 
 <strong>Valeurs limites journalières d'émission de polluants pour les installations existantes (Arrêté du 20 septembre 2002)</strong> :
 
-<img src="../images/M10/M10_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Polluant</th><th>Moy. journalière</th><th>Moy. ½ h</th><th>Moy. 10 mn</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Poussières (C)</td><td>10</td><td>30</td><td>—</td></tr>
+      <tr><td>HCl (C)</td><td>10</td><td>60</td><td>2</td></tr>
+      <tr><td>HF (C)</td><td>10</td><td>4</td><td>2</td></tr>
+      <tr><td>SO₂ (C)</td><td>50</td><td>200</td><td>150</td></tr>
+      <tr><td>CO (C)</td><td>50</td><td>100</td><td>150</td></tr>
+      <tr><td>COT (C)</td><td>10</td><td>20</td><td>—</td></tr>
+      <tr><td>NOₓ (C)</td><td>200</td><td>400</td><td>—</td></tr>
+      <tr><td>Métaux totaux</td><td>—</td><td>0,5</td><td>—</td></tr>
+      <tr><td>Hg</td><td>—</td><td>0,05</td><td>—</td></tr>
+      <tr><td>Cd + Tl</td><td>—</td><td>0,05</td><td>—</td></tr>
+      <tr><td>Dioxines/furanes</td><td>—</td><td>0,1 ng I-TEQ/Nm³</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="table-note">Valeurs en mg/Nm³ à 11% O₂ sauf mention. (C) = mesuré en continu.</p>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <p>Voir fiche index : Réglementation applicable aux systèmes d'incinération des déchets dangereux, Unité no. 3.
  
@@ -198,9 +226,9 @@ Elle doit être exprimée en mg/Nm3 ramené à 11\</p>
 
 <p>Chaque incinérateur est différent. Les gaz de combustion contiennent un pourcentage d’oxygène spécifique pour chaque unité. Plus ce pourcentage sera élevé et plus les polluants contenus dans ces gaz seront dilués, et, par conséquent, afficheront une concentration en mg/m3 plus faible. Cet oxygène provient de l’excès d’air de combustion et aussi d’infiltration d’air dans le système car celui-ci est maintenu sous une pression négative crée par le ventilateur de tirage raccordé à la cheminée.</p>
 
-<p>Pour palier ce problème, les réglementations imposent une façon standard de comparer les gaz de combustion. Elles exigent que les concentrations mesurées soient recalculées pour les exprimer au niveau qu’il aurait été possible de les mesurer si les gaz de combustion avaient tous eu le même pourcentage d’oxygène. La réglementation française et européenne fixe ce pourcentage de comparaison standard à 11\</p>
+<p>Pour palier ce problème, les réglementations imposent une façon standard de comparer les gaz de combustion. Elles exigent que les concentrations mesurées soient recalculées pour les exprimer au niveau qu’il aurait été possible de les mesurer si les gaz de combustion avaient tous eu le même pourcentage d’oxygène. La réglementation française et européenne fixe ce pourcentage de comparaison standard à 11%</p>
 
-<p>Pour des raisons identiques il faut choisir, si on exprime la concentration en polluants d’un gaz de combustion sous une base humide ou sèche. Comme les gaz de combustion peuvent facilement contenir jusqu’à 15\</p>
+<p>Pour des raisons identiques il faut choisir, si on exprime la concentration en polluants d’un gaz de combustion sous une base humide ou sèche. Comme les gaz de combustion peuvent facilement contenir jusqu’à 15%</p>
 
 <p>La température et la pression sont aussi des facteurs importants à normaliser pour bien s’assurer que l’on mesure une quantité de polluants sur des quantités de gaz qui sont comparables : les concentration sont toujours exprimées en mg ou ng par Normal mètre cube (Nm3), concept étudié aux modules 3 et 5. La réglementation fixe les conditions du Normal mètre cube à 0 °C pour la température et à 101,3 kPa pour la pression.</p>
 
@@ -283,7 +311,8 @@ Il en résulte que ces usines sont très bien équipées en matériels de prél�
 
 <p>Le schéma ci-dessous montre un exemple de la disposition des analyseurs process et réglementaire (en bleu) sur une ligne d’incinération.</p>
 
-<img src="../images/M10/M10_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <strong>Principes de mesure pour les analyseurs</strong>
 
@@ -291,12 +320,14 @@ Il en résulte que ces usines sont très bien équipées en matériels de prél�
 
 <p>L’analyseur par prélèvement possède une ligne d’échantillonnage, et une pompe, qui aspire les fumées vers la cellule d’analyse. De cette manière un temps d’échantillonnage est introduit et décale le signal délivré par rapport au phénomène réel. Le gaz peut ensuite être séché ou au contraire maintenu à température élevée pour éviter la condensation d’eau. Enfin, il est généralement analysé dans la cellule de mesure par un système optique (émission de lumière à travers la cellule et réception/analyse de la lumière). Ces analyseurs sont généralement installés en cheminée, pour l’analyse réglementaire.</p>
 
-<img src="../images/M10/M10_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 {Multigas Analyzer SICK}
 
 <p>L’analyseur in situ est composé d’un émetteur et d’un récepteur de lumière directement installés sur le conduit des gaz. Ce système est plus réactif que le système avec prélèvement. Par contre, il est installé dans un milieu plus difficile (poussières, diamètre du conduit) et la mesure est plus délicate. Ces analyseurs sont généralement installés en intermédiaire sur le process.</p>
 
-<img src="../images/M10/M10_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 {Principe d'analyse IN-SITU}
 
 <p>O2</p>
@@ -330,13 +361,25 @@ Néanmoins, dans le cas de techniques de mesure avec prélèvement, elle peut ê
 
 <p>Il est toujours extrêmement important de connaître la technique de mesure employée pour mesurer un élément afin de savoir si la valeur délivrée par l’analyseur est sur gaz sec ou humide.</p>
 
-<img src="../images/M10/M10_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Technique de mesure</th><th>Résultat (sec/humide)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ligne de prélèvement chauffée</td><td>Humide</td></tr>
+      <tr><td>Prélèvement et séchage</td><td>Sec</td></tr>
+      <tr><td>In situ</td><td>Humide</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <p>Il est aussi très important de savoir si les valeurs qui apparaissent sur les supervisons et dans les rapport ont été corrigées en H2O et/ou O2 ou s’il s’agit de valeurs ‘brutes’.</p>
 
 <p>Débit</p>
 
-<p>Le débit de fumées est un paramètre très important. En effet, les flux de polluants de l’installations sont calculés à partir des concentrations et du débit (attention à bien multiplier des concentrations en mg/Nm3 sec corrigés à 11\</p>
+<p>Le débit de fumées est un paramètre très important. En effet, les flux de polluants de l’installations sont calculés à partir des concentrations et du débit (attention à bien multiplier des concentrations en mg/Nm3 sec corrigés à 11%</p>
 
 <p>La mesure est généralement fait par un tube multi-pitot, qui mesure la pression différentielle dans le conduit, ce qui permet de calculer la vitesse des gaz, et grâce à la géométrie du conduit, le débit.</p>
 
@@ -345,7 +388,23 @@ Néanmoins, dans le cas de techniques de mesure avec prélèvement, elle peut ê
 <p>Les échelles de mesure doivent être adaptées aux phénomènes que l’ont souhaite mesurer. En particulier, elles doivent être suffisamment étendues pour appréhender la variabilité des concentrations de polluants.
 Pour les mesures réglementaires, des étendues d’échelle de 2 fois la Valeur Limite d’Emission en moyenne ½ h, couvre de façon satisfaisant les phénomènes observés.</p>
 
-<img src="../images/M10/M10_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Polluant</th><th>VLE ½ h (mg/Nm³)</th><th>Étendue max (mg/Nm³)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HCl</td><td>60</td><td>120</td></tr>
+      <tr><td>SO₂</td><td>200</td><td>400</td></tr>
+      <tr><td>Poussières</td><td>30</td><td>60</td></tr>
+      <tr><td>CO</td><td>100</td><td>200*</td></tr>
+      <tr><td>COT</td><td>20</td><td>20</td></tr>
+      <tr><td>NOₓ</td><td>400</td><td>800</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="table-note">* CO plage haute : 500 voire 1000 mg/Nm³</p>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>
 
 <h4>Temps de mesure</h4>
 
@@ -363,7 +422,25 @@ Il s’agit d’un étalonnage externe, réalisé avec des gaz étalons en boute
 
 <p>Exemple d’analyseurs utilisé sur les UIDD de SARPI</p>
 
-<img src="../images/M10/M10_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Paramètre</th><th>Analyseur</th><th>Principe</th></tr>
+    </thead>
+    <tbody>
+      <tr><td rowspan="3">HCl, SO₂, CO, COT, NOₓ</td><td>PERKIN-ELMER</td><td>IR</td></tr>
+      <tr><td>ENVIRONNEMENT SA</td><td>IR</td></tr>
+      <tr><td>OPSIS</td><td>In situ IR</td></tr>
+      <tr><td rowspan="2">Poussières</td><td>OLDHAM</td><td>Opacimètre</td></tr>
+      <tr><td>ENVIRONNEMENT SA</td><td>Jauge bêta</td></tr>
+      <tr><td rowspan="3">O₂</td><td>PANAMETRICS</td><td>Sonde Zr</td></tr>
+      <tr><td>SERVOMEX</td><td>Paramagnétique</td></tr>
+      <tr><td>OPSIS</td><td>In situ IR</td></tr>
+      <tr><td>Débit</td><td>ANNUBAR</td><td>Multipitot</td></tr>
+    </tbody>
+  </table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <h3>Les analyses ponctuelles</h3>
 
@@ -398,16 +475,17 @@ Il s’agit principalement :</p>
 <h4>Les dioxines et furanes (PCDD-F)</h4>
 
 <p>Nous avons vu que les PCDD-F sont des composés organiques présent à l’état de traces dans les fumées.
-Le prélèvement des ces composés est très délicat à réaliser. Une norme européenne décrit précisément les étapes à respecter. Néanmoins, les difficultés de ce prélèvement introduisent des incertitudes qui peuvent aller jusqu’à 100\
+Le prélèvement des ces composés est très délicat à réaliser. Une norme européenne décrit précisément les étapes à respecter. Néanmoins, les difficultés de ce prélèvement introduisent des incertitudes qui peuvent aller jusqu’à 100%
 Prélèvement : le système de prélèvement, installés sur la bride normée, est le suivant :</p>
 
-<img src="../images/M10/M10_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <p>Les PCDD-F sont arrêtés sur le filtre et sur la résine absorbante.
 Extraction :ces deux substrats sont ensuite envoyés dans un laboratoire agréé qui procède dans un premier temps à l’extraction des PCDD-F à l’aide de solvants.
 Analyse : les PCDD-F en solution dans les solvants sont alors analysés par un spectromètre de masse à haute résolution. Le laboratoire délivre des résultats en ng par congénère dans les substrats.</p>
 
-<p>Le rapport final du prestataire de service fait apparaître les conditions de la mesure, les résultats d’analyses dans la solution et enfin les résultats dans les fumées après les corrections habituelles (O2, H2O, et facteur de toxicité : ng I-TEQ / Nm3 sec 11\</p>
+<p>Le rapport final du prestataire de service fait apparaître les conditions de la mesure, les résultats d’analyses dans la solution et enfin les résultats dans les fumées après les corrections habituelles (O2, H2O, et facteur de toxicité : ng I-TEQ / Nm3 sec 11%</p>
 
 <h2>La gestion des données d'autosurveillance</h2>
 
@@ -422,27 +500,30 @@ A titre d’exemple, avec une fréquence d’échantillonnage de 60s, nous obten
 On peut ensuite représenter ces ensembles par un spectre de répartition par polluant.
 Il présente le détail de la répartition des 15 000 moyennes ½ h de l’année par tranche.</p>
 
-<img src="../images/M10/M10_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
 
 <h4>Suivis des dépassements</h4>
 
 <p>Les dépassements sont suivis en temps réel et même anticipés par le calculateur. Ce renseignement est fourni au chef de quart qui agit sur l’installation en connaissance de cause.
 Un récapitulatif des dépassements est réalisé mensuellement et envoyé aux autorités environnementales, avec les explications nécessaires.</p>
 
-<img src="../images/M10/M10_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <h4> Suivi des performances analyseurs</h4>
 
 <p>Les temps de marche et d’arrêt des analyseurs sont précisément consignés. L’absence de données venant de l’analyseur est renseigné avec détail : panne analyseur, auto-calibration…</p>
 
-<img src="../images/M10/M10_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M10/M10_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <h3>Le suivi des résidus</h3>
 
 <p>Les mâchefers sont contrôlés régulièrement par le personnel de quart lors des rondes (aspect visuel, odeur) et par le laboratoire sur des échantillons moyens (moyenne hebdomadaire des échantillons prélevés quotidiennement).
 Le prélèvement de l’échantillon de mâchefers est effectué avec soin, en sortie de l’extracteur, sur du mâchefer « frais ».</p>
 
-<p>Les mâchefers doivent évidemment respecter la norme des 3\</p>
+<p>Les mâchefers doivent évidemment respecter la norme des 3%</p>
 
 <p>Les Résidus d’Epuration des Fumées (REF) sont également suivi régulièrement (quotidiennement ou hebdomadairement), vis à vis de paramètres exploitation (Cl, S, réactif libre) et de paramètres « stockage » (lixiviation, fraction soluble…).</p>
 
