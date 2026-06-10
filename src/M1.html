@@ -146,7 +146,8 @@
 
 <p>Les différents types de déchets sont présentés dans le schéma ci-dessous.</p>
 
-<img src="../images/M1/panel_HW.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M1/panel_HW.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <h3>Mieux connaître les termes</h3>
 
@@ -166,7 +167,38 @@ La commune est responsable de la collecte et de l’élimination des OM. Elles d
 
 <p>Exemple</p>
 
-<img src="../images/M1/selectivesorting.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Conteneur</th>
+        <th>Tri-Flow</th>
+        <th>Bi-Flow</th>
+        <th>Mono-Flow</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First container</td>
+        <td>Glass</td>
+        <td>Glass</td>
+        <td>Glass<br>Newspaper<br>Magazines<br>Cardboard<br>Plastics<br>Metals</td>
+      </tr>
+      <tr>
+        <td>Second container</td>
+        <td>Newspaper<br>Magazines</td>
+        <td>Newspaper<br>Magazines<br>Cardboard<br>Plastics<br>Metals</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Third container</td>
+        <td>Plastics<br>Cardboard<br>Metals</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <strong>Encombrants</strong>
 
@@ -229,7 +261,8 @@ La collecte et l’élimination de ces déchets sont de la responsabilité de l�
 
 <strong>Déchets dangereux diffus (DDD)</strong>
 
-<img src="../images/M1/DHW.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M1/DHW.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <p>Ils sont de même nature que les déchets dangereux (DD), mais sont produits en faibles quantités par des petites entreprises ou par les laboratoires des lycées ou des universités. De ce fait, les moyens de collecte sont différents : par exemple, SARPI-Onyx propose le service Coralie, basé sur la mise à disposition de bonbonnes spécifiques à chaque produit chimique, collectées périodiquement.
 La collecte et l’élimination de ces déchets sont de la responsabilité de l’entreprise ou de l’établissement producteur.</p>
@@ -241,8 +274,8 @@ La collecte et l’élimination de ces déchets sont de la responsabilité de l�
 <p>Déchets non susceptibles d’évolution physico-chimique : qui ne brûlent pas, qui ne fermentent pas, qui ne diffusent pas d’éléments polluants dans l’eau.
 Deux grands types d’inertes :
 <ul>
- <li>résidus extraits des mines (75\</li>
- <li>certains déchets de démolition (25\</li>
+ <li>résidus extraits des mines (75%</li>
+ <li>certains déchets de démolition (25%</li>
 </ul></p>
 
 <p>Remarque : les déchets végétaux ne peuvent en aucun cas être considérés comme des inertes et être éliminés dans les mêmes conditions que ceux-ci.</p>
@@ -401,7 +434,97 @@ On les classe en deux catégories :</p>
   </table>
 </div>
 
-<img src="../images/M1/currentwastecompo.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<figure style="margin:25px auto; border:1px solid #ddd; padding:16px; background:#fff; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="text-align:center;font-weight:700;color:#1a1a1a;margin-bottom:8px;">Current mean composition of household waste (1995)</figcaption>
+  <svg id="hw-pie" viewBox="0 0 800 420" style="width:100%;display:block;"></svg>
+  <script>
+  (function(){
+    /* Clockwise from top — "Sanitary textiles" corrigé à 3.1% (23.1% dans l'image originale est une erreur, la somme doit être 100%) */
+    var data=[
+      {label:"Sanitary textiles",       pct: 3.1, color:"#aed6f1"},
+      {label:"Plastics",                pct:11.1, color:"#e74c3c"},
+      {label:"Fuels",                   pct: 3.2, color:"#f39c12"},
+      {label:"Glass",                   pct:13.1, color:"#7f8c8d"},
+      {label:"Metals",                  pct: 4.1, color:"#34495e"},
+      {label:"Incombustible waste",     pct: 6.8, color:"#95a5a6"},
+      {label:"Special household waste", pct: 0.5, color:"#c0392b"},
+      {label:"Compostable waste",       pct:28.8, color:"#1d4e89"},
+      {label:"Paper",                   pct:16.0, color:"#2980b9"},
+      {label:"Cardboard boxes",         pct: 9.3, color:"#e67e22"},
+      {label:"Composites",              pct: 1.4, color:"#9b59b6"},
+      {label:"Textiles",                pct: 2.6, color:"#27ae60"},
+    ];
+    var cx=390,cy=210,r=145,ns="http://www.w3.org/2000/svg";
+    var svg=document.getElementById("hw-pie");
+    var a=-Math.PI/2, slices=[];
+
+    /* Draw slices */
+    data.forEach(function(d){
+      var sa=(d.pct/100)*2*Math.PI, ea=a+sa, mid=a+sa/2;
+      var x1=cx+r*Math.cos(a), y1=cy+r*Math.sin(a);
+      var x2=cx+r*Math.cos(ea),y2=cy+r*Math.sin(ea);
+      var p=document.createElementNS(ns,"path");
+      p.setAttribute("d","M "+cx+" "+cy+" L "+x1.toFixed(1)+" "+y1.toFixed(1)+" A "+r+" "+r+" 0 "+(sa>Math.PI?1:0)+" 1 "+x2.toFixed(1)+" "+y2.toFixed(1)+" Z");
+      p.setAttribute("fill",d.color);
+      p.setAttribute("stroke","white");
+      p.setAttribute("stroke-width","1.5");
+      svg.appendChild(p);
+      slices.push({d:d, mid:mid, ny: cy+(r+12)*Math.sin(mid)});
+      a=ea;
+    });
+
+    /* Split left / right, sort by y, spread to avoid overlap */
+    var right=[], left=[];
+    slices.forEach(function(s){ (Math.cos(s.mid)>=0 ? right : left).push(s); });
+    right.sort(function(a,b){return a.ny-b.ny;});
+    left.sort(function(a,b){return a.ny-b.ny;});
+    var ms=17;
+    function spread(arr){
+      for(var i=1;i<arr.length;i++)
+        if(arr[i].ny-arr[i-1].ny<ms) arr[i].ny=arr[i-1].ny+ms;
+    }
+    spread(right); spread(left);
+
+    /* Draw leader lines + labels */
+    var rX=590, lX=205, fs=11;
+    slices.forEach(function(s){
+      var isR=Math.cos(s.mid)>=0, hx=isR?rX:lX;
+      /* 3-point polyline: pie-edge → outward knee → horizontal endpoint */
+      var ax=cx+(r+8 )*Math.cos(s.mid), ay=cy+(r+8 )*Math.sin(s.mid);
+      var bx=cx+(r+28)*Math.cos(s.mid), by=cy+(r+28)*Math.sin(s.mid);
+
+      var pl=document.createElementNS(ns,"polyline");
+      pl.setAttribute("points",
+        ax.toFixed(1)+","+ay.toFixed(1)+" "+
+        bx.toFixed(1)+","+by.toFixed(1)+" "+
+        hx+","+s.ny.toFixed(1));
+      pl.setAttribute("fill","none");
+      pl.setAttribute("stroke","#888");
+      pl.setAttribute("stroke-width","0.9");
+      svg.appendChild(pl);
+
+      /* Small filled dot at pie edge */
+      var dot=document.createElementNS(ns,"circle");
+      dot.setAttribute("cx",ax.toFixed(1));
+      dot.setAttribute("cy",ay.toFixed(1));
+      dot.setAttribute("r","2.8");
+      dot.setAttribute("fill",s.d.color);
+      svg.appendChild(dot);
+
+      /* Text label */
+      var tx=document.createElementNS(ns,"text");
+      tx.setAttribute("x", isR ? hx+5 : hx-5);
+      tx.setAttribute("y", (s.ny+fs*0.38).toFixed(1));
+      tx.setAttribute("font-size",fs);
+      tx.setAttribute("font-family","Segoe UI,Helvetica,sans-serif");
+      tx.setAttribute("fill","#222");
+      tx.setAttribute("text-anchor", isR?"start":"end");
+      tx.textContent=s.d.label+" "+s.d.pct+"%";
+      svg.appendChild(tx);
+    });
+  })();
+  </script>
+</figure>
 
 <h2>Quels traitements pour quels déchets ?</h2>
 
@@ -553,7 +676,7 @@ On les classe en deux catégories :</p>
 <p>Solutions de traitement multiples :
 <ul>
  <li>incinération en centre spécialisé de traitement des DASRI contaminés;</li>
- <li>incinération dans des usines d’incinération d’ordures ménagères, si un système de vidage automatique des déchets dans la trémie du four est en place : aucun opérateur ne doit avoir de contact avec les DASRI, pas de vidage dans la fosse destinée aux OM. Ces DASDI ne doivent pas représenter plus de 10\</li>
+ <li>incinération dans des usines d’incinération d’ordures ménagères, si un système de vidage automatique des déchets dans la trémie du four est en place : aucun opérateur ne doit avoir de contact avec les DASRI, pas de vidage dans la fosse destinée aux OM. Ces DASDI ne doivent pas représenter plus de 10%</li>
  <li>décontamination par chauffage (micro-ondes, vapeur…) ou désinfection chimique, puis traitement des déchets désinfectés ou “ banalisés ” comme des ordures ménagères classiques par incinération.</li>
 </ul></p>
 
@@ -669,7 +792,7 @@ généralisée sur tout le territoire national. Dans les départements très rur
 <strong>Le bilan peu satisfaisant à la fin des années 1980</strong>
 
 <ul>
- <li>60\</li>
+ <li>60%</li>
  <li>le recyclage et la valorisation restaient marginaux ;</li>
  <li>l’ouverture de nouveaux sites de stockage des déchets était de plus en plus difficile.</li>
 </ul>
@@ -684,7 +807,7 @@ Pour cela :</p>
 <ul>
  <li>Produire moins de déchets : au niveau de la fabrication des produits ou lors de leur utilisation. Label NF Environnement (peintures, piles…)</li>
  <li>Réduire les quantités à stocker en décharge en favorisant le recyclage et la valorisation énergétique (chaleur ou électricité) ou organique (compost). itemize</li>
- <li>Donner la priorité au recyclage et à la valorisation : objectif de valorisation par recyclage ou par compostage de 50\</li>
+ <li>Donner la priorité au recyclage et à la valorisation : objectif de valorisation par recyclage ou par compostage de 50%</li>
  <li>Réserver les centres de stockage aux déchets ultimes à partir du 1er juillet 2002.</li>
 </ul>
 itemize
@@ -712,11 +835,90 @@ Ce sont, par exemple, des résidus de dépollution des fumées d’incinération
 
 <p>En 2002, l’ADEME estimait la production française de déchets dangereux à environ 6 millions de tonnes. Les secteurs d’activités à l’origine de ces déchets semblent très divers (cf. figure n°1). Néanmoins, deux familles de secteurs d’activité cohérents contribuent de façon majoritaire au bilan total :
 <ul>
- <li>Le secteur Métallurgique : Déchets mécaniques, électriques et électroniques : 35\</li>
- <li>Le Secteur Chimique : Pétrochimie, Chimie Fondamentale, Chimie Fine, Pharmaceutique, Parachimie : 31\</li>
+ <li>Le secteur Métallurgique : Déchets mécaniques, électriques et électroniques : 35%</li>
+ <li>Le Secteur Chimique : Pétrochimie, Chimie Fondamentale, Chimie Fine, Pharmaceutique, Parachimie : 31%</li>
 </ul></p>
 
-<img src="../images/M1/fewindus.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
-<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="garde.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M2.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+<figure style="margin:25px auto; border:1px solid #ddd; padding:16px; background:#fff; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="text-align:center;font-style:italic;color:#555;margin-bottom:8px;">Fig. no. 1 : breakdown of the volumes of HIW in France</figcaption>
+  <svg id="indus-pie" viewBox="0 0 800 420" style="width:100%;display:block;"></svg>
+  <script>
+  (function(){
+    var data=[
+      {label:"Petrochemicals",                        pct: 4, color:"#2980b9"},
+      {label:"Basic chemistry, fines, pharmaceuticals",pct:24, color:"#1d4e89"},
+      {label:"Parachemistry",                         pct: 3, color:"#f39c12"},
+      {label:"Mechanical",                            pct: 7, color:"#27ae60"},
+      {label:"Waste treatment",                       pct: 9, color:"#e74c3c"},
+      {label:"Paper, cardboard",                      pct: 2, color:"#bdc3c7"},
+      {label:"Electricity, electronics",              pct: 5, color:"#8e44ad"},
+      {label:"Metallurgy",                            pct:23, color:"#16a085"},
+      {label:"DIB / S",                               pct:15, color:"#e67e22"},
+      {label:"Transport, maintenance",                pct: 2, color:"#3498db"},
+      {label:"Others",                                pct: 6, color:"#7f8c8d"},
+    ];
+    var cx=390,cy=210,r=145,ns="http://www.w3.org/2000/svg";
+    var svg=document.getElementById("indus-pie");
+    var a=-Math.PI/2, slices=[];
+
+    data.forEach(function(d){
+      var sa=(d.pct/100)*2*Math.PI, ea=a+sa, mid=a+sa/2;
+      var x1=cx+r*Math.cos(a), y1=cy+r*Math.sin(a);
+      var x2=cx+r*Math.cos(ea),y2=cy+r*Math.sin(ea);
+      var p=document.createElementNS(ns,"path");
+      p.setAttribute("d","M "+cx+" "+cy+" L "+x1.toFixed(1)+" "+y1.toFixed(1)+" A "+r+" "+r+" 0 "+(sa>Math.PI?1:0)+" 1 "+x2.toFixed(1)+" "+y2.toFixed(1)+" Z");
+      p.setAttribute("fill",d.color);
+      p.setAttribute("stroke","white");
+      p.setAttribute("stroke-width","1.5");
+      svg.appendChild(p);
+      slices.push({d:d, mid:mid, ny:cy+(r+12)*Math.sin(mid)});
+      a=ea;
+    });
+
+    var right=[], left=[];
+    slices.forEach(function(s){(Math.cos(s.mid)>=0?right:left).push(s);});
+    right.sort(function(a,b){return a.ny-b.ny;});
+    left.sort(function(a,b){return a.ny-b.ny;});
+    var ms=17;
+    function spread(arr){for(var i=1;i<arr.length;i++)if(arr[i].ny-arr[i-1].ny<ms)arr[i].ny=arr[i-1].ny+ms;}
+    spread(right); spread(left);
+
+    var rX=590, lX=205, fs=11;
+    slices.forEach(function(s){
+      var isR=Math.cos(s.mid)>=0, hx=isR?rX:lX;
+      var ax=cx+(r+8 )*Math.cos(s.mid), ay=cy+(r+8 )*Math.sin(s.mid);
+      var bx=cx+(r+28)*Math.cos(s.mid), by=cy+(r+28)*Math.sin(s.mid);
+
+      var pl=document.createElementNS(ns,"polyline");
+      pl.setAttribute("points",
+        ax.toFixed(1)+","+ay.toFixed(1)+" "+
+        bx.toFixed(1)+","+by.toFixed(1)+" "+
+        hx+","+s.ny.toFixed(1));
+      pl.setAttribute("fill","none");
+      pl.setAttribute("stroke","#888");
+      pl.setAttribute("stroke-width","0.9");
+      svg.appendChild(pl);
+
+      var dot=document.createElementNS(ns,"circle");
+      dot.setAttribute("cx",ax.toFixed(1));
+      dot.setAttribute("cy",ay.toFixed(1));
+      dot.setAttribute("r","2.8");
+      dot.setAttribute("fill",s.d.color);
+      svg.appendChild(dot);
+
+      var tx=document.createElementNS(ns,"text");
+      tx.setAttribute("x", isR?hx+5:hx-5);
+      tx.setAttribute("y",(s.ny+fs*0.38).toFixed(1));
+      tx.setAttribute("font-size",fs);
+      tx.setAttribute("font-family","Segoe UI,Helvetica,sans-serif");
+      tx.setAttribute("fill","#222");
+      tx.setAttribute("text-anchor",isR?"start":"end");
+      tx.textContent=s.d.label+" "+s.d.pct+"%";
+      svg.appendChild(tx);
+    });
+  })();
+  </script>
+</figure>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="../index.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="garde.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M2.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>

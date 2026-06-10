@@ -95,6 +95,51 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background-color: #f5f5f5;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-note {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -105,7 +150,8 @@
 <p>À la fin de ce module vous serez capable de recenser les tâches de maintenance et les règles de sécurité liées à l’accueil, au stockage et aux pré-traitements des déchets dans une usine d’incinération de déchets dangereux.
 Vous pourrez identifier certains équipements de préparation des déchets avant traitement et pourrez expliquer leur principe de fonctionnement.</p>
 
-<img src="../images/M4/usine.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/usine.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <strong>Principes généraux de réception, stockage, tri et prétraitement des déchets dangereux </strong>
 
@@ -137,7 +183,41 @@ Les déchets conditionnés sont préparés (pompage, broyage, reconditionnement)
  <li>Isoconteneur : conteneur étanche, double enveloppe, inerté à l’azote pour transport de produits spéciaux.</li>
 </ul></p>
 
-<img src="../images/M4/bulk_packaged_waste.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Container type</th>
+<th>Volume / Size</th>
+<th>Materials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bulk waste</strong></td>
+<td>Tanks<br/>Pits</td>
+<td>From a few m³ to several tens of m³</td>
+<td>✓ Plastic<br/>✓ Metal…</td>
+</tr>
+<tr>
+<td rowspan="3"><strong>Packaged waste</strong></td>
+<td>&lt; 200 l Containers</td>
+<td>Laboratory flasks<br/>Canisters of 5, 10, 20 or 30 l…<br/>Drums of 60, 80, 120 l…<br/>Bags of 20, 30 kg…</td>
+<td rowspan="3">✓ Metal<br/>✓ Plastic (PVC, High Density Polyethylene "HDPE")<br/>✓ Glass<br/>✓ Fabric</td>
+</tr>
+<tr>
+<td>Drums</td>
+<td>180 to 220 l</td>
+</tr>
+<tr>
+<td>Containers / Big Bags</td>
+<td>400 l to 1000 l</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <p>Par leurs propriétés chimiques :
 <ul>
@@ -194,7 +274,8 @@ Ainsi, la qualité du traitement étant liée à la nature des déchets stockés
 
 <p>DESCRIPTION DU SYSTÈME : A l’entrée de l’usine, le chauffeur du camion avance son véhicule sur le pont bascule puis s’adresse à un réceptionniste du laboratoire qui valide le pesage du chargement.</p>
 
-<img src="../images/M4/peson_camion.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/peson_camion.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
 <p>Les camions peuvent aussi être accueillis par une borne de pesage.
 Cette borne comprend :</p>
@@ -213,7 +294,8 @@ Cette borne comprend :</p>
 
 <p>Le pont hors fosse est recommandé car il présente les avantages d’avoir un coût et un entretien réduits ainsi que la garantie que toutes les roues du véhicule sont bien pesées. Le principal avantage du pont en fosse est qu’il est intégré au sol et ne constitue pas un obstacle à la circulation transversale. En revanche, les opérations d’entretien et de réparation sont difficiles car réalisées en fosse. Les pesées peuvent être faussées si le camion ne se positionne pas correctement (roues en partie hors du pont).</p>
 
-<img src="../images/M4/weighbridge.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/weighbridge.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 
 <p>Le pont bascule est composé de :</p>
 
@@ -529,7 +611,8 @@ Si teneur en chlore < 1\</p>
 
 <p>Spectrophotomètre à fluorescence X</p>
 
-<img src="../images/M4/xray.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/xray.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <p>XI-Table des incompatibilités chimiques…</p>
 
@@ -542,7 +625,8 @@ Si teneur en chlore < 1\</p>
  <li>les comburants favorisent l’inflammation des matières combustibles par leur pouvoir oxydant</li>
 </ul>
 
-<img src="../images/M4/storage_comptatibility.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/storage_comptatibility.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>
 
 <h2>Le stockage des déchets</h2>
 <h3>Les déchets liquides en vrac</h3>
@@ -557,7 +641,8 @@ Les produits sont triés et orientés vers différents stockages car le mélange
 <p>Une fois les analyses de réception effectuées, la conformité du déchet par rapport à l’analyse préalable confirmée, le camion reçoit un bon de dépotage pour une zone précise de stockage, correspondant à la catégorie du déchet.
 Un opérateur prend en charge le camion et surveille le bon déroulement de l’opération.</p>
 
-<img src="../images/M4/gravity_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/gravity_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <strong>Système gravitaire :</strong>
 
@@ -576,28 +661,56 @@ Inconvénient : pas de visibilité, nettoyage du filtre nécessite démontage.</
  
  minipage{0.45}
  
- <img src="../images/M4/unloading_bays.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ <img src="../images/M4/unloading_bays.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
  minipage
  
  minipage{0.2}
  
- <img src="../images/M4/filtration_basket.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ <img src="../images/M4/filtration_basket.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
  minipage
 minipage</p>
 
 <p>[H]
  
-<img src="../images/M4/direct_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;"></p>
+<img src="../images/M4/direct_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p></p>
 
 <strong>Les stockages</strong>
 
 <p>Les liquides « banals » (c’est à dire non réactifs) sont généralement stockés selon leur pouvoir calorifique.</p>
 
-<img src="../images/M4/standar_liquid.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Gross Calorific Value (GCV)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High Calorific Value</td>
+<td>GCV &gt; 5000 kcal/kg</td>
+</tr>
+<tr>
+<td>Medium Calorific Value</td>
+<td>GCV ∈ [1000 ; 5000] kcal/kg</td>
+</tr>
+<tr>
+<td>Low Calorific Value</td>
+<td>GCV &lt; 1000 kcal/kg</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <p>Schéma de principe d’une cuve de stockage à déchets liquides</p>
 
-<img src="../images/M4/liquid_storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/liquid_storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <strong>Spécifications</strong>
 
@@ -632,14 +745,16 @@ La cuvette de rétention est aussi équipée de systèmes de détection et d’e
  
  minipage{0.45}
  
- <img src="../images/M4/bassens.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ <img src="../images/M4/bassens.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
  {Liquides Stockage SIAP Bassens}
  
  minipage
  
  minipage{0.45}
  
- <img src="../images/M4/fos.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ <img src="../images/M4/fos.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
  {Liquids Storage SM Fos}
  
  minipage
@@ -647,10 +762,12 @@ minipage
  
 Les déchets solides vrac « homogènes » (terres polluées, boues homogènes, farines animales…) arrivent par camion benne de 15 à 20 m3. Ils sont dépotés dans des fosses affectées à chaque catégorie de déchet solide.</p>
 
-<img src="../images/M4/storage_pit.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/storage_pit.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 {Schéma montrant le principe d'une fosse de stockage de déchets dangereux}
 
-<img src="../images/M4/solid_pit.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/solid_pit.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 16</p>
 {Solides fosse F1 Limay}
 
 <strong>Spécifications</strong>
@@ -673,11 +790,38 @@ Ces système d’extinction sont des canons à mousse intérieurs et extérieurs
 
 <strong>Catégories</strong>
 
-<img src="../images/M4/packaged_waste.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Container type</th>
+<th>Volume / Size</th>
+<th>Materials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 200 l Containers</td>
+<td>Laboratory flasks<br/>Canisters of 5, 10, 20 or 30 l…<br/>Drums of 60, 80, 120 l…<br/>Bags of 20, 30 kg…</td>
+<td rowspan="3">✓ Metal<br/>✓ Plastic (PVC, High Density Polyethylene "HDPE")<br/>✓ Glass<br/>✓ Fabric</td>
+</tr>
+<tr>
+<td>Drums</td>
+<td>180 to 220 l</td>
+</tr>
+<tr>
+<td>Containers / Big Bags</td>
+<td>400 l to 1000 l</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 17</p>
 
 <p>Les déchets conditionnés, comme les déchets vrac, peuvent être liquides, solides, pâteux ou gazeux, organiques ou minéraux…</p>
 
-<img src="../images/M4/drums.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/drums.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 18</p>
 
 <strong>Spécificités </strong>
 
@@ -714,7 +858,8 @@ Ces système d’extinction sont des canons à mousse intérieurs et extérieurs
 
 <strong>Stockages</strong>
 
-<img src="../images/M4/storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 19</p>
 
 <p>Immobilisation temporaire des déchets</p>
 
@@ -732,7 +877,8 @@ Ces système d’extinction sont des canons à mousse intérieurs et extérieurs
 Ces aires sont sur rétention : une fuite sur un contenant est confinée.
 Elles sont également équipés de systèmes de détection et de protection incendie (généralement réseau de sprinklers d’eau dopée et moyens mobiles).</p>
 
-<img src="../images/M4/drum_zone.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/drum_zone.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 20</p>
 {Drums zone SOLAMAT-MEREX Rognac}
 
 <strong>Petit conditionnement</strong>
@@ -744,7 +890,8 @@ Ces déchets sont stockés dans des alvéoles avant et après les opérations de
 
 <p>Chaque alvéole est équipée de murs et de portes coupe-feu, ainsi que de systèmes de détection et de protection incendie (détecteurs de flamme et réseau de sprinklers).</p>
 
-<img src="../images/M4/small_packing.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/small_packing.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 21</p>
 
 <h2>Engins de déblaiement et de levage</h2>
 
@@ -756,7 +903,8 @@ Ces déchets sont stockés dans des alvéoles avant et après les opérations de
  <li>le chariot automoteur (ou chariot élévateur).</li>
 </ul></p>
 
-<img src="../images/M4/clarck.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/clarck.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 22</p>
 
 <h3>Autorisation de conduite</h3>
 
@@ -781,7 +929,8 @@ Ces déchets sont stockés dans des alvéoles avant et après les opérations de
 
 <h3>Règles de sécurité</h3>
 
-<img src="../images/M4/heavy_load.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/heavy_load.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 23</p>
 
 <p>Pour éviter de nombreux accidents, il faut respecter les quelques règles de base suivantes:
 <ul>
@@ -827,7 +976,8 @@ Les déchets vrac solides et pâteux doivent être mélangés avant injection da
 Les containers et fûts contenant des liquides sont généralement pompés, par catégories (HPC, BPC, Chlorés…), et regroupés dans des cuves intermédiaires avant transfert vers les stockages vrac liquide.
 Les contenants sont soit valorisés (recyclage métal) soit broyés et incinérés (s’il sont trop souillés)
 
-<img src="../images/M4/pumping_station.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/pumping_station.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 24</p>
 
 <p>minipage{.60}
 Dans ce système, la pompe centrifuge peut être considérée comme une pièce d’usure. Au bout d’un certain nombre d’heures de fonctionnement avec des produits très divers et parfois agressifs (solvants, sédiments), elle doit être remplacée.
@@ -837,7 +987,8 @@ Une autre technique, utilisant une pompe à vide, évite l’usure de l’équip
 
 <p>minipage{.35}</p>
 
-<img src="../images/M4/vacuum_pump_cedilor.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/vacuum_pump_cedilor.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 25</p>
 
 <p>minipage</p>
 
@@ -853,7 +1004,8 @@ Il existe plusieurs techniques de broyage adaptées aux différents types de dé
 
 <p>Ces déchets sont généralement peu réactifs et peuvent être broyés dans des installations équipées des sécurité classiques.</p>
 
-<img src="../images/M4/shredder.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/shredder.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 26</p>
 {Exemple d'une rectifieuse}
 
 <p>Exemple d’installation de broyage :</p>
@@ -892,7 +1044,8 @@ Exemple d’une installation de Broyage + Mélangeur + Injection</p>
 
 <p>Des cisailles 3 ou 4 arbres sont généralement utilisées. Deux arbres effectuent le découpage ; une grille de calibration laisse passer les déchets suffisamment réduits ; 1 ou deux arbres assurent la remontée des déchets hors calibre vers les arbres de découpe.</p>
 
-<img src="../images/M4/carboard.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M4/carboard.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 27</p>
 
 <strong>Déchets plastiques</strong>
 
@@ -909,7 +1062,8 @@ Exemple d’une installation de Broyage + Mélangeur + Injection</p>
 <p>Pour cette raison, ces déchets sont laissés dans leur conditionnement d’origine, ou fractionnés dans de petits contenants, afin d’être injectés directement dans le four, sans contact avec les autres déchets.
 Toutes ces opérations sont réalisées à la main, par des chimistes de terrain, dans un atelier dédié.</p>
 
-<img src="../images/M4/reconditioning.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
-<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M3.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+<img src="../images/M4/reconditioning.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 28</p>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="../index.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M3.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>

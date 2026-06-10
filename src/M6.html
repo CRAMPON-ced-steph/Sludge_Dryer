@@ -95,6 +95,14 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+
+        .table-container { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff; border-radius: 8px; overflow: hidden; }
+        th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 15px; text-align: left; font-weight: 600; font-size: 0.9em; }
+        td { padding: 12px 15px; border-bottom: 1px solid #ddd; background-color: #fff; vertical-align: top; }
+        tr:hover td { background-color: #f5f5f5; }
+        tr:last-child td { border-bottom: none; }
+        .table-note { font-size: 0.85em; color: #666; font-style: italic; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -139,7 +147,8 @@
 
 <p>Pour connaître la capacité de traitement d’un four, il faut se référer au guide de conduite fourni par le fabricant. On y trouve les principes de fonctionnement du four et les zones de bon fonctionnement. Ces dernières sont définies sur un diagramme dont l’aspect est le suivant :</p>
 
-<img src="../images/M6/combustion_diagram.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/combustion_diagram.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <p>Sur l’axe des ordonnées, on trouve la puissance dégagée par le four; elle peut être donnée en kW.
 En abscisse, on trouve le débit de déchets en t/h.
@@ -166,7 +175,8 @@ Si l’on incinère une quantité supérieure à la quantité maximale, on dépa
  <li>une évacuation difficile de la chaleur produite.</li>
 </ul>
 
-<img src="../images/M6/M6_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <p>On peut alors définir un premier axe, l’axe des abscisses, sur lequel on place le débit des déchets dans le four. L’unité de débit est la tonne par heure, t/h.</p>
 
@@ -179,7 +189,8 @@ Si l’on incinère une quantité supérieure à la quantité maximale, on dépa
 
 <p>Le four est limité en puissance. On ne doit pas dépasser cette puissance maximale car on dépasse alors la capacité de la chaudière vapeur et des équipements d’extraction des gaz de combustion. La chaudière ne pouvant absorber le surplus de chaleur, il s’ensuit une augmentation de la température du foyer et des gaz de combustion qui risquent d’endommager l’ensemble four-chaudière.</p>
 
-<img src="../images/M6/M6_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
 <p>Il ne faut jamais dépasser cette puissance maximale, sauf pour une courte durée, et maintenir une surveillance attentive de tous les paramètres.</p>
 
@@ -192,9 +203,9 @@ Si l’on incinère une quantité supérieure à la quantité maximale, on dépa
 <p>Le fonctionnement du four dépend aussi de la nature du déchet. On peut la définir par le PCI, donné en kWh/t.
 Pour des déchets de même nature, c’est-à-dire de PCI égaux, on peut noter que la puissance est proportionnelle au débit d’ordures.</p>
 
-<p>\[
+<p>%[
 Puissance = PCI débit de déchets
-\]</p>
+%]</p>
 
 <p>Cela signifie que, pour le même type de déchet, si on multiplie par deux le débit d’ordures, on multiplie par deux la puissance. De même, si on multiplie par trois le débit d’ordures, on multiplie par trois la puissance. 
 Il devient alors possible de tracer sur le diagramme la puissance en fonction du débit, la courbe représentant le PCI.</p>
@@ -203,13 +214,15 @@ Il devient alors possible de tracer sur le diagramme la puissance en fonction du
 Si l’on brûle 1 tonne de déchets par heure, on obtient une puissance égale à 2000 kWh/t x 1 t/h, soit 2000 kW.
 Si on brûle deux fois plus de déchets, pour 2 tonnes par heure on obtient une puissance égale à 2000 kWh/t x 2 t/h, soit 4000 kW.</p>
 
-<img src="../images/M6/M6_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 
 <p>Si on brûle 3 tonnes par heure de déchets de même PCI, on obtient une puissance égale à 2000 kWh/t x 3 t/h, soit 6000 kW.</p>
 
 <p>Traçons en pointillé sur le diagramme la courbe puissance-débit pour un PCI de 2000 kWh/t.</p>
 
-<img src="../images/M6/M6_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <p>Un déchet dont le PCI est élevé est facile à brûler et dégage beaucoup de chaleur. Un déchet dont le PCI est faible est difficile à brûler et dégage moins de chaleur.
 On peut définir ainsi un PCI maxi à ne pas dépasser. Le papier, le plastique ont des PCI très élevés,; ils brûlent facilement et très rapidement. En conséquence, la température risque de monter dans le four au-delà de la limite maximale admissible. De plus, la quantité de gaz de combustion produits ne pourra être évacuée par le ventilateur d’extraction.</p>
@@ -250,7 +263,8 @@ On peut définir ainsi un PCI maxi à ne pas dépasser. Le papier, le plastique 
 <p>La zone hachurée correspond à la zone de fonctionnement normale du four.
 Chaque four possède un diagramme propre selon sa technologie et ses dimensions.</p>
 
-<img src="../images/M6/M6_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">indiqué
+<img src="../images/M6/M6_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>indiqué
 
 <h3>Détection des surcharges</h3>
 
@@ -267,7 +281,8 @@ Chaque four possède un diagramme propre selon sa technologie et ses dimensions.
 <p>Exemple numérique :
 Comment reconnaître une surcharge? Dans la zone définie par les PCI 1160 et 2320 kWh/t pour atteindre la puissance maximale de la chaudière 16240 kW, le débit d’ordures enfourné est supérieur à 7 t/h. Pour ne pas dépasser ce débit maximal, il faut diminuer la puissance de la chaudière.</p>
 
-<img src="../images/M6/M6_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <p>Dans la zone définie par les PCI 2320 et 3248 kWh/t, la puissance maxi sera obtenue avec un débit d’ordures inférieur à 7 t/h. Il est donc possible de « pousser la chaudière » dans cette zone; il suffit d’augmenter le débit de déchets.
 Il faut éviter de dépasser la puissance maximale du four.</p>
@@ -282,16 +297,43 @@ Il faut éviter de dépasser la puissance maximale du four.</p>
 
 <p>Tableau récapitulatif des installations SARPI/ONYX en France.</p>
 
-<img src="../images/M6/M6_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th rowspan="2">Site</th>
+<th colspan="2">Thermal power</th>
+<th rowspan="2">Nominal capacity (T/year)</th>
+<th colspan="2">Kiln</th>
+<th rowspan="2">Th.p. density (kW/m³)</th>
+</tr>
+<tr>
+<th>Th/h</th>
+<th>MW</th>
+<th>DXL (m)</th>
+<th>Volume (m³)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>SOTRENOR</td><td>30,000</td><td>34</td><td>105,000</td><td>4.36 × 12</td><td>180</td><td>189</td></tr>
+<tr><td>SARPI Limay 1</td><td>15,000</td><td>17</td><td>60,000</td><td>2.43 × 11</td><td>51</td><td>333</td></tr>
+<tr><td>SARPI Limay 2</td><td>15,000</td><td>17</td><td>60,000</td><td>3 × 11.17</td><td>79</td><td>215</td></tr>
+<tr><td>SIAP</td><td>15,000</td><td>17</td><td>60,000</td><td>2.7 × 8</td><td>45</td><td>378</td></tr>
+<tr><td>SM Rognac</td><td>13,000</td><td>15</td><td>55,000</td><td>3 × 10</td><td>69</td><td>217</td></tr>
+<tr><td>SM Fos</td><td>20,000</td><td>24</td><td>60,000</td><td>3.5 × 10</td><td>115</td><td>209</td></tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <p>Ceci ne met pas en péril les installations mais va engendrer des dépassements des seuils des rejets réglementaires.</p>
 
 <p>Par analogie à une voiture :
 La puissance thermique peut être définie à la vitesse où l’on roule et un deuxième indicateur la puissance de marche (PM) qui va donné combien de temps je roule à cette vitesse par rapport à combien j’aurais pu rouler sur un temps donné (période choisie : poste, journée, semaine…).</p>
 
-<p>\[
+<p>%[
  PM = {puissance thermique moyenne sur l'équipe x nbr d'heures de fct sur la période}{Max. e. p. pour l'installation x nbr d'heures th sur la période}
-\]</p>
+%]</p>
 
 <strong>Contrairement aux usines d’ordures ménagères où la production d’énergie est un des objectifs de rentabilité important. Pour les usines de traitement des DID la valorisation énergétique, certes importante d’un point de vue médiatique, reste secondaire du point de vue de l’exploitation. La chaudière est là pour assurer avant tout un refroidissement des gaz avant leur traitement de neutralisation.</strong>
 
@@ -341,7 +383,7 @@ Pour un même volume, la masse introduite est plus importante dans le cas de dé
  <li>elle mélange et oxygène les déchets solides</li>
 </ul></p>
 
-<p>Le dispositif de chargement des déchets pâteux permet au conducteur du four d’assurer une alimentation régulière en tête de four. L’oxydation de ce type de produit est favorisée par le brassage crée par la rotation du four. Ces déchets forment un talus dans le four et sont animés d’un mouvement oscillant généré par la rotation du four pour la montée et sous l’action de leur propre poids pour la descente. L’avancement axial des déchets dans le four est donné par la rotation et la pente du four (entre 2 et 3\</p>
+<p>Le dispositif de chargement des déchets pâteux permet au conducteur du four d’assurer une alimentation régulière en tête de four. L’oxydation de ce type de produit est favorisée par le brassage crée par la rotation du four. Ces déchets forment un talus dans le four et sont animés d’un mouvement oscillant généré par la rotation du four pour la montée et sous l’action de leur propre poids pour la descente. L’avancement axial des déchets dans le four est donné par la rotation et la pente du four (entre 2 et 3%</p>
 
 <p>De plus, le moteur d’entraînement du four est équipé d’un variateur de fréquence ce qui permet au chef de quart d’augmenter ou de diminuer la vitesse de rotation. L’augmentation de la vitesse de rotation aura pour effet un brassage plus important donc une oxydation plus rapide mais à contrario un avancement axial plus rapide. Et inversement.</p>
 
@@ -350,7 +392,7 @@ On peut régler la quantité d’air de chacun des ventilateurs de combustion.
 La quantité d’air de combustion dépend de la quantité et de la qualité des déchets présents dans le four. Le réglage du débit est considéré correct lorsque :
 
 <ul>
- <li>la teneur en oxygène est conforme aux consignes d’exploitation, elle est supérieure à 6\</li>
+ <li>la teneur en oxygène est conforme aux consignes d’exploitation, elle est supérieure à 6%</li>
  <li>la T2S est supérieure à 850°C ou 1100°C (valeur réglementaire);</li>
  <li>la flamme est jaune, de turbulence normale et sans dégagement de fumée;</li>
  <li>la combustion en fin de four est achevée.</li>
@@ -358,7 +400,7 @@ La quantité d’air de combustion dépend de la quantité et de la qualité des
 
 <p>Si le débit d'air est insuffisant :
 <ul>
- <li>le taux d’oxygène (\</li>
+ <li>le taux d’oxygène (%</li>
  <li>la température du foyer peut augmenter;</li>
  <li>la combustion est incomplète et des émissions de CO surviennent;</li>
  <li>la qualité des mâchefers est médiocre.</li>
@@ -460,27 +502,29 @@ Sont brûlés dans cet incinérateur : Les
 
 <p>Les dimensions de la chambre de postcombustion sont conçues pour garantir qu'après l'injection d'air finale, les gaz restent dans cette chambre pendant plus de 2 s.</p>
 
-<img src="../images/M6/M6_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
 
 <h3>L'impact des réglages selon le type d'utilisation</h3>
 
 <strong>Incinérateurs alimentés en déchets liquides</strong>
 
-<p>Dans les incinérateurs principalement alimentés en déchets liquides, plus de 70\</p>
+<p>Dans les incinérateurs principalement alimentés en déchets liquides, plus de 70%</p>
 
 <p>La chaleur est alors majoritairement transférée par les liquides et l'incinérateur peut être piloté très simplement à l'aide des boucles de régulation en adaptant les débits des différents liquides (HCV, LCV...) et en maintenant une consigne de température.
 Les déchets solides sont introduits dans l'incinérateur avec un débit régulier à partir d'un automate de pont roulant, en fonction de l'ouverture du grappin et des consignes de vitesse.</p>
 
 <strong>Incinérateurs alimentés en déchets solides</strong>
 
-<p>Dans les incinérateurs principalement alimentés en déchets solides, plus de 50\</p>
+<p>Dans les incinérateurs principalement alimentés en déchets solides, plus de 50%</p>
 
-<img src="../images/M6/M6_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <ol>
  <li><ul> <li>Le pourcentage d’oxygène se stabilise puis commence à monter.</li> <li>La température se stabilise avec un temps de retard sur l’O2 puis commence à chuter. $$ Les pâteux contenus dans le four ont fini de brûler. L’agent d’exploitation doit recharger le four.</li> </ul></li>
  <li><ul> <li>Le pourcentage d’oxygène continue de monter puis se stabilise.</li> <li>La température continue de chuter jusqu’à stabilisation. $$ Les pâteux introduits dans le four se réchauffent et l’eau contenue dans ces pâteux se vaporise.</li> </ul></li>
- <li><ul> <li>Le pourcentage d’oxygène diminue</li> <li>La température augmente $\ rightarrow$ Les déchets pâteux brûlent.</li> </ul></li>
+ <li><ul> <li>Le pourcentage d’oxygène diminue</li> <li>La température augmente $% rightarrow$ Les déchets pâteux brûlent.</li> </ul></li>
  <li><ul> <li>Le pourcentage d’oxygène se stabilise puis commence à augmenter.</li> <li>La température se stabilise puis commence à diminuer $$ Les pâteux contenus dans le four terminent leur combustion. L’agent d’exploitation doit recharger le four.</li> </ul></li>
 </ol>
 
@@ -499,14 +543,15 @@ Ces fours possèdent généralement des réfractaires très performants, et parf
 
 <p>Pour conduire le four, l’opérateur est assisté par des systèmes numériques de contrôle commande dite SNCC (ou conduite centralisée). Ces systèmes permettent de régler la charge du four, d’optimiser son chargement tout en contrôlant et en corrigeant les paramètres environnementaux d’émissions atmosphériques.</p>
 
-<img src="../images/M6/M6_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <p>Pour assurer son rôle, la SNCC doit mesurer plusieurs paramètres représentatifs de la puissance et de la qualité de combustion :</p>
 
 <ul>
  <li>le débit de vapeur (exemple : 25 t/h);</li>
  <li>la température du foyer (exemple : 850°C);</li>
- <li>la teneur en oxygène (exemple : 8\</li>
+ <li>la teneur en oxygène (exemple : 8%</li>
 </ul>
 
 <p>Un ensemble de régulation sert à maintenir ces valeurs constantes. Ces valeurs sont appelées les consignes.</p>
@@ -514,7 +559,7 @@ Ces fours possèdent généralement des réfractaires très performants, et parf
 <p>Pour atteindre les consignes, la SNCC agira sur les commandes de clapets d’air, de l’alimentateur, appelés organes de réglages.</p>
 
 <p>Exemple :
-Si on veut maintenir la teneur en oxygène (\</p>
+Si on veut maintenir la teneur en oxygène (%</p>
 
 <p>Sur les fours, il existe plusieurs régulations :</p>
 
@@ -572,7 +617,8 @@ La principale régulation se fait par une lecture et un enregistrement de la tem
 
 <p>Les paramètres qui ne sont pas reliés au régulateur sont contrôlés et ajustés manuellement par l’opérateur.</p>
 
-<img src="../images/M6/M6_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <p>Sur la plupart des installations, l’ensemble de ces réglages sont manuels : la diversité des déchets ne permet pas de régulation simple.</p>
 
@@ -591,7 +637,8 @@ La principale régulation se fait par une lecture et un enregistrement de la tem
  <li>marche ou arrêt des brûleurs d’appoint.</li>
 </ul>
 
-<img src="../images/M6/M6_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
 
 <strong>Régulation par débit de vapeur et autres variables</strong>
 
@@ -614,7 +661,8 @@ La principale régulation se fait par une lecture et un enregistrement de la tem
  <li>marche ou arrêt des brûleurs d’appoint.</li>
 </ul>
 
-<img src="../images/M6/M6_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
 
 <strong>Principes généraux</strong>
 
@@ -630,7 +678,8 @@ Les systèmes de régulation permettent aussi un fonctionnement en mode dégrad�
  <li>la marche ou l’arrêt des brûleurs d’appoint.</li>
 </ul>
 
-<img src="../images/M6/M6_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M6/M6_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 {Vue du système de supervision d'injection liquide par SARP Industries Limay}
 
 <p>Pour contrôler la combustion à l’intérieur du four, il est utile de visualiser l’état du feu à travers les regards sur site :
@@ -679,6 +728,6 @@ La température peut se modérer en augmentant l’excès d’air ou en augmenta
 
 <p>Le débit de vapeur doit être constant et proche de la consigne imposée par l’opérateur. 
 Un débit ou une pression de vapeur instable sont le signe d’une mauvaise combustion.</p>
-<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M7.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="../index.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M7.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>

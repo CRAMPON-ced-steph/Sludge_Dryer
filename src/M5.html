@@ -95,6 +95,51 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background-color: #f5f5f5;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-note {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -140,7 +185,7 @@
  <li>gaz finissant leur combustion par un temps de séjour supérieur à 2s à haute température dans la chambre de post-combustion.</li>
 </ul></p>
 
-<strong>L'air</strong> est soufflé par des ventilateurs d'air dans les brûleurs pour assurer une combustion complète (Four et Post-Combustion air primaire), dans la goulotte des solides (air secondaire) et parfois en périphérie du four ( air tertiaire). Une part importante de l'air (plus de 20\
+<strong>L'air</strong> est soufflé par des ventilateurs d'air dans les brûleurs pour assurer une combustion complète (Four et Post-Combustion air primaire), dans la goulotte des solides (air secondaire) et parfois en périphérie du four ( air tertiaire). Une part importante de l'air (plus de 20%
 
 <p>La progression des déchets et le mélange à l'intérieur du four sont contrôlés en réglant la vitesse de rotation appropriée du four. Ce réglage doit maintenir la couche de déchets à épaisseur constante. Les objectifs principaux sont :
 <ul>
@@ -155,7 +200,8 @@
 
 <p>Les mâchefers tombent dans le joint du piège extracteur humide où ils sont trempés par de l'eau de 1000°C à environ 80°C</p>
 
-<img src="../images/M5/RK.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/RK.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <h2>La combustion</h2>
 
@@ -168,14 +214,15 @@
  <li>l'atmosphère doit être au-dessus de la température d'auto-inflammation, c'est-à-dire de la chaleur.</li>
 </ul></p>
 
-<img src="../images/M5/Triangle_feu.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Triangle_feu.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
 
 <p>Rappel de la composition de l'air : 
 <ul>
- <li>78\</li>
- <li>21\</li>
- <li>0.9\</li>
- <li>0,1\</li>
+ <li>78%</li>
+ <li>21%</li>
+ <li>0.9%</li>
+ <li>0,1%</li>
 </ul></p>
 
 <p>Le triangle du feu est montré ci-contre.</p>
@@ -220,7 +267,35 @@ La vitesse de combustion est limitée par l'apport d'oxygène sur les braises (f
 
 <p>Les réactions chimiques peuvent être écrites en utilisant des équations impliquant les éléments susmentionnés. Les équations peuvent se lire comme suit :</p>
 
-<img src="../images/M5/Table_reaction.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Available reagents</th>
+<th>Chemical reaction</th>
+<th>Reaction products</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C + O₂</td>
+<td>→</td>
+<td>CO₂</td>
+</tr>
+<tr>
+<td>C + ½ O₂</td>
+<td>→</td>
+<td>CO</td>
+</tr>
+<tr>
+<td>H₂ + ½ O₂</td>
+<td>→</td>
+<td>H₂O</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
 <strong>Réaction complète</strong> : Le carbone se transforme directement en dioxyde de carbone selon la réaction suivante :
 center
@@ -256,7 +331,8 @@ center</p>
 <p>La stoechiométrie est l'étude des proportions relatives des éléments lorsqu'ils se combinent chimiquement. Ce type de combustion est chimiquement idéal, cependant, il ne se produit jamais complètement dans la pratique.</p>
 
 <p>center
-<img src="../images/M5/Type_comb1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;"></p>
+<img src="../images/M5/Type_comb1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p></p>
 
 <p>center</p>
 
@@ -264,7 +340,8 @@ center</p>
 Une grande quantité d'oxygène est alors disponible dans les gaz de combustion. Un excès d'air peut également aider à réduire la température de la flamme.</p>
 
 <p>center
-<img src="../images/M5/Type_comb2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;"></p>
+<img src="../images/M5/Type_comb2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p></p>
 
 <p>center</p>
 
@@ -272,17 +349,19 @@ Une grande quantité d'oxygène est alors disponible dans les gaz de combustion.
 La variation et l'alternance des conditions de réaction oxydante et réductrice corroderont les tuyaux de la chaudière.</p>
 
 <p>center
-<img src="../images/M5/Type_comb3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;"></p>
+<img src="../images/M5/Type_comb3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p></p>
 
 <p>center</p>
 
 <h3>Analyse simple des produits de combustion</h3>
 
-<p>Le pourcentage d'oxygène (O2 \
+<p>Le pourcentage d'oxygène (O2 %
 Le pourcentage de monoxyde de carbone (CO) dans la fumée est vérifié pour déterminer si l'air entrant est adéquat. Cette valeur augmentera proportionnellement au manque d'air.
-Les incinérateurs de déchets dangereux fonctionnent généralement avec un excès d'air conduisant à des niveaux d'oxygène compris entre 4 et 8\</p>
+Les incinérateurs de déchets dangereux fonctionnent généralement avec un excès d'air conduisant à des niveaux d'oxygène compris entre 4 et 8%</p>
 
-<img src="../images/M5/RK_analysis.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/RK_analysis.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <h2>L'importance de l'étendue de la combustion</h2>
 
@@ -294,15 +373,16 @@ Les incinérateurs de déchets dangereux fonctionnent généralement avec un exc
  <li>pour les problèmes de pollution : en effet, les réactions incomplètes (c'est-à-dire avec un air inadéquat) dégagent des niveaux élevés de polluants dus à la présence de monoxyde de carbone (CO) et d'imbrûlés (précurseurs de dioxines) ;</li>
 </ul></p>
 
-<p>L'excès d'air est donc de l'ordre de 100\</p>
+<p>L'excès d'air est donc de l'ordre de 100%</p>
 
 <p>Pour incinérer 1 kg de déchets dangereux au pouvoir calorifique net (PCI) de 3 kW/kg dans des conditions stoechiométriques, il faut 3,5 kg d'air (exemple avec une composition mixte de déchets dangereux susceptible de varier sensiblement), pour brûler 7000 kg (7 tonnes) de déchets dangereux dans les mêmes conditions stoechiométriques, il faut : 3,5 x 7000 = 24 500 kg d'air (soit 24,5 tonnes).</p>
 
 <p>Comme vu précédemment, 1 Nm3 d'air représente 1,293 kg, et donc 24 500 kg d'air représente 24 500/1,293 = 18 948 Nm3 (arrondi à 19 000 Nm3).</p>
 
-<p>En effet, ces 7 tonnes de déchets sont brûlées avec un excès d'air, qui est supposé être de 110\</p>
+<p>En effet, ces 7 tonnes de déchets sont brûlées avec un excès d'air, qui est supposé être de 110%</p>
 
-<img src="../images/M5/Excess_air.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Excess_air.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <h3>Vérification de l'excès d'air</h3>
 
@@ -314,13 +394,14 @@ Les incinérateurs de déchets dangereux fonctionnent généralement avec un exc
 
 <strong>Le premier type</strong>, la combustion stoechiométrique, avec le minimum d'air nécessaire, est représenté sur le schéma ci-contre.
 
-<img src="../images/M5/Excess_air.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Excess_air.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
 
 <strong>Le deuxième type</strong>, combustion avec excès d'air, c'est à dire si la quantité d'air disponible dépasse la quantité minimale requise. L'air en excès est plus froid que les gaz (à l'intérieur du four), et n'intervient pas dans la combustion, mais va en revanche absorber de la chaleur, c'est-à-dire refroidir les fumées et les matériaux réfractaires.
 
 <p>Le taux de variation des températures des fumées peut être suivi en fonction de la quantité d'air entrant dans le four :</p>
 
-<strong>Remarque :</strong> cette courbe est spécifique à une qualité de déchets dangereux mélangés et à un type de four à parois non refroidies. Ce type est illustré dans l'exemple ci-dessus, c'est-à-dire avec un excès d'air de 110\
+<strong>Remarque :</strong> cette courbe est spécifique à une qualité de déchets dangereux mélangés et à un type de four à parois non refroidies. Ce type est illustré dans l'exemple ci-dessus, c'est-à-dire avec un excès d'air de 110%
 
 <strong>Conditions de validité :</strong>
 <ul>
@@ -356,8 +437,8 @@ Les incinérateurs de déchets dangereux fonctionnent généralement avec un exc
 <p>Le Ministère de l'Environnement a défini des règles pour la combustion des déchets dangereux, qui peuvent être résumées selon les principes suivants :
 <ul>
  <li>les conditions d'incinération doivent être définies et maintenues en termes de température et de résidence temps afin de garantir l'incinération et l'oxydation complète des fumées ;</li>
- <li>les fumées produites à partir des déchets doivent être chauffées (y compris dans les conditions les plus défavorables) après l'injection finale d'air de combustion, à une température d'au moins 850 °C pendant au moins 2 secondes ; si le taux d'halogènes dans les déchets dépasse 1\</li>
- <li>les fumées ne doivent pas contenir plus de 100 mg/Nm3 de monoxyde de carbone en moyenne par heure, ni plus de 5\</li>
+ <li>les fumées produites à partir des déchets doivent être chauffées (y compris dans les conditions les plus défavorables) après l'injection finale d'air de combustion, à une température d'au moins 850 °C pendant au moins 2 secondes ; si le taux d'halogènes dans les déchets dépasse 1%</li>
+ <li>les fumées ne doivent pas contenir plus de 100 mg/Nm3 de monoxyde de carbone en moyenne par heure, ni plus de 5%</li>
 </ul></p>
 
 <h3>Comparaison avec un combustible standard : le fuel</h3>
@@ -394,14 +475,14 @@ Les incinérateurs de déchets dangereux fonctionnent généralement avec un exc
 
 <p>La thermolyse (ou pyrolyse) est une technique traditionnelle de traitement thermique utilisée sur des matières organiques en l'absence d'air. Une nouvelle génération de techniques de thermolyse a émergé dans les années 1980 avec un regain d'intérêt pour des capacités de traitement relativement faibles (généralement moins de 200 000 tonnes par an), tant pour les déchets industriels que pour les déchets ménagers. Ces procédés sont actuellement utilisés soit sous forme de prétraitement avec thermolyse seule, soit sous forme de traitement complet avec thermolyse intégrée et déchets résiduels valorisés sur site.</p>
 
-<p>— La thermolyse est un type de traitement thermique à température modérée (450°C - 750°C) en l'absence d'air. Au cours du traitement, la matière organique se décompose en une phase solide (une sorte de semi-coke avec 60-65\
+<p>— La thermolyse est un type de traitement thermique à température modérée (450°C - 750°C) en l'absence d'air. Au cours du traitement, la matière organique se décompose en une phase solide (une sorte de semi-coke avec 60-65%
 En effet, la thermolyse comprend un traitement thermique préalable et les gaz dégagés sont brûlés. La thermolyse doit donc être suivie de la combustion des résidus solides, en réutilisant l'énergie, soit directement sur le site, soit ultérieurement sur un autre site.</p>
 
 <p>A titre d'exemple, une tonne de déchets non traités produira environ 400 kg de gaz et 400 kg de solides après séchage.
 Les gaz de thermolyse (environ 400 kg) sont caractérisés par un PCI d'environ 3,6 kWh/kg.</p>
 
 <p>Compte tenu de sa composition, ce gaz doit être brûlé sur place, dans des conditions répondant aux normes d'émissions.
-Les solides de thermolyse (environ 400 kg) contiennent environ 60 à 65\</p>
+Les solides de thermolyse (environ 400 kg) contiennent environ 60 à 65%</p>
 
 <p>— Avec des procédés de thermolyse intégrés, le combustible solide et les gaz de thermolyse sont brûlés ou gazéifiés dans un four à haute température (1300°C - 1900°C) où les cendres sont rendues inertes par vitrification. Les fumées doivent également être traitées conformément aux normes applicables en matière d'émissions.</p>
 
@@ -568,7 +649,7 @@ Par exemple, lorsque vous soufflez dans un ballon, une pression positive est cr�
 
 <p>Si la pression négative n'est pas adéquate, de la fumée chaude pourrait remonter dans la goulotte de solides et déclencher un incendie dans la trémie d'alimentation.</p>
 
-<h2>Fours \& Post-Combustion</h2>
+<h2>Fours &amp; Post-Combustion</h2>
 
 <p>Les incinérateurs de déchets dangereux sont divisés en deux sections :
 Un four rotatif
@@ -618,7 +699,8 @@ utiliser comme incinérateur statique pour brûler certains déchets liquides</p
 
 <p>table</p>
 
-<img src="../images/M5/Calcul_PC.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Calcul_PC.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <p>Exemple de calcul du temps de séjour des fumées dans une chambre de postcombustion</p>
 
@@ -661,7 +743,8 @@ utiliser comme incinérateur statique pour brûler certains déchets liquides</p
 
 <h3>Table des dimensions des fours SARPI/ONYX et PC</h3>
 
-<img src="../images/M5/Dimension_sarpi.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Dimension_sarpi.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <h3>Incinérateurs à grille</h3>
 
@@ -669,7 +752,8 @@ utiliser comme incinérateur statique pour brûler certains déchets liquides</p
 
 <p>Plusieurs technologies différentes existent, et nous en décrirons simplement quelques-unes. Plusieurs de ces incinérateurs ont une capacité de 8 à 40 tonnes par heure. Différents modèles existent et le flux d'air peut être parallèle ou opposé au mouvement de la grille.</p>
 
-<img src="../images/M5/Four_rouleaux_DBA.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_rouleaux_DBA.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <p>La grille est à un angle de 20 à 30° C. La grille se compose de six rouleaux rotatifs. La vitesse de rotation de chaque rouleau est modifiée en fonction de la combustion des déchets et de leur emplacement sur la grille. La vitesse de rotation du premier rouleau est de 0,5 t/heure, et celle du dernier rouleau d'env. 1 t/heure. Les déchets ménagers sont mélangés et déplacés vers l'avant en inclinant et en faisant tourner les rouleaux. Les déchets restent dans l'incinérateur pendant plus de 45 minutes.</p>
 
@@ -685,7 +769,8 @@ de la partie la plus basse de la grille. L’épaisseur moyenne de la couche de 
 de 40 cm et est réglée par les différentes vitesses de chaque grille, et parfois par un volet situé au bas de la grille. 
 L’air primaire est soufflé sous la grille, l’air secondaire dans la zone de combustion.</p>
 
-<img src="../images/M5/Four_grille_mobile.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_grille_mobile.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
 
 <strong>Incinérateur Volund</strong>
 
@@ -698,7 +783,8 @@ Ces incinérateurs comportent trois à cinq grilles successives à un angle de 1
  <li>un mur de chute entre les premières grilles.</li>
 </ul></p>
 
-<img src="../images/M5/Four_volund1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_volund1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
 
 <p>Chaque grille comprend :
 <ul>
@@ -718,7 +804,8 @@ Ces incinérateurs comportent trois à cinq grilles successives à un angle de 1
 
 <p>L'épaisseur de la couche d'ordures ménagères est ajustée en fonction de la vitesse de chaque grille.</p>
 
-<img src="../images/M5/Four_volund2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_volund2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 
 <strong>Incinérateurs Martin Grate</strong>
 
@@ -726,19 +813,22 @@ Ces incinérateurs comportent trois à cinq grilles successives à un angle de 1
 
 <p>La grille est à un angle de 26°C. La grille comporte treize marches et une marche sur deux est mobile. Les traverses des marches mobiles peuvent se déplacer très légèrement les unes par rapport aux autres (d'environ un ou deux cm). Les marches se déplacent dans la direction opposée au mouvement des déchets. La marche mobile pousse et mélange les déchets. Les déchets tombent par gravité. La grille est considérée à l'envers.</p>
 
-<img src="../images/M5/Four_grille_martin1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_grille_martin1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 16</p>
 
 <p>L'air primaire est soufflé sous la grille et l'air secondaire dans la chambre de combustion.
 La combustion se produit dans la partie médiane de la grille et se termine dans la partie inférieure.
 Un tambour cylindrique en bas de la grille permet d'évacuer les mâchefers et d'ajuster la couche de déchets.</p>
 
-<img src="../images/M5/Four_grille_martin2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_grille_martin2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 17</p>
 
 <strong>Incinérateurs de type Stein</strong>
 
 <p>Ces incinérateurs fonctionnent de la même manière que les incinérateurs Martin. Les traverses de grille sont légèrement plus grandes et les traverses de marches mobiles ne bougent pas les unes par rapport aux autres.</p>
 
-<img src="../images/M5/Four_stein.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_stein.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 18</p>
 
 <h3>Incinérateurs à lit fluidisé</h3>
 
@@ -747,11 +837,12 @@ Un tambour cylindrique en bas de la grille permet d'évacuer les mâchefers et d
 <p>Ces incinérateurs permettent de brûler différents types de déchets et sont compatibles avec les variations de pouvoir calorifique (PCI).
 Ces incinérateurs sont rectangulaires à l'intérieur. Les grains de sable en suspension dans l'incinérateur, faisant partie d'un lit fluidisé, sont chauffés. Les déchets prébroyés sont ensuite injectés dans l'incinérateur et brûlés.</p>
 
-<img src="../images/M5/Four_LF.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_LF.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 19</p>
 
 <p>L'incinérateur à lit fluidisé rotatif est caractérisé par l'air circulant à travers le lit fluidisé à des vitesses d'environ 1 à 2 m/s. L'air de combustion est soufflé vers le haut sous une grille fixe, soulevant la masse de particules solides. Cette masse reste en suspension dans l'incinérateur.</p>
 
-<p>99\</p>
+<p>99%</p>
 
 <p>La grille est inclinée et prend la forme d'une pyramide à base rectangulaire ; trois zones distinctes existent : une zone centrale, où le sable fait partie du lit fluidisé ; deux zones périphériques, où le flux d'air se déplace plus rapidement que la zone centrale, créant des vortex et tirant les particules vers la zone centrale. Un extracteur peut être utilisé pour évacuer les cendres et les éléments inertes.</p>
 
@@ -763,7 +854,8 @@ Ces incinérateurs sont rectangulaires à l'intérieur. Les grains de sable en s
 
 <p>Certains incinérateurs, comme les fours Laurent Bouillet, sont oscillants, c'est-à-dire que la rotation est incomplète : le boîtier oscille avec un mouvement de va-et-vient, décrivant un arc d'environ 210°, avec 20 à 30 oscillations par heure .</p>
 
-<img src="../images/M5/Four_oscillant.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Four_oscillant.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 20</p>
 
 <h2>Couches réfractaires</h2>
 <h3>Le rôle et l'importance des couches réfractaires</h3>
@@ -795,11 +887,79 @@ Ces incinérateurs sont rectangulaires à l'intérieur. Les grains de sable en s
 La corrosion peut être causée par des produits chimiques contenus dans les gaz de combustion ou les liquides (cendres fondues) réagissant avec les matériaux réfractaires. Cet effet est particulièrement critique pour des températures supérieures à 1000°C. Le chlore, le soufre et le fluor sous forme d'acides ou de sels en sont les principales causes. Les matériaux poreux sont vulnérables à cet effet.</p>
 
 <p>Les cendres volantes et les particules solides se déplaçant autour de l'incinérateur à grande vitesse entraînent une abrasion. Ce phénomène usera rapidement la couche réfractaire. L'état de la surface de la couche réfractaire est important.
-Des matériaux à base d'alumine Al2O3 (60 - 85\</p>
+Des matériaux à base d'alumine Al2O3 (60 - 85%</p>
 
 <p>Le tableau suivant résume les différents types de matériaux réfractaires et leurs propriétés respectives.</p>
 
-<img src="../images/M5/Refractaire.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Aggregate</th>
+<th>Binder</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silica products</td>
+<td>Silica</td>
+<td>Silica</td>
+<td>Pure silica sintering</td>
+</tr>
+<tr>
+<td>Silica products</td>
+<td>Silica</td>
+<td>Silica + vitreous phase</td>
+<td>Binding weakened by the vitreous phase obtained using impurities</td>
+</tr>
+<tr>
+<td>Silica-argillaceous and argillaceous products</td>
+<td>Grog</td>
+<td>Vitreous phase</td>
+<td>—</td>
+</tr>
+<tr>
+<td colspan="4"><strong>Products with high alumina content, group 1</strong></td>
+</tr>
+<tr>
+<td>1 — Alumina silicate</td>
+<td>Silimanite, Andalousite, Kerphalite</td>
+<td>Mullite + vitreous phase</td>
+<td>% mullitisation depending on baking temperature and time</td>
+</tr>
+<tr>
+<td>2 — Mullite</td>
+<td>Mullite</td>
+<td>Mullite + vitreous phase</td>
+<td>Small quantities, vitreous phase</td>
+</tr>
+<tr>
+<td>3 — Bauxite</td>
+<td>Bauxite</td>
+<td>Vitreous phase</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4 — Corundum</td>
+<td>Corundum</td>
+<td>Mullite + vitreous phase</td>
+<td>% mullitisation depending on baking temperature and time</td>
+</tr>
+<tr>
+<td colspan="4"><strong>Products with high alumina content, group 2</strong></td>
+</tr>
+<tr>
+<td>—</td>
+<td>Vitreous phase grog</td>
+<td>—</td>
+<td>Obtained by adding…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 21</p>
 
 <p>Plus le matériau est réfractaire :
 <ul>
@@ -809,15 +969,16 @@ Des matériaux à base d'alumine Al2O3 (60 - 85\</p>
  <li>plus il est dense et donc bon conducteur de la chaleur</li>
 </ul></p>
 
-<p>SARPI/ONYX utilisent généralement des briques de type ELEKTRA N avec 80\</p>
+<p>SARPI/ONYX utilisent généralement des briques de type ELEKTRA N avec 80%</p>
 
-<p>Dans certains cas particuliers (déchets qui fondent facilement, températures élevées conduisant à un mode de scorification), des briques de meilleure qualité sont nécessaires : par exemple KR85C (85\</p>
+<p>Dans certains cas particuliers (déchets qui fondent facilement, températures élevées conduisant à un mode de scorification), des briques de meilleure qualité sont nécessaires : par exemple KR85C (85%</p>
 
 <p>Ce refroidissement est bénéfique car il aide à solidifier les scories sur les briques en évacuant la chaleur du four, protégeant les briques réfractaires.</p>
 
-<p>Pour ce qui est du plafond de la chambre de postcombustion, des briques contenant 60\</p>
+<p>Pour ce qui est du plafond de la chambre de postcombustion, des briques contenant 60%</p>
 
-<img src="../images/M5/Ancrage_refractaire.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Ancrage_refractaire.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 22</p>
 
 <p>Enfin, l'entrée de l'incinérateur et les chemins de chaudières initiales sont revêtues avec du béton réfractaire (cf. section suivante)
 des bétons réfractaires à basse teneur en ciment sont poreuses et moins ont plus grande résistance mécanique.
@@ -825,7 +986,8 @@ Lors de la préparation et de l'installation des briques réfractaires, de l'eau
 
 <p>Les couches réfractaires peuvent résister à des températures allant de 800 à 1800°C selon le type.</p>
 
-<img src="../images/M5/joint_dilatation.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/joint_dilatation.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 23</p>
 
 <p>Le matériau réfractaire va se dilater en s'échauffant et ce phénomène physique est impossible à empêcher. Si un mur réfractaire monocouche est construit entre deux points fixes, il ne pourra pas se dilater librement, ce qui entraînera une fissuration et une rupture potentielle du casing cadre lorsque la température de l'incinérateur augmente. Des joints de dilatation sont donc installés, permettant aux matériaux réfractaires de se dilater.</p>
 
@@ -846,7 +1008,8 @@ Pour un mur d'une longueur de 5 m, cela représente un supplément de 5 cm pour 
 
 <p>Certains matériaux réfractaires sont précuits sous forme de briques ou de pièces standard. Les autres sont considérés comme non préformés et livrés en vrac. Ils sont ensuite mélangés avec un liant sur le site, puis façonnés. Des systèmes d'ancrage sont nécessaires pour fixer les matériaux réfractaires au mur.</p>
 
-<img src="../images/M5/gunitage.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/gunitage.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 24</p>
 
 <p>Les types de béton suivants sont utilisés :
 <ul>
@@ -857,12 +1020,12 @@ Pour un mur d'une longueur de 5 m, cela représente un supplément de 5 cm pour 
  <li>en train de projeter du béton.</li>
 </ul></p>
 
-<p>Des liants à base de ciment hydraulique sont utilisés pour durcir le béton et assurer sa cohésion. Ces liants peuvent être hydratés à l'aide d'eau à basse température, provoquant le durcissement du matériau. Ils contiennent un pourcentage élevé d'eau par rapport aux autres matériaux réfractaires, qui varient entre 4 et 15\</p>
+<p>Des liants à base de ciment hydraulique sont utilisés pour durcir le béton et assurer sa cohésion. Ces liants peuvent être hydratés à l'aide d'eau à basse température, provoquant le durcissement du matériau. Ils contiennent un pourcentage élevé d'eau par rapport aux autres matériaux réfractaires, qui varient entre 4 et 15%</p>
 
 <p>Un liant chimique est ajouté pour les plastiques et les revêtements :
 <ul>
  <li>un liant à base de silicate est utilisé pour la prise à froid, notamment pour les joints car la qualité du réfractaire est inférieure ;</li>
- <li>un liant à base de phosphate est utilisé pour les matériaux réfractaires contenant de la silice et de l'alumine. Leur teneur en eau est faible, inférieure à 4\</li>
+ <li>un liant à base de phosphate est utilisé pour les matériaux réfractaires contenant de la silice et de l'alumine. Leur teneur en eau est faible, inférieure à 4%</li>
 </ul></p>
 
 <p>Les propriétés isolantes des bétons réfractaires seront proportionnelles à leur faible densité (hors matériaux fibreux). Leur résistance mécanique diminuera au fur et à mesure que leurs propriétés isolantes augmenteront.
@@ -908,7 +1071,8 @@ Aucune charte standard n'existe, cependant des chartes sont disponibles pour cha
 
 <p>Le graphique présenté ici est valable pour un matériau réfractaire dense d'une épaisseur de 150 mm.</p>
 
-<img src="../images/M5/montee_temp.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/montee_temp.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 25</p>
 
 <strong>Formation de clinker</strong>
 
@@ -961,7 +1125,8 @@ N'oubliez jamais que les températures à l'intérieur de l'incinérateur atteig
 
 <p>Les ingénieurs et les techniciens utilisent des méthodes standard pour expliquer ou décrire un système ou un équipement complexe. L'une de ces méthodes consiste à dessiner un diagramme pour illustrer la route ou le flux emprunté par les masses de tous les matériaux et produits entrants et sortants d'un système : le bilan de masse. Une approche identique est appliquée pour illustrer la quantité d'énergie entrante et sortante d'un système ou d'un équipement : le bilan énergétique.</p>
 
-<img src="../images/M5/Bilan_eau.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/Bilan_eau.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 26</p>
 
 <h3>Conservation de la masse et du débit massique</h3>
 
@@ -983,7 +1148,8 @@ Si un gaz est comprimé, son volume diminuera, mais sa masse restera inchangée 
 <p>Si deux matériaux, de types différents, sont combinés, leurs masses peuvent être additionnées.
 Plus généralement, pour tous les systèmes de traitement des matières, ce qui suit est vrai :</p>
 
-<img src="../images/M5/compression.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/compression.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 27</p>
 
 <p>masses entrantes totales = masses sortantes totales</p>
 
@@ -991,7 +1157,8 @@ Plus généralement, pour tous les systèmes de traitement des matières, ce qui
 
 <p>débits massiques entrants totaux = débits massiques sortants totaux</p>
 
-<img src="../images/M5/compression2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/compression2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 28</p>
 
 <p>Dans ce cas, débit massique entrant = débit massique sortant = 2000 kg /h</p>
 
@@ -1072,7 +1239,7 @@ La source de chaleur par rayonnement la plus connue est le soleil.</p>
  Dans notre exemple, l'efficacité est égale à :
  800/1000 = 0,80</p>
 
-<p>Donc l'efficacité est de 80\</p>
+<p>Donc l'efficacité est de 80%</p>
 
 <p>Considérons quelques exemples d'efficacité énergétique :
 <ul>
@@ -1125,7 +1292,8 @@ GCV = 2,6 kWh/kg</p>
 
 <h3>Bilan énergétique appliqué à un incinérateur</h3>
 
-<img src="../images/M5/RK_Energy_Balance.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M5/RK_Energy_Balance.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 29</p>
 
 <p>Considérons l'exemple d'un incinérateur dans lequel l'énergie totale produite par la combustion est de 20 000 kWh.
 Une partie de cette énergie (15000 kWh) est récupérée sous forme de vapeur, puis réutilisée pour le chauffage ou pour produire de l'électricité : énergie utile.
@@ -1138,7 +1306,7 @@ Une partie de cette énergie (500 kWh) est perdue dans les fumées et via divers
 Le rendement de l'incinérateur peut être calculé comme suit :</p>
 
 <p>equation
- Efficacité = {Energie utile}{Energie total}=15000{20000} = 0.75 i.e 75\
+ Efficacité = {Energie utile}{Energie total}=15000{20000} = 0.75 i.e 75%
 {equation</p>
 
 <h3>Index</h3>
@@ -1197,7 +1365,7 @@ equation</p>
 <p>Pour chauffer 5 kg d'eau de 20°C à 50°C, l'énergie suivante est nécessaire :</p>
 
 <p>equation
- 5 1.16 (50 - 20) = 174 \, Wh
+ 5 1.16 (50 - 20) = 174 Wh
 equation
  
 <strong>Exercice</strong></p>
@@ -1421,6 +1589,6 @@ equation</p>
 <strong>Exercice</strong>
 
 <p>Calculer la vitesse (en km/h) d'une voiture parcourant 600 km en 7 heures.</p>
-<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M4.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M6.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="../index.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M4.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M6.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>

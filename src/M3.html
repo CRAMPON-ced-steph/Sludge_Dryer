@@ -95,6 +95,51 @@
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
         }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background-color: #f5f5f5;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-note {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -114,7 +159,8 @@
 
 <h3>Air et pollution atmosphérique</h3>
 
-<img src="../images/M3/emissions_pollutants.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/emissions_pollutants.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 1</p>
 
 <p>L’air est un mélange de plusieurs gaz et il est principalement composé d’azote (78\
 Certains polluants, présents en quantités infimes, peuvent entraîner des effets nuisibles à la santé. Plus la durée d’exposition au polluant est importante, plus ces effets risquent d’être aggravés. On parle de pollution atmosphérique lorsque certains composants sont présents dans l’air à des concentrations supérieures à la normale et qu’ils peuvent entraîner une modification du milieu naturel ou occasionner une gêne pour les êtres vivants, notamment l’être humain. Les phénomènes de pollution atmosphérique peuvent être d’échelle locale, régionale ou mondiale.</p>
@@ -131,7 +177,72 @@ Le schéma de la page précédente montre les principaux phénomènes de polluti
 valeurs-seuil (concentration maximale par unité de temps) à respecter pour de nombreux polluants atmosphériques.
 En France, plus de 550 sites, généralement situés dans les grandes agglomérations, mesurent en continu la concentration de plusieurs polluants. Le tableau suivant donne le résultat de la surveillance de quelques polluants en 1995 :</p>
 
-<img src="../images/M3/air_quality.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutant (chemical symbol)</th>
+<th>Sources? Effects on health?</th>
+<th>Effects on threshold values</th>
+<th>WHO or EU in France (1995)</th>
+<th>Air quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydrochloric acid (HCl)</td>
+<td>Chlorine industry and incineration of plastics</td>
+<td>Irritations and disorders of respiratory tracts, eyes</td>
+<td>—</td>
+<td>Pollutant not monitored at national level</td>
+</tr>
+<tr>
+<td>Suspended solids, dust</td>
+<td>Combustion (diesel, heating)</td>
+<td>Breathing disorders</td>
+<td>0.100 mg/m³ over 24 hours (EU)</td>
+<td>1/3 of sites do not satisfy this threshold</td>
+</tr>
+<tr>
+<td>Carbon monoxide (CO)</td>
+<td>Incomplete combustion reactions (engines, industry)</td>
+<td>Cardiovascular diseases, attention disorders and eyesight</td>
+<td>10 mg/m³ over 8 hours (WHO)</td>
+<td>40% of sites exceed this threshold several days each year</td>
+</tr>
+<tr>
+<td>Sulphur dioxide (SO₂)</td>
+<td>Combustion of oil products (fuel oil, diesel) and coal</td>
+<td>Respiratory tract irritations and disorders, eyes</td>
+<td>0.125 mg/m³ over 24 hours (WHO)</td>
+<td>1/4 of sites do not satisfy this threshold</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)</td>
+<td>Combustion (industry, vehicles)</td>
+<td>Respiratory disorders at least once</td>
+<td>0.150 mg/m³ over 24 hours (WHO)</td>
+<td>11% of sites have exceeded this threshold</td>
+</tr>
+<tr>
+<td>Lead (Pb)</td>
+<td>Petrol vehicles, industry</td>
+<td>Toxicity for the nervous system, kidneys, eyes</td>
+<td>0.0005 mg/m³ over 1 year (WHO)</td>
+<td>Threshold satisfied</td>
+</tr>
+<tr>
+<td>Other heavy metals — Chromium (Cr), Copper (Cu), Cadmium (Cd), Nickel (Ni), Mercury (Hg)</td>
+<td>Industry, incineration</td>
+<td>Multiple toxicities: carcinogenic effects, kidney disorders, damage to the nervous system</td>
+<td>Variable depending on each pollutant</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 2</p>
+<p class="table-note">1 mg = 0.001 g = 10⁻³ g — Example: 0.0005 mg/m³ = ½ millionth of a gram per cubic metre (threshold value for lead)</p>
 
 <p>Remarque : Les termes généraux sont définis plus en détail dans les fiches de définition jointes à la fin de chaque unité. Triez ces feuilles à la fin du dossier par ordre alphabétique.</p>
 
@@ -153,7 +264,8 @@ En France, plus de 550 sites, généralement situés dans les grandes aggloméra
  <li>la présence d’obstacles proches (bâtiments) qui pourraient gêner la dispersion des fumées. Les schémas ci-dessous montrent deux modes de dispersion des rejets d’une cheminée.</li>
 </ul></p>
 
-<img src="../images/M3/normal_diffusion.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/normal_diffusion.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 3</p>
 
 <p>Diffusion normale
 (Source : La Qualité de l'air, notre patrimoine vital, (La qualité de l'air, notre patrimoine vital) Ministère français de l'Environnement, 1989)</p>
@@ -165,7 +277,8 @@ En France, plus de 550 sites, généralement situés dans les grandes aggloméra
  <li>lorsque l’air chaud des grandes agglomérations entraîne vers le centre ville l’air pollué des zones industrielles périphériques plus fraîches.</li>
 </ul>
 
-<img src="../images/M3/inv_temp.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/inv_temp.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 4</p>
 
 <p>Inversion de température
 (Source : La Qualité de l'air, notre patrimoine vital, (La qualité de l'air, notre patrimoine vital) Ministère de l'Environnement, 1989)</p>
@@ -186,7 +299,45 @@ Le tableau suivant représente les quantités en poids des différents polluants
 <strong>Exemples de poids de polluants émis dans les fumées des gaz. 
 (hypothèse calculée sur la base de 6000 m3 par tonne) :</strong>
 
-<img src="../images/M3/pollutant_emitted.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutants</th>
+<th>Gaseous emissions from the incinerator [kg/t]<br/>(per tonne of incinerated waste)</th>
+<th>Gaseous emissions after processing [kg/t]<br/>(per tonne of incinerated waste)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dust</td>
+<td>12 kg/t to 60 kg/t</td>
+<td>0.006 kg/t to 0.06 kg/t (6 g/t to 60 g/t)</td>
+</tr>
+<tr>
+<td>Hydrochloric acid</td>
+<td>6 kg/t to 60 kg/t</td>
+<td>0.03 kg/t to 0.28 kg/t (30 g/t to 280 g/t)</td>
+</tr>
+<tr>
+<td>Heavy metals (Hg, Cd)</td>
+<td>less than 0.006 kg/t, i.e. less than 6 g/t</td>
+<td>less than 0.0003 kg/t, i.e. less than 0.3 g/t</td>
+</tr>
+<tr>
+<td>Sulphur dioxide (SO₂)</td>
+<td>6 kg/t to 36 kg/t</td>
+<td>0.06 kg/t to 1.7 kg/t</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)</td>
+<td>0.6 kg/t to 12 kg/t</td>
+<td>0.4 kg/t to 2.8 kg/t</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 5</p>
 
 <strong>Dioxines : les rejets étant très faibles, il est préférable d’exprimer les valeurs de rejets gazeux pour 100000 t de déchets incinérés, soit :</strong>
 <ul>
@@ -196,14 +347,94 @@ Le tableau suivant représente les quantités en poids des différents polluants
 
 <p>Une autre manière de comparer les valeurs des rejets gazeux est de présenter les quantités en poids des différents polluants émis dans les gaz de combustion en milligrammes (mg) par mètre cube de gaz rejeté à l’atmosphère.</p>
 
-<img src="../images/M3/pollutant_emitted2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutants</th>
+<th>Gaseous emissions from the incinerator (before processing) in mg/m³</th>
+<th>Gaseous emissions after processing in mg/m³</th>
+<th>Purification rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dust</td>
+<td>2000 to 10000 mg/m³</td>
+<td>1 to 10 mg/m³</td>
+<td>more than 95%</td>
+</tr>
+<tr>
+<td>Hydrochloric acid (HCl)</td>
+<td>2000 to 10000 mg/m³</td>
+<td>2 to 10 mg/m³</td>
+<td>more than 95%</td>
+</tr>
+<tr>
+<td>Heavy metals (Hg, Cd)</td>
+<td>1 to 10 mg/m³</td>
+<td>less than 0.1 mg/m³</td>
+<td>more than 90%</td>
+</tr>
+<tr>
+<td>Sulphur dioxide (SO₂)</td>
+<td>2000 to 6000 mg/m³</td>
+<td>20 to 50 mg/m³</td>
+<td>more than 95%</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)¹</td>
+<td>100 to 2000 mg/m³</td>
+<td>70 to 200 mg/m³</td>
+<td>more than 90%</td>
+</tr>
+<tr>
+<td>Dioxins¹</td>
+<td>1 to 10 nanograms/m³</td>
+<td>less than 0.1 nanogram/m³</td>
+<td>more than 90%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 6</p>
+<p class="table-note">¹ The purification rates indicated are only valid for plants with complementary smoke treatment units (not mandatory for existing plants)<br/>
+1 milligram = 0.001 g = 10⁻³ g — 1 nanogram = 10⁻⁹ g = 10⁻⁶ mg — i.e. 0.1 nanogram/m³ = 10⁻¹⁰ g/m³ = 0.1 billionth of a gram per m³ discharged</p>
 
 <p>Ainsi une nouvelle usine traitant 100000 t/an de déchets dangereux rejetterait dans 
 l’atmosphère moins de 1/20 g de dioxine par an.</p>
 
 <p>Rappelons brièvement les procédés de traitement les plus utilisés pour piéger ces polluants que nous étudierons dans les prochains modules (modules 9 et 10) :</p>
 
-<img src="../images/M3/pollutant_emitted3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutant</th>
+<th>Treatment process</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dust</td>
+<td>Baghouse filter, electrofilter</td>
+</tr>
+<tr>
+<td>Hydrochloric acid (HCl) and sulphur dioxide (SO₂)</td>
+<td>Chemical neutralisation with a reagent (e.g. powdered lime, milk of lime, bicarbonate, etc.)</td>
+</tr>
+<tr>
+<td>Heavy metals</td>
+<td>Dust removal<br/>Condensation</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)</td>
+<td>Injection of catalytic ammonia or non-catalytic ammonia</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 7</p>
 
 <h3>Réglementation des rejets atmosphériques</h3>
 
@@ -212,15 +443,86 @@ l’atmosphère moins de 1/20 g de dioxine par an.</p>
 <p>Les mesures et le contrôle en continu des valeurs des polluants permettent à l’exploitant de vérifier le bon fonctionnement de son installation de traitement des fumées, de réajuster en permanence la quantité de réactifs nécessaires à la neutralisation et à l’épuration des gaz pollués (voir le détail de la réglementation dans les fiches de définition). Ainsi est limitée la quantité de polluants rejetés à l’atmosphère.
 D’autres composés, comme les métaux lourds, ne sont mesurés qu’une fois par an.</p>
 
-<img src="../images/M3/pollutant_mesured.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/pollutant_mesured.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 8</p>
 
 <p>Le tableau suivant présente quelques valeurs issues de la réglementation en vigueur :</p>
 
-<img src="../images/M3/regulation.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutants</th>
+<th>ELV — Daily mean</th>
+<th>ELV — ½ hourly mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydrochloric acid (HCl)</td>
+<td>10</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Hydrofluoric acid (HF)</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Sulphur oxides (SOₓ)</td>
+<td>50</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Dust</td>
+<td>10</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Carbon monoxide (CO)</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Total Organic Compounds (TOC)</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)</td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Total metals — Sb+As+Pb+Cr+Co+Cu+Mn+Ni+V</td>
+<td>0.5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mercury (Hg)</td>
+<td>0.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cadmium + Thallium (Cd+Tl)</td>
+<td>0.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Dioxins &amp; furans</td>
+<td>0.1 ng I-TEQ</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 9</p>
+<p class="table-note">ELV : Emission Limit Value — All values in mg/Nm³ for dry gas reduced to 11% O₂</p>
 
 <p>Les mesures de dioxines sont délicates à réaliser. C’est la raison pour laquelle notre groupe a décidé d’équiper le Creed (Centre de recherche pour l’environnement, l’énergie et le déchet, situé à Limay, dans les Yvelines) d’un laboratoire de mesures de dioxines. Ce laboratoire réalise en France des prélèvements d’échantillon de fumées et des analyses.</p>
 
-<img src="../images/M3/dioxine_mesure.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/dioxine_mesure.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 10</p>
 
 <p>D’autre part, en France, il existe une taxe parafiscale payable par les exploitants des usines sur leurs émissions polluantes à l’atmosphère. Cette taxe concerne les émissions suivantes :
 <ul>
@@ -238,7 +540,31 @@ D’autres composés, comme les métaux lourds, ne sont mesurés qu’une fois p
 
 <p>Le tableau ci-dessous résume l’importance relative à ces rejets.</p>
 
-<img src="../images/M3/pollutant_emitted4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutants</th>
+<th>(SO₂) Sulphur dioxide</th>
+<th>(NOₓ) Nitrogen oxides</th>
+<th>(HCl) Hydrochloric acid</th>
+<th>Dust</th>
+<th>Dioxins and furans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relative importance of UIDD emissions</td>
+<td>Very low</td>
+<td>Very low</td>
+<td>Very low</td>
+<td>Very low</td>
+<td>Very low</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 11</p>
 
 <h2>Impacts sur l'eau</h2>
 
@@ -309,7 +635,37 @@ organiques de taille importante, des virus, des bactéries, etc. En diminuant le
 
 <p>Le pH est un paramètre chimique mesuré sur une échelle de 0 à 14. Il permet d’évaluer le degré d’acidité d’une solution.</p>
 
-<img src="../images/M3/neutrality.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th colspan="2">Acid</th>
+<th>Neutral</th>
+<th colspan="2">Alkaline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Lemon juice</td>
+<td>Apple juice</td>
+<td>—</td>
+<td>Drinking water</td>
+<td>Washing-up liquid</td>
+</tr>
+<tr>
+<td><strong>pH</strong></td>
+<td>2</td>
+<td>4–5</td>
+<td>7</td>
+<td>8–9</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 12</p>
 
 <p>Lorsque le pH est inférieur à 6 ou supérieur à 9, la vie des poissons est mise en danger, voire impossible. Si le pH d’une solution est égal à 7, on dit que la solution est neutre.</p>
 
@@ -340,7 +696,47 @@ activités industrielles peut avoir de graves conséquences sur le métabolisme 
 
 <p>Le tableau ci-dessous donne des exemples de teneurs limites pour chaque classe de qualité :</p>
 
-<img src="../images/M3/class_water.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Quality rating</th>
+<th>Class 1A</th>
+<th>Class 1B</th>
+<th>Class 2</th>
+<th>Class 3</th>
+<th>Unclassified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dissolved oxygen (mg/l)</td>
+<td>&gt;7</td>
+<td>5 to 7</td>
+<td>3 to 5</td>
+<td>1 to 3</td>
+<td>&lt;1</td>
+</tr>
+<tr>
+<td>BOD (mg/l)</td>
+<td>&lt;3</td>
+<td>3 to 5</td>
+<td>5 to 10</td>
+<td>10 to 25</td>
+<td>&gt;25</td>
+</tr>
+<tr>
+<td>COD (mg/l)</td>
+<td>&lt;20</td>
+<td>20 to 25</td>
+<td>25 to 40</td>
+<td>40 to 80</td>
+<td>&gt;80</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 13</p>
 
 <p>Le ministère de l’Environnement fixe un objectif de qualité pour chaque cours d’eau. Par exemple, une rivière actuellement classée 2 (passable) peut avoir un objectif de qualité de classe 1B. Ces objectifs de qualité servent de référence aux administrations pour fixer les valeurs limites de rejet de chaque installation.</p>
 
@@ -349,7 +745,30 @@ activités industrielles peut avoir de graves conséquences sur le métabolisme 
 <p>La pollution d’une nappe souterraine est souvent due à une contamination du sol situé à proximité. Lorsqu’un site industriel se trouve à proximité d’une nappe sensible, un réseau de surveillance de la qualité de l’eau souterraine est exigé par l’administration. Des piézomètres, sortes de mini puits forés dans le sol, permettent d’effectuer des prélèvements de l’eau de la nappe et de vérifier par analyse la qualité des eaux souterraines
 En France, la qualité des eaux potables est réglementée et très suivie. L’Organisation mondiale de la santé (OMS), la Communauté économique européenne (CEE) et la France ont défini des valeurs recommandées, ainsi que des valeurs maximales à ne pas dépasser pour près de 100 paramètres chimiques. Le tableau ci-dessous reprend les valeurs limites recommandées pour divers métaux lourds :</p>
 
-<img src="../images/M3/drinking_water.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th colspan="4">Drinking water quality: maximum permissible concentrations of heavy metals</th>
+</tr>
+<tr>
+<th>Cadmium</th>
+<th>Mercury</th>
+<th>Arsenic</th>
+<th>Lead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.005 mg/l</td>
+<td>0.001 mg/l</td>
+<td>0.050 mg/l</td>
+<td>0.050 mg/l</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 14</p>
 
 <h3>Rejets liquides de UIDD</h3>
 
@@ -369,13 +788,72 @@ rejetés vers le milieu naturel (rivière, fleuve) ou vers un réseau d’assain
 <p>Lorsque les effluents de l’UIDD sont rejetés vers le milieu naturel, les valeurs limites fixées par la Drire (Direction régionale de l’industrie, de la recherche et de l’environnement), organisme d’État chargé de vérifier l’application des normes de rejets, sont adaptées à la nature du cours d’eau et à son indice de qualité. 
 Dans tous les cas, l’UIDD doit respecter les prescriptions de l’arrêté ministériel du 20 septembre 2002, notamment les paramètres suivants :</p>
 
-<img src="../images/M3/discharges.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th colspan="2">Discharges into the natural environment (example requirements for a UIDD)</th>
+</tr>
+<tr>
+<th>Parameter</th>
+<th>Maximum discharge value (concentration by mass, unfiltered samples)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1 — Total suspended solids</td><td>30 mg/l</td></tr>
+<tr><td>2 — Total Organic Carbon (TOC)</td><td>40 mg/l</td></tr>
+<tr><td>3 — Chemical Oxygen Demand (COD)</td><td>125 mg/l</td></tr>
+<tr><td>4 — Mercury and mercury compounds, expressed as mercury (Hg)</td><td>0.03 mg/l</td></tr>
+<tr><td>5 — Cadmium and cadmium compounds, expressed as cadmium (Cd)</td><td>0.05 mg/l</td></tr>
+<tr><td>6 — Thallium and thallium compounds, expressed as thallium (Tl)</td><td>0.05 mg/l</td></tr>
+<tr><td>7 — Arsenic and arsenic compounds, expressed as arsenic (As)</td><td>0.1 mg/l</td></tr>
+<tr><td>8 — Lead and lead compounds, expressed as lead (Pb)</td><td>0.2 mg/l</td></tr>
+<tr><td>9 — Chromium and chromium compounds, expressed as chromium (Cr)</td><td>0.5 mg/l (of which Cr⁶⁺: 0.1 mg/l)</td></tr>
+<tr><td>10 — Copper and copper compounds, expressed as copper (Cu)</td><td>0.5 mg/l</td></tr>
+<tr><td>11 — Nickel and nickel compounds, expressed as nickel (Ni)</td><td>0.5 mg/l</td></tr>
+<tr><td>12 — Zinc and zinc compounds, expressed as zinc (Zn)</td><td>1.5 mg/l</td></tr>
+<tr><td>13 — Fluorides</td><td>15 mg/l</td></tr>
+<tr><td>14 — Free CN</td><td>0.1 mg/l</td></tr>
+<tr><td>15 — Total hydrocarbons</td><td>5 mg/l</td></tr>
+<tr><td>16 — AOX</td><td>5 mg/l</td></tr>
+<tr><td>17 — Dioxins and furans</td><td>0.3 ng/l</td></tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 15</p>
 
 <strong>Lorsque les effluents sont rejetés vers un réseau d’assainissement public</strong>, 
 les valeurs de rejet sont généralement fixées en accord avec l’exploitant du réseau ou de la station municipale de traitement dans une convention de raccordement. Les prescriptions peuvent être moins contraignantes pour les MES et la DCO que celles indiquées ci-dessus. 
 Exemple : quelques prescriptions de rejets de l’UIOM de Saran
 
-<img src="../images/M3/discharges2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th colspan="6">Discharges into a collective drainage system (example requirements for a UIDD)</th>
+</tr>
+<tr>
+<th>pH</th>
+<th>TSS</th>
+<th>COD</th>
+<th>BOD5</th>
+<th>Cadmium</th>
+<th>Total heavy metals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>From 5 to 8.5</td>
+<td>&lt;500 mg/l</td>
+<td>&lt;1000 mg/l</td>
+<td>&lt;500 mg/l</td>
+<td>0.05 mg/l</td>
+<td>&lt;15 mg/l</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 16</p>
 
 <p>Toutefois, pour les polluants qui ne peuvent être éliminés par la station municipale, comme les métaux lourds, les prescriptions de rejet de la convention sont identiques à celle de rejet vers le milieu naturel.
 Dans les deux cas, un ou plusieurs traitements d’eau au préalable sont nécessaires pour respecter les prescriptions de rejet (neutralisation, décantation, etc.).</p>
@@ -406,7 +884,8 @@ En tant que milieu naturel, le sol assure quatre fonctions différentes :</p>
 
 <p>L’infiltration des polluants lors de la contamination des eaux souterraines est explicitée à la figure ci-dessous.</p>
 
-<img src="../images/M3/underground_water.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/underground_water.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 17</p>
 
 <p>L’approvisionnement en eau industrielle d’un site de production se fait par de multiples moyens (pompage en rivière, approvisionnement urbain, par exemple). Parfois, une part souvent importante provient de prélèvements directs dans la nappe phréatique à l’aplomb du site.
 C’est dire l’importance qu’il convient d’attacher au sol et au sous-sol d’un site industriel : toute pollution a une répercussion directe sur les approvisionnements du site et des communes, proches ou lointaines.</p>
@@ -419,7 +898,8 @@ C’est dire l’importance qu’il convient d’attacher au sol et au sous-sol 
 
 <p>Les conséquences de cette pollution peuvent être importantes, par exemple lorsqu’une ressource en eau potable devient inutilisable ou lorsque l’usage du sol pour la culture devient limité ou impossible.</p>
 
-<img src="../images/M3/underground_water2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/underground_water2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 18</p>
 
 <strong>La pollution du sol peut s’effectuer selon deux formes différentes :</strong>
 <ul>
@@ -481,7 +961,56 @@ générer des odeurs qui incommodent le voisinage. Parfois, lorsqu’un système
 Lorsqu’un bruit double d’intensité, le niveau sonore exprimé en décibels augmente de 3 dB. Si ce bruit triple d’intensité, le niveau sonore augmente de 5 dB.
 Le tableau ci-dessous donne des exemples de niveaux de bruit.</p>
 
-<img src="../images/M3/noise.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Talking level</th>
+<th>Auditory sensation</th>
+<th>No. of dB</th>
+<th>Indoor noise</th>
+<th>Outdoor noise</th>
+<th>Vehicle noise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whispering</td>
+<td>Very calm</td>
+<td>15</td>
+<td>Rustled by a gentle wind in a quiet garden</td>
+<td>Light leaves</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Normal speech</td>
+<td>Normal noise</td>
+<td>60</td>
+<td>Large stores, Normal Conversation, Chamber music</td>
+<td>Residential street</td>
+<td>Motor boat</td>
+</tr>
+<tr>
+<td>Difficult</td>
+<td>Unpleasant</td>
+<td>95</td>
+<td>Forge</td>
+<td>Street with heavy traffic, aeroplane at a short distance</td>
+<td>Large propeller</td>
+</tr>
+<tr>
+<td>Impossible</td>
+<td>Painful</td>
+<td>120</td>
+<td>Engine test bench</td>
+<td>A few meters away</td>
+<td>Aircraft engines nearby</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 19</p>
+<p class="table-note">Source: Jean Laroche (inspector of classified sites in the Paris region), "Les méfaits du bruit", in <em>Produits et Problèmes pharmaceutiques</em>, 1970.</p>
 
 <strong>Bruit généré par l'UIDD</strong>
 
@@ -498,7 +1027,28 @@ Sur le plan environnemental, le bruit à l'extérieur du site est réglementé e
 
 <p>Par ailleurs, le niveau sonore maximum admissible en bordure de propriété est défini en fonction du type de zone dans laquelle se situe le site UIDD. Le tableau suivant donne les exigences applicables pour les installations situées dans une zone dominée par des opérations commerciales et industrielles.</p>
 
-<img src="../images/M3/noise2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th colspan="3">Noise: maximum permissible noise levels in a commercial or industrial area</th>
+</tr>
+<tr>
+<th>Daytime, from 7:00 to 20:00</th>
+<th>Intermediate period</th>
+<th>Nighttime, from 2:00 to 6:00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>65 dB</td>
+<td>60 dB</td>
+<td>55 dB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 20</p>
 
 <h3>Intégration paysagère</h3>
 
@@ -514,7 +1064,8 @@ Sur le plan environnemental, le bruit à l'extérieur du site est réglementé e
  
 La contribution de l’exploitant à la réduction des nuisances visuelles peut être de maintenir un bon état de propreté extérieure (nettoyage régulier adapté, maintien de la « fraîcheur » de la peinture d’origine, balayage des aires extérieures…).
 
-<img src="../images/M3/image_limay.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/image_limay.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 21</p>
 
 <h2>Impacts liés aux déchets</h2>
 
@@ -583,7 +1134,8 @@ Ces installations sont suivies régulièrement par un inspecteur de la DRIRE. Ce
 
 <p>Plusieurs dizaines de textes réglementaires concernent complètement ou partiellement les activités d’incinération de déchets ménagers. L’organigramme ci-dessous présente de façon simplifiée les principaux textes applicables aux UIDD.</p>
 
-<img src="../images/M3/applicable_regulation.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/applicable_regulation.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 22</p>
 
 <h2>ISO 14001 : un modèle de gestion environnementale</h2>
 
@@ -645,13 +1197,15 @@ Ce certificat ISO 14001 est une preuve de compétence en matière de gestion env
 
 <p>La notion d’amélioration continue est présentée dans le schéma ci-dessous :</p>
 
-<img src="../images/M3/continuous_improvment.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/continuous_improvment.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 23</p>
 
 <h2>Index</h2>
 
 <h3>Incinération de déchets dangereux en France</h3>
 
-<img src="../images/M3/SARPI_france.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/SARPI_france.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 24</p>
 
 <h3>Réglementation applicable à l'UIDD : Arrêté du 20 septembre 2002</h3>
 
@@ -661,7 +1215,26 @@ Ce certificat ISO 14001 est une preuve de compétence en matière de gestion env
 Toutes les concentrations sont exprimées en mg/Nm3 sec ramenés à 11\
 Les moyennes sur une demi-heure et les moyennes sur dix minutes sont déterminées pendant la période de fonctionnement effectif ( à l’exception des phases de démarrage et d’extinction, lorsqu’aucun déchet n’est incinéré) à partir des valeurs mesurées après soustraction de l’intervalle de confiance à 95 p. 100 sur chacune de ces mesures. Cet intervalle de confiance ne doit pas dépasser les pourcentages suivants des valeurs limites d’émission :</p>
 
-<img src="../images/M3/regulation_UIDD.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutant</th>
+<th>Maximum confidence interval (% of emission limit value)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Carbon monoxide</td><td>10%</td></tr>
+<tr><td>Sulphur dioxide</td><td>20%</td></tr>
+<tr><td>Nitrogen dioxide</td><td>20%</td></tr>
+<tr><td>Total dust</td><td>30%</td></tr>
+<tr><td>Total organic carbon</td><td>30%</td></tr>
+<tr><td>Hydrogen chloride</td><td>40%</td></tr>
+<tr><td>Hydrogen fluoride</td><td>40%</td></tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 25</p>
 
 <p>Les moyennes journalières sont calculées à partir de ces moyennes validées.</p>
 
@@ -675,7 +1248,76 @@ La température doit être mesurée en continu.</p>
 
 <strong>Normes d'émission</strong>
 
-<img src="../images/M3/emissions_standards_pollutants.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Pollutants</th>
+<th>Emission limit values — Daily mean</th>
+<th>Emission limit values — ½ hourly mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydrochloric acid (HCl)</td>
+<td>10</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Hydrofluoric acid (HF)</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Sulphur oxides (SOₓ)</td>
+<td>50</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Dust</td>
+<td>10</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Carbon monoxide (CO)</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Total Organic Compounds (TOC)</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Nitrogen oxides (NOₓ)</td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Total metals — Sb+As+Pb+Cr+Co+Cu+Mn+Ni+V</td>
+<td>0.5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mercury (Hg)</td>
+<td>0.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cadmium + Thallium (Cd+Tl)</td>
+<td>0.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Dioxins &amp; furans</td>
+<td>0.1 ng I-TEQ</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 26</p>
+<p class="table-note">All values in mg/Nm³ for dry gas reduced to 11% O₂</p>
 
 <strong>Respect des Valeurs Limite d’Emissions</strong>
 
@@ -711,7 +1353,8 @@ En chimie on distingue les métaux dits lourds (à cause de leur poids effectif)
 
 <strong>Dioxines et furanes</strong>
 
-<img src="../images/M3/PCDD.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<img src="../images/M3/PCDD.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px auto; display: block; border: 1px solid #ddd; padding: 5px;">
+<p style="text-align:center; font-style:italic; font-size:0.85em; color:#666; margin-top:4px;">Fig. 27</p>
 
 <p>Dioxines et furanes : ces deux familles de polluants se forment principalement lors de la combustion de matières contenant du chlore comme les plastiques ou certains solvants (on trouve naturellement des composés chlorés dans le bois et le charbon). 
 Le terme « dioxine » regroupe 75 types de dioxines et 135 types de furanes. Ces dioxines ont pour faculté de s’accumuler dans les graisses et de s’éliminer très difficilement.</p>
@@ -742,6 +1385,6 @@ Cet arrêté est applicable aux usines nouvelles immédiatement et à toutes les
 <p>Ainsi, dans certaines conditions de température et de pression, il y a compatibilité entre l’azote et l’oxygène pour former une nouvelle substance (NO2) ou oxyde d’azote. Comme il s’agit d’un regroupement d’éléments de base, la particule élémentaire du NO2 s’appelle molécule.</p>
 
 <p>La plupart des substances, produits ou matériaux que nous utilisons chaque jour sont des regroupements d’éléments de base, mais il y a certaines exceptions : l’or, le cuivre, l’aluminium peuvent avoir des degrés de pureté assez élevés et sont des éléments de base.</p>
-<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M2.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M4.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="../index.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M2.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M4.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
 </body>
 </html>
