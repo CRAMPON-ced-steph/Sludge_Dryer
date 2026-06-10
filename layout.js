@@ -3,85 +3,55 @@
   const sidebarHTML = `
     <div class="sidebar-header">
       <div class="sidebar-header-top">
-        <div class="sidebar-logo">CNAM</div>
-        <button class="lang-toggle" onclick="toggleLang()" title="Switch language / Changer de langue" aria-label="Switch language">
-          <span class="lt-fr">FR</span>
-          <span class="lt-sep">|</span>
-          <span class="lt-en">EN</span>
-        </button>
+        <div class="sidebar-logo">HW</div>
       </div>
-      <div class="sidebar-subtitle">
-        <span class="fr-text">Thèse de doctorat</span><span class="en-text">Doctoral thesis</span>
-      </div>
+      <div class="sidebar-subtitle">Hazardous Waste Courses</div>
     </div>
     <ul class="nav-tree">
-      <li><a href="garde.html" class="nav-link nav-top">
-        <span class="fr-text">Page de garde</span><span class="en-text">Cover page</span>
-      </a></li>
-      <li><a href="resume.html" class="nav-link nav-top">
-        <span class="fr-text">Résumé / Abstract</span><span class="en-text">Summary / Abstract</span>
-      </a></li>
-      <li><a href="preambule.html" class="nav-link nav-top">
-        <span class="fr-text">Préambule</span><span class="en-text">Preamble</span>
-      </a></li>
-      <li><a href="toc.html" class="nav-link nav-top">
-        <span class="fr-text">Table des matières</span><span class="en-text">Table of contents</span>
-      </a></li>
-      <li><a href="intro.html" class="nav-link nav-top">Introduction</a></li>
 
-      <li class="nav-section">
-        <span class="nav-chapter-label">
-          <span class="fr-text">Chapitre 1</span><span class="en-text">Chapter 1</span>
-        </span>
-        <a href="chap1.html" class="nav-link">
-          <span class="fr-text">Panorama du traitement des boues</span>
-          <span class="en-text">Overview of sludge treatment</span>
-        </a>
-      </li>
-      <li class="nav-section">
-        <span class="nav-chapter-label">
-          <span class="fr-text">Chapitre 2</span><span class="en-text">Chapter 2</span>
-        </span>
-        <a href="chap2.html" class="nav-link">
-          <span class="fr-text">Modélisation du procédé</span>
-          <span class="en-text">Process modelling</span>
-        </a>
-      </li>
-      <li class="nav-section">
-        <span class="nav-chapter-label">
-          <span class="fr-text">Chapitre 3</span><span class="en-text">Chapter 3</span>
-        </span>
-        <a href="chap3.html" class="nav-link">
-          <span class="fr-text">Validations expérimentales</span>
-          <span class="en-text">Experimental validation</span>
-        </a>
-      </li>
-      <li class="nav-section">
-        <span class="nav-chapter-label">
-          <span class="fr-text">Chapitre 4</span><span class="en-text">Chapter 4</span>
-        </span>
-        <a href="chap4.html" class="nav-link">
-          <span class="fr-text">Réglementaire &amp; énergétique</span>
-          <span class="en-text">Regulatory &amp; energy</span>
-        </a>
-      </li>
+      <li><span class="nav-chapter-label">Déchets dangereux</span></li>
+      <li><a href="src/M1.html" class="nav-link">M1 — Les différents types de déchets</a></li>
+      <li><a href="src/M2.html" class="nav-link">M2 — Collecte et traitement des déchets dangereux</a></li>
+      <li><a href="src/M3.html" class="nav-link">M3 — Incinération et environnement</a></li>
+      <li><a href="src/M4.html" class="nav-link">M4 — Réception, stockage et préparation</a></li>
 
-      <li><a href="concl.html" class="nav-link nav-top">
-        <span class="fr-text">Conclusion générale</span><span class="en-text">General conclusion</span>
-      </a></li>
-      <li><a href="annexe.html" class="nav-link nav-top">
-        <span class="fr-text">Annexes</span><span class="en-text">Appendices</span>
-      </a></li>
-      <li><a href="biblio.html" class="nav-link nav-top">
-        <span class="fr-text">Bibliographie</span><span class="en-text">Bibliography</span>
-      </a></li>
-    </ul>
-    <div class="sidebar-footer">
-      <button class="btn-pdf" onclick="window.print()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <span class="fr-text">Exporter en PDF</span><span class="en-text">Export to PDF</span>
-      </button>
-    </div>`;
+      <li><span class="nav-chapter-label">Incinérateur</span></li>
+      <li><a href="src/M5.html" class="nav-link">M5 — Combustion</a></li>
+      <li><a href="src/M6.html" class="nav-link">M6 — Contrôle et fonctionnement</a></li>
+      <li><a href="src/M7.html" class="nav-link">M7 — Systèmes d'alimentation</a></li>
+      <li><a href="src/M8.html" class="nav-link">M8 — Épuration des fumées</a></li>
+      <li><a href="src/M9.html" class="nav-link">M9 — Résidus solides et eaux usées</a></li>
+      <li><a href="src/M10.html" class="nav-link">M10 — Mesure des émissions</a></li>
+
+      <li><span class="nav-chapter-label">Chaudière et vapeur</span></li>
+      <li><a href="src/M11.html" class="nav-link">M11 — Généralités chaudières</a></li>
+      <li><a href="src/M12.html" class="nav-link">M12 — Chaudières de récupération</a></li>
+      <li><a href="src/M13.html" class="nav-link">M13 — Sécurité chaudières</a></li>
+      <li><a href="src/M14.html" class="nav-link">M14 — Traitement de l'eau</a></li>
+      <li><a href="src/M15.html" class="nav-link">M15 — Turbines et alternateurs</a></li>
+
+      <li><span class="nav-chapter-label">Électricité</span></li>
+      <li><a href="src/M16.html" class="nav-link">M16 — Bases de l'électricité</a></li>
+      <li><a href="src/M17.html" class="nav-link">M17 — Circuits et mesures</a></li>
+      <li><a href="src/M18.html" class="nav-link">M18 — Moteurs électriques</a></li>
+      <li><a href="src/M19.html" class="nav-link">M19 — Distribution électrique</a></li>
+      <li><a href="src/M20.html" class="nav-link">M20 — Automatismes</a></li>
+
+      <li><span class="nav-chapter-label">Instrumentation</span></li>
+      <li><a href="src/M21.html" class="nav-link">M21 — Capteurs et mesures</a></li>
+      <li><a href="src/M22.html" class="nav-link">M22 — Régulation</a></li>
+      <li><a href="src/M23.html" class="nav-link">M23 — Supervision</a></li>
+
+      <li><span class="nav-chapter-label">Sécurité et environnement</span></li>
+      <li><a href="src/M24.html" class="nav-link">M24 — Sécurité industrielle</a></li>
+      <li><a href="src/M25.html" class="nav-link">M25 — Risques chimiques</a></li>
+      <li><a href="src/M26.html" class="nav-link">M26 — Incendie et explosion</a></li>
+      <li><a href="src/M27.html" class="nav-link">M27 — Réglementation ICPE</a></li>
+      <li><a href="src/M28.html" class="nav-link">M28 — Gestion des déchets ultimes</a></li>
+      <li><a href="src/M29.html" class="nav-link">M29 — Impacts environnementaux</a></li>
+      <li><a href="src/M30.html" class="nav-link">M30 — Bilan et perspectives</a></li>
+
+    </ul>`;
 
   /* ── Inject sidebar ────────────────────────────────────────────────── */
   const sidebar = document.createElement('nav');

@@ -1,7 +1,7 @@
 {
-  "name": "these-cedric",
+  "name": "hazardous-waste-courses",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx live-server ."
+    "dev": "npx live-server . --port=8081 --no-browser"
   }
 }
