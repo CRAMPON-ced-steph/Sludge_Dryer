@@ -1,132 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page de garde — Hydrolyse thermique</title>
-  <link rel="stylesheet" href="../styles.css"/>
-  <script src="../lang.js"></script>
-  <style>
-    .garde-wrapper { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-    .garde-institution { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); padding-bottom: 20px; border-bottom: 1px solid var(--border); }
-    .garde-institution strong { color: var(--text-dim); }
-    .garde-separator { height: 1px; background: var(--border); margin: 28px 0; }
-    .garde-main-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--heading); line-height: 1.2; padding: 28px 0; }
-    .garde-main-title em { color: var(--accent-pale); font-style: italic; }
-    .garde-thesis-type { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 40px; }
-    .garde-author-block { border-left: 3px solid var(--accent); padding: 20px 24px; background: var(--bg-card); margin: 32px 0; }
-    .garde-author-name { font-family: var(--font-display); font-size: 1.6rem; color: var(--heading); margin-bottom: 6px; }
-    .garde-author-detail { font-size: 0.82rem; color: var(--text-faint); line-height: 1.8; }
-    .garde-jury { margin-top: 40px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; }
-    .garde-jury-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 16px; }
-    .jury-member { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dotted var(--border); font-size: 0.84rem; }
-    .jury-name { color: var(--text); }
-    .jury-role { color: var(--text-faint); font-size: 0.76rem; }
-    .remerciments-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazardous Waste Courses - Page de Garde</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            max-width: 700px;
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .description {
+            color: #666;
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin: 30px 0;
+            text-align: justify;
+        }
+        
+        .separator {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 30px auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border-color: #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #f9f9f9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .info {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 4px;
+            text-align: left;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .info strong {
+            color: #667eea;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-<main id="main-content">
 
-  <!-- ── FR ──────────────────────────────────────────────────────────── -->
-  <div class="fr-block">
-    <div class="garde-wrapper">
-      <div class="garde-institution">
-        <strong>Conservatoire National des Arts et Métiers</strong><br/>
-        École Doctorale HESAM — Laboratoire LAFSET
-      </div>
-      <div class="garde-thesis-type" style="margin-top:24px;">Thèse présentée en vue de l'obtention du grade de Docteur</div>
-      <h1 class="garde-main-title">
-        Conception d'un procédé innovant<br/>
-        <em>d'hydrolyse thermique</em>
-      </h1>
-      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:32px;">
-        Spécialité : Génie des procédés · Version 1.0
-      </p>
-      <div class="garde-author-block">
-        <div class="garde-author-name">Cédric CRAMPON</div>
-        <div class="garde-author-detail">
-          Laboratoire du froid et des systèmes énergétiques et thermiques (LAFSET)<br/>
-          France<br/>
-          <a href="mailto:cedric.crampon@gmail.com" style="color:var(--accent-pale);">cedric.crampon@gmail.com</a>
-        </div>
-      </div>
-      <div class="garde-jury">
-        <div class="garde-jury-title">Composition du jury</div>
-        <div class="jury-member"><span class="jury-name">M. Jean-Louis HAVET</span><span class="jury-role">Directeur de thèse — Professeur CNAM Paris</span></div>
-        <div class="jury-member"><span class="jury-name">M. Brice TREMEAC</span><span class="jury-role">Directeur LAFSET</span></div>
-        <div class="jury-member"><span class="jury-name">Mme Hélène CARRERE</span><span class="jury-role">Rapporteure</span></div>
-        <div class="jury-member"><span class="jury-name">M. Nicolas ROCHE</span><span class="jury-role">Rapporteur</span></div>
-        <div class="jury-member"><span class="jury-name">M. Michel BAUDU</span><span class="jury-role">Examinateur — Président du jury</span></div>
-      </div>
-      <div class="remerciments-section">
-        <h2>Remerciements</h2>
-        <p>Arrivé au bout du chemin de cette thèse préparée dans le cadre d'une validation des acquis de l'expérience (VAE), je mesure l'ampleur de la tâche accomplie dans laquelle je me suis lancé avec enthousiasme et passion. Je mesure la chance qui m'est offerte de travailler au sein d'une société qui innove continuellement pour se préparer à relever les défis environnementaux de demain.</p>
-        <p>Je commencerai par remercier ceux qui m'ont donné la chance d'accéder à une fonction me permettant d'apprendre quotidiennement et de pouvoir chercher et développer des concepts innovants ainsi que ceux qui ont cru et croient encore dans les projets que je propose. Je remercie également l'ensemble de ma hiérarchie de m'avoir permis de réaliser cette VAE.</p>
-        <p>Je remercie infiniment <strong>M. Jean-Louis HAVET</strong>, professeur au CNAM Paris et directeur du présent projet de doctorat, d'avoir accepté ma candidature et de m'avoir permis d'évoluer. Ses nombreux conseils méthodologiques m'ont guidé et m'ont poussé à me dépasser.</p>
-        <p>Je remercie <strong>M. Brice TREMEAC</strong>, directeur du Laboratoire du froid et des systèmes énergétiques et thermiques (LAFSET), de m'avoir accueilli dans son unité de recherche.</p>
-        <p>Je voudrais remercier <strong>Mme Hélène CARRERE</strong> ainsi que <strong>M. Nicolas ROCHE</strong> d'avoir accepté de relire cette thèse et d'en être rapporteurs. Je tiens à remercier <strong>M. Michel BAUDU</strong> d'avoir accepté de participer à ce jury en tant qu'examinateur et d'en avoir également assuré la présidence.</p>
-        <p>Je tiens à remercier Mme Marie-Eve DAUSSET, conseillère en VAE, pour ses conseils et l'efficacité dans le traitement de mon dossier ainsi que le CNAM dans sa globalité qui m'a tant apporté au cours de ces formations et de ces années, du diplôme d'ingénieur à la soutenance de cette thèse.</p>
-        <p>Mon parcours professionnel a été jalonné de belles rencontres, de personnes avec qui j'ai eu la chance de pouvoir échanger régulièrement et qui ont bien voulu partager leurs connaissances et leurs expériences. Ce fut particulièrement vrai avec <strong>M. Eric GUIBELIN</strong>, expert boue et odeur, qui a exploré le domaine des biosolides pendant plus de 30 ans.</p>
-        <p>Enfin, je remercie ma chère épouse pour son soutien quotidien et je lui demande de m'excuser de toutes ces soirées où j'ai été si absorbé par mes lectures scientifiques et la réalisation de ce manuscrit.</p>
-      </div>
-      <div class="page-nav">
-        <span></span>
-        <a href="resume.html"><span class="arrow">→</span> Résumé / Abstract</a>
-      </div>
+<div class="container">
+    <div class="logo">♻️</div>
+    
+    <h1>Hazardous Waste Courses</h1>
+    <p class="subtitle">Cours sur la Gestion des Déchets Dangereux</p>
+    
+    <div class="separator"></div>
+    
+    <p class="description">
+        Bienvenue dans ce cours complet de formation sur la gestion, le traitement et la réglementation des déchets dangereux en France. 
+        Ce programme pédagogique couvre tous les aspects essentiels : classification des déchets, collecte, traitement, 
+        réglementation, et perspectives de valorisation énergétique.
+    </p>
+    
+    <div class="nav-links">
+        <a href="toc.html" class="btn btn-primary">Sommaire Complet</a>
+        <a href="M1.html" class="btn btn-secondary">Démarrer le Cours</a>
     </div>
-  </div>
-
-  <!-- ── EN ──────────────────────────────────────────────────────────── -->
-  <div class="en-block">
-    <div class="garde-wrapper">
-      <div class="garde-institution">
-        <strong>Conservatoire National des Arts et Métiers</strong><br/>
-        Doctoral School HESAM — LAFSET Laboratory
-      </div>
-      <div class="garde-thesis-type" style="margin-top:24px;">Thesis submitted for the degree of Doctor of Philosophy</div>
-      <h1 class="garde-main-title">
-        Design of an innovative<br/>
-        <em>thermal hydrolysis process</em>
-      </h1>
-      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:32px;">
-        Speciality: Process Engineering · Version 1.0
-      </p>
-      <div class="garde-author-block">
-        <div class="garde-author-name">Cédric CRAMPON</div>
-        <div class="garde-author-detail">
-          Laboratory of Refrigeration and Thermal Energy Systems (LAFSET)<br/>
-          France<br/>
-          <a href="mailto:cedric.crampon@gmail.com" style="color:var(--accent-pale);">cedric.crampon@gmail.com</a>
-        </div>
-      </div>
-      <div class="garde-jury">
-        <div class="garde-jury-title">Thesis committee</div>
-        <div class="jury-member"><span class="jury-name">Mr Jean-Louis HAVET</span><span class="jury-role">Thesis supervisor — Professor, CNAM Paris</span></div>
-        <div class="jury-member"><span class="jury-name">Mr Brice TREMEAC</span><span class="jury-role">Director, LAFSET</span></div>
-        <div class="jury-member"><span class="jury-name">Ms Hélène CARRERE</span><span class="jury-role">Reviewer</span></div>
-        <div class="jury-member"><span class="jury-name">Mr Nicolas ROCHE</span><span class="jury-role">Reviewer</span></div>
-        <div class="jury-member"><span class="jury-name">Mr Michel BAUDU</span><span class="jury-role">Examiner — Committee chair</span></div>
-      </div>
-      <div class="remerciments-section">
-        <h2>Acknowledgements</h2>
-        <p>Having reached the end of this thesis, prepared as part of a professional experience validation (VAE), I appreciate the scope of the task I undertook with enthusiasm and passion. I am grateful for the opportunity to work within a company that continuously innovates to meet tomorrow's environmental challenges.</p>
-        <p>I begin by thanking those who gave me the opportunity to take on a role allowing me to learn daily and to research and develop innovative concepts, as well as those who have believed, and continue to believe, in the projects I put forward. I also thank my management for allowing me to carry out this VAE.</p>
-        <p>I am deeply grateful to <strong>Mr Jean-Louis HAVET</strong>, Professor at CNAM Paris and supervisor of this doctoral project, for accepting my application and enabling my development. His many methodological pieces of advice guided me and pushed me to surpass myself.</p>
-        <p>I thank <strong>Mr Brice TREMEAC</strong>, Director of the Laboratory of Refrigeration and Thermal Energy Systems (LAFSET), for welcoming me into his research unit.</p>
-        <p>I would like to thank <strong>Ms Hélène CARRERE</strong> and <strong>Mr Nicolas ROCHE</strong> for agreeing to review this thesis. I also thank <strong>Mr Michel BAUDU</strong> for agreeing to serve as an examiner and for chairing the committee.</p>
-        <p>I thank Ms Marie-Eve DAUSSET, VAE advisor, for her guidance and the efficiency with which she handled my file, and the CNAM as a whole for everything it has given me over these years of training, from my engineering degree to the defence of this thesis.</p>
-        <p>My professional journey has been marked by wonderful encounters with people whom I had the opportunity to exchange with regularly and who generously shared their knowledge and experience. This was particularly true of <strong>Mr Eric GUIBELIN</strong>, sludge and odour expert, who explored the field of biosolids for over 30 years.</p>
-        <p>Finally, I thank my dear wife for her daily support and apologise for all the evenings spent so absorbed in my scientific reading and the writing of this manuscript.</p>
-      </div>
-      <div class="page-nav">
-        <span></span>
-        <a href="resume.html"><span class="arrow">→</span> Summary / Abstract</a>
-      </div>
+    
+    <div class="info">
+        <strong>📚 Contenu du cours :</strong>
+        <p>30 modules pédagogiques couvrant tous les aspects de la gestion des déchets dangereux, 
+        complétés par des illustrations, des schémas et des données chiffrées à jour.</p>
     </div>
-  </div>
+    
+    <footer>
+        <p>© 2024 Hazardous Waste Courses | Formation continue en gestion des déchets</p>
+    </footer>
+    
+    <nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M1.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Démarrer le Cours →</a></div></nav>
+</div>
 
-</main>
-<script src="../layout.js"></script>
 </body>
 </html>

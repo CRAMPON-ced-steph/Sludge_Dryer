@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M27</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin: 40px 0 30px 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #0056b3;
+            margin: 35px 0 20px 0;
+            font-size: 1.7em;
+            border-left: 4px solid #0056b3;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #003d82;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            border-left: 3px solid #003d82;
+            padding-left: 12px;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<h1>Le bilan masse et énergie</h1>
+
+<p>En matière financière lorsqu’on souhaite s’assurer de la bonne marche, et le bon suivi d’une société, on établit son bilan. Un bilan est un tableau comparant l’argent entré et l’argent sorti de l’entreprise. De la même manière, pour le bon fonctionnement d’un équipement, si nous voulons nous assurer de la maîtrise du procédé, nous devons connaître les quantités entrantes de matière ou d’énergie et les quantités sortantes. C’est ce que l’on appelle la loi de consommation de la masse et de l’énergie.
+Ces bilans peuvent être établis pour un équipement ou pour une usine complète. Comme en matière financière, un bilan est équilibré : la quantité entrante doit toujours être égale à la quantité sortante.</p>
+
+<h2>Intérêt d'un bilan</h2>
+
+<h3>Système réglé</h3>
+
+<p>Le premier utilisateur du bilan d’un appareil ou d’un équipement est bien entendu son concepteur. Tant que son bilan n’est pas équilibré, cela signifie qu’une erreur traîne dans le calcul.
+De la même manière, lors des essais d’un équipement, si les quantités entrantes et sortantes ne sont pas égales, cela peut signifier que certaines mesures sont erronées, qu’il y a présence de fuites non décelées ou bien des phénomènes non pris en compte interviennent.
+Les bilans servent aussi très souvent à déterminer de façon indirecte des grandeurs non prises en compte initialement dans les calculs.</p>
+
+<strong>Exemple :</strong>
+Quelle est la quantité d’eau évaporée d’un extracteur de mâchefers, sachant qu’un extracteur de mâchefers consomme 1 m3/h d’eau, et que les mâchefers extraits représentent un tonnage de 3 t/h, ayant une humidité de 20\
+
+<p>Le bilan matière du cycle de l’eau se présentera ainsi :</p>
+
+<img src="../images/M27/M27_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Ce bilan permet de calculer le débit d’eau évaporée et d’en déduire l’incidence sur le débit des gaz de combustion (400 kg/h représentent 500 Nm3/h) et sur leur humidité.</p>
+
+<p>D’autres utilisations de ces bilans sont possibles, comme par exemple la prévision des conséquences d’une modification des entrées dans le process :
+<ul>
+ <li>incidence d’une collecte sélective ;</li>
+ <li>incidence d’une modification des conditions ambiantes ;</li>
+ <li>incidence de l’adjonction d’un appareil.</li>
+</ul></p>
+
+<h3>Établissement d’un bilan système</h3>
+
+<p>Lorsque l’on souhaite établir un bilan, la première tâche consiste à délimiter de façon la plus précise les frontières (les limites) du système étudié.</p>
+
+<p>Bien entendu, la tâche est d’autant plus facile que le nombre d’entrées/sorties est le plus faible possible et que chacune des entrées/sorties est bien connue.</p>
+
+<p>Dans la pratique, l’établissement d’un schéma est souvent indispensable dès que l’on s’intéresse à un ensemble d’appareils.</p>
+
+<img src="../images/M27/M27_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Dans le schéma ci-dessus, si nous désirons analyser le système dans sa globalité, il convient d’établir un bilan des entrées et des sorties, en examinant les paramètres suivants :</p>
+
+<img src="../images/M27/M27_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Précautions d’emploi</h3>
+
+<p>En plus des précautions concernant les limites précises du système mentionnées ci-dessus, il convient bien entendu de n’établir des bilans que sur des quantités qui se conservent lors de leur passage au travers du système. En effet, dans l’exemple de l’extracteur de mâchefers, un bilan matière est possible avec l’ensemble eau liquide + vapeur, mais ce bilan aurait été erroné s’il avait été appliqué que sur la seule eau liquide. 
+Nous pourrons ainsi établir des bilans massiques globaux, des bilans massiques portant sur un seul élément (par exemple bilan massique mercure) ou des bilans énergétiques.</p>
+
+<p>D’autres précautions sont également à prendre en compte, notamment :
+<ul>
+ <li>utiliser les mêmes unités de mesure ;</li>
+ <li>utiliser des systèmes de mesure compatibles.</li>
+ <li></li>
+</ul></p>
+
+<h3>Bilan de masse</h3>
+
+<p>L’élaboration d’un bilan de masse ne pose en général pas de problème majeur. Nous donnons ci après, à titre d’information, les bilans de masse réalisés sur une UIOM type, la quantité (en grammes) de quelques métaux lourds produite par la combustion d’une tonne d’ordures ménagères.</p>
+
+<img src="../images/M27/M27_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Bilan d’énergie</h3>
+
+<p>L’énergie peut se manifester sous de nombreuses formes : nucléaire, chimique, thermique, électrique, mécanique… En pratique, dans nos usines, nous n’avons à considérer que l’énergie chimique de combustion (voir module 5), l’énergie thermique et l’énergie électrique. Malgré leurs noms différents, il ne s’agit en fait que de différentes formes de l’énergie, et il est possible de convertir l’une dans l’autre</p>
+
+<img src="../images/M27/M27_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Toutes ces transformations ne sont jamais parfaites, elles s’accompagnent de pertes qui se manifestent sous forme d’un dégagement de chaleur (énergie thermique).
+Comme dans les modules précédents, nous utiliserons comme unités le kilowatt ou le kilowattheure : 1 kWh = 3 600 kJ = 860 kcal.</p>
+
+<h3>Notions de calcul des bilans</h3>
+
+<p>Les exemples présentés dans les pages suivantes comportent des calculs de bilans d’énergie. On calcule des quantités d’énergie contenues dans les flux de matière solide, liquide ou gazeuse, à l’entrée et à la sortie de système.</p>
+
+<strong>Calcul d’énergie avec chaleur massique</strong>
+
+<p>Tel que mentionné au module 5 et dans la fiche index « Chaleur », la chaleur massique est une caractéristique propre à chaque substance car c’est la quantité d’énergie requise pour augmenter de 1 °C une masse de matière de 1 kg. 
+La chaleur massique s’exprime en différentes unités, mais nous utiliserons ici l’unité suivante : Wh/kg. °C, ou kWh/kg. °C.</p>
+
+<p>La quantité d’énergie (E) contenue dans un flux de matière est directement proportionnelle à :
+ <ul>
+ <li>la masse de matière m exprimée en kg ;</li>
+ <li>la chaleur massique (Cm), exprimée en Wh/kg. °C, ou kWh/kg. °C</li>
+ <li>la température T (en prenant pour base une température de °C), exprimé en °C.</li>
+</ul></p>
+
+<p>On peut ainsi calculer la quantité d’énergie E par la formule suivante :</p>
+
+<p>equation
+E = m Cm T
+equation</p>
+
+<p>En appliquant les unités : kWh = kg kWh. x °C = kWh
+ kg. °C</p>
+
+<img src="../images/M27/M27_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Exemples de calcul d’énergie avec chaleur latente</strong>
+
+<p>Énergie dégagée par 2 000 kg/h de mâchefers à 400 °C = 2 000 x 0,00025 x 400 = 200 kW.
+Énergie dégagée par 5 000 kg/h d’eau à 120 °C = 5 000 x 0,00116 x 120 = 696 kW.</p>
+
+<strong>Calcul de l’énergie par enthalpie</strong>
+
+<p>La chaleur massique de l’eau ne peut être utilisée pour calculer l’énergie de flux de vapeur à différentes températures et pressions. Pour ce faire, on utilise des tables ou diagrammes fournissant les valeurs de l’énergie contenue dans la vapeur à différentes conditions de pression et de température. Cette énergie est appelée enthalpie et peut s’exprimer dans différentes unités, (voir module 12, index « Chaleur latente »).</p>
+
+<strong>Exemples de calcul d’énergie lié au changement d’état</strong>
+
+<p>Dans le calcul d’un bilan d’énergie, il se peut que dans le process de l’équipement, il y ait un changement d'état, par exemple de l’eau se transformant en vapeur. Dans ce cas, il faut tenir compte de l’énergie spécifique requise pour établir ce changement d’état.</p>
+
+<p>Pour la vaporisation de l’eau, cette énergie est de : 0,7 kWh/kg ou 700 Wh/kg (à 100°C et 1 bar).</p>
+
+<p>Dans l’extracteur à mâchefers, 230 kg/h d’eau évaporée représentent une énergie dégagée de : 230 x 0,7 = 160 kWh.</p>
+
+<h2>Bilan masse et d’énergie d’une UIOM</h2>
+
+<p>Nous allons étudier le cas d’une UIOM comprenant une ligne d’incinération de 10 t/h à PCI 2,4 kWh/kg (2 064 kcal/kg).
+La valorisation thermique est assurée par un GTA à condensation et par un petit réseau de chaleur de 3 MW fonctionnant en eau surchauffée à 110 °C. Le traitement des gaz de combustion est du type semi-humide, suivi par un lavage des gaz à la soude.
+Avant d’aborder le bilan complet, nous étudierons successivement le bilan des principaux équipements qui la composent, à savoir :</p>
+
+<ul>
+ <li>réchauffeur d’air primaire</li>
+ <li>groupe turboalternateur</li>
+ <li>extracteur à mâchefers</li>
+ <li>aérocondenseur</li>
+ <li>four</li>
+ <li>réseau électrique</li>
+ <li>chaudière</li>
+ <li>traitement des gaz semi-humide</li>
+ <li>dégazeur</li>
+ <li>lavage des gaz de combustion</li>
+ <li>réseau de chauffage</li>
+</ul>
+
+<p>Ensuite nous établirons le bilan global de l’UIOM.</p>
+
+<h3>Réchauffeur d’air primaire</h3>
+
+<img src="../images/M27/M27_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>* Exemple de calcul 
+En se reportant aux exemples donnés au module 5 dans la fiche index « Chaleur », on vérifie : 43 510 x 0,28 x (15 – 0) = 182 000 Wh = 182 kWh.</p>
+
+<h3>Extracteur mâchefers</h3>
+
+<img src="../images/M27/M27_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>La chaleur de vaporisation (0,7 kWh/kg) permet de tenir compte du fait que l’énergie des buées a ici un point de référence à 0 °C tout comme l’eau liquide, comme expliqué plus haut.</p>
+
+<h3>Four</h3>
+
+<img src="../images/M27/M27_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Chaudière</h3>
+
+<img src="../images/M27/M27_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Dans cet exemple, nous n’avons pas considéré le désurchauffeur, souvent placé entre les faisceaux surchauffeurs. En fait, le bilan ne serait pas modifié, à condition de prendre en compte le débit d’eau alimentaire y compris le débit d’eau de désurchauffe.</p>
+
+<p>L’énergie de la vapeur de ramonage a été calculée de la même manière que l’humidité des gaz. Il a donc été nécessaire d’ajouter côté sortie l’énergie de vaporisation de la vapeur de ramonage (0,7 kWh/kg) fournie par la chaudière et qui ne sera pas récupérée.</p>
+
+<h3>Dégazeur</h3>
+
+<img src="../images/M27/M27_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Réseau de chauffage (3 MW départ UIOM)</h3>
+
+<img src="../images/M27/M27_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_17.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h2>Groupe turbo-alternateur</h2>
+
+<img src="../images/M27/M27_18.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_19.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Remarque</strong>
+
+<p>Le circuit d’huile du groupe sert bien sûr à la lubrification et à la régulation du groupe, mais sa fonction est également d’évacuer la chaleur dégagée par la « perte réducteur » (et paliers turbine et alternateur).
+De même, les pertes de l’alternateur sont évacuées soit par un circuit d’air, soit par un circuit d’eau.</p>
+
+<img src="../images/M27/M27_20.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Aérocondenseur</h3>
+
+<img src="../images/M27/M27_21.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Réseau électrique</strong>
+
+<img src="../images/M27/M27_22.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_23.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Traitement semi-humide des gaz </h3>
+
+<img src="../images/M27/M27_24.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_25.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Lavage des gaz de combustion</h3>
+
+<img src="../images/M27/M27_26.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_27.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>UIOM complète</h3>
+
+<p>Les bilans des principaux équipements permettent d’établir le bilan global de l’UIOM :</p>
+
+<img src="../images/M27/M27_28.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Ces divers renseignements, et notamment le bilan masse, sont résumés dans le diagramme général présenté en page suivante.</p>
+
+<img src="../images/M27/M27_29.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<img src="../images/M27/M27_30.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Notion de rendement</h3>
+
+<p>Les exploitants d’usine s’attachent à définir des rendements afin d’évaluer l’efficacité de leur outil de production. Les bilans réalisés précédemment sont indispensables pour en effectuer le calcul :</p>
+
+<h2>Rendement du four-chaudière</h2>
+
+<p>Rappel : voir le module 5, page 15</p>
+
+<p>Le rendement est défini traditionnellement comme le rapport de l’énergie nette produite (production de vapeur diminuée de la consommation du réchauffeur d’air de combustion) à l’énergie apportée par le combustible, soit dans notre cas :</p>
+
+<img src="../images/M27/M27_31.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>* valeur ramenée au tonnage vapeur</p>
+
+<img src="../images/M27/M27_32.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>D’où le calcul du rendement :</p>
+
+<p>equation
+ Rendement = {Énergie nette produite-réchauffeur}{Énergie combustible}= 19 744 – 916 {24 000}=78,45 \
+{equation</p>
+
+<p>Les pertes représentent donc 21,55\</p>
+
+<p>En fait, cette méthode ne peut être utilisée que si l’on connaît parfaitement la valeur du PCI du combustible utilisé, c’est-à-dire en pratique lorsqu’on utilise des combustibles commerciaux (charbon, fioul-oil…) dont le PCI est suffisamment bien connu. 
+Dans le cas d’un déchet dont le PCI n’est pas très bien connu, on a recours à la méthode des « pertes séparées » qui consiste à calculer les pertes aussi précisément que possible, pour en déduire le rendement, et ensuite le PCI. 
+Dans notre cas, les pertes seraient calculées comme suit (en négligeant très souvent les termes les plus faibles).</p>
+
+<h3>Valeurs des pertes (en 1 heure)</h3>
+
+<p>Ce tableau, établi pour une usine type, met en évidence les éléments principaux des pertes, à savoir :
+<ul>
+ <li>les pertes par les gaz ;</li>
+ <li>les pertes par rayonnement four et chaudière (calorifuge) ;</li>
+ <li>les pertes mâchefers (imbrûlés et pertes par l’eau d’extinction) ;</li>
+ <li>les pertes ramonage vapeur.</li>
+</ul></p>
+
+<h3>Rendement électrique</h3>
+
+<p>a) On utilise le plus souvent le rendement brut, égal à :</p>
+
+<p>equation
+{Énergie électrique alternateur}{Énergie déchets}=4 671{24 000} = 19,46 \
+{equation</p>
+
+<p>b) Le rendement net, plus intéressant pour les calculs financiers, serait égal à :</p>
+
+<p>equation
+{Énergie électrique vendue}{Énergie déchets}=3 000{24 000} = 15 \
+{equation</p>
+
+<h3>Rendement énergétique</h3>
+
+<p>De la même manière, on peut parler de rendement énergétique net :</p>
+
+<p>equation
+{Énergie vendue (thermique + électrique)}{Énergie déchets}=3 600+2740{24 000} = 26,42 \
+{equation</p>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M26.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M28.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+</body>
+</html>

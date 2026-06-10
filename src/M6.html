@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin: 40px 0 30px 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #0056b3;
+            margin: 35px 0 20px 0;
+            font-size: 1.7em;
+            border-left: 4px solid #0056b3;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #003d82;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            border-left: 3px solid #003d82;
+            padding-left: 12px;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<h1>Contrôle et fonctionnement de l'incinérateur</h1>
+
+<p>Ce module décrit les différents paramètres qui interviennent lors de la conduite d’un four d’incinération. Vous pourrez ainsi mieux comprendre les diagrammes de fonctionnement des fours, plus facilement identifier les caractéristiques d’une bonne combustion des déchets dangereux et apprendre les différents réglages possibles pour améliorer la conduite du four.</p>
+
+<strong>Principes généraux de la conduite des fours d’incinération de déchets dangereux</strong>
+
+<p>La conduite d’un four d’incinération peut avoir deux objectifs :
+<ul>
+ <li>incinérer un maximum de déchets dans une année pour répondre à l’objectif de production fixé par chaque centre de traitement et cela dans les meilleures conditions de traitement pour répondre aux exigences Qualités Sécurité Environnement (Q.S.E.).;</li>
+ <li>fournir de l’énergie sous forme de vapeur pour les industries voisines, ou sous forme d’électricité revendue à EDF.</li>
+</ul></p>
+
+<p>Ce dernier objectif est généralement secondaire lorsqu’il s’agit de déchets dangereux (ce n’est pas le cas avec des ordures ménagères)</p>
+
+<p>Dans tous les cas, il s’agit pour le conducteur d’assurer le fonctionnement du four dans des conditions stables de manière :</p>
+
+<ul>
+ <li>à respecter la réglementation en vigueur en matière de respect et protection de l’environnement;</li>
+ <li>à ne pas dépasser les caractéristiques de fonctionnement du four fixées par le constructeur.</li>
+</ul>
+
+<p>Pour cela, le conducteur est assisté par un système de contrôle-commande qui mesure les grandeurs physiques garantes du fonctionnement correct de l’installation, à savoir :
+<ul>
+ <li>la teneur en oxygène;</li>
+ <li>la teneur en monoxyde de carbone;</li>
+ <li>la température dans la post-combustion et à l’intérieur de la chaudière;</li>
+ <li>le débit de vapeur.</li>
+</ul></p>
+
+<p>Pour modifier ces grandeurs, le chef de quart, aidé du conducteur, agit sur les organes de réglage du four : les vannes de régulation d’injection des produits liquides, la cadence des pompes à boues, la cadence et l’ouverture du grappin ou du système d’alimentation des solides, la vitesse des ventilateurs d’air de combustion ou les vannes de régulation de débit de vapeur.</p>
+
+<p>Néanmoins, le système n’est pas entièrement autonome. Pour le démarrage et l’arrêt du four, par exemple, il nécessite l’intervention manuelle du conducteur. De plus, certains phénomènes non mesurables par la régulation ne peuvent être réglés que de manière visuelle par le conducteur; c’est le cas de la position ou la couleur des flammes dans le four, éléments importants pour la conduite.</p>
+
+<p>Nous décrirons comment les réglages influencent le fonctionnement du four.</p>
+
+<h2>Capacité de traitement d’un four d’incinération</h2>
+
+<h3>Diagramme de fonctionnement</h3>
+
+<p>Pour connaître la capacité de traitement d’un four, il faut se référer au guide de conduite fourni par le fabricant. On y trouve les principes de fonctionnement du four et les zones de bon fonctionnement. Ces dernières sont définies sur un diagramme dont l’aspect est le suivant :</p>
+
+<img src="../images/M6/combustion_diagram.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Sur l’axe des ordonnées, on trouve la puissance dégagée par le four; elle peut être donnée en kW.
+En abscisse, on trouve le débit de déchets en t/h.
+Les droites en pointillés représentent les différents PCI moyen qui dépendent de la nature des déchets.</p>
+
+<p>Le point de fonctionnement du four doit être à l’intérieur du diagramme en trait fort.</p>
+
+<p>Rappel : l’unité la plus couramment utilisée dans la littérature est la kcal/kg. Toutefois, dans le cadre de ces présents modules de formation, on préfère la mesurer en kWh/kg ou kWh/t afin de faciliter la comparaison entre l’énergie fournie par le procédé et l’énergie nette valorisée produite par un turboalternateur, qui est généralement exprimée en kWh.</p>
+
+<h2>Construire le diagramme</h2>
+
+<p>Nous allons essayer de construire le diagramme pour mieux comprendre son interprétation.</p>
+
+<strong>Quantité de déchets injectés dans le four et la post-combustion</strong>
+
+<p>Le fabricant donne les quantités de déchets maximale et minimale admissibles dans le four.
+Si l’on incinère une quantité de déchets inférieure à la quantité minimale, le feu dans le four sera instable et il sera difficile de maintenir la température réglementaire.
+Si l’on incinère une quantité supérieure à la quantité maximale, on dépasse les capacités du four, ce qui entraîne :</p>
+
+<ul>
+ <li>une usure rapide des organes mécaniques;</li>
+ <li>la formation d’imbrûlés;</li>
+ <li>une augmentation de la température du foyer;</li>
+ <li>une évacuation difficile de la chaleur produite.</li>
+</ul>
+
+<img src="../images/M6/M6_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>On peut alors définir un premier axe, l’axe des abscisses, sur lequel on place le débit des déchets dans le four. L’unité de débit est la tonne par heure, t/h.</p>
+
+<p>Sur le graphique, la zone correcte de fonctionnement du débit doit être située entre le débit maximal et le débit minimal.</p>
+
+<p>Le débit max est défini par la géométrie du four et par la qualité des réfractaires. Généralement, on se limite à 
+250 th.h-1.m-3 soit 290 kW/m3.</p>
+
+<strong>La puissance</strong>
+
+<p>Le four est limité en puissance. On ne doit pas dépasser cette puissance maximale car on dépasse alors la capacité de la chaudière vapeur et des équipements d’extraction des gaz de combustion. La chaudière ne pouvant absorber le surplus de chaleur, il s’ensuit une augmentation de la température du foyer et des gaz de combustion qui risquent d’endommager l’ensemble four-chaudière.</p>
+
+<img src="../images/M6/M6_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Il ne faut jamais dépasser cette puissance maximale, sauf pour une courte durée, et maintenir une surveillance attentive de tous les paramètres.</p>
+
+<p>Si la puissance est trop faible, la température du foyer diminue : on ne peut maintenir les gaz de combustion à 850°C (ou 1100°C) pendant 2 secondes et il faut alors démarrer les brûleurs de soutien. On définit les limites de puissance du four sur le diagramme.</p>
+
+<p>Sur le graphique, la zone de fonctionnement doit être située entre la puissance minimale et la puissance maximale.</p>
+
+<strong>Pouvoir calorifique des déchets</strong>
+
+<p>Le fonctionnement du four dépend aussi de la nature du déchet. On peut la définir par le PCI, donné en kWh/t.
+Pour des déchets de même nature, c’est-à-dire de PCI égaux, on peut noter que la puissance est proportionnelle au débit d’ordures.</p>
+
+<p>\[
+Puissance = PCI débit de déchets
+\]</p>
+
+<p>Cela signifie que, pour le même type de déchet, si on multiplie par deux le débit d’ordures, on multiplie par deux la puissance. De même, si on multiplie par trois le débit d’ordures, on multiplie par trois la puissance. 
+Il devient alors possible de tracer sur le diagramme la puissance en fonction du débit, la courbe représentant le PCI.</p>
+
+<p>Prenons l’exemple d’un déchet dont le PCI est de 2000 kWh/t.
+Si l’on brûle 1 tonne de déchets par heure, on obtient une puissance égale à 2000 kWh/t x 1 t/h, soit 2000 kW.
+Si on brûle deux fois plus de déchets, pour 2 tonnes par heure on obtient une puissance égale à 2000 kWh/t x 2 t/h, soit 4000 kW.</p>
+
+<img src="../images/M6/M6_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Si on brûle 3 tonnes par heure de déchets de même PCI, on obtient une puissance égale à 2000 kWh/t x 3 t/h, soit 6000 kW.</p>
+
+<p>Traçons en pointillé sur le diagramme la courbe puissance-débit pour un PCI de 2000 kWh/t.</p>
+
+<img src="../images/M6/M6_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Un déchet dont le PCI est élevé est facile à brûler et dégage beaucoup de chaleur. Un déchet dont le PCI est faible est difficile à brûler et dégage moins de chaleur.
+On peut définir ainsi un PCI maxi à ne pas dépasser. Le papier, le plastique ont des PCI très élevés,; ils brûlent facilement et très rapidement. En conséquence, la température risque de monter dans le four au-delà de la limite maximale admissible. De plus, la quantité de gaz de combustion produits ne pourra être évacuée par le ventilateur d’extraction.</p>
+
+<p>Un déchet avec un PCI trop faible, difficile à brûler, entraîne une chute de température du foyer. On doit alors enclencher les brûleurs d’appoint pour remonter les températures des fumées à 850°C. Ces limites sont définies sur le diagramme de fonctionnement.</p>
+
+<p>Sur le diagramme, la zone de fonctionnement doit être située entre les deux droites PCI maximal et PCI minimal.</p>
+
+<p>Attention : il faut garder à l’esprit que l’on parle de PCI moyen des déchets. Dans la réalité on injecte une combinaison de déchets liquides et solides de différents PCI.</p>
+
+<p>Les déchets industriels dangereux sont classés en deux grandes catégories :</p>
+
+<ul>
+ <li>déchets liquides</li>
+ <li>déchets solides et pâteux</li>
+</ul>
+
+<p>Pour les déchets solides et / ou pâteux il est difficile de déterminer précisément leur pouvoir calorifique du fait de leur hétérogénéité, il est couramment admis que cette catégorie à un PCI moyen de l’ordre de 2000 Kcal / kg.</p>
+
+<p>Pour les déchets liquides, ils sont classés en 2 ou 3 catégories selon les centres de traitement et les seuils de classement varient également d’un centre à l’autre ; Ceux qui existent sur tous les centres sont :</p>
+
+<ul>
+ <li>Les Hauts Pouvoir Calorifique ( HPC )</li>
+ <li>Les Bas Pouvoir Calorifique ( BPC )</li>
+</ul>
+
+<p>Le PCI moyen peut être calculer de la manière suivante :
+<ul>
+ <li>1 t/h de HPC à 8 000 kcal/kg : 1 000 x 8 000 =000 8000 kcal</li>
+ <li>1 t/h de solides à 2 000 kcal/kg : 1 000 x 2 000 = 2 000 000 kcal</li>
+ <li>10 000 000 kcal pour 2 T/ h, soit : PCI = 5 000 kcal/kg</li>
+</ul></p>
+
+<h3>Interprétation du diagramme</h3>
+
+<p>Assemblons maintenant sur un même schéma l’ensemble des différentes limites tracées. On obtient le diagramme de fonctionnement du four.</p>
+
+<p>La zone hachurée correspond à la zone de fonctionnement normale du four.
+Chaque four possède un diagramme propre selon sa technologie et ses dimensions.</p>
+
+<img src="../images/M6/M6_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">indiqué
+
+<h3>Détection des surcharges</h3>
+
+<p>Comme on l’a vu précédemment, la capacité du four est limitée par :
+<ul>
+ <li>le PCI moyen des déchets dangereux;</li>
+ <li>la puissance de la chaudière ou le débit de vapeur;</li>
+ <li>le débit des déchets dangereux;</li>
+ <li>la température du foyer.</li>
+</ul></p>
+
+<p>Grâce au diagramme, on peut définir ces limites et déduire la manœuvre à effectuer pour sortir de la zone de surcharge.</p>
+
+<p>Exemple numérique :
+Comment reconnaître une surcharge? Dans la zone définie par les PCI 1160 et 2320 kWh/t pour atteindre la puissance maximale de la chaudière 16240 kW, le débit d’ordures enfourné est supérieur à 7 t/h. Pour ne pas dépasser ce débit maximal, il faut diminuer la puissance de la chaudière.</p>
+
+<img src="../images/M6/M6_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Dans la zone définie par les PCI 2320 et 3248 kWh/t, la puissance maxi sera obtenue avec un débit d’ordures inférieur à 7 t/h. Il est donc possible de « pousser la chaudière » dans cette zone; il suffit d’augmenter le débit de déchets.
+Il faut éviter de dépasser la puissance maximale du four.</p>
+
+<p>Dans la zone définie par un PCI supérieur à 3248 kWh/t, on peut obtenir de la chaudière une puissance supérieure à 16240 kW avec un débit de déchets inférieur à 5 t/h, voire 3,5 t/h.</p>
+
+<p>Si on augmente le débit de déchets, la puissance dépasse la puissance maximale et la température peut augmenter au-delà de 1000°C. Si le four et la PC ne sont pas conçus pour tenir à ces températures (épaisseur et qualité des réfractaires), cela peut les endommager.</p>
+
+<p>De plus, un surplus de puissance est traduit par plus de combustion de déchet donc un volume de fumée supplémentaire à extraire. Ce surplus de chaleur ne sera pas absorbé par la chaudière qu’il faudra donc refroidir par plus d’eau sur la tour de refroidissement et qui se traduit par encore plus de volume de gaz à extraire. Le volume de gaz supplémentaire issu de la combustion des déchets dans le four sera autant de polluants supplémentaires à neutraliser et va indéniablement conduire à des dépassements des seuils réglementaire de rejet.</p>
+
+<p>Pour toutes ces raisons, il ne faut pas dépasser la puissance thermique maximale de manière volontaire. Il se peut en cours de conduite que celle ci doit dépasser ou l’atteindre très rapidement à partir d’un niveau stable inférieur et redescendre au seuil initial après quelque minute. C’est une envolée de charge.</p>
+
+<p>Tableau récapitulatif des installations SARPI/ONYX en France.</p>
+
+<img src="../images/M6/M6_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Ceci ne met pas en péril les installations mais va engendrer des dépassements des seuils des rejets réglementaires.</p>
+
+<p>Par analogie à une voiture :
+La puissance thermique peut être définie à la vitesse où l’on roule et un deuxième indicateur la puissance de marche (PM) qui va donné combien de temps je roule à cette vitesse par rapport à combien j’aurais pu rouler sur un temps donné (période choisie : poste, journée, semaine…).</p>
+
+<p>\[
+ PM = {puissance thermique moyenne sur l'équipe x nbr d'heures de fct sur la période}{Max. e. p. pour l'installation x nbr d'heures th sur la période}
+\]</p>
+
+<strong>Contrairement aux usines d’ordures ménagères où la production d’énergie est un des objectifs de rentabilité important. Pour les usines de traitement des DID la valorisation énergétique, certes importante d’un point de vue médiatique, reste secondaire du point de vue de l’exploitation. La chaudière est là pour assurer avant tout un refroidissement des gaz avant leur traitement de neutralisation.</strong>
+
+<h2>Les réglages d’un four</h2>
+
+<h3>Les manœuvres possibles</h3>
+
+<p>Pour régler l’allure de fonctionnement d’un four, on peut agir sur :
+<ul>
+ <li>les différents systèmes d’alimentation des déchets (Ch 7)</li>
+ <li>la vitesse de rotation du four;</li>
+ <li>la quantité d’air de combustion injecté</li>
+</ul></p>
+
+<p>Les différents réglages sont réalisés afin d’obtenir une allure de fonctionnement aussi stable que possible. Ils évitent ainsi des régimes transitoires indésirables qui auraient pour conséquences :</p>
+
+<ul>
+ <li>une usure prématurée du four dans le cas d’une surcharge et d’une température de foyer trop importante (passage en laves et usure des réfractaires);</li>
+ <li>la remise en température du four à l’aide des brûleurs de soutien dans le cas d’une baisse de charge et de température de foyer trop basse (consommation de combustible noble);</li>
+ <li>une mauvaise combustion dans le cas d’un mauvais réglage des injections de déchets ou d’une quantité d’air injectée mal répartie (dépassements des normes de qualité sur les émissions et les mâchefers).</li>
+</ul>
+
+<h3>Influences des différents réglages</h3>
+
+<strong>Systèmes d'alimentation</strong>
+
+<p>Liquides : Les liquides sont injectés dans le four et la post-combustion grâce à des pompes. Il suffit de faire varier la vitesse de la pompe ou l’ouverture de la vanne pour augmenter ou diminuer les débits. Cette conduite est faite depuis la salle de commande en fixant des consignes de régulation (voir Ch 25).</p>
+
+<p>Boues : Les boues sont injectés dans le four grâce à des pompes volumétriques (à piston). Pour faire varier les volumes injectés, il suffit de faire varier la cadence des pistons.</p>
+
+<p>Solides : Les solides sont injectés par grappin ; le débit est définit par la cadence et l’ouverture du grappin. Il existe également des systèmes d’alimentation par tapis ou trémie peseuse. Là encore, c’est la cadence du système qui fixe le débit.</p>
+
+<p>Le volume des déchets solides introduits dans le four dépend de cette cadence.</p>
+
+<p>La masse des déchets dépend de leur volume et de leur densité. 
+Le papier, le plastique sont peu denses : on dit qu’ils sont légers.
+Les déchets homogènes qui ont séjourné longtemps dans la fosse, deviennent plus denses : on dit qu’ils sont plus lourds.
+Pour un même volume, la masse introduite est plus importante dans le cas de déchets très denses.</p>
+
+<p>La grande majorité des alimentations sur les fours de DD sont quantifiées par unité de masse (débitmètre massique sur ligne liquide, pesons sur grappin ou système d’alimentation solides).</p>
+
+<strong>La vitesse de rotation du four</strong>
+
+<p>La rotation du four a deux effets :
+<ul>
+ <li>elle fait progresser les déchets solides vers la sortie du four</li>
+ <li>elle mélange et oxygène les déchets solides</li>
+</ul></p>
+
+<p>Le dispositif de chargement des déchets pâteux permet au conducteur du four d’assurer une alimentation régulière en tête de four. L’oxydation de ce type de produit est favorisée par le brassage crée par la rotation du four. Ces déchets forment un talus dans le four et sont animés d’un mouvement oscillant généré par la rotation du four pour la montée et sous l’action de leur propre poids pour la descente. L’avancement axial des déchets dans le four est donné par la rotation et la pente du four (entre 2 et 3\</p>
+
+<p>De plus, le moteur d’entraînement du four est équipé d’un variateur de fréquence ce qui permet au chef de quart d’augmenter ou de diminuer la vitesse de rotation. L’augmentation de la vitesse de rotation aura pour effet un brassage plus important donc une oxydation plus rapide mais à contrario un avancement axial plus rapide. Et inversement.</p>
+
+<strong>Quantité d'air injecté</strong>
+On peut régler la quantité d’air de chacun des ventilateurs de combustion.
+La quantité d’air de combustion dépend de la quantité et de la qualité des déchets présents dans le four. Le réglage du débit est considéré correct lorsque :
+
+<ul>
+ <li>la teneur en oxygène est conforme aux consignes d’exploitation, elle est supérieure à 6\</li>
+ <li>la T2S est supérieure à 850°C ou 1100°C (valeur réglementaire);</li>
+ <li>la flamme est jaune, de turbulence normale et sans dégagement de fumée;</li>
+ <li>la combustion en fin de four est achevée.</li>
+</ul>
+
+<p>Si le débit d'air est insuffisant :
+<ul>
+ <li>le taux d’oxygène (\</li>
+ <li>la température du foyer peut augmenter;</li>
+ <li>la combustion est incomplète et des émissions de CO surviennent;</li>
+ <li>la qualité des mâchefers est médiocre.</li>
+</ul></p>
+
+<p>Si le débit d'air est trop élevé : 
+<ul>
+ <li>le taux d’oxygène est supérieur aux consignes d’exploitation;</li>
+ <li>la température du foyer diminue et peut passer en dessous de 850°C (1100°C);</li>
+ <li>les flammes se forment vers le début du four et les déchets sont brûlés bien avant la zone de fin de combustion.</li>
+</ul></p>
+
+<h3>Comportement théorique du four</h3>
+
+<p>Pour mieux comprendre les influences des réglages sur la combustion, on peut comparer les étapes de la combustion des déchets avec celles d’un feu de bois réalisé dans le foyer d’une cheminée. On décompose la combustion d’un feu de bois de la même façon, en trois phases :
+<ul>
+ <li>allumage et séchage ;</li>
+ <li>combustion ;</li>
+ <li>fin de combustion.</li>
+</ul></p>
+
+<p>Dans chacune des phases, on fait varier la quantité de bois à brûler ou la quantité d’air et on observe alors les phénomènes suivants :
+<ul>
+ <li>pendant la phase d'allumage : itemize</li>
+ <li>si la source de chaleur est insuffisante en durée et en capacité, alors le feu ne prend pas;</li>
+ <li>si la quantité de bois est trop faible, la combustion est rapide;</li>
+ <li>si le débit d’air est trop important, on souffle la flamme;</li>
+ <li>si le débit d’air est trop faible, une fumée épaisse se forme et le feu s’étouffe.</li>
+</ul></p>
+
+<p>itemize</p>
+
+<ul>
+ <li>pendant la phase de combustion : itemize</li>
+ <li>si la quantité de bois est trop importante, la combustion durera longtemps car l’air a du mal à atteindre le combustible;</li>
+ <li>si la quantité de bois est faible, la combustion se fait rapidement;</li>
+ <li>si la quantité d’air est grande, on attise le feu;</li>
+ <li>si la quantité d’air est faible, le feu s’éteint.</li>
+</ul>
+
+<p>itemize</p>
+
+<ul>
+ <li>pendant la phase finale de combustion : itemize</li>
+ <li>si la quantité de bois est faible, le feu s’éteint, la température des cendres s’abaisse plus rapidement;</li>
+ <li>si la quantité de bois est importante, le refroidissement est plus lent;</li>
+ <li>si la quantité d’air est faible, le refroidissement est lent, toutes les braises sont brûlées;</li>
+ <li>si la quantité d’air est importante, le refroidissement est rapide, les braises sont éteintes avant d’avoir fini la combustion et il y a beaucoup d’imbrûlés.</li>
+</ul>
+itemize
+
+<strong>Les différentes zones du four</strong>
+
+<p>Pour apprécier l’impact de l’action sur les organes de régulation de la combustion, examinons de manière théorique le détail des processus qui se déroulent lors de l’incinération des déchets dans un four rotatif.</p>
+
+<p>Trois zones différentes peuvent être situées au sein des déchets présents dans le four :</p>
+
+<ul>
+ <li>la zone de séchage : les déchets ne sont pas encore entrés en combustion;</li>
+ <li>la zone de combustion : les déchets sont en combustion;</li>
+ <li>la zone de fin de combustion : les mâchefers deviennent moins chauds.</li>
+</ul>
+
+<p>Bien entendu, dans la pratique, les séparations entre zones ne sont pas aussi nettes en raison de l’hétérogénéité des déchets et de la rotation du four.</p>
+
+<p>Dans tous les cas, la préparation de la charge, solide et liquide, est primordiale pour la bonne conduite du four.
+Les solides doivent être le plus homogène possible en termes de pouvoir calorifique. Leur granulométrie est compatible avec les moyens d’alimentation (taille de la goulotte) ; plus elle est fine, meilleure sera la combustion.</p>
+
+<p>Les liquides sont classés et stocké en au moins deux catégories (Haut PCI et Bas PCI). Les bacs sont maintenus en agitation pour éviter les séparation de phase.
+Les conditionnés injectés en filière directe sont limité en poids afin de ne pas apporter d’un seul coup une quantité de calories susceptible de déstabiliser la combustion.</p>
+
+<strong>Zone de séchage</strong>
+
+<p>Dans cette zone, les déchets solides sont séchés et réchauffés jusqu’à leur point d’inflammation.</p>
+
+<p>Le premier tiers du four (côté façade) sous l’action combiné de la rotation et de la pente agit comme une vis doseuse qui alimente en solides la zone de pleine combustion.</p>
+
+<p>L’allumage des déchets est contrôlé par une sonde de température en façade.</p>
+
+<ul>
+ <li>Si la température est trop chaude (>700°C), cela veut dire que le solide brûle très rapidement. On peut alors injecter un peu plus d’eau au niveau des cannes de pulvérisation, pour modérer la combustion.</li>
+ <li>Si la température est trop basse (<700°C), le solide ne s’allume pas, et on risque d’avoir de mauvais mâchefers. Il faut augmenter les liquides à haut pouvoir calorifique dans les cannes de pulvérisation.</li>
+</ul>
+
+<strong>Zone de combustion</strong>
+
+<p>C’est dans cette zone que se produit l’essentiel de la combustion. Les déchets, soumis au rayonnement du four, sont portés au-dessus de leur température d’inflammation et entrent en combustion.</p>
+
+<strong>Chambre de combustion finale</strong>
+
+<p>En principe, la combustion des déchets est pratiquement terminée et seule la température des déchets non combustibles, c'est-à-dire les mâchefers, va diminuer. En termes réels, il n'y a pas de séparation réelle de la zone de combustion et une petite quantité de déchets en combustion peut rester ; les flammes seront visibles jusqu'à l'entrée du cendrier inférieur (notamment les flammes bleues provoquées par la combustion du charbon).</p>
+
+<strong>Post-combustion</strong>
+
+<p>La chambre de post-combustion est en fait un incinérateur vertical statique.
+Sont brûlés dans cet incinérateur : Les
+ gaz dégagés lors de la combustion des déchets solides,
+ Les liquides injectés dans la chambre de postcombustion via un brûleur alimenté en déchets et en combustible noble.</p>
+
+<p>Les dimensions de la chambre de postcombustion sont conçues pour garantir qu'après l'injection d'air finale, les gaz restent dans cette chambre pendant plus de 2 s.</p>
+
+<img src="../images/M6/M6_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>L'impact des réglages selon le type d'utilisation</h3>
+
+<strong>Incinérateurs alimentés en déchets liquides</strong>
+
+<p>Dans les incinérateurs principalement alimentés en déchets liquides, plus de 70\</p>
+
+<p>La chaleur est alors majoritairement transférée par les liquides et l'incinérateur peut être piloté très simplement à l'aide des boucles de régulation en adaptant les débits des différents liquides (HCV, LCV...) et en maintenant une consigne de température.
+Les déchets solides sont introduits dans l'incinérateur avec un débit régulier à partir d'un automate de pont roulant, en fonction de l'ouverture du grappin et des consignes de vitesse.</p>
+
+<strong>Incinérateurs alimentés en déchets solides</strong>
+
+<p>Dans les incinérateurs principalement alimentés en déchets solides, plus de 50\</p>
+
+<img src="../images/M6/M6_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<ol>
+ <li><ul> <li>Le pourcentage d’oxygène se stabilise puis commence à monter.</li> <li>La température se stabilise avec un temps de retard sur l’O2 puis commence à chuter. $$ Les pâteux contenus dans le four ont fini de brûler. L’agent d’exploitation doit recharger le four.</li> </ul></li>
+ <li><ul> <li>Le pourcentage d’oxygène continue de monter puis se stabilise.</li> <li>La température continue de chuter jusqu’à stabilisation. $$ Les pâteux introduits dans le four se réchauffent et l’eau contenue dans ces pâteux se vaporise.</li> </ul></li>
+ <li><ul> <li>Le pourcentage d’oxygène diminue</li> <li>La température augmente $\ rightarrow$ Les déchets pâteux brûlent.</li> </ul></li>
+ <li><ul> <li>Le pourcentage d’oxygène se stabilise puis commence à augmenter.</li> <li>La température se stabilise puis commence à diminuer $$ Les pâteux contenus dans le four terminent leur combustion. L’agent d’exploitation doit recharger le four.</li> </ul></li>
+</ol>
+
+<p>Pour les liquides, leurs injections permettent de maintenir un équilibre thermique dans le four. Les BPC et HPC servent de régulateur de température.
+ Augmentation du déchet des BPC pour baisser la température
+ Augmentation du déchet des HPC pour augmenter la température</p>
+
+<p>La plus grande partie des liquides peut être brûlée en Post-Combustion. (Ex. : SEDIBEX au Havre brûle 4 T/h de solides dans le four et 4 T/h de liquides dans la PC).</p>
+
+<strong>Slagging mode</strong>
+
+<p>Certains fours fonctionnent avec des déchets très calorifiques ou très fondants. Les températures de combustion sont volontairement très élevées (>1200°C) afin que les déchets fondent, ce qui garantie une excellente qualité de mâchefers (« vitrifiés »).
+Ces fours possèdent généralement des réfractaires très performants, et parfois des systèmes de refroidissement de virole (à l’air ou à l’eau). Ces systèmes de refroidissement permettent d’évacuer la chaleur et de figer une épaisseur de laves sur le réfractaire, le protégeant de cette façon.</p>
+
+<h2>Régulation automatique des fours</h2>
+
+<p>Pour conduire le four, l’opérateur est assisté par des systèmes numériques de contrôle commande dite SNCC (ou conduite centralisée). Ces systèmes permettent de régler la charge du four, d’optimiser son chargement tout en contrôlant et en corrigeant les paramètres environnementaux d’émissions atmosphériques.</p>
+
+<img src="../images/M6/M6_12.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Pour assurer son rôle, la SNCC doit mesurer plusieurs paramètres représentatifs de la puissance et de la qualité de combustion :</p>
+
+<ul>
+ <li>le débit de vapeur (exemple : 25 t/h);</li>
+ <li>la température du foyer (exemple : 850°C);</li>
+ <li>la teneur en oxygène (exemple : 8\</li>
+</ul>
+
+<p>Un ensemble de régulation sert à maintenir ces valeurs constantes. Ces valeurs sont appelées les consignes.</p>
+
+<p>Pour atteindre les consignes, la SNCC agira sur les commandes de clapets d’air, de l’alimentateur, appelés organes de réglages.</p>
+
+<p>Exemple :
+Si on veut maintenir la teneur en oxygène (\</p>
+
+<p>Sur les fours, il existe plusieurs régulations :</p>
+
+<ul>
+ <li>une régulation d’alimentation des déchets;</li>
+ <li>une régulation de la quantité de combustible ou de puissance;</li>
+ <li>une régulation de débit d’air ou de réglage de combustion.</li>
+</ul>
+
+<p>Vous pouvez observer que toutes ces régulations ne sont pas indépendantes les unes des autres.</p>
+
+<h3>Réglage du débit des déchets introduits dans le four</h3>
+
+<p>La régulation sert à régler le débit des déchets rentrant dans le four. Elle agit sur la cadence des systèmes d’alimentation (solides) ou l’ouverture des vannes (liquides).
+En fonction du type de déchets, l’opérateur peut choisir les temps de marche suivants :</p>
+
+<ul>
+ <li>court pour les déchets légers ;</li>
+ <li>long pour les déchets compacts et humides.</li>
+</ul>
+
+<p>Le conducteur de four a pour rôle de maximiser les débits de déchets tout en maintenant la qualité de la combustion (émissions, mâchefers).</p>
+
+<p>Sur certains incinérateurs calés en liquides, il est possible d’asservir l’injection de certains liquides (HPC en particulier) à une consigne de température.
+Si la température du four augmente au dessus de la consigne (de 1150°C par exemple), le débit de HPC va diminuer (selon une formule propre proportionnelle ou autre voir Ch 25).
+Si la température du four diminue en dessous de la température de consigne, le débit de HPC va augmenter.</p>
+
+<h3>Réglage le débit d'air</h3>
+
+<p>Les débit d’air ne sont généralement pas régulés automatiquement. La plupart du temps ils sont même fixes, et ce sont les débits de déchets qui sont optimisés en fonction de l’air disponible.</p>
+
+<h3>Principes de régulation</h3>
+
+<p>Il existe une diversité importante dans le type d’unités d’incinération de déchets dangereux en fonctionnement. En effet, selon le constructeur, le type de four et l’ancienneté de l’installation, différentes générations de fours ont été installées.
+En ce qui concerne le principe de régulation, on retrouve trois principales familles d’installation :</p>
+
+<ul>
+ <li>régulation par la température du foyer;</li>
+ <li>régulation par débit de vapeur;</li>
+ <li>régulation par débit de vapeur et autres variables.</li>
+</ul>
+
+<p>Les deux dernières régulation sont employées dans le domaine des ordures ménagères, où la vente d’énergie est le principal revenue de l’activité.</p>
+
+<strong>Régulation par la température du four</strong>
+
+<p>C’est l’un des paramètres principaux du fonctionnement de nos fours. C’est, de plus un paramètres réglementaire.
+La principale régulation se fait par une lecture et un enregistrement de la température, généralement au milieu de la post-combustion, et par utilisation de cette donnée pour contrôler (via un régulateur) un ou plusieurs paramètres suivants :</p>
+
+<ul>
+ <li>débit entrée des déchets;</li>
+ <li>débit d’air primaire;</li>
+ <li>mise en marche/arrêt de brûleurs d’appoint.</li>
+</ul>
+
+<p>Les paramètres qui ne sont pas reliés au régulateur sont contrôlés et ajustés manuellement par l’opérateur.</p>
+
+<img src="../images/M6/M6_13.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Sur la plupart des installations, l’ensemble de ces réglages sont manuels : la diversité des déchets ne permet pas de régulation simple.</p>
+
+<strong>Contrôle en fonction du débit de vapeur</strong>
+
+<p>Ce genre d’installation possède un système de récupération d’énergie. L’opérateur ajuste la régulation pour que celle-ci maintienne un débit de vapeur constant à une pression donnée.</p>
+
+<p>Les enregistrements de débit et de pression sont ainsi transmises au régulateur, lequel agit sur les paramètres du process pour établir et maintenir la consigne demandée par l’opérateur.</p>
+
+<p>Le régulateur enregistre un signal d’entrée (pression et/ou débit) et détermine un ou des signaux de sortie pour contrôler les paramètres du procédé qui ont une influence sur le débit de vapeur. Ainsi le régulateur peut agir sur une ou plusieurs de ses variables :</p>
+
+<ul>
+ <li>débit entrée des ordures;</li>
+ <li>air primaire;</li>
+ <li>vitesse de grilles ou rouleaux;</li>
+ <li>marche ou arrêt des brûleurs d’appoint.</li>
+</ul>
+
+<img src="../images/M6/M6_14.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Régulation par débit de vapeur et autres variables</strong>
+
+<p>Les installations modernes d’incinération d’ordures ménagères doivent optimiser le rendement thermique et respecter des normes d’émission très strictes. Plusieurs variables d’entrée sont prises en compte :</p>
+
+<ul>
+ <li>débit et pression de vapeur;</li>
+ <li>excès d’air primaire, par la mesure de la quantité d’oxygène O2 dans les gaz de combustion;</li>
+ <li>déficience d’air par la mesure du niveau de monoxyde de carbone CO dans les gaz de combustion;</li>
+ <li>quantité et /ou pression d’air primaire ou secondaire;</li>
+ <li>température du foyer et d’entrée de la chaudière.</li>
+</ul>
+
+<p>Le système de régulation considère plusieurs ou toutes ces variables comme des signaux d’entrée. Il les analyse et calcule automatiquement la valeur optimale de certains paramètres influents sur l’allure du procédé de façon à établir ou à maintenir les points de consignes affichés. Ces paramètres qui recevront un signal de sortie émis par le régulateur peuvent être plusieurs ou tous les paramètres de la liste suivante :</p>
+
+<ul>
+ <li>air primaire ou secondaire;</li>
+ <li>débit entrée des ordures;</li>
+ <li>vitesse de grilles ou des rouleaux;</li>
+ <li>marche ou arrêt des brûleurs d’appoint.</li>
+</ul>
+
+<img src="../images/M6/M6_15.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Principes généraux</strong>
+
+<p>Les systèmes de régulation permettent de choisir un mode de contrôle manuel du four si l’opérateur le désire, par exemple en période de démarrage ou durant des phases transitoires pour lesquelles la régulation automatique parvient difficilement à maintenir la stabilité du procédé.
+Les systèmes de régulation permettent aussi un fonctionnement en mode dégradé, c’est-à-dire seulement avec une partie des automatismes.</p>
+
+<p>L’opérateur doit toujours être en mesure de reprendre manuellement le contrôle du procédé en agissant manuellement sur :</p>
+
+<ul>
+ <li>le débit d’entrée des déchets;</li>
+ <li>la vitesse de rotation du four;</li>
+ <li>la quantité et la répartition de l’air de combustion;</li>
+ <li>la marche ou l’arrêt des brûleurs d’appoint.</li>
+</ul>
+
+<img src="../images/M6/M6_16.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Vue du système de supervision d'injection liquide par SARP Industries Limay}
+
+<p>Pour contrôler la combustion à l’intérieur du four, il est utile de visualiser l’état du feu à travers les regards sur site :
+<ul>
+ <li>couleur et position des flammes dans le four;</li>
+ <li>absence d’imbrûlés dans les mâchefers, itemize</li>
+ <li>température du foyer;</li>
+ <li>teneur en oxygène;</li>
+ <li>teneur en monoxyde de carbone CO;</li>
+ <li>stabilité du débit de vapeur.</li>
+</ul>
+itemize</p>
+
+<p>La combustion est optimale lorsque l’opérateur conduit le four au maximum de ses possibilités et conformément à la réglementation.</p>
+
+<h2>Caractéristique d’une bonne combustion</h2>
+
+<h3>Aspect du feu</h3>
+ 
+Il est nécessaire de contrôler régulièrement l’aspect des flammes. Elles doivent être assez longues et légèrement tourbillonnantes. Leur couleur est jaune. Les gaz de combustion doivent être d’aspect transparent.
+Le feu doit s’étaler sur la zone centrale du four. Il ne doit pas y avoir de flamme au niveau des mâchefers.
+Si le feu est trop bas cela peut signifier :
+
+<ul>
+ <li>une vitesse de rotation trop importante;</li>
+ <li>un défaut d’air sous la grille de combustion ;</li>
+ <li>un PCI très faible des déchets</li>
+</ul>
+
+<h3>Qualité des mâchefers</h3>
+
+<p>En sortie de four, il ne doit rester aucun imbrûlé. Dans le cas contraire, c’est le signe d’une mauvaise combustion. Dans ce cas, il faut réajuster le débit des déchets (équilibre liquides / solides) et l’air de combustion.</p>
+
+<h3>Mesure de la température</h3>
+
+<p>La température dans la Post-Combustion est comprise entre 900 et 1400°C, température maximale fonction des caractéristiques de la PC (réfractaires).
+La température du four est inconnue, mais varie entre 850 et 1200°C.
+Lorsque le four atteint des températures trop élevées, les déchets entrent en fusion et coulent en lave, entraînant une usure rapide des réfractaires. De plus les cendres volantes elles aussi entrent en fusion et certaines vont se coller sur les parois de la chaudière, entraînant une diminution de l’échange thermique.
+La température peut se modérer en augmentant l’excès d’air ou en augmentant la quantité de déchets à bas PCI.</p>
+
+<h3>teneur en CO</h3>
+
+<p>La teneur en monoxyde de carbone (CO) doit être la plus faible possible et toujours en dessous de la valeur imposée par la réglementation. D’après celle-ci, le taux de CO (en moyenne ½ horaire doit être inférieur à 100 mg/Nm3, mais il est préférable de se situer à des valeurs inférieures, soit moins de 50 mg/Nm3 (qui est la valeur limite d’émission pour la moyenne journalière).</p>
+
+<h3>Débit de vapeur</h3>
+
+<p>Le débit de vapeur doit être constant et proche de la consigne imposée par l’opérateur. 
+Un débit ou une pression de vapeur instable sont le signe d’une mauvaise combustion.</p>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M7.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+</body>
+</html>

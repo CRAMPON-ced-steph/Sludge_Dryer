@@ -1,120 +1,342 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Table des matières — Hydrolyse thermique</title>
-  <link rel="stylesheet" href="../styles.css"/>
-  <script src="../lang.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommaire - Hazardous Waste Courses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .toc-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .toc-title {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .module-link {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .module-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+        
+        .module-number {
+            display: block;
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .modules-grid-special {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .module-link-special {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .module-link-special:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+            background: linear-gradient(135deg, #f5576c, #f093fb);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-<main id="main-content">
-  <div class="chapter-page">
 
-    <!-- ── FR ─────────────────────────────────────────────────────────── -->
-    <div class="fr-block">
-      <div class="breadcrumb">
-        <a href="../index.html">Accueil</a><span>›</span> Table des matières
-      </div>
-      <h1 class="chapter-title">Table des matières</h1>
-      <ul class="toc-list">
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="resume.html">Résumé / Abstract</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="preambule.html">Préambule</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="intro.html">Introduction générale</a></li>
+<div class="header">
+    <h1>📚 Sommaire Complet</h1>
+    <p>Cours sur la Gestion des Déchets Dangereux</p>
+</div>
 
-        <li class="toc-part">Chapitre 1 — Panorama du traitement des boues urbaines</li>
-        <li class="toc-chapter"><span class="toc-num">1</span><a href="chap1.html">Panorama du traitement des boues urbaines</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-matrice">1.1 &nbsp; Qu'est-ce que la matrice boue ?</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-origine">1.2 &nbsp; D'où proviennent les boues ?</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-valorisation-non-thermique">1.3 &nbsp; Les voies de valorisation non thermique</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-thermique">1.4 &nbsp; Les procédés thermiques de valorisation</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-hydrolyse">1.5 &nbsp; Les procédés d'hydrolyse thermique</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-conclusion">1.6 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapitre 2 — Modélisation du procédé d'hydrolyse en continu</li>
-        <li class="toc-chapter"><span class="toc-num">2</span><a href="chap2.html">Modélisation du procédé d'hydrolyse en continu</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-approche">2.1 &nbsp; Approche des phénomènes à modéliser</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-materiel-methode">2.2 &nbsp; Matériel et méthode</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-resultats">2.3 &nbsp; Résultats et discussions</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-conclusion">2.4 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapitre 3 — Validations expérimentales du procédé</li>
-        <li class="toc-chapter"><span class="toc-num">3</span><a href="chap3.html">Validations expérimentales du procédé</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-pilote">3.1 &nbsp; Présentation de l'unité pré-industrielle</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-methodes">3.2 &nbsp; Matériel et méthodes</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-resultats">3.3 &nbsp; Résultats et discussions</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-conclusion">3.4 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapitre 4 — Attente réglementaire et énergétique</li>
-        <li class="toc-chapter"><span class="toc-num">4</span><a href="chap4.html">Attente réglementaire et énergétique</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-enjeux">4.1 &nbsp; Les enjeux réglementaire et énergétique</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-methode">4.2 &nbsp; Matériel et méthode</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-resultats">4.3 &nbsp; Résultats et discussions</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-conclusion4">4.4 &nbsp; Conclusions</a></li>
-
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="concl.html">Conclusion générale et perspectives</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="annexe.html">Annexes</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="biblio.html">Bibliographie</a></li>
-      </ul>
-      <div class="page-nav">
-        <a href="resume.html"><span class="arrow">←</span> Résumé</a>
-        <a href="intro.html"><span class="arrow">→</span> Introduction</a>
-      </div>
+<div class="container">
+    <a href="garde.html" class="back-btn">← Retour à la page d'accueil</a>
+    
+    <div class="stats">
+        <div class="stat-box">
+            <span class="stat-number">30</span>
+            <span class="stat-label">Modules de cours</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">+2</span>
+            <span class="stat-label">Sections spéciales</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">Complet</span>
+            <span class="stat-label">Contenu pédagogique</span>
+        </div>
     </div>
-
-    <!-- ── EN ─────────────────────────────────────────────────────────── -->
-    <div class="en-block">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a><span>›</span> Table of contents
-      </div>
-      <h1 class="chapter-title">Table of contents</h1>
-      <ul class="toc-list">
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="resume.html">Summary / Abstract</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="preambule.html">Preamble</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="intro.html">General introduction</a></li>
-
-        <li class="toc-part">Chapter 1 — Overview of urban sludge treatment</li>
-        <li class="toc-chapter"><span class="toc-num">1</span><a href="chap1.html">Overview of urban sludge treatment</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-matrice">1.1 &nbsp; What is the sludge matrix?</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-origine">1.2 &nbsp; Where does sludge come from?</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-valorisation-non-thermique">1.3 &nbsp; Non-thermal valorisation pathways</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-thermique">1.4 &nbsp; Thermal valorisation processes</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-hydrolyse">1.5 &nbsp; Thermal hydrolysis processes</a></li>
-        <li class="toc-section"><a href="chap1.html#sec-conclusion">1.6 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapter 2 — Modelling of the continuous hydrolysis process</li>
-        <li class="toc-chapter"><span class="toc-num">2</span><a href="chap2.html">Modelling of the continuous hydrolysis process</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-approche">2.1 &nbsp; Approach to the phenomena to be modelled</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-materiel-methode">2.2 &nbsp; Materials and methods</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-resultats">2.3 &nbsp; Results and discussion</a></li>
-        <li class="toc-section"><a href="chap2.html#sec-conclusion">2.4 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapter 3 — Experimental validation of the process</li>
-        <li class="toc-chapter"><span class="toc-num">3</span><a href="chap3.html">Experimental validation of the process</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-pilote">3.1 &nbsp; Presentation of the pre-industrial unit</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-methodes">3.2 &nbsp; Materials and methods</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-resultats">3.3 &nbsp; Results and discussion</a></li>
-        <li class="toc-section"><a href="chap3.html#sec-conclusion">3.4 &nbsp; Conclusion</a></li>
-
-        <li class="toc-part">Chapter 4 — Regulatory and energy requirements</li>
-        <li class="toc-chapter"><span class="toc-num">4</span><a href="chap4.html">Regulatory and energy requirements</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-enjeux">4.1 &nbsp; Regulatory and energy challenges</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-methode">4.2 &nbsp; Materials and methods</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-resultats">4.3 &nbsp; Results and discussion</a></li>
-        <li class="toc-section"><a href="chap4.html#sec-conclusion4">4.4 &nbsp; Conclusions</a></li>
-
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="concl.html">General conclusion and perspectives</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="annexe.html">Appendices</a></li>
-        <li class="toc-chapter"><span class="toc-num">—</span><a href="biblio.html">Bibliography</a></li>
-      </ul>
-      <div class="page-nav">
-        <a href="resume.html"><span class="arrow">←</span> Summary</a>
-        <a href="intro.html"><span class="arrow">→</span> Introduction</a>
-      </div>
+    
+    <div class="toc-section">
+        <h2 class="toc-title">🎯 Modules Principaux</h2>
+        <div class="modules-grid">
+            <a href="M1.html" class="module-link">
+                <span class="module-number">Module 1</span>
+                Les différents types de déchets
+            </a>
+            <a href="M2.html" class="module-link">
+                <span class="module-number">Module 2</span>
+                La collecte et le traitement des déchets dangereux
+            </a>
+            <a href="M3.html" class="module-link">
+                <span class="module-number">Module 3</span>
+                Incinération des déchets
+            </a>
+            <a href="M4.html" class="module-link">
+                <span class="module-number">Module 4</span>
+                Traitement physico-chimique
+            </a>
+            <a href="M5.html" class="module-link">
+                <span class="module-number">Module 5</span>
+                Valorisation énergétique
+            </a>
+            <a href="M6.html" class="module-link">
+                <span class="module-number">Module 6</span>
+                Traitement biologique
+            </a>
+            <a href="M7.html" class="module-link">
+                <span class="module-number">Module 7</span>
+                Stockage des déchets
+            </a>
+            <a href="M8.html" class="module-link">
+                <span class="module-number">Module 8</span>
+                Réglementation et normes
+            </a>
+            <a href="M9.html" class="module-link">
+                <span class="module-number">Module 9</span>
+                Sécurité et prévention
+            </a>
+            <a href="M10.html" class="module-link">
+                <span class="module-number">Module 10</span>
+                Transport des matières dangereuses
+            </a>
+            <a href="M11.html" class="module-link">
+                <span class="module-number">Module 11</span>
+                Gestion des déchets hospitaliers
+            </a>
+            <a href="M12.html" class="module-link">
+                <span class="module-number">Module 12</span>
+                Déchets chimiques industriels
+            </a>
+            <a href="M13.html" class="module-link">
+                <span class="module-number">Module 13</span>
+                Recyclage et valorisation
+            </a>
+            <a href="M14.html" class="module-link">
+                <span class="module-number">Module 14</span>
+                Réduction à la source
+            </a>
+            <a href="M15.html" class="module-link">
+                <span class="module-number">Module 15</span>
+                Gestion des eaux résiduelles
+            </a>
+            <a href="M16.html" class="module-link">
+                <span class="module-number">Module 16</span>
+                Décontamination des sites
+            </a>
+            <a href="M17.html" class="module-link">
+                <span class="module-number">Module 17</span>
+                Traitement des fumées
+            </a>
+            <a href="M18.html" class="module-link">
+                <span class="module-number">Module 18</span>
+                Gestion des emballages
+            </a>
+            <a href="M19.html" class="module-link">
+                <span class="module-number">Module 19</span>
+                Filières de traitement spécialisées
+            </a>
+            <a href="M20.html" class="module-link">
+                <span class="module-number">Module 20</span>
+                Économie circulaire et déchets
+            </a>
+            <a href="M21.html" class="module-link">
+                <span class="module-number">Module 21</span>
+                Certifications et audits
+            </a>
+            <a href="M22.html" class="module-link">
+                <span class="module-number">Module 22</span>
+                Responsabilités légales
+            </a>
+            <a href="M23.html" class="module-link">
+                <span class="module-number">Module 23</span>
+                Traçabilité des déchets
+            </a>
+            <a href="M24.html" class="module-link">
+                <span class="module-number">Module 24</span>
+                Technologies innovantes
+            </a>
+            <a href="M25.html" class="module-link">
+                <span class="module-number">Module 25</span>
+                Gestion d'urgence
+            </a>
+            <a href="M26.html" class="module-link">
+                <span class="module-number">Module 26</span>
+                Formation des opérateurs
+            </a>
+            <a href="M27.html" class="module-link">
+                <span class="module-number">Module 27</span>
+                Cas d'études pratiques
+            </a>
+            <a href="M28.html" class="module-link">
+                <span class="module-number">Module 28</span>
+                Evaluation des risques
+            </a>
+            <a href="M29.html" class="module-link">
+                <span class="module-number">Module 29</span>
+                Développement durable
+            </a>
+            <a href="M30.html" class="module-link">
+                <span class="module-number">Module 30</span>
+                Synthèse et perspectives
+            </a>
+        </div>
     </div>
+    
+    <div class="toc-section">
+        <h2 class="toc-title">📖 Sections Complémentaires</h2>
+        <div class="modules-grid-special">
+            <a href="M1book.html" class="module-link-special">
+                Livre du Module 1
+            </a>
+            <a href="varia.html" class="module-link-special">
+                Ressources Variées
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2024 Hazardous Waste Courses | Formation Continue</p>
+    </footer>
+    
+    <nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="garde.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Retour</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M1.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Démarrer →</a></div></nav>
+</div>
 
-  </div>
-</main>
-<script src="../layout.js"></script>
 </body>
 </html>

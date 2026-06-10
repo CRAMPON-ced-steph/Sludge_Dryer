@@ -1,0 +1,659 @@
+\chapter{Schémas d'instrumentation et de contrôle}
+
+Que ce soit pour les synoptiques de description des processus industriels ou pour les tableaux ou écrans graphiques de supervision et de contrôle, l’utilisation de symboles est essentielle tant au niveau des études qu’en exploitation et maintenance : symbolisation des points de mesure, symbolisation des indicateurs, enregistreurs, régulateurs, symbolisation des capteurs, des actionneurs, des organes de réglage…
+\vspace{0.3cm}
+
+Le rôle de chaque symbole est de représenter sur un schéma une entité plus ou moins complexe, de manière à ce qu’elle soit reconnaissable et identifiable par le plus grand nombre de techniciens et ingénieurs.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/M26/M26_1.png}
+\end{figure}
+
+L’installation, la mise en service, l’exploitation et la maintenance des installations industrielles nécessitent une représentation symbolique normalisée des divers procédés élémentaires d’une installation complexe. Les symboles employés sont utilisés tant au niveau des documents manipulés par le technicien d’installation ou de maintenance qu’au niveau des tableaux de contrôle ou synoptiques manipulés par les agents d’exploitation.
+\vspace{0.3cm}
+
+Il existe une normalisation générale mais on ne s’étonnera pas de l’existence de variantes en fonction du secteur d’activité (chimie, pétrochimie, distribution d’électricité…) ou même de l’entreprise. 
+
+
+
+\section{Documentation du système d’instrumentation contrôle}
+
+
+\subsection{Les différents documents normalement disponibles}
+
+Il y a plusieurs types de documents relatifs aux instruments de contrôle disponibles dans un site. Ces différents documents sont plus ou moins proches de l’instrument de régulation. En effet, les documents disponibles peuvent aller du schéma de principe de l’installation jusqu’à la notice technique d’un capteur, par exemple.
+On distingue principalement : 
+
+
+\begin{itemize} 
+\item  le schéma du procédé ou plan de circulation des fluides (PCF) ;
+\item  le schéma de tuyauterie et instruments (TI) ;
+\item  les schémas de câblage ;
+\item  les notices constructeurs des différents instruments.
+
+\end{itemize}
+
+Il y a aussi les :
+
+ \begin{itemize}
+\item  schémas procédé instrumenté ;
+\item  schémas de régulation ;
+\item  plans d’armoire ;
+\item  plans de borniers ;
+\item  schémas boucles ;
+\item  carnets de câble
+
+\end{itemize}
+
+\subsection{Le schéma du procédé} 
+
+Pour tous les corps de métier, on utilise le plan de circulation des fluides (PCF), qui est un schéma faisant apparaître les éléments matériels et les flux de fluides, nécessaires au fonctionnement du procédé. 
+Ce schéma comprend notamment :
+
+
+ \begin{itemize}
+\item  les appareils : cuves, condenseurs, réacteurs, tuyaux… ;
+\item  la nature et le sens d’écoulement des fluides ;
+\item  les organes de puissance, pompes, agitateurs motorisés… ;
+\item  l’indication des grandeurs utiles.
+
+\end{itemize}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{Images/M26/M26_2.png}
+\end{figure}
+
+
+Le PCF d’une installation est un outil utile, mais il est insuffisant car il n’indique pas les moyens de contrôle-commande du procédé. On le complète donc par l’indication de tous les dispositifs permettant l’observation et la commande du procédé, que l’on désigne habituellement par le terme d’instruments.
+
+\subsection{Le schéma TI}
+
+Ce schéma représente les tuyauteries et les instruments, d’où le sigle TI. C’est un schéma PCF, instrumenté, c’est-à-dire complété par les appareils de mesure, les appareils de contrôle et de calcul, les actionneurs et les liaisons entre ces divers appareils.
+\vspace{0.3cm}
+
+Tous ces éléments ont une représentation normalisée. L’étude de cette représentation donne lieu à un chapitre à part entière (chapitre 2). 
+\vspace{0.3cm}
+
+On peut résumer de façon succincte cette représentation de la manière suivante :
+
+
+ \begin{itemize}
+\item Les liaisons sont représentées par des traits.
+\item La représentation des appareils de mesure utilise un cercle, avec indication de la localisation de l’appareil. Ce cercle contient une désignation de l’appareil, conforme à la règle suivante :
+
+
+ \begin{itemize}
+\item la première lettre indique la grandeur primaire mesurée : P pour pression ; F pour débit (flow) ; T pour température ; L pour niveau (level) ; A pour analyse (mesure spéciale) ; PD pour pression différentielle (écart entre deux pressions ;
+	\item les lettres suivantes indiquent le type d’appareil et/ou la fonction : T pour transmetteur ; I pour indicateur ; A pour alarme ; S pour sécurité ; R (« record ») pour 
+enregistreur.
+
+\end{itemize}
+
+\item La représentation des actionneurs est un dessin représentant symboliquement leur forme.
+
+\end{itemize}
+
+
+\subsection{	Schémas de câblage} 
+
+Il s’agit de schémas plus détaillés que les schémas TI. Ces schémas permettent de visualiser les liaisons entre les différents appareils d’une boucle de régulation, mais aussi les numéros de bornes de ces différents appareils, les repères et câbles, ou encore les numéros de bornes des boîtes de jonctions.
+
+
+
+\subsection{Les notices constructeurs des différents instruments}
+
+Les notices des différents appareils constituant les boucles de régulation sont des documents fournis par les différents constructeurs de ces instruments sur lesquels on retrouve les caractéristiques techniques des appareils (échelle de mesure d’un transmetteur, signal de sortie, valeurs d’alimentation, précision garantie par le constructeur, etc.). 
+\vspace{0.3cm}
+
+On retrouve aussi dans ces notices les précautions à prendre pour le montage des instruments, une description du fonctionnement de l’appareil, quelquefois des schémas avec une nomenclature complète des différentes pièces, ou encore des documents de certification.
+
+
+
+\section{La symbolisation graphique}
+
+Nous n’allons pas étudier la norme Afnor dans le détail, mais nous contenter de voir les points les plus importants vous permettant de lire les schémas d’instrumentation des boucles de régulation d’un site d’incinération.
+\vspace{0.3cm}
+
+D’une manière générale, cette norme reprend pour l’essentiel les symboles définis d’une part par l’ISA (Instrument Society of America), d’autre part, par l’ISO (International Standard Organisation).
+\vspace{0.3cm}
+
+Dans la première partie nous allons voir les symboles des fonctions de bases, dans la deuxième partie, la représentation des signaux, dans la troisième les symboles des capteurs (différents types de capteurs de débit, de niveaux…). Puis viendront les symboles des dispositifs régulants, des robinets et des actionneurs, et la méthode d’identification des instruments. Enfin, dans la dernière partie nous étudierons quelques exemples.
+
+
+
+\subsection{Symbolisation des instruments}
+
+Les instruments de régulation, qu’ils s’agissent de transmetteurs, de régulateurs, de convertisseurs…, sont tous représentés par des cercles. 
+\vspace{0.3cm}
+
+Si l’appareil de régulation est un instrument local, celui-ci est représenté par un cercle simple. On entend par instrument local, un élément de la boucle de régulation situé à proximité du procédé. Par exemple, un transmetteur mesurant le niveau dans une cuve est obligatoirement situé à proximité de celle-ci : il s’agit, par définition, d’un instrument local. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_3.png}
+{Instrument individuel local}
+\end{figure} 
+
+Les instruments situés sur un tableau en salle de commande sont représentés par un cercle barré. Il s’agit principalement de régulateurs, d’indicateurs, d’enregistreurs ou de voyants d’alarme.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_4.png}
+{Instrument de tableau en salle}
+\end{figure}
+
+Il existe aussi des instruments de tableau local. Ce sont des instruments de tableau qui ne sont pas situés en salle de commande mais dans des petites salles, généralement peu éloignées du procédé. Ces instruments sont repérés par un cercle contenant deux barres.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_5.png}
+{Instrument de tableau local}
+\end{figure}
+
+
+Il est possible de compléter le cercle d’un instrument pour y ajouter une précision. Par exemple, on peut préciser le mode régulation d’un régulateur en indiquant les termes PID dans ce rectangle.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_6.png}
+\end{figure}
+
+Pour les convertisseurs, le cercle est complété d’un carré dans lequel on précise la nature de la conversion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_7.png}
+{Convertisseur de signal}
+\end{figure}
+
+
+
+a et b peuvent être :
+
+ \begin{itemize}
+\item 	A : analogique
+\item 	B : binaire
+\item 	D : numérique
+\item 	E : tension
+\item 	H : hydraulique
+\item 	I : courant
+\item 	O : électromagnétique
+\item 	P : pneumatique
+\item 	R : résistance
+\end{itemize}
+
+
+Par exemple, un Le convertisseur électropneumatique sera représenté ainsi : 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{Images/M26/M26_8.png}
+\end{figure}
+
+Il existe deux représentations possibles pour les points de mesures. La première consiste simplement en un trait fin reliant le transmetteur au procédé. La seconde, le plus souvent utilisé pour symboliser les sondes de température, est un trait fin complété d’un petit cercle. 
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{Images/M26/M26_9.png}
+{Points de mesure}
+\end{figure}
+
+
+
+
+
+D’autres appareils intervenants dans les boucles de régulation comme des automates programmables ou des calculateurs sont représentés par d’autres symboles.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{Images/M26/M26_10.png}
+\end{figure}
+
+
+
+\subsection{Symbolisation des signaux (liaisons)}
+
+On utilise les liaisons entre les différents instruments de régulation pour symboliser la nature des signaux de communication. 
+Les signaux les plus utilisés sont les signaux électriques et pneumatiques. 
+
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Images/M26/M26_11.png}
+\end{figure}
+
+L’alimentation des appareils peut être représentée par un trait continu fin, éventuellement complété par les abréviations suivantes :
+\begin{itemize} 
+\item 	AS : alimentation en air
+\item 	ES : alimentation électrique 
+\item 	GS : alimentation en gaz 
+\item 	HS : alimentation hydraulique 
+\item 	NS : alimentation en azote 
+\item 	SS : approvisionnement en vapeur 
+\item 	WS : approvisionnement en eau 
+\end{itemize}
+
+Remarque : Le S signifie supply (alimentation, en anglais).
+La valeur de l’alimentation peut également être précisée.
+
+
+
+\subsection{Symbolisation des capteurs}
+
+Il est possible de préciser la nature des capteurs. Il suffit pour cela de se reporter aux tableaux ci-dessous. Il est toutefois bon de préciser qu’on utilise qu’assez rarement ces symboles afin de ne pas alourdir les schémas. 
+
+\vspace{0.3cm}
+\textbf{Les capteurs de température}
+\vspace{0.3cm}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_12.png}
+\end{figure}
+
+
+
+\textbf{Les capteurs de pression}
+
+
+\begin{figure}[ H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_13.png}
+\end{figure}
+
+\textbf{Les capteurs de niveau}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_14.png}
+\end{figure}
+
+
+\textbf{Les capteurs de débit}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_15.png}
+\end{figure}
+
+\subsection{Les symboles d’identification} 
+
+La symbolisation des actionneurs se décompose en un symbole de l’organe de réglage complété par l’actionneur lui-même. C’est-à-dire que, pour les vannes, on représentera le corps de vanne complété par son servomoteur.
+
+
+\textbf{Les organes de réglage	}	
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_16.png}
+\end{figure}
+
+
+
+
+\textbf{		Vannes	}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_17.png}
+\end{figure}
+
+
+\textbf{	Actionneurs}			
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_18.png}
+\end{figure}
+
+
+\subsection{	Symboles d'identification}
+
+Tous les appareils sont identifiés par des lettres suivies de chiffres.
+L'objectif principal de la norme des symboles est la lisibilité. Dans ces conditions, il est indispensable que les identifiants (codes alphanumériques) accompagnant les symboles graphiques soient aisément compréhensibles : un même symbole est utilisé pour les régulateurs d'une chaîne de régulation de débit et d'une chaîne de régulation de température (les lettres F [débit] et T [température ] différencier les deux contrôleurs).
+\vspace{0.3cm}
+
+S'il est nécessaire d'identifier la fonction de chaque élément graphique, il est indispensable de codifier cette identification. Le guide de codification de l'instrument Afnor donne les principes suivants :
+
+ \begin{itemize}
+\item 	L'identifiant doit être composé d'au moins deux valeurs de code (c'est-à-dire deux lettres juxtaposées).
+\item 	Chaque valeur de code a une signification précise ; cette signification est liée à la place de la valeur du code dans l'identifiant.
+\end{itemize}
+
+La première valeur de code (ou lettre d'identification) de l'identifiant représente la variable mesurée, contrôlée, indiquée, etc. Cette lettre d'identification est dans tous les identifiants de la chaîne de mesure traitant cette variable (du capteur à l'organe de commande, en passant par l'actionneur) ; cette valeur de code est appelée un « signifiant » de la variable (ce signifiant a parfois un complément).
+\vspace{0.3cm}
+
+La valeur de code suivante concerne l'appareil à identifier (capteur, indicateur, transmetteur, enregistreur), la fonction réalisée (commande, commutation/contact, relais, calcul), l'appareil de commande (appareil de commande, actionneur, contrôleur autonome), et la signalisation (lumière, alarme).
+\vspace{0.3cm}
+
+Par exemple, l'identifiant LIT désigne un émetteur T, indicateur (I) de niveau (L). De même, TSL désigne un contact S (interrupteur) pour les basses (L) températures (T).
+\vspace{0.3cm}
+
+Les critères de sélection de la lettre d'identification ne sont pas toujours évidents. A noter qu'il faut choisir la variable à obtenir et non la variable mesurée par le capteur. Ainsi, par exemple, une mesure de niveau effectuée par un capteur de pression est identifiée par la lettre L (niveau), et non par P (pression). De même, une détection de niveau par un capteur de rayonnement est identifiée par la lettre L, et non par R (rayonnement).
+De plus, n'oubliez pas que tous les instruments d'une même chaîne de mesure doivent avoir la même lettre d'identification. Une fonction de contrôle de niveau, identifiée par la lettre L par exemple, peut être assurée par une mesure de pression (P) et un contrôle de débit (F) ; la fonction fournie est un contrôle de niveau.
+\vspace{0.3cm}
+
+Les valeurs de code sont généralement placées à l'intérieur de la bulle (au-dessus de la ligne horizontale pour les instruments du panneau de commande). 
+Ces valeurs de code peuvent être complétées par un numéro d'identification qui est placé à l'intérieur (sous les valeurs de code d'identification) ou à l'extérieur (près) de la bulle. 
+Les valeurs de code de qualification (voir ci-dessous) peuvent être placées à l'intérieur ou à l'extérieur de la bulle.
+\vspace{0.3cm}
+
+Nous n'allons pas passer ici en revue l'alphabet (voir tableau), mais notons néanmoins que la norme n'affecte pas les variables avec les lettres G, O et X, et que l'utilisation des lettres C, D, M et N sont "au choix de l'utilisateur" si la variable listée par la norme (respectivement : conductivité, densité, humidité, viscosité) n'est pas utilisée dans le schéma.
+De plus, s'agissant de l'action manuelle d'un opérateur sur un composant (lettre H), elle peut dépendre d'une ou plusieurs variables.
+\vspace{0.3cm}
+
+Notons enfin que, dans le cas d'entrées multiples où les variables (introduites dans un même composant) sont de natures différentes, la lettre U peut être utilisée comme première valeur de code pour chaque identifiant de variables mesurées.
+\vspace{0.3cm}
+
+\textbf{Complément (ou modificateur) de l’initiale}
+\vspace{0.3cm}
+
+Pour certaines variables, une autre lettre doit être ajoutée pour spécifier sa signification (par exemple, la température différentielle est TD). La majuscule est recommandée (par la norme) pour ce supplément. Cependant, des lettres minuscules peuvent être utilisées si cela aide à la compréhension.
+\vspace{0.3cm}
+
+Sept lettres complètent la lettre d'identification :
+
+ \begin{itemize}
+\item 	D pour différence (pression/température différentielle, etc.) ;
+\item 	F (fraction ou pourcentage) s'applique à une proportion de deux variables (le symbole FF fait référence à la proportion de deux flux dans un rapport donné) ;
+\item e point 	J s'applique à un instrument destiné à recevoir les signaux correspondant à plusieurs variables, au moyen d'un système de balayage automatique ou manuel ;
+\item 	K précise qu'une mesure dépend d'un taux de variation dans le temps (introduction d'un calendrier) ou d'un taux de variation (variation dans le temps) ;
+\item 	Q s'applique aux variables intégrées ou additionnées pour donner un résultat total ;
+\item le point 	S s'applique aux instruments autonomes destinés à assurer la sécurité des employés et à protéger les équipements ;
+\item 	X indique qu'il s'agit d'un élément de transmission nécessaire pour mesurer correctement la variable en question (pour un transmetteur de niveau barboteur, LT désigne le transmetteur de niveau, tandis que LX désigne le barboteur).
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{	Affichage, action, qualification}
+\vspace{0.3cm}
+
+
+Une ou plusieurs lettres succèdent à la ou aux lettres représentant la variable mesurée, et désignent soit l'élément primaire (capteur, etc.) soit la fonction de la variable. La norme définit ces lettres comme les valeurs de code suivantes.
+Parfois, les valeurs de code suivantes doivent être enchaînées pour compléter l'identification. Dans ce cas, l'ordre suivant doit être utilisé : 
+
+\begin{enumerate}
+\item 	Affichage : la lettre relative à la fonction passive/lecture (R pour enregistreur ou imprimante, I pour indicateur, etc.) ; 
+\item 	Action : la lettre relative à la fonction active/sortie (C pour commande, S pour interrupteur, T pour transmission, etc.) ;
+\item 	Modificateur de fonction : ajouter des valeurs de code de modification (H pour niveau haut, HH haut-haut, L bas, LL bas-bas, M milieu, etc.).
+\end{enumerate}
+
+Comme pour la première lettre, certaines de ces lettres sont "au choix de l'utilisateur": N et X (ou B), pour l'affichage, B, N et X représentent une action.
+
+\vspace{0.3cm}
+\textbf{La sécurité}
+\vspace{0.3cm}
+
+Notons qu’il y a deux niveaux pour représenter un dispositif de sécurité.
+Le niveau de sécurité qui ne s’applique qu’à un instrument autonome (destiné à assurer la sécurité des personnes et la protection des équipements) est identifié par la lettre S en complément de l’initiale : PSV pour une soupape de sûreté, PSE pour un disque de rupture, TSE pour un dispositif de sécurité thermique, etc.
+La sécurité au niveau de l’installation complète (arrêt d’urgence…) est quant à elle identifiée par le double codet qualificatif/S (qui prend place en fin de l’identificateur).
+
+Vous trouverez en annexe un tableau regroupant les codifications les plus couramment utilisées.
+
+
+
+\subsection{Exemples de repère d’instruments et de boucles complètes}
+
+Comme nous l’avons vu dans le module 25, une régulation complète de niveau comporte au minimum un capteur, un transmetteur, un régulateur, un convertisseur et une vanne :
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_19.png}
+\end{figure}
+
+
+Cette régulation se représentera de la façon suivante :
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_20.png}
+\end{figure}
+
+
+
+
+On peut rencontrer les exemples suivants :
+
+\begin{itemize}
+
+\item Un transmetteur de débit est représenté comme suit :  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_21.png}
+\end{figure}
+
+F pour Flux		
+T pour transmetteur
+
+
+
+\item Le contrôleur d'indicateur de pression est représenté comme suit : 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_22.png}
+\end{figure}
+
+
+C pour le régulateur
+P pour la pression				
+I pour l'indicateur
+
+\item Un convertisseur électropneumatique dans une boucle de régulation de température est représenté comme suit :
+						
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_23.png}
+\end{figure}
+
+
+
+
+I/P pour électropneumatique
+T pour température
+						
+Y pour convertisseur
+
+
+
+\item Une alarme de niveau haut est représentée comme suit :  
+						
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.1\textwidth]{Images/M26/M26_24.png}
+\end{figure}
+
+
+
+H pour haut
+L pour niveau			
+A pour alarme
+
+\end{itemize}
+
+\section{Les schémas de principe de régulation}
+
+
+Ce sont des P\&ID (schémas TI) où la tuyauterie a été supprimée et ne montrent donc que l'instrumentation. Les boucles de contrôle sont regroupées par thème.
+Ces diagrammes se lisent de haut en bas. Ils commencent par les émetteurs (fonction de mesure) et sont suivis des fonctions de contrôle, des fonctions de conduite, des fonctions d'indication et des actionneurs
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_25.png}
+\end{figure}
+
+
+Généralement, les périphériques des boucles adjacentes ayant les mêmes fonctions sont regroupés par zone.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_26.png}
+\end{figure}
+
+
+\section{	Schémas de câblage}
+
+
+Les instrumentistes ou les techniciens de maintenance ont aussi à leur disposition des schémas de câblage. Ces schémas, plus détaillés que les schémas TI, permettent de visualiser dans le détail le câblage des boucles de régulation.
+On retrouve dans ces schémas, non seulement les instruments, mais aussi et surtout les numéros de câbles reliant ces instruments, et même les numéros de bornes sur lesquelles ces câbles sont reliés.
+
+
+
+\subsection{	Schéma de câblage électrique}
+
+Les bornes de chaque appareil électronique sont symbolisées par des cercles identifiés par un numéro correspondant au numéro de bornes attribué par le constructeur. Toutes les bornes câblées sont rassemblées dans un rectangle symbolisant le bornier. 
+
+Représentation des bornes de câblage d’un régulateur indicateur de débit n° 301 :
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{Images/M26/M26_27.png}
+\end{figure}
+
+On retrouve souvent dans ces schémas des boîtes de jonction dont le symbole ressemble à celui d’un bornier mais qui comporte en plus un numéro de boîte.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Images/M26/M26_28.png}
+\end{figure}
+
+
+Les schémas de câblage complets contiennent les différents instruments de contrôle, leurs borniers, les boîtes de jonction, et les connexions (fils) reliant ces appareils.
+Les valeurs de puissance et de signal utilisées peuvent être spécifiées dans le schéma de câblage.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/M26/M26_29.png}
+\end{figure}
+
+\subsection{	Schéma de câblage pneumatique}
+
+Pour les appareils pneumatiques, les orifices de câblage pneumatiques sont symbolisés par des petits carrés juxtaposés identifiés par un numéro ou par une ou plusieurs lettres. 
+Généralement, la lettre I correspond à l’entrée (pour input), la lettre O correspond la sortie (pour output), la lettre S correspond à l’alimentation (pour supply). 
+Les valeurs d’alimentation et de signal utilisées peuvent être précisées sur le schéma de câblage.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Images/M26/M26_30.png}
+\end{figure}
+
+Les schémas de câblage complets contiennent donc les différents instruments de régulation, leurs orifices, les boîtes de jonction ainsi que les liaisons (tubes pneumatiques) reliant ces appareils.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/M26/M26_31.png}
+\end{figure}
+
+
+\newpage
+
+\subsection{	Annexe 1 : Symboles boursiers ISA et ISO pour capteurs et actionneurs}
+
+1. Capteurs de température
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Images/M26/M26_32.png}
+\end{figure}
+
+2. Capteurs de pression
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Images/M26/M26_33.png}
+\end{figure}
+\newpage
+3. Capteurs de niveau
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Images/M26/M26_34.png}
+\end{figure}
+\newpage
+4. Capteurs de débit
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Images/M26/M26_35.png}
+\end{figure}
+\newpage
+5. Contrôle des composants
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Images/M26/M26_36.png}
+\end{figure}
+
+\newpage
+
+6. Actionneurs
+
+\begin{figure}[H]
+\centering
+\includegraphics [width=\textwidth]{Images/M26/M26_37.png}
+\end{figure}
+\newpage
+\subsection{	Annexe 2 : Tableau des valeurs de code communes}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/M26/M26_38.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/M26/M26_39.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.55]{Images/M26/M26_40.png}
+\end{figure}
+
+
+
+NOTES
+
+\begin{enumerate}
+\item 	Utiliser la gauche au choix de l'utilisateur si la variable listée N'est pas utilisé.
+\item 	Modificateur de variable : D = différentiel, Q = intégration ou totalisateur, F = rapport (fraction ou pourcentage), 
+S = sécurité (uniquement pour les éléments primaires de sécurité autonomes), J = balayage.
+\item 	E = général, P = connexion pour mesure en attente ou pour échantillonnage (par exemple échantillonnage AP). 
+W = manche ; O = s'applique uniquement au limiteur de débit FO.
+\item 	Indication; G = miroir, uniquement pour l'observation.
+\item 	et 6. Contact, S = ajouté à l'instrument s'il est intégré (en 5) ou séparé (en 6).
+\item 	Lumière ou alarme : HH = haut-haut, M = moyen ou intermédiaire, L = bas, H = haut, HH = haut-haut.
+\item 	Relais ou accessoires divers et de calcul, tels que les relais électromagnétiques.
+\item 	Elément de commande final auto-actionné (réducteur de pression, régulateur, etc.) ; CV = vanne de régulation, 
+SV = vanne de sécurité.
+\item 	Action du servomoteur hors tension : FO = échec de la position d'ouverture.
+\item 	FL = échec en position verrouillée, FC = échec en position fermée, FI = échec en position intermédiaire, etc.
+\end{enumerate}
+

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin: 40px 0 30px 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #0056b3;
+            margin: 35px 0 20px 0;
+            font-size: 1.7em;
+            border-left: 4px solid #0056b3;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #003d82;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            border-left: 3px solid #003d82;
+            padding-left: 12px;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<h1>Autosurveillance</h1>
+
+<p>Ce module a pour but de vous sensibiliser à l’importance de la réglementation environnementale et à ses implications pratiques sur une usine d’incinération de déchets dangereux. Vous verrez que l’auto-surveillances des différents rejets (atmosphériques, aqueux, résidus) est une composante importante de nos métiers et un savoir-faire.</p>
+
+<p>Vous apprendrez à connaître les différents types d’analyseurs en continu des émissions atmosphériques, les systèmes de prélèvement ponctuels, les analyses réalisées et la gestion de toutes ces données environnementales.</p>
+
+<h2> Les exigences réglementaires</h2>
+
+<p>Une usine d'incinération de déchets produit trois types d'émissions différentes : 
+<ul>
+ <li>les émissions atmosphériques</li>
+ <li>les résidus (issus de la combustion et de l'épuration des fumées)</li>
+ <li>les effluents aqueux</li>
+</ul></p>
+
+<p>L'arrêté préfectoral fixe les exigences réglementaires en termes de seuils de rejets et de contrôle.
+Il respecte a minima les exigences de l'arrêté ministériel sur l'incinération, publié le 20 septembre 2002 (appliquant la directive européenne 2000/76/CE).</p>
+
+<h3>Contrôle de la combustion</h3>
+
+<p>Article 9</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Les installations d’incinération sont exploitées de manière à atteindre un niveau d’incinération tel que la teneur en carbone organique total (COT) des cendres et mâchefers soit inférieure à 3\
+tcolorbox</p>
+
+<p>La qualité des mâchefers doit être contrôlée régulièrement, par les opérateurs de l'incinérateur (aspect visuel lors des contrôles) et par le laboratoire.</p>
+
+<p>Article 9 (suite)</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]</p>
+
+<p>Les installations d’incinération sont conçues, équipées, construites et exploitées de manière à ce que, même dans les conditions les plus défavorables que l’on puisse prévoir, les gaz résultant du processus soient portés, après la dernière injection d’air de combustion, d’une façon contrôlée et homogène, à une température de 850 ° C pendant deux secondes, mesurée à proximité de la paroi interne ou en un autre point représentatif de la chambre de combustion défini par l’arrêté préfectoral d’autorisation. Le temps de séjour devra être vérifié lors des essais de mise en service. S’il s’agit de déchets dangereux ayant une teneur en substances organiques halogénées, exprimée en chlore, supérieure à 1 p. 100, la température doit être amenée à 1100 ° C pendant au moins deux secondes.
+tcolorbox</p>
+
+<p>[…]
+tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Chaque ligne d’incinération est équipée d’au moins un brûleur d’appoint, lequel doit s’enclencher automatiquement lorsque la température des gaz de combustion tombe en dessous de 850 ° C ou de 1100 ° C, selon le cas, après la dernière injection d’air de combustion. Ces brûleurs sont aussi utilisés dans les phases de démarrage et d’extinction afin d’assurer en permanence la température de 850 °C ou de 1100 ° C, selon le cas, pendant lesdites phases et aussi longtemps que des déchets non brûlés se trouvent dans la chambre de combustion.
+tcolorbox</p>
+
+<p>[…]</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Les installations d’incinération et de co-incinération possèdent et utilisent un système automatique qui empêche l’alimentation en déchets :
+<ul>
+ <li>pendant la phase de démarrage, jusqu'à ce que la température de 850 °C ou 1100 ° C, selon le cas, ou la température précisée au paragraphe (f) ait été atteinte ;</li>
+ <li>chaque fois que la température de 850°C ou 1100 ° C, selon le cas, ou la température fixée au paragraphe (f) n’est pas maintenue.</li>
+ <li>chaque fois que les mesures en continu prévues par l’article 28 montrent qu’une des valeurs limites d’émission est dépassée en raison d’un dérèglement ou d’une défaillance des systèmes d’épuration.</li>
+</ul>
+tcolorbox</p>
+
+<p>Cet article implique un suivi très rigoureux de la température de combustion. Le conducteur de four doit être très vigilant afin d’éviter la sécurité « arrêt déchets sur température basse » ou « arrêt déchet sur dépassements émissions ».
+Il est aidé dans sa conduite par des alarmes en anticipation qui le renseignent sur une dérive du procédé.</p>
+
+<h3>Émissions atmosphériques</h3>
+
+<p>Article 18</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Les valeurs limites d'émission sont respectées si : 
+<ul>
+ <li>aucune des moyennes journalières mesurées ne dépasse les limites d’émission fixées à l’article 17 pour le monoxyde de carbone et pour les poussières totales, les substances organiques à l’état de gaz ou de vapeur exprimées en carbone organique total (C.O.T.), le chlorure d’hydrogène, le fluorure d’hydrogène, le dioxyde de soufre et les oxydes d’azote ;</li>
+ <li>aucune des moyennes sur une demi-heure mesurées pour les poussières totales, les substances organiques à l’état de gaz ou de vapeur exprimées en carbone organique total, le chlorure d’hydrogène, le fluorure d’hydrogène, le dioxyde de soufre et les oxydes d’azote ne dépasse les valeurs limites définies à l’article 17 ;</li>
+ <li>aucune des moyennes mesurées sur la période d’échantillonnage prévue pour le cadmium et ses composés ainsi que le thallium et ses composés, le mercure et ses composés, le total des autres métaux (Sb+As+Pb+Cr+Co+Cu+Mn+Ni+V), les dioxines et furannes, ne dépasse les valeurs limites définies à l’article 17.</li>
+ <li>95 p. 100 de toutes les moyennes mesurées sur dix minutes pour le monoxyde de carbone sont inférieures à 150 mg/m3 ; ou aucune mesure correspondant à des valeurs moyennes calculées sur une demi-heure au cours d’une période de 24 heures ne dépasse 100 mg/m3.</li>
+</ul>
+tcolorbox</p>
+
+<p>Cet article exige de l’exploitant qu’il soit capable de mesurer en continu les polluants suivants : HCl, SO2, Poussières, CO, COT, NOx.
+(concernant HF, la plupart des usines ont une dérogation qui considère que si le traitement est efficace sur HCl, il l’est a fortiori sur HF, plus réactif).
+De plus l’exploitant doit être en mesure de présenter le détail de ses émissions (moyenne 10mn, ½ h et journalière), de compter les dépassements et de les expliquer.</p>
+
+<p>Article 18 (suite)</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Pour qu’une moyenne journalière soit valide, il faut que, pour une même journée, pas plus de cinq moyennes sur une demi-heure n’aient dû être écartées pour cause de mauvais fonctionnement ou d’entretien du système de mesure en continu. Dix moyennes journalières par an peuvent être écartées au maximum pour cause de mauvais fonctionnement ou d’entretien du système de mesure en continu.
+tcolorbox</p>
+
+<p>Ce texte impose à l’exploitant de suivre précisément le temps de fonctionnement de ses analyseurs. Concrètement, il faut compter les temps de panne, les temps de calibrage 0, les temps d’étalonnage, les temps d’indisponibilité de la base de données informatiques.</p>
+
+<h3>Valeurs limites d'émission</h3>
+
+<p>Le traitement des fumées est obligatoire pour les usines d'incinération.
+Le traitement des gaz de combustion est obligatoire pour les installations d’incinération.</p>
+
+<p>Les installations d’incinération d’ordures ménagères existantes doivent appliquer depuis 1991 des valeurs limites d’émission de polluants. Depuis février 1997, les nouvelles installations doivent appliquer des valeurs limites d’émission encore plus sévères.</p>
+
+<p>Valeur limite d’émission : c’est une teneur ou concentration à ne pas dépasser. 
+Elle doit être exprimée en mg/Nm3 ramené à 11\</p>
+
+<strong>Valeurs limites journalières d'émission de polluants pour les installations existantes (Arrêté du 20 septembre 2002)</strong> :
+
+<img src="../images/M10/M10_1.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Voir fiche index : Réglementation applicable aux systèmes d'incinération des déchets dangereux, Unité no. 3.
+ 
+<h4> Correction des mesures de polluants en sortie selon la réglementation</h4></p>
+
+<p>Chaque incinérateur est différent. Les gaz de combustion contiennent un pourcentage d’oxygène spécifique pour chaque unité. Plus ce pourcentage sera élevé et plus les polluants contenus dans ces gaz seront dilués, et, par conséquent, afficheront une concentration en mg/m3 plus faible. Cet oxygène provient de l’excès d’air de combustion et aussi d’infiltration d’air dans le système car celui-ci est maintenu sous une pression négative crée par le ventilateur de tirage raccordé à la cheminée.</p>
+
+<p>Pour palier ce problème, les réglementations imposent une façon standard de comparer les gaz de combustion. Elles exigent que les concentrations mesurées soient recalculées pour les exprimer au niveau qu’il aurait été possible de les mesurer si les gaz de combustion avaient tous eu le même pourcentage d’oxygène. La réglementation française et européenne fixe ce pourcentage de comparaison standard à 11\</p>
+
+<p>Pour des raisons identiques il faut choisir, si on exprime la concentration en polluants d’un gaz de combustion sous une base humide ou sèche. Comme les gaz de combustion peuvent facilement contenir jusqu’à 15\</p>
+
+<p>La température et la pression sont aussi des facteurs importants à normaliser pour bien s’assurer que l’on mesure une quantité de polluants sur des quantités de gaz qui sont comparables : les concentration sont toujours exprimées en mg ou ng par Normal mètre cube (Nm3), concept étudié aux modules 3 et 5. La réglementation fixe les conditions du Normal mètre cube à 0 °C pour la température et à 101,3 kPa pour la pression.</p>
+
+<h3>Contrôle des déchets de l'usine</h3>
+
+<p>Article 26</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+L’arrêté préfectoral d’autorisation fixe la périodicité des contrôles à réaliser. Cette périodicité est au moins trimestrielle pour les résidus d’épuration des fumées.</p>
+
+<p>La teneur en carbone organique total ou la perte au feu des mâchefers est vérifiée au moins une fois par mois et un plan de suivi de ce paramètre est défini.
+tcolorbox</p>
+
+<p>Le contrôle des REF permet également de réaliser des bilans matières sur les polluants et de mieux connaître les points de fonctionnement du système de traitement des fumées.</p>
+
+<h3>Contrôle des rejets aqueux</h3>
+
+<p>Article 21</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]
+Les effluents aqueux issus des installations de traitement des déchets doivent faire l’objet d’un traitement permettant de satisfaire aux points de rejet aux valeurs limites de rejet fixées à l’annexe 4. Les effluents sont ceux notamment issus des opérations suivantes :
+<ul>
+ <li>dépotage ;</li>
+ <li>entreposage ;</li>
+ <li>traitement des gaz</li>
+ <li>refroidissement des mâchefers ;</li>
+ <li>nettoyage des chaudières.</li>
+</ul></p>
+
+<p>Ces dispositions ne concernent ni les eaux de ruissellement qui ne sont pas entrées en contact avec les déchets ni les eaux usées domestiques. []
+tcolorbox</p>
+
+<p>Article 29</p>
+
+<p>tcolorbox[colback=blue!5!white,colframe=blue!75!black]</p>
+
+<p>L’exploitant doit mettre en place un programme de surveillance de ses rejets aqueux. Les mesures sont effectuées sous la responsabilité de l’exploitant et à ses frais dans les conditions fixées par l’arrêté d’autorisation, qui sont au moins celles qui suivent. Des fréquences supérieures peuvent être définies par l’arrêté d’autorisation lorsque la sensibilité du milieu récepteur le justifie.</p>
+
+<p>L’exploitant doit réaliser la mesure en continu des paramètres suivants : pH, température, débit et concentration en C.O.T. Dans le cas où des difficultés sont rencontrées pour la mesure du C.O.T. en continu en raison de la présence de chlorures, la mesure de C.O.T peut être réalisée à fréquence journalière, sur échantillonnage ponctuel.</p>
+
+<p>L’exploitant doit également réaliser des mesures journalières sur échantillonnage ponctuel de la quantité totale de solides en suspension et de la demande chimique en oxygène, sauf si cette mesure n’est pas compatible avec la nature de l’effluent, et notamment lorsque la teneur en chlorure est supérieure à 5 g/l.</p>
+
+<p>L’exploitant doit en outre faire réaliser par un organisme compétent des mesures mensuelles, par un prélèvement sur 24 heures proportionnel au débit, des paramètres suivants : métaux (Hg, Cd, Tl, As, Pb, Cr, Cu, Ni et Zn), fluorures, CN libres, hydrocarbures totaux, AOX et demande biochimique en oxygène.</p>
+
+<p>Il doit enfin faire réaliser par un organisme compétent au moins deux mesures par an des dioxines et des furannes. Au cours de la première année d’exploitation, une telle mesure est réalisée tous les trois mois.</p>
+
+<p>tcolorbox</p>
+
+<p>Les valeurs limite d’émission dans le milieu naturel sont donnés au module 3.</p>
+
+<h3>Surveillance des impacts</h3>
+
+<p>L’ article 30 impose des contrôles réguliers de la qualité des aquifères, c’est à dire des eaux souterraines au droit de l’usine.</p>
+
+<p>L’article 31 demande le suivi de l’impact sur l’environnement par des méthodes de quantification des retombées polluantes. Il s’agit de mettre en place un programme de prélèvement et d’analyse de substrats autour de l’usine.</p>
+
+<h2>Les outils analytiques de mesure des émissions atmosphériques</h2>
+
+<p>Les exigences réglementaires, on l’a vu, sont très fortes en matière d’auto surveillance sur les usines d’incinération.
+Il en résulte que ces usines sont très bien équipées en matériels de prélèvement et de mesure, et en personnel compétent pour maintenir et utiliser ces appareils.</p>
+
+<h3>Les analyseurs de fumées en continu</h3>
+
+<p>Rôle</p>
+
+<p>Selon leur localisation, ils fournissent soit des information purement de process, soit des valeurs d’émissions réglementaires.</p>
+
+<p>Analyseurs de process</p>
+
+<p>Installés tout au long du process, ils donnent des informations qui permettent de d’optimiser la conduite des procédés :</p>
+
+<ul>
+ <li>O2 et CO mesurés dans la chaudière Ce sont, avec la température, les principaux paramètres de conduite de la combustion.</li>
+ <li>HCl et SO2 avant traitement des fumées Certaines usines sont équipés d’analyseurs de polluant avant traitement (appelés analyseurs intermédiaires). Ils permettent d’optimiser l’injection des réactifs de neutralisation, en contrôlant des boucles de régulation.</li>
+</ul>
+
+<p>Analyseurs réglementaires</p>
+
+<p>Il s’agit des analyseurs installés à la cheminée. Ce sont les indicateurs de la performance environnementale et réglementaire de l’incinérateur.</p>
+
+<p>Le schéma ci-dessous montre un exemple de la disposition des analyseurs process et réglementaire (en bleu) sur une ligne d’incinération.</p>
+
+<img src="../images/M10/M10_2.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Principes de mesure pour les analyseurs</strong>
+
+<strong>Analyseur d'échantillons / Analyseur in situ</strong>
+
+<p>L’analyseur par prélèvement possède une ligne d’échantillonnage, et une pompe, qui aspire les fumées vers la cellule d’analyse. De cette manière un temps d’échantillonnage est introduit et décale le signal délivré par rapport au phénomène réel. Le gaz peut ensuite être séché ou au contraire maintenu à température élevée pour éviter la condensation d’eau. Enfin, il est généralement analysé dans la cellule de mesure par un système optique (émission de lumière à travers la cellule et réception/analyse de la lumière). Ces analyseurs sont généralement installés en cheminée, pour l’analyse réglementaire.</p>
+
+<img src="../images/M10/M10_3.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Multigas Analyzer SICK}
+
+<p>L’analyseur in situ est composé d’un émetteur et d’un récepteur de lumière directement installés sur le conduit des gaz. Ce système est plus réactif que le système avec prélèvement. Par contre, il est installé dans un milieu plus difficile (poussières, diamètre du conduit) et la mesure est plus délicate. Ces analyseurs sont généralement installés en intermédiaire sur le process.</p>
+
+<img src="../images/M10/M10_4.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Principe d'analyse IN-SITU}
+
+<p>O2</p>
+
+<p>Plusieurs techniques de mesure sont utilisées, par prélèvement ou in situ, pour mesurer ce paramètre fondamental de combustion.
+<ul>
+ <li>Infrarouge (IR) : Voir principe au § suivant (polluants)</li>
+ <li>Paramagnétique : La concentration en oxygène dans le gaz modifie le champ magnétique d'un matériau particulier (appelé paramagnétique). Un courant électrique est généré, proportionnel à la concentration en O2.</li>
+ <li>Diffusion moléculaire : L'oxygène contenu dans la fumée se diffuse à travers une sonde en oxyde de zirconium ("Zr Probe"). Un courant électrique est généré, proportionnel à la concentration en O2.</li>
+</ul></p>
+
+<p>Polluants HCl, SO2, CO, TOC, NOx</p>
+
+<p>Tous ces polluants sont principalement analysés par Infra-Rouge (IR).
+Un rayon optique émis par une source IR traverse la chambre de mesure et est focalisé sur un détecteur IR. Chaque gaz à analyser présent dans le trajet optique absorbe le rayon optique à des longueurs d’ondes spécifiques et proportionnellement à sa concentration (loi de Beer-Lambert).</p>
+
+<p>Des filtres interférenciels, délimitant une zone de longueurs d’onde, sont placés successivement devant la source lumineuse (grâce à un carrousel) et permettent de mesurer spécifiquement les absorbances des différents gaz. Grâce à la mesure de l’absorbance de référence du gaz à une concentration donnée, on en déduit alors la concentration dans l’échantillon.</p>
+
+<p>Poussière</p>
+
+<p>Les poussières sont mesurées généralement soit par opacimétrie, soit par jauge béta.
+<ul>
+ <li>Opacimétrie (in situ) : un laser émet de la lumière à travers les fumées vers un récepteur. La quantité de lumière transmise est déterminée et est proportionnelle à l’opacité et donc à la concentration en poussières de fumées.</li>
+ <li>Jauge béta (par prélèvement uniquement) : les fumées passent à travers un filtre pendant un temps donné (système semi-continu) sur lequel s’accumulent les poussières. La quantité de poussières est alors déterminée grâce au rayonnement d’une source radioactive béta.</li>
+</ul></p>
+
+<p>H2O</p>
+
+<p>La vapeur d’eau est généralement mesurée par IR.
+Néanmoins, dans le cas de techniques de mesure avec prélèvement, elle peut être simplement éliminée par des sécheur.</p>
+
+<p>Il est toujours extrêmement important de connaître la technique de mesure employée pour mesurer un élément afin de savoir si la valeur délivrée par l’analyseur est sur gaz sec ou humide.</p>
+
+<img src="../images/M10/M10_5.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Il est aussi très important de savoir si les valeurs qui apparaissent sur les supervisons et dans les rapport ont été corrigées en H2O et/ou O2 ou s’il s’agit de valeurs ‘brutes’.</p>
+
+<p>Débit</p>
+
+<p>Le débit de fumées est un paramètre très important. En effet, les flux de polluants de l’installations sont calculés à partir des concentrations et du débit (attention à bien multiplier des concentrations en mg/Nm3 sec corrigés à 11\</p>
+
+<p>La mesure est généralement fait par un tube multi-pitot, qui mesure la pression différentielle dans le conduit, ce qui permet de calculer la vitesse des gaz, et grâce à la géométrie du conduit, le débit.</p>
+
+<h4> Échelles de mesure</h4>
+
+<p>Les échelles de mesure doivent être adaptées aux phénomènes que l’ont souhaite mesurer. En particulier, elles doivent être suffisamment étendues pour appréhender la variabilité des concentrations de polluants.
+Pour les mesures réglementaires, des étendues d’échelle de 2 fois la Valeur Limite d’Emission en moyenne ½ h, couvre de façon satisfaisant les phénomènes observés.</p>
+
+<img src="../images/M10/M10_6.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h4>Temps de mesure</h4>
+
+<p>Plusieurs temps interviennent dans le processus d’analyse du phénomène physique et de traitement du signal généré.
+Temps d’acquisition de l’analyseur : c’est le temps nécessaire à l’analyseur pour produire une données pour un polluant donné. Ce temps est généralement de l’ordre de quelques secondes. La valeur délivrée est une moyenne glissante réalisée sur une à deux minutes.</p>
+
+<p>Temps de rafraîchissement de la supervision : les données fournies par l’analyseur sont transmise directement au superviseur qui les affiche en salle de contrôle. Ces valeurs sont rafraîchies avec un rythme propre au superviseur (quelques secondes).</p>
+
+<p>Temps d’acquisition du système de stockage et de traitement des données émissions : les données issues des analyseurs sont échantillonnés vers une base de données informatique avec un certain pas (1s, 30s, 60s). C’est à partir de cette base de données que seront effectués les calculs de correction et de moyenne.</p>
+
+<h4>Etalonnage</h4>
+
+<p>Les analyseurs en continu sont étalonnés régulièrement, au moins une fois par an, lors de l’arrêt pour entretien de l’installation.
+Il s’agit d’un étalonnage externe, réalisé avec des gaz étalons en bouteille.</p>
+
+<p>Exemple d’analyseurs utilisé sur les UIDD de SARPI</p>
+
+<img src="../images/M10/M10_7.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Les analyses ponctuelles</h3>
+
+<p>Certains polluants ne peuvent, dans l’état actuel des techniques, être mesurés en continu.</p>
+
+<p>L’arrêté ministériel fixe une fréquence minimale pour la réalisation de ces mesures par des organismes agréés.
+Il s’agit principalement :</p>
+
+<ul>
+ <li>des métaux (Mx)</li>
+ <li>des dioxines et furanes (PCDD-F)</li>
+ <li>de l'acide fluorhydrique (HF)</li>
+</ul>
+
+<p>A cet effet, une plate-forme de prélèvement est installée sur la cheminée. Des brides normées permettent aux prestataires d’installer rapidement leur matériel de prélèvement.</p>
+
+<h4>Les métaux</h4>
+
+<p>Les Métaux réglementés par l'arrêté ministériel sont les suivants :
+<ul>
+ <li>Mercure (Hg)</li>
+ <li>Cadmium (Cd) + Thallium (Tl)</li>
+ <li>Antimoine (Sb) + Arsenic (As) + Plomb (Pb) + Chrome (Cr) + Cobalt (Co) + Cuivre (Cu) + Manganèse (Mn) + Nickel (Ni) + Vanadium (V)</li>
+</ul></p>
+
+<p>Les fumées sont prélevées pendant 2 heures à partir de la bride normé en cheminée. Le système de prélèvement est constitué d’une canne chauffée, d’un filtre, d’un condensateur et de flacons contenant des solution de barbottage. Le prélèvement doit être réalisé de manière isocinétique (la vitesse d’aspiration des fumées dans le système doit être égale à la vitesse des fumées dans la cheminée). Un compteur permet de connaître le volume de fumées aspiré pendant le temps du prélèvement.</p>
+
+<p>Les métaux contenus dans les poussières sont piégés dans le filtre et les métaux sous forme gazeuse sont dissous dans la solution de barbottage.</p>
+
+<p>Après analyse du filtre et de la solution en laboratoire, puis correction du volume de fumées prélevé et des conditions (O2, H2O), on obtient la concentration de chaque métaux dans les fumées, sous forme particulaire et sous forme gazeuse.</p>
+
+<h4>Les dioxines et furanes (PCDD-F)</h4>
+
+<p>Nous avons vu que les PCDD-F sont des composés organiques présent à l’état de traces dans les fumées.
+Le prélèvement des ces composés est très délicat à réaliser. Une norme européenne décrit précisément les étapes à respecter. Néanmoins, les difficultés de ce prélèvement introduisent des incertitudes qui peuvent aller jusqu’à 100\
+Prélèvement : le système de prélèvement, installés sur la bride normée, est le suivant :</p>
+
+<img src="../images/M10/M10_8.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Les PCDD-F sont arrêtés sur le filtre et sur la résine absorbante.
+Extraction :ces deux substrats sont ensuite envoyés dans un laboratoire agréé qui procède dans un premier temps à l’extraction des PCDD-F à l’aide de solvants.
+Analyse : les PCDD-F en solution dans les solvants sont alors analysés par un spectromètre de masse à haute résolution. Le laboratoire délivre des résultats en ng par congénère dans les substrats.</p>
+
+<p>Le rapport final du prestataire de service fait apparaître les conditions de la mesure, les résultats d’analyses dans la solution et enfin les résultats dans les fumées après les corrections habituelles (O2, H2O, et facteur de toxicité : ng I-TEQ / Nm3 sec 11\</p>
+
+<h2>La gestion des données d'autosurveillance</h2>
+
+<h3>Gestion des données d'émissions atmosphériques</h3>
+
+<p>Les analyseurs produisent énormément de données qui sont échantillonnées et stockées dans un système informatique.
+A titre d’exemple, avec une fréquence d’échantillonnage de 60s, nous obtenons 525 600 valeurs par polluant pour une année entière.</p>
+
+<h4> Calcul des moyennes</h4>
+
+<p>A partir de ces valeurs sont calculées, en temps réel, les moyennes 10mn, ½ h et journalières pour chaque polluant. Ces valeurs moyennes sont également stockées dans la base de données.
+On peut ensuite représenter ces ensembles par un spectre de répartition par polluant.
+Il présente le détail de la répartition des 15 000 moyennes ½ h de l’année par tranche.</p>
+
+<img src="../images/M10/M10_9.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h4>Suivis des dépassements</h4>
+
+<p>Les dépassements sont suivis en temps réel et même anticipés par le calculateur. Ce renseignement est fourni au chef de quart qui agit sur l’installation en connaissance de cause.
+Un récapitulatif des dépassements est réalisé mensuellement et envoyé aux autorités environnementales, avec les explications nécessaires.</p>
+
+<img src="../images/M10/M10_10.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h4> Suivi des performances analyseurs</h4>
+
+<p>Les temps de marche et d’arrêt des analyseurs sont précisément consignés. L’absence de données venant de l’analyseur est renseigné avec détail : panne analyseur, auto-calibration…</p>
+
+<img src="../images/M10/M10_11.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Le suivi des résidus</h3>
+
+<p>Les mâchefers sont contrôlés régulièrement par le personnel de quart lors des rondes (aspect visuel, odeur) et par le laboratoire sur des échantillons moyens (moyenne hebdomadaire des échantillons prélevés quotidiennement).
+Le prélèvement de l’échantillon de mâchefers est effectué avec soin, en sortie de l’extracteur, sur du mâchefer « frais ».</p>
+
+<p>Les mâchefers doivent évidemment respecter la norme des 3\</p>
+
+<p>Les Résidus d’Epuration des Fumées (REF) sont également suivi régulièrement (quotidiennement ou hebdomadairement), vis à vis de paramètres exploitation (Cl, S, réactif libre) et de paramètres « stockage » (lixiviation, fraction soluble…).</p>
+
+<h3>Le suivi des effluents</h3>
+
+<p>Les effluents concernés par l’arrêté ministériel (dépotage, entreposage, traitement des gaz, refroidissement des mâchefers, nettoyage des chaudières) sont traités et suivi afin d’atteindre les exigences de rejet réglementaires.
+Le pH et la température sont relevés en continu.</p>
+
+<p>Pour les autres paramètres et pour des débits assez importants, un préleveur automatique réalise un échantillon moyen 24h qui est analysé le jour suivant au laboratoire de l’usine. Des contrôles sont réalisés par des organismes extérieurs conformément à la fréquence fixée par l’arrêté.
+De même que pour les émissions, un suivi précis des données effluents est réalisé (tableau récapitulatif, comptage et explication des dépassements…).</p>
+
+<h3>Le suivi des impact environnementaux</h3>
+
+<p>Les aquifères (nappe phréatiques) au droit de l’usine sont contrôlé régulièrement, conformément à la fréquence fixée par l’arrêté préfectoral.</p>
+
+<p>Un programme de suivi des retombées atmosphériques dans l’environnement immédiat de l’usine est mis en place.
+Il peut s’agir d’installation de jauges de collecte en différents points de retombées du panache de fumées (fonction de la rose des vents du site). Il peut également s’agir de campagnes de prélèvement de terre ou de lichens.</p>
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M9.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M11.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+</body>
+</html>

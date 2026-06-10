@@ -1,0 +1,122 @@
+
+\documentclass[a4paper,11pt,oneside,openright,notitlepage]{book}
+
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{-1000pt}{0pt}
+
+
+\usepackage{fullpage}
+%\addtolength{\oddsidemargin}{-0.1in}
+%\addtolength{\evensidemargin}{-0.1in}
+%\addtolength{\textwidth}{1in}
+
+
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+%Packages utilisés :
+\usepackage[T1]{fontenc}			%codage de caractères T1
+%\usepackage[latin1]{inputenc}	%caractères accentués
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{natbib}           %augmente la variété de styles de bibliographie
+%\usepackage[english]{babel}	
+\usepackage[french]{babel}
+%\usepackage[spanish]{babel}
+
+%adaptation de LaTeX au français
+\addto\captionsfrench{\def\tablename{TABLEAU}}
+
+
+%\usepackage[english]{babel}
+\usepackage{amsmath}					%complement mathematique
+\usepackage{amssymb}					%ajoute des symboles
+\usepackage{amstext}          %ajoute des caractères spéciaux
+\usepackage{amsfonts}         %ajoute des lettres doubles
+\usepackage{isomath}
+\usepackage{theorem}          %permet de modifier les thm et déf, comment changer l'écriture des titres ou ajouter des lignes,...
+\usepackage{array}						%Outils supplémentaires pour les tableaux
+\usepackage{multicol}					%Plusieurs colonnes possibles
+\usepackage{multirow}					%modification des tableaux
+\usepackage{colortbl} % coleur dans tableau
+\usepackage{chemist}
+ \usepackage[version=4]{mhchem}
+
+\usepackage{chemgreek}
+\usepackage{xspace}						%Gestion des espaces
+\usepackage[pdftex]{graphicx}	%inclure des graphiques
+\usepackage{indentfirst} 			%indenter le premier paragraphe après une nouvelle section
+\usepackage{latexsym}					%ajoute des symboles
+\usepackage{setspace}					%Pour les Interlignes
+\usepackage{algorithm}				%Pour les algorithmes
+\usepackage{algorithmic}			%Pour les algorithmes
+\usepackage{makeidx}					%Pour l'index
+\usepackage{vmargin}					%Definition des marges
+\usepackage{float}            %Placer où on veut les figures avec H
+\usepackage{enumerate}        %permet de faire des énumérations
+\usepackage{verbatim}         %Insérer du code source d'un pgm
+\usepackage{floatflt}         %permet d'insérer des images ou des tableaux N'IMPORTE OÙ
+\usepackage{rotating}					%permet d'ajouter des tableaux et des figures en mode paysage
+\usepackage{longtable}        % permet de créer un tableau sur plusieurs pages
+%\usepackage[pdfa,a4paper=true,pagebackref=true]{hyperref}
+%\usepackage{natbib}           %augmente la variété de styles de bibliographie
+\usepackage[french]{varioref} %varioref sert pour des références variées
+\usepackage{url}              %permet de citer des pages web dans la bibliographie
+\bibpunct{[}{]}{;}{a}{ }{,}
+\RequirePackage{ifpdf}
+%\ifpdf \PassOptionsToPackage{pdfa,a4paper=true,pagebackref=true}{hyperref} \fi
+%\RequirePackage{hyperref}
+\usepackage{textgreek}
+\usepackage{chemmacros}
+\usepackage{tcolorbox}
+
+\usepackage{tikz}
+\usepackage{wallpaper}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+%\centering
+\includegraphics[width=1000,height=1000,keepaspectratio=false]{Images/Generic/LOGO_veolia.png}%
+\vfill
+}}}
+
+
+
+
+\begin{document}
+%\thispagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\tableofcontents    
+
+%\input{FR/M1}
+
+
+\input{FR_part1}
+
+%\setcounter{chapter}{13}%numéro du chapitre précédent
+%\setcounter{page}{286}
+%\input{FR_part2}
+
+%\input{EN_part1}
+%\setcounter{chapter}{13}%numéro du chapitre précédent
+%\setcounter{page}{282}
+%\input{EN_part2}
+
+%\input{ES_part1}
+%\setcounter{chapter}{13}%numéro du chapitre précédent
+%\setcounter{page}{286}
+%\input{ES_part2}
+
+
+\end{document}
+

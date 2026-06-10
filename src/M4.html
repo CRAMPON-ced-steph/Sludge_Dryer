@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin: 40px 0 30px 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #0056b3;
+            margin: 35px 0 20px 0;
+            font-size: 1.7em;
+            border-left: 4px solid #0056b3;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #003d82;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            border-left: 3px solid #003d82;
+            padding-left: 12px;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<h1>Réception, stockage et préparation des déchets</h1>
+
+<p>Dans ce module, nous décrirons comment un chargement de déchets (vrac ou conditionnés, solides, pâteux ou liquides) est réceptionné, stocké et préparé avant incinération.</p>
+
+<p>À la fin de ce module vous serez capable de recenser les tâches de maintenance et les règles de sécurité liées à l’accueil, au stockage et aux pré-traitements des déchets dans une usine d’incinération de déchets dangereux.
+Vous pourrez identifier certains équipements de préparation des déchets avant traitement et pourrez expliquer leur principe de fonctionnement.</p>
+
+<img src="../images/M4/usine.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Principes généraux de réception, stockage, tri et prétraitement des déchets dangereux </strong>
+
+<p>Suivons un peu le parcours des déchets depuis l’entrée de l’usine de traitement 
+jusqu’aux systèmes d’alimentation du four.
+Les déchets arrivent par camion après la collecte (camion citerne, camion benne vrac ou camion plateau pour les déchets conditionnés).</p>
+
+<p>Le camion est pesé et le chauffeur apporte au laboratoire l’ensemble des documents accompagnant le chargement (et en particulier le BSDI)
+Le laboratoire effectue un prélèvement du chargement et analyse la conformité avec l’analyse effectuée préalablement.</p>
+
+<p>Le déchet est déchargé dans le stockage adéquat (fosse à solides ou cuve) ou sur la zone de tri (déchets conditionnés)
+Les déchets conditionnés sont préparés (pompage, broyage, reconditionnement) et homogénéisés avec les déchets vrac.</p>
+
+<strong>Rappel : catégories de déchets dangereux</strong>
+
+<p>Les déchets dangereux susceptibles d’être incinérés sont caractérisés :</p>
+
+<p>Par leur aspect physique :
+<ul>
+ <li>solide (granulométrie plus ou moins grossière)</li>
+ <li>boue (d'épaisseur et d'homogénéité variables)</li>
+ <li>liquides (contenant des quantités variables de sédiments)</li>
+</ul></p>
+
+<p>Par leur conditionnement :
+<ul>
+ <li>VRAC : citerne de 20m3 pour les liquides, benne de 15 à 30 m3 pour les solides et les boues ;</li>
+ <li>CONDITIONNES : en cubitainer plastique ou métal(1m3), en fûts (<200 litres, métallique, plastique ou carton), en petit conditionnement (<100 litres, bidons, bouteilles, flacons…) ;</li>
+ <li>Isoconteneur : conteneur étanche, double enveloppe, inerté à l’azote pour transport de produits spéciaux.</li>
+</ul></p>
+
+<img src="../images/M4/bulk_packaged_waste.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Par leurs propriétés chimiques :
+<ul>
+ <li>acides contaminés ou bases</li>
+ <li>solvants</li>
+ <li>solvants chlorés</li>
+ <li>eaux polluées</li>
+ <li>liquides cyanurés</li>
+ <li>produits spéciaux (goudrons, polymères…)</li>
+</ul></p>
+
+<h2>La réception des déchets</h2>
+
+<p>Le parcours des déchets depuis l’entrée de l’usine de traitement jusqu’aux fosses ou cuves de réception passe par les phases suivantes : Acceptation préalable - Pesée, réception administrative des chargements - Prélèvement d’échantillon - Contrôle des entrées - Les règles de circulation dans l’usine - Plate-forme de déchargement.</p>
+
+<h3>Acceptation préalable</h3>
+
+<p>L’acceptation préalable est un acte essentiel dans la prise en charge des déchets pour tous les centres de traitement de Sarp Industries. Cette procédure répond à des exigences réglementaires, aux besoins d’information des exploitants, aux soucis de la sécurité et enfin à l’application des barèmes de tarification.</p>
+
+<strong>Exigences réglementaires</strong>
+
+<p>La procédure d’acceptation préalable est le plus souvent exigée dans les arrêtés préfectoraux. Ceux-ci précisent parfois précisément les paramètres qui doivent être pris en compte.</p>
+
+<p>Pour les unités d’incinération, la procédure d’acceptation est clairement précisée dans l’arrêté ministériel du 10 octobre 1996 relatif à l’incinération des déchets industriels spéciaux.</p>
+
+<strong>Information des exploitants</strong>
+
+<p>Les exploitants doivent prendre en compte un certain nombre de paramètres physico-chimiques afin de vérifier que les produits sont compatibles avec leurs installations. En particulier il faut veiller à ce que la qualité du résultat final (déchets ultimes ou effluents) soit compatible avec les exigences réglementaires.
+L’analyse d’un déchet se fait, dans la plupart des cas, à partir d’un choix « à priori » de la filière de traitement et de la filière d’élimination. Ce choix est basé sur les informations en possession du chimiste, de son expérience et de la connaissance qu’il a des procédés de l’usine.</p>
+
+<p>L’analyse sert alors à vérifier les contraintes réglementaires et les paramètres de sécurité. Le chimiste, à partir de l’aspect du produit et de son origine, examine les facteurs clefs qui risquent d’interdire la filière d’élimination la plus intéressante à priori. Si c’est le cas, le déroulement de l’analyse est modifié pour examiner une nouvelle filière.</p>
+
+<p>Dans ce contexte, le chimiste doit parfaitement connaître les contraintes des procédés.
+Ces besoins sont en général assurés par les essais réalisés sur les échantillons fournis par les clients.</p>
+
+<strong>Sécurité</strong>
+
+<p>Il est impératif de prendre en charge les déchets avec le maximum de garanties concernant la sécurité. Les contrôles réalisés dans nos laboratoires procurent un certain nombre de renseignements permettant d’identifier des risques potentiels (inflammabilité, présence d’éléments toxiques,…) et d’appliquer des principes généraux concernant par exemple la compatibilité des produits entre eux. Ils sont cependant largement insuffisants pour couvrir tout le champ des risques liés aux produits utilisés par les industriels.</p>
+
+<strong>Barèmes de tarification</strong>
+
+<p>Les prix des traitements sont établis en fonction des moyens mis en œuvre pour le traitement (filière retenue, réactifs, quantité et nature des résidus ultimes) et sur les difficultés particulières rencontrées (manutention, déconditionnement, prétraitement). Ces paramètres sont pour la plupart sélectionnés parmi les informations identifiées comme étant essentielles par l’exploitant.</p>
+
+<p>Les résultats des analyses physico-chimiques réalisées avant l’acceptation des déchets sont portés sur une fiche signée par le responsable du laboratoire.
+Ainsi, la qualité du traitement étant liée à la nature des déchets stockés, le laboratoire procède à une sélection rigoureuse des déchets avant acceptation, déchets qui proviennent d’entreprises industrielles régionales.</p>
+
+<h3>Pesée, réception administrative des chargements</h3>
+
+<p>Les déchets arrivent par camion après la collecte. Pour être admis sur le site, la pesée et la réception administrative des chargements doivent être réalisées.</p>
+
+<p>a -<strong>Pesage des camions</strong></p>
+
+<p>REMARQUE : Le pesage est une fonction importante puisqu’il permet de suivre et de quantifier le flux de matières entrant et sortant de l’usine.</p>
+
+<p>DESCRIPTION DU SYSTÈME : A l’entrée de l’usine, le chauffeur du camion avance son véhicule sur le pont bascule puis s’adresse à un réceptionniste du laboratoire qui valide le pesage du chargement.</p>
+
+<img src="../images/M4/peson_camion.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Les camions peuvent aussi être accueillis par une borne de pesage.
+Cette borne comprend :</p>
+
+<ul>
+ <li>un lecteur de badge d’identification ;</li>
+ <li>un écran d’affichage de la pesée ;</li>
+ <li>un interphone et un bouton d’appel pour communiquer avec la salle de quart ;</li>
+ <li>un écran pour la lecture des renseignements concernant le camion et le chargement, un clavier pour la saisie des informations à recueillir ;</li>
+ <li>une imprimante délivrant un ticket de pesée</li>
+</ul>
+
+<p>La borne est reliée à un ordinateur situé généralement en salle de réception ; il permet d’enregistrer toutes les informations recueillies au niveau de la borne.</p>
+
+<p>La pesée s’effectue sur un pont bascule installé en fosse ou non. Le pont en fosse a sa partie supérieure sur laquelle roule le camion au niveau de la voirie.</p>
+
+<p>Le pont hors fosse est recommandé car il présente les avantages d’avoir un coût et un entretien réduits ainsi que la garantie que toutes les roues du véhicule sont bien pesées. Le principal avantage du pont en fosse est qu’il est intégré au sol et ne constitue pas un obstacle à la circulation transversale. En revanche, les opérations d’entretien et de réparation sont difficiles car réalisées en fosse. Les pesées peuvent être faussées si le camion ne se positionne pas correctement (roues en partie hors du pont).</p>
+
+<img src="../images/M4/weighbridge.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Le pont bascule est composé de :</p>
+
+<ul>
+ <li>d’un tablier métallique sur lequel le camion peut rouler ; le tablier est désolidarisé de la fosse ;</li>
+ <li>de quatre capteurs, ou pesons, qui supportent le tablier métallique. Sous le poids du camion ses capteurs se déforment et envoient un signal de faible courant à l’indicateur.</li>
+</ul>
+
+<p>L’indicateur renseigne la borne et l’ordinateur sur le poids du camion. L’ensemble capteurs et indicateurs est homologué et réglementé ;
+<ul>
+ <li>d’une plaque métallique mise à niveau de la voirie qui permet l’accès en fond de fosse pour le nettoyage et la maintenance.</li>
+</ul></p>
+
+<p>A l’intérieur en salle de réception, sont disposés :
+<ul>
+ <li>un ordinateur ;</li>
+ <li>une imprimante alimentée en papier continu, qui imprime au fur et à mesure les renseignements sur le transporteur et les pesées ;</li>
+ <li>un afficheur de pesée pour les opérations manuelles.</li>
+</ul></p>
+
+<p>TYPES D’INFORMATIONS A RECUEILLIR</p>
+
+<p>Au niveau de l’exploitation de l’usine, l’enregistrement du poids de chaque camion est très important puisque l’une des principales rémunérations de l’entreprise est liée à la masse de déchets incinérés.</p>
+
+<p>L’enregistrement permet d’établir les facturations et de savoir si le camion est un fournisseur (transport de matières premières pour l’usine) ou un client (collecte de déchets pour incinération).</p>
+
+<p>D’autres informations doivent être recueillies pour identifier la nature et la provenance des déchets ménagers (ville).</p>
+
+<p>Pour cela, il faut disposer d’un moyen pour identifier chaque camion qui entre sur le site. Chaque chauffeur de camion dispose d’un badge qu’il introduit dans le lecteur de la borne à chaque entrée.</p>
+
+<p>Les informations contenues sur le badge concernent les caractéristiques du camion :
+<ul>
+ <li>son numéro d’immatriculation ;</li>
+ <li>sa tare ou poids à vide ;</li>
+ <li>le code du transporteur ;</li>
+ <li>la date et l’heure.</li>
+</ul></p>
+
+<p>Chaque camion est ainsi répertorié et on peut alors connaître son propriétaire, le lieu, la date et l’heure de son arrivée sur le centre ainsi que le type de déchet qu’il contient.</p>
+
+<p>Le conducteur accède à toutes ces informations et peut demander à les modifier en cas de désaccord, par exemple concernant la nature et la provenance des déchets.
+La pesée peut alors commencer afin de déterminer la masse des déchets transportée par chaque camion.</p>
+
+<p>OPERATION DE PESAGE</p>
+
+<p>Elle peut être effectuée par double ou simple pesée.
+La double pesée est un peu plus longue mais plus fiable dans la mesure où elle permet de connaître, à chaque passage, la tare du camion, donc la masse réelle des déchets ménagers qui a été déversée dans la fosse.</p>
+
+<p>Pour effectuer la double pesée, on pèse d’abord le camion plein (masse brute du camion), puis, après déchargement, on pèse le camion vide (tare du camion). La différence entre ces deux pesées donne la masse nette du chargement.</p>
+
+<p>Masse brute du camion – tare du camion = masse nette du chargement</p>
+
+<p>ENTRETIEN ET MAINTENANCE</p>
+
+<p>Chaque jour, un contrôle visuel permet de vérifier qu’aucun objet n’est coincé entre le tablier et la fosse. C’est la garantie que le tablier est désolidarisé de la fosse et que rien ne vient perturber la pesée.</p>
+
+<p>En général, il est prévu une visite mensuelle pour nettoyage, graissage, vérification des contacts électriques, vidange de l’eau de la fosse.
+Une fois par an, un spécialiste (balancier) vérifie la justesse des pesées. Un certificat de conformité est délivré par un organisme de contrôle.</p>
+
+<p>b –<strong>Réception administrative des chargements</strong></p>
+
+<ul>
+ <li>Suite à la pesée, la réceptionniste enregistre dans la base informatique du groupe les informations relatives au déchet entré avec sa nature et sa provenance grâce au BSDI correspondant au chargement.</li>
+ <li>Pour obtenir le droit de prise en charge sur le centre de traitement, tout déchet doit être identifié et répertorié.</li>
+ <li>Une fois ces opérations réalisées, le camion peut alors pénétrer sur le site pour se diriger vers l’aire de prélèvement d’échantillons du chargement.</li>
+ <li>La réceptionniste autorise le prélèvement des échantillons du chargement en délivrant un bon de dépotage vierge à remplir par les techniciens du laboratoire.</li>
+ <li>c’est lorsque le camion sera déchargé que la réceptionniste fait la deuxième pesée, enregistre le poids net et complète les informations concernant les analyses d’entrées dans la base informatique, et enfin complète le BSDI.</li>
+</ul>
+
+<h3>Prélèvement d’échantillon</h3>
+
+<p>Le prélèvement d’un échantillon représentatif du chargement des camions est une étape essentielle dans le contrôle des déchets.
+Une de nos filiales a même breveté un système de prélèvement automatique d’échantillons dans les camions.
+L’échantillon prélevé est transféré, par un système pneumatique, jusqu’au laboratoire où il sera analysé.</p>
+
+<p>L’échantillon est joint au bon de dépotage vierge qui sont remis au laboratoire pour analyses et vérification de la nature du déchet.
+Une « déchethèque » permet de conserver tous les échantillons prélevés.</p>
+
+<h3>Contrôle des entrées par le laboratoire</h3>
+
+<p>L’acceptation sur le site d’une expédition se fait par une série de tests plus sommaire à pratiquer sur le déchet et confirmant les critères d’orientation validés en acceptation préalable.</p>
+
+<p>La conformité des déchets arrivant sur le site avec l’échantillon initial (CAP) est contrôlée au laboratoire par une analyse de vérification.
+Tout déchet conforme est orienté vers une zone de déchargement décrite sur le bon de dépotage délivré au chauffeur.</p>
+
+<p>En cas de refus, le camion repart chez le producteur et la DRIRE en est informée. Ce refus est consigné dans le rapport d’activité.</p>
+
+<h3>Les règles de circulation dans l’usine</h3>
+
+<p>Les chauffeurs de camion, tout comme les conducteurs d’engins, doivent se conformer aux règles de sécurité de l’entreprise.
+Chaque usine possède un plan de circulation.
+Les chauffeurs doivent respecter :</p>
+
+<ul>
+ <li>la signalisation à l’intérieur de l’usine (feux, panneaux stop…) ;</li>
+ <li>la vitesse maximale de 20 km/h ;</li>
+ <li>la priorité par rapport aux piétons et aux engins ;</li>
+ <li>les locaux et les équipements de l’usine.</li>
+</ul>
+
+<p>Si les camions ne sont pas du type benne basculante, ils doivent être bâchés pour éviter l’envol des déchets dans l’usine.</p>
+
+<h3>Plateforme de déchargement</h3>
+
+<p>Le chauffeur présente le bon de dépotage correspondant à son chargement délivré par le laboratoire à une personne habilitée au déchargement des camions. Cette personne dirige alors le camion, en toute sécurité, à l’endroit précis où il doit déverser les déchets.</p>
+
+<p>Une fois son camion vidé, le chauffeur se représente à la deuxième pesée et au bureau de réception pour compléter les enregistrements administratifs.</p>
+
+<p>Pour être admis sur le centre de traitement, les résidus doivent répondre à des caractéristiques physico-chimiques strictes.</p>
+
+<h2>Les modalités d’acceptation des déchets</h2>
+
+<h3>Déchets admis</h3>
+La nature des déchets admis dans l’usine est définie par un contrat avec le client, repris dans un arrêté préfectoral d’exploitation et par le fabricant du four qui définit les limites de la garantie de fonctionnement de son matériel.
+Quelques exemples de déchets admis généralement sont :
+
+<ul>
+ <li>solvants halogénés et non halogénés</li>
+ <li>huiles</li>
+ <li>émulsions</li>
+ <li>déchets de fabrication</li>
+ <li>eau</li>
+ <li>déchets d'encre</li>
+ <li>déchets de peintures</li>
+ <li>boues</li>
+ <li>etc.</li>
+</ul>
+
+<p>Voir arrêté d’exploitation pour plus de détails.</p>
+
+<p>Quelques exemples de déchets non admis sont :</p>
+
+<ul>
+ <li>les déchets radioactifs</li>
+ <li>les déchets contenant des PCB</li>
+ <li>les déchets contaminés provenant d'hôpitaux, de cliniques et d'abattoirs ;</li>
+ <li>les déchets infectieux</li>
+ <li>les bouteilles de gaz</li>
+ <li>les déchets explosifs/déflagrants</li>
+ <li>etc.</li>
+</ul>
+
+<p>Voir arrêté d’exploitation pour plus de détails.</p>
+
+<h3>Vérification de la nature des déchets réceptionnés</h3>
+
+<p>En fonction des différentes catégories de déchets admissibles dans l’usine, il faut être vigilant sur la nature des déchets avant réception. Outre les tests réalisés sur les échantillons, il faut être vigilant sur le contenu des bennes car il peut être la cause :</p>
+
+<ul>
+ <li>d’accidents (déchets trop gros ou monstres bloquant la trèmie ou l’extracteur à mâchefers) ;</li>
+ <li>d’explosion (liée à la présence de certains déchets ménagers, pots de peinture, aérosols, bonbonnes de gaz…) ;</li>
+ <li>de pollution (peinture, plastique en trop grande quantité) ;</li>
+ <li>de destruction de four (corrosion et forte augmentation de température du four liées à l’introduction de plastiques à fort PCI en trop grande quantité) ;</li>
+ <li>de contamination (déchets hospitaliers non décontaminés).</li>
+</ul>
+
+<p>Moyens d’identification et de vérification</p>
+
+<p>La vérification de la nature des déchets ne peut être effectuée qu’après déchargement des déchets dans la fosse. Le pontier ou le pelleteur doit alors brasser les déchets dans la fosse, ce qui permet d’homogénéiser les déchets et de vérifier l’absence d’objets suspects.</p>
+
+<p>Conduite à tenir en présence de déchets non autorisés</p>
+
+<p>En cas de découverte de déchets non autorisés, il faut absolument en informer le responsable de site et identifier le camion qui a déversé ces déchets. Le pontier ou le pelleteur en charge de l’homogénéisation sort alors ces déchets de la fosse pour les expédier dans un centre spécialisé.</p>
+
+<h3>Equipements et type d’analyses pratiquées au laboratoire</h3>
+
+<p>Les contrôles physico-chimiques sont effectués par des chimistes expérimentés qui disposent d’équipements performants.
+Outre le matériel classique (verrerie, pH-mètres, conductimètres, balances, étuves…), le laboratoire est doté d’appareils sophistiqués.
+Le laboratoire est équipé par exemple des instruments de mesure suivants :</p>
+
+<ul>
+ <li>un spectrophotomètre d’absorption atomique pouvant travailler en four ou en flamme pour l’analyse des métaux</li>
+ <li>un spectrophotomètre d’émission à plasma d’argon à couplage inductif (ICP, Inductively Coupled Plasma)</li>
+ <li>un spectrophotomètre à fluorescence X</li>
+ <li>un COT-mètre pour l’analyse de la matière organique</li>
+ <li>un chromatographe ionique pour la mesure des anions et notamment des chlorures</li>
+ <li>un calorimètre</li>
+ <li>un banc DCO</li>
+</ul>
+
+<p>Voir tableau des Paramètres analytiques déterminants pour chaque filière d’élimination.</p>
+
+<h3>Définition des paramètres analytiques, méthodes de mesures utilisées et instrumentation</h3>
+
+<p>Composants formés après la combustion</p>
+
+<p>Comme l’explique le module n°5, la combustion des déchets industriels dangereux est une oxydation exothermique qui produit un volume de gaz chaud très important. Ces gaz contiennent certains polluants avant traitement, notamment :</p>
+
+<ul>
+ <li>acide chlorhydrique, ou chlorure d'hydrogène (HCl);</li>
+ <li>acide fluorhydrique (HF);</li>
+ <li>oxydes d'azote (NOx);</li>
+ <li>oxydes de soufre (SOx);</li>
+ <li>monoxyde de carbone (CO);</li>
+ <li>poussière.</li>
+</ul>
+
+<p>Il est à noter que les gaz de combustion contiennent également de l’eau (H20) sous forme de vapeur.</p>
+
+<p>En plus, au cours de la combustion, se trouvent entraînées par le flux des gaz des particules de métaux dits « lourds » mélangées aux poussières. Ces molécules de métaux lourds se présentent sous forme gazeuse ou solide. Elles proviennent des composants des déchets, qui ont été incinérés, à savoir :</p>
+
+<ul>
+ <li>cadmium (Cd),</li>
+ <li>chrome (Cr),</li>
+ <li>cuivre (Cu),</li>
+ <li>plomb (Pb),</li>
+ <li>mercure (Hg),</li>
+ <li>arsenic (As),</li>
+ <li>nickel (Ni),</li>
+ <li>manganèse (Mn),</li>
+ <li>métaux provenant des différents secteurs industriels des sociétés productrices.</li>
+</ul>
+
+<p>Compte tenu des réglementations concernant ces polluants dans les rejets atmosphériques entre autres, certains paramètres analytiques des déchets doivent être maîtrisés tels que :
+<ul>
+ <li>Le pH</li>
+ <li>La demande chimique en oxygène (DCO)</li>
+ <li>Le carbone organique total (COT)</li>
+ <li>Les éléments métalliques toxiques</li>
+ <li>La salinité ou la minéralisation</li>
+ <li>Le pouvoir calorifique</li>
+ <li>La teneur en chlore organique et autres halogènes (F, Br , I)</li>
+ <li>La teneur en PCB</li>
+ <li>La teneur en soufre</li>
+ <li>Les odeurs.</li>
+</ul></p>
+
+<strong>Le pH-Potentiel d’hydrogène</strong>
+On mesure le pH d’une solution de plusieurs façons :
+<ul>
+ <li>par le papier dit « pH », qui est d’une utilisation rapide, peu coûteuse et facile à mettre en œuvre. On trempe une bandelette de papier pH dans la solution à analyser, la bandelette ainsi humectée se colore et , à l’aide d’une gamme de couleurs, on compare la couleur du papier pH avec celle de la gamme qui donne alors la valeur du pH. Cette méthode n’est pas très précise.</li>
+ <li>par comparaison avec des solutions qui changent de couleurs selon de pH des solutions dans laquelle elles sont dissoutes. On appelle ces substances des indicateurs colorés acido-basiques.</li>
+ <li>par un appareil de mesure, appelé pH-mètre, fonctionnant sur le principe de la mesure de la résistance électrique d’une solution.</li>
+</ul>
+
+<strong>La teneur en COT/DCO Carbone Organique Total ou Demande Chimique en Oxygène</strong>
+
+<p>Une mesure précise des substances organiques présentes dans une eau est chose difficile à concevoir, car ces substances sont innombrables et de formules très diverses ; il est impossible d’envisager l’isolement et le dosage pondéral de chacune d’elles.</p>
+
+<p>C’est pourquoi les méthodes de dosage les plus répandues et les plus significatives pour apprécier sinon la teneur, du moins la nocivité, des substances organiques présentes sont celles qui utilisent comme référence la quantité d’oxygène nécessaire à les oxyder, cela dans des conditions expérimentales variables, mais chaque fois bien définies. Ces techniques de mesure sont le plus souvent désignées sous la dénomination très explicite de demandes d’oxygène ou encore d’oxydabilité.</p>
+
+<p>Leur détermination est envisagée le plus souvent par la mesure de :
+ La demande chimique en oxygène (DCO)
+ Le carbone organique total (COT)</p>
+
+<strong>La demande chimique en oxygène (DCO)</strong>
+
+<p>La demande chimique en oxygène représente la quantité d’oxygène nécessaire pour oxyder, dans un certain contexte réactionnel, les substances réductrices ou oxydables contenues dans l’échantillon. Elle s’exprime en mg O2/L.
+Divers oxydants ont été préconisés pour mesurer la DCO ; actuellement ne coexistent que le bichromate de potassium et le permanganate de potassium.</p>
+
+<strong>Le carbone organique total (COT)</strong>
+
+<p>La détermination du taux de carbone peut être considérée comme une très bonne approximation de la quantité de matières organiques, dans la mesure où cet élément est le constituant majeur de ces composés.</p>
+
+<strong>Éléments métalliques toxiques</strong>
+
+<p>En plus des particules de métaux dits « lourds » pouvant être entraînées par le flux des gaz, (voir intro paragraphe XI) ces métaux peuvent également se retrouver dans les résidus solides de combustion (mâchefers, cendres volantes).</p>
+
+<p>Pourquoi ces métaux sont-ils appelés « lourds » ?</p>
+
+<p>Les éléments traces sont des éléments chimiques présents en très faibles quantités dans les différents milieux (sol, eau, air).</p>
+
+<p>Parmi ces éléments traces, certains sont nécessaires aux organismes vivants (plantes, animaux, homme) dans de très faibles quantités : il s’agit des oligo-éléments (exemple : zinc, cuivre, manganèse, bore, molybdène, cobalt, sélénium). Remarquons qu’à de trop grandes quantités et au-delà de certains seuils, ces oligo-éléments peuvent devenir toxiques.</p>
+
+<p>D’autres éléments traces (plomb, cadmium, mercure, nickel, arsenic…) ne sont pas utiles aux organismes et, au delà d’un certain seuil, peuvent devenir toxiques pour le milieu naturel et l’homme. Ils sont désignés communément par le terme de « métaux lourds ». Rappelons que les métaux lourds les plus dangereux pour la santé humaine sont le cadmium, le plomb et le mercure.</p>
+
+<p>Le terme « métaux lourds », généralement utilisé en langage environnemental, est souvent un abus de langage car tous ces éléments ne sont pas chimiquement des métalloïdes (exemple : l’arsenic).</p>
+
+<p>Ces éléments sont soumis à des normes très strictes.
+Au-delà d’une certaine concentration, les métaux lourds présentent une toxicité aiguë. Ils présentent l’inconvénient de se concentrer le long de la chaîne alimentaire.</p>
+
+<strong>La salinité ou la minéralisation</strong>
+
+<p>Les sels sont solubles dans l’eau et sont contenus dans les déchets aqueux. Ils sont caractérisés par la somme des éléments sodium (Na), potassium (K) et calcium (Ca) présents dans ce déchet, encore appelés « fondants » pour les sels Na et K. Leur présence en grande quantité endommage les fours, raison pour laquelle il est important de considérer ce paramètre.</p>
+
+<strong>Le pouvoir calorifique</strong>
+
+<p>C’est la quantité d’énergie fournie par la combustion complète d’une unité d’un combustible à pression atmosphérique.
+La quantité de chaleur dégagée par 1 kg de déchet (mélange) permet de mesurer la quantité d’énergie totale produite par la combustion totale dans le four. Le PC de chaque déchet est mesuré séparément.</p>
+
+<p>Pour obtenir un fonctionnement stable du four, il faut éviter des augmentations ou des chutes trop rapides de température du four dues à l’enfournement de déchets ayant des pouvoirs calorifiques (PC) trop différents.
+Un régime de fonctionnement instable entraîne une mauvaise combustion et est source de polution.</p>
+
+<p>C’est la raison pour laquelle il est utile d’identifier les déchets à fort ou à faible pouvoir calorifique.
+*Les solvants, les huiles, les produits organiques, les plastiques, le papier ont un pouvoir calorifique très élevé. Ils brûlent très facilement et dégagent une forte quantité de chaleur.
+*les liquides, pâteux ou solides contenant un majeure partie d’eau sont très difficiles à brûler, à cause de ce chargement en eau. Ils fournissent une faible quantité de chaleur.</p>
+
+<p>Plus un déchet est humide, plus il est difficile à brûler.</p>
+
+<p>Pour obtenir un pouvoir calorifique moyen des déchets le plus constant possible, il faut enfourner les déchets à fort PC en même temps que ceux à faible PC.
+Les déchets sont très variables. Il faut alors constituer un stockage dans des cuves et fosses pour avoir des réserves de HPCI, MPCI et BPCI de pouvoirs calorifiques connus lors de l’incinération, de façon à connaître les débits à régler pour chacun des stocks.</p>
+
+<strong>La teneur en chlore, brome, iode et fluor (Cl, Br, I et F)</strong>
+
+<p>La mesure du chlore contenu dans les déchets est primordiale car elle conditionne la valeur de la T2S règlementaire :
+Si teneur en chlore < 1\</p>
+
+<p>Si teneur en chlore >1\</p>
+
+<strong>La teneur en PCB</strong>
+
+<p>Les polychlorobiphényles (PCB) sont trouvés principalement dans les huiles de transformateurs dans lesquels les PCB ont été à l’origine utilisés comme milieu échangeur de chaleur. Bien que l’utilisation de ces composés ait été interdite, il existe encore de nombreux transformateurs qui contiennent des PCB, ce qui conduit à des contaminations des eaux potables ou eaux usées. Ces composés sont toxiques, bioaccumulatifs et extrêmement stables.</p>
+
+<p>Par arrêté préfectoral les incinérateurs de déchets dangereux ne sont pas autorisés à traiter des produits contenant plus de 50 ppm de PCB. Pour les produits dépassant ce seuil, ceux-ci doivent être envoyés dans des centres spécialisés.</p>
+
+<strong>La teneur en soufre</strong>
+
+<p>On trouve du soufre dans les produits pétroliers (jusqu’à 5\</p>
+
+<strong>Les odeurs</strong>
+
+<p>L’odeur est une sensation résultant de nombreux processus physico-chimiques, mnésiques, cognitifs, etc par des substances chimiques. Il est donc indispensable de différencier l’odeur d’un mélange gazeux de sa composition chimique. Ainsi, l’odeur doit être mesurée en tant que telle avec, si nécessaire, un complément d’information par des mesures physico-chimiques.</p>
+
+<p>Spectrophotomètre à fluorescence X</p>
+
+<img src="../images/M4/xray.jpg" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>XI-Table des incompatibilités chimiques…</p>
+
+<p>Certains produits sont incompatibles, c’est pourquoi il faut respecter les consignes de stockage.</p>
+
+<ul>
+ <li>les acides et les bases mélangés engendrent une réaction de neutralisation qui dégage plus ou moins violemment de la chaleur.</li>
+ <li>le mélange des produits minéraux acides avec des produits organiques ou minéraux engendre des réactions violentes (dégagement violent de chaleur, inflammation, incandescence, réaction violente, projections, décomposition, explosion immédiate, avec parfois des dégagements de produits toxiques).</li>
+ <li>les peroxydes engendrent une réaction chimique d’oxydation qui peut être plus ou moins violente.</li>
+ <li>les comburants favorisent l’inflammation des matières combustibles par leur pouvoir oxydant</li>
+</ul>
+
+<img src="../images/M4/storage_comptatibility.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h2>Le stockage des déchets</h2>
+<h3>Les déchets liquides en vrac</h3>
+
+<p>Les déchets liquides arrivent sur l’usine dans des citernes routières ou des camions pompeurs de capacité 15 à 20m3.</p>
+
+<p>Leur arrivée sur l’usine est planifiée. Le client qui amène ce type de déchet doit prendre un rendez-vous auprès du service planning. Ce service assure, avec le service exploitation, l’utilisation optimale des stockages liquides.
+Les produits sont triés et orientés vers différents stockages car le mélange de certains d’entre eux, peuvent provoques des réactions dangereuses (échauffement polymérisation, prise en masse incendie explosion).</p>
+
+<strong>Le dépotage</strong>
+
+<p>Une fois les analyses de réception effectuées, la conformité du déchet par rapport à l’analyse préalable confirmée, le camion reçoit un bon de dépotage pour une zone précise de stockage, correspondant à la catégorie du déchet.
+Un opérateur prend en charge le camion et surveille le bon déroulement de l’opération.</p>
+
+<img src="../images/M4/gravity_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Système gravitaire :</strong>
+
+<p>Le camion est vidé dans une fosse à travers un panier de filtration. Une pompe reprend le liquide filtré et l’envoie dans la cuve sélectionnée.</p>
+
+<p>Avantage : visibilité du produit, contrôle du déchargement
+Inconvénient : le poste de travail doit être capoté ; l’atmosphère est aspirée et traitée (lavage, biofiltre, charbon actif) ; le filtre est curé manuellement régulièrement.</p>
+
+<strong>Système direct :</strong>
+
+<p>Les pompes de transfert aspirent le déchet depuis le camion à travers un filtre fermé, et le refoulent vers la cuve sélectionnée.
+Avantage : système confiné, pas de traitement de l’air.
+Inconvénient : pas de visibilité, nettoyage du filtre nécessite démontage.</p>
+
+<p>minipage{}
+ 
+ minipage{0.45}
+ 
+ <img src="../images/M4/unloading_bays.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ minipage
+ 
+ minipage{0.2}
+ 
+ <img src="../images/M4/filtration_basket.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ minipage
+minipage</p>
+
+<p>[H]
+ 
+<img src="../images/M4/direct_system.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;"></p>
+
+<strong>Les stockages</strong>
+
+<p>Les liquides « banals » (c’est à dire non réactifs) sont généralement stockés selon leur pouvoir calorifique.</p>
+
+<img src="../images/M4/standar_liquid.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Schéma de principe d’une cuve de stockage à déchets liquides</p>
+
+<img src="../images/M4/liquid_storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Spécifications</strong>
+
+<p>Dimensions : les cuves sont généralement de capacités 100 à 200 m3, avec un fond conique. Le supportage est assuré par des pieds en béton et l’ensemble est raccordé électriquement à la terre.</p>
+
+<p>Matériau : acier carbone</p>
+
+<p>Equipements :</p>
+
+<p>Mesure de niveau (radar), report des niveaux sur la supervision en salle de contrôle.
+Sécurités niveau haut et bas (LSH et LSL)
+Agitation (pour certains déchets spécifique)</p>
+
+<p>Events :</p>
+
+<p>La cuve peut être équipée d’un ciel d’azote (suppression d’une atmosphère explosive). Les évents sont captés, passent sur une garde d’eau puis sont traités (sur charbon actif, filtre biologique ou oxydation thermique dans le four d’incinération).</p>
+
+<p>Protection incendie :</p>
+
+<p>Les cuves sont équipées d’un système de détection incendie, d’un système d’extinction (canon à mousse et couronne d’arrosage).
+La cuvette de rétention est aussi équipée de systèmes de détection et d’extinction.</p>
+
+<strong>Produits spéciaux</strong>
+
+<p>Acides : les acides souillées sont stockés dans des cuves spéciales, revêtu Halar (matériau céramique résistant), de petit volume (6 à 12 m3).</p>
+
+<p>Odeurs : les produits particulièrement odorants sont également stockés dans des cuves spéciales, équipées d’un lavage des évents.</p>
+
+<h3>Déchets solides et boues en vrac</h3>
+
+<p>minipage{}
+ 
+ minipage{0.45}
+ 
+ <img src="../images/M4/bassens.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ {Liquides Stockage SIAP Bassens}
+ 
+ minipage
+ 
+ minipage{0.45}
+ 
+ <img src="../images/M4/fos.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+ {Liquids Storage SM Fos}
+ 
+ minipage
+minipage
+ 
+Les déchets solides vrac « homogènes » (terres polluées, boues homogènes, farines animales…) arrivent par camion benne de 15 à 20 m3. Ils sont dépotés dans des fosses affectées à chaque catégorie de déchet solide.</p>
+
+<img src="../images/M4/storage_pit.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Schéma montrant le principe d'une fosse de stockage de déchets dangereux}
+
+<img src="../images/M4/solid_pit.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Solides fosse F1 Limay}
+
+<strong>Spécifications</strong>
+
+<p>Construction : fosse en béton, contrôle de l’étanchéité par réseau de puits.
+Les fosses sont construites à l’intérieur d’un bâtiment fermé (bardage). Des portes permettent l’accès aux fosses lors des opérations de dépotage.</p>
+
+<strong>Traitement de l’atmosphère :</strong>
+
+<p>L’atmosphère des fosses est captée, lavée sur une colonne de lavage et envoyée dans le four avec l’air de combustion. Lorsque le four est à l’arrêt, un système de captation sur charbon actif assure l’épuration de l’atmosphère.</p>
+
+<strong>Protection incendie :</strong>
+
+<p>Plusieurs systèmes de détection alertent sur un élévation de température ou la présence de flamme dans les fosses. Une alarme prévient les opérateurs qui déclenchent les systèmes d’extinction.
+Ces système d’extinction sont des canons à mousse intérieurs et extérieurs aux fosses.</p>
+
+<p>Les déchets solides « non homogènes » nécessitent un pré-traitement par broyage. Ils sont stockés sur la zone broyage, dans des fosses ou dans des alvéoles.</p>
+
+<h3>Les déchets conditionnés</h3>
+
+<strong>Catégories</strong>
+
+<img src="../images/M4/packaged_waste.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Les déchets conditionnés, comme les déchets vrac, peuvent être liquides, solides, pâteux ou gazeux, organiques ou minéraux…</p>
+
+<img src="../images/M4/drums.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Spécificités </strong>
+
+<p>Très souvent, parce que les quantités produites (et donc à transporter) sont faibles, il y a rupture de charge entre le producteur et le centre de prétraitement, dans un centre de transit.</p>
+
+<p>Les filières finales de « traitement / valorisation » sont en général conçues pour prendre en charge des déchets vrac.</p>
+
+<p>C’est pourquoi, avant de rejoindre les filières de traitement / valorisation, les déchets conditionnés doivent passer par une étape de déconditionnement (mise en vrac). Cette plate-forme peut être intégrée au centre de traitement / valorisation ou être extérieure.</p>
+
+<p>Pour les déchets conditionnés, la prise en charge sur la plate-forme de prétraitement consiste à :</p>
+
+<ul>
+ <li>Déconditionner / prétraiter les déchets pour constituer un volume vrac homogène livrable aux filières de traitement / valorisation</li>
+</ul>
+
+<p>Ou</p>
+
+<ul>
+ <li>Conditionner les déchets « difficiles » pour les sécuriser et les introduire en faibles quantités dans les filières de traitement (exemple enfournement direct)</li>
+</ul>
+
+<p>Le nombre important de conditionnements, l’hétérogénéité des déchets, les risques liés aux incompatibilités éventuelles requièrent la mise en œuvre de moyens importants (surface de stockage, nombre d’opérateurs, moyens de sécurité …) et entraîne la multiplication des manipulations par rapport aux déchets vrac.</p>
+
+<p>1 tonne de déchets en vrac = 1 réservoir de stockage 
+1 tonne de déchets en conteneurs de 1 m3 = 1 conteneur
+1 tonne de déchets en fûts de 200 litres = 5 conteneurs
+1 tonne de déchets en bidons de 10 l = 100 conteneurs</p>
+
+<strong>Zoom : DDD de quoi parle-t-on ? </strong>
+
+<p>On parle de DDD (Déchets Dangereux Diffus) lorsqu’on qualifie les déchets produits par les petits producteurs. Il s’agit des déchets des artisans, des petites entreprises, des commerçants, des laboratoires de recherche, des établissements d’enseignement….</p>
+
+<p>Les agences de l’eau associent le terme de DDD à la notion de « petite » quantité produite annuellement (par site ou par grande filière) et / ou à la taille de l’entreprise productrice de déchets (nombre d’employés - critères PME / PMI). Dans la majorité des cas, les DDD sont des déchets conditionnés mais ils peuvent être aussi conditionnés en vrac. Tous les déchets conditionnés ne sont pas des DDD (ex.les déchets conditionnés de grandes sites industriels).</p>
+
+<strong>Stockages</strong>
+
+<img src="../images/M4/storage.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Immobilisation temporaire des déchets</p>
+
+<ul>
+ <li>Avant déconditionnement, prétraitement ou conditionnement : les déchets sont stockés conditionnés Par exemple sur étagères. Le stockage s’effectue par familles (déterminées par le tri)</li>
+ <li>Après déconditionnement, prétraitement ou conditionnement : les déchets peuvent être stockés en vrac (liquides en cuves, broyats en fosses) ou conditionnés (transit, filière directe)</li>
+ <li>Pour certains déchets sensibles aux élévations de température par exemple, le stockage peut se faire en zone ou armoire réfrigérée.</li>
+</ul>
+
+<strong>Containers et fûts</strong>
+
+<p>Une fois analysés et leur filière de traitement identifiés, les containers et les fûts sont stockés sur des aires couvertes, en attente de leur transfert vers les zones de pré-traitement.</p>
+
+<p>Le stockage répond à des règles strictes d’organisation (catégorisation des produits, isolement des produits réactifs…) afin de minimiser les risques.
+Ces aires sont sur rétention : une fuite sur un contenant est confinée.
+Elles sont également équipés de systèmes de détection et de protection incendie (généralement réseau de sprinklers d’eau dopée et moyens mobiles).</p>
+
+<img src="../images/M4/drum_zone.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Drums zone SOLAMAT-MEREX Rognac}
+
+<strong>Petit conditionnement</strong>
+
+<p>Parmi ces déchets, on retrouve souvent des déchets très réactifs, qui nécessitent donc un stockage et une organisation particulière.</p>
+
+<p>Les petits conditionnés sont souvent réceptionnés sous forme de palettes ou de caisse-palettes contenant un grand nombre de contenant divers.
+Ces déchets sont stockés dans des alvéoles avant et après les opérations de tri, en respectant des règles strictes de sécurité (non proximité de produits réactifs, ségrégation des risques…)</p>
+
+<p>Chaque alvéole est équipée de murs et de portes coupe-feu, ainsi que de systèmes de détection et de protection incendie (détecteurs de flamme et réseau de sprinklers).</p>
+
+<img src="../images/M4/small_packing.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h2>Engins de déblaiement et de levage</h2>
+
+<h3>Rôle</h3>
+
+<p>Pour la manutention ou le levage des charges, on trouve couramment dans les usines des engins mécaniques à conducteur porté :
+<ul>
+ <li>la pelleteuse (ou tractopelle);</li>
+ <li>le chariot automoteur (ou chariot élévateur).</li>
+</ul></p>
+
+<img src="../images/M4/clarck.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<h3>Autorisation de conduite</h3>
+
+<p>Seules les personnes en possession de l’autorisation de conduite délivrée par le directeur de l’usine sont autorisées à conduire les engins à conducteur porté.</p>
+
+<h3>Vérifications à la prise de poste</h3>
+
+<p>Avant d’utiliser les engins, le conducteur doit vérifier les points suivants :
+<ul>
+ <li>l’état des pneumatiques;</li>
+ <li>l’état de charge de la batterie pour les chariots électriques;</li>
+ <li>l’absence de tâche d’huile sous l’engin;</li>
+ <li>les circuits hydrauliques;</li>
+ <li>le niveau d’huile du circuit de freinage;</li>
+ <li>le niveau de carburant;</li>
+ <li>l’efficacité des freins d’immobilisation et de service;</li>
+ <li>le fonctionnement du système de manutention;</li>
+ <li>le fonctionnement de l’avertisseur sonore.</li>
+</ul></p>
+
+<p>Si l’engin présente la moindre défectuosité, il faut la signaler immédiatement et la faire réparer.</p>
+
+<h3>Règles de sécurité</h3>
+
+<img src="../images/M4/heavy_load.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>Pour éviter de nombreux accidents, il faut respecter les quelques règles de base suivantes:
+<ul>
+ <li>circuler à vitesse réduite dans l’enceinte de l’usine;</li>
+ <li>ne jamais circuler avec les fourches ou le godet en position haute, à vide ou en charge; les garder à environ 15 cm du sol;</li>
+ <li>avant toute intervention sur un engin, mettre le godet ou les fourches en position basse;</li>
+ <li>ne jamais lever une charge supérieure à la capacité de l’engin;</li>
+ <li>ne pas transporter des personnes sur des engins non prévus à cet effet;</li>
+ <li>être vigilant lors des manœuvres;</li>
+ <li>ne jamais se placer sous une charge;</li>
+ <li>débrancher la batterie avant chaque intervention d’entretien.</li>
+</ul></p>
+
+<h3>Consignes de fin de poste</h3>
+
+<p>Après avoir utilisé l’engin de manutention, le conducteur doit replacer l’engin à sa place de stationnement et effectuer les consignes de fin de poste suivantes :
+<ul>
+ <li>laisser le godet ou les fourches en position basse;</li>
+ <li>arrêter le moteur et mettre au point mort;</li>
+ <li>serrer le frein d’immobilisation;</li>
+ <li>ne pas laisser la clé de contact sur le tableau de bord du chariot en l’absence du conducteur.</li>
+</ul></p>
+
+<h2>Préparation des déchets avant incinération</h2>
+
+<h3>Rôle</h3>
+
+<p>Etant la diversité (types et contenants) des déchets dangereux reçus sur les centres SARPI, il est nécessaire de procéder à une préparation de charge avant de les introduire dans le four.</p>
+
+<p>Cette préparation consiste en un déconditionnement (broyage, pompage…) et une homogénéisation. Elle permet de casser la réactivité des déchets, de réduire leur granulométrie et d’uniformiser leur propriétés physico-chimique. Tout ceci dans le but de faciliter leur introduction dans le four et d’améliorer leur combustion.</p>
+
+<h3>Homogénéisation</h3>
+Les déchets vrac solides et pâteux doivent être mélangés avant injection dans le four :
+
+<ul>
+ <li>pour obtenir un aspect physique (consistance, viscosité…) compatible avec les moyens d’injection,</li>
+ <li>pour obtenir une homogénéité garantissant un pouvoir calorifique le plus égal possible dans le temps, et donc assurer de bonnes conditions de combustion.</li>
+</ul>
+
+<p>Ce mélange est généralement réalisé dans les fosses de stockage, à l’aide du grappin et d’une pelle mécanique.</p>
+
+<h3>Pompage</h3>
+Les containers et fûts contenant des liquides sont généralement pompés, par catégories (HPC, BPC, Chlorés…), et regroupés dans des cuves intermédiaires avant transfert vers les stockages vrac liquide.
+Les contenants sont soit valorisés (recyclage métal) soit broyés et incinérés (s’il sont trop souillés)
+
+<img src="../images/M4/pumping_station.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>minipage{.60}
+Dans ce système, la pompe centrifuge peut être considérée comme une pièce d’usure. Au bout d’un certain nombre d’heures de fonctionnement avec des produits très divers et parfois agressifs (solvants, sédiments), elle doit être remplacée.
+Une autre technique, utilisant une pompe à vide, évite l’usure de l’équipement de pompage. Le vide est fait dans la cuve tampon. Par contre, il faut traiter les vapeurs issues de la pompe à vide (en particuliers lorsque l’on pompe des solvants).</p>
+
+<p>minipage</p>
+
+<p>minipage{.35}</p>
+
+<img src="../images/M4/vacuum_pump_cedilor.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<p>minipage</p>
+
+<h3>Broyage</h3>
+
+<p>Pour réaliser une bonne homogénéisation des différents déchets reçus, leur granulométrie doit être suffisamment faible.
+Le broyage concerne donc les déchets hétérogènes de granulométrie importante : emballages souillés (pots de peintures, fûts souillés issus du pompage), conditionnés (fûts de solides, petits conditionnés).
+Il existe plusieurs techniques de broyage adaptées aux différents types de déchets à broyer, à leur dangerosité, à leur réactivité.</p>
+
+<strong>Déchets "secs"</strong>
+
+<p>Il s’agit majoritairement des emballage souillés, qui arrivent dans l’usine sur palettes ou dans des bennes. Cette catégorie peut également être appelée « vrac à broyer ».</p>
+
+<p>Ces déchets sont généralement peu réactifs et peuvent être broyés dans des installations équipées des sécurité classiques.</p>
+
+<img src="../images/M4/shredder.PNG" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+{Exemple d'une rectifieuse}
+
+<p>Exemple d’installation de broyage :</p>
+
+<p>Une grue alimente un déchiqueteur : il s’agit d’un broyeur équipé de deux arbres munis de dents largement espacées qui forcent les déchets à travers une table de coupe.
+La protection incendie est assuré par des canons à mousse au niveau :</p>
+
+<ul>
+ <li>de l’alvéole de stockage</li>
+ <li>de la trémie du broyeur</li>
+ <li>de la benne de réception des broyats</li>
+</ul>
+
+<p>De plus une brumisation d’eau au dessus de la trémie assure la prévention des départ de feu et empêche la dispersion des poussières. La trémie peut être fermée, si besoin, par un couvercle.
+Le broyeur utilisé est généralement un déchiqueteur.</p>
+
+<strong>Déchets réactifs et Boues</strong>
+
+<p>Il s'agit principalement de déchets en petits emballages, susceptibles de produire des réactions chimiques lors du déconditionnement par broyage.
+Il s’agit principalement de déchets en petit conditionnement, susceptibles de produire des réactions chimique lors du déconditionnement par broyage.</p>
+
+<p>Le broyage a, dans ce cas, deux rôles : déconditionner et casser la réactivité.
+Ces installations sont généralement capotées et inertées à l’azote, qui garantit l’absence d’oxygène et minimise les risques de réaction. Les déchets sont introduits dans le broyeur à l’aide de différents moyens de levage (ascenseur, grappin…) à travers des sas.</p>
+
+<p>Le broyeur est généralement une cisaille : constituée de deux arbres équipées de dents tournant en sens contraire à faible vitesse, elle happe les déchets entre ces dents et les découpe en lambeaux.</p>
+
+<p>Une installation complète est, de plus, équipée d’un mélangeur en sortie du broyeur, qui réalise l’étape d’homogénéisation et permet d’ajuster, par des ajouts appropriés d’huile, d’eau polluées ou de pulvérulents, le PCI et la viscosité du mélange.
+Enfin, afin de garantir l’absence de contact du déchet avec l’atmosphère, l’équipement d’injection (pompe à boues ou vis ou tapis) peut être installé en sortie du mélangeur.</p>
+
+<p>Ce type d’installation fonctionne dans les usines d’Europe du Nord, et est à l’essai sur nos usines en France.
+Exemple d’une installation de Broyage + Mélangeur + Injection</p>
+
+<strong>Déchets textiles et cartons</strong>
+
+<p>Ces déchets nécessitent d’être découpé plusieurs fois pour obtenir une granulométrie correcte et être injecté dans le four.</p>
+
+<p>Des cisailles 3 ou 4 arbres sont généralement utilisées. Deux arbres effectuent le découpage ; une grille de calibration laisse passer les déchets suffisamment réduits ; 1 ou deux arbres assurent la remontée des déchets hors calibre vers les arbres de découpe.</p>
+
+<img src="../images/M4/carboard.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+
+<strong>Déchets plastiques</strong>
+
+<p>Les lots d’emballage plastique peu souillés peuvent être broyés très finement afin de fournir un bon combustible de substitution, en addition des boues pour l’incinération, ou tel quel pour les industries de production du ciment ou de la chaux.</p>
+
+<p>La granulation des plastiques (généralement bidons) et obtenue grâce à un granulateur. Ce broyeur est composé d’un seul arbre munis d’un grand nombre de petits couteaux, tournant à grand vitesse contre une table de coupe muni de contre couteaux.</p>
+
+<p>Une grande attention doit être apporté au tri des déchets en amont de cet équipement fragile (une pièce métallique peut provoquer de sérieux dégâts).</p>
+
+<h3>Reconditionnement</h3>
+
+<p>Certains déchets dangereux très réactifs (produits de laboratoire par exemple) ne peuvent en aucun cas être mélangés avec d’autres, broyés ou pompés. Un tel mélange serait susceptible d’entraîner un échauffement, un début d’incendie, un dégagement gazeux ou d’autres réactions chimique non contrôlées.</p>
+
+<p>Pour cette raison, ces déchets sont laissés dans leur conditionnement d’origine, ou fractionnés dans de petits contenants, afin d’être injectés directement dans le four, sans contact avec les autres déchets.
+Toutes ces opérations sont réalisées à la main, par des chimistes de terrain, dans un atelier dédié.</p>
+
+<img src="../images/M4/reconditioning.png" alt="Image" style="max-width: 100%; height: auto; margin: 15px 0; border: 1px solid #ddd; padding: 5px;">
+<nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; margin-top: 60px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><a href="toc.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📚 Sommaire</a><div style="display: flex; gap: 10px; flex-wrap: wrap;"><a href="M3.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Précédent</a><a href="M5.html" style="display: inline-block; padding: 12px 25px; background: white; color: #667eea; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s ease; border: 2px solid white;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Suivant →</a></div></nav>
+</body>
+</html>
