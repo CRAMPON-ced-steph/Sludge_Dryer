@@ -1,6 +1,6 @@
 # CLAUDE.md — 260713_Sludge_Dryer_Biocon
 
-Application **BIOCO** : outil de dimensionnement de sécheur à bande pour biosolides (type Biocon Turbo). SPA React + Vite + Tailwind CSS v4, bilingue FR/EN. Portage fidèle d'une feuille Google Sheets + Apps Script d'origine (115 fonctions : psychrométrie, bilans matière/enthalpie, goal-seek imbriqués).
+Application **Biocon** : outil de dimensionnement de sécheur à bande pour biosolides (type Biocon Turbo). SPA React + Vite + Tailwind CSS v4, bilingue FR/EN. Portage fidèle d'une feuille Google Sheets + Apps Script d'origine (115 fonctions : psychrométrie, bilans matière/enthalpie, goal-seek imbriqués).
 
 Dépôt GitHub : https://github.com/CRAMPON-ced-steph/Sludge_Dryer.git
 

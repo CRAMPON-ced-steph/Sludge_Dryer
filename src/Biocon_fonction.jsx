@@ -1,10 +1,10 @@
 // ============================================================================
-//  BIOCO — Moteur de calcul, utilitaires de formatage, sauvegarde et rapport.
+//  Biocon — Moteur de calcul, utilitaires de formatage, sauvegarde et rapport.
 //  Extrait de Biocon.jsx : aucune dépendance React, importé par le composant.
 // ============================================================================
 
 // ============================================================================
-//  BIOCO DRYER ENGINE  —  Portage fidèle du script Google Apps Script
+//  BIOCON DRYER ENGINE  —  Portage fidèle du script Google Apps Script
 //  Modèle de dimensionnement thermique d'un sécheur à bande pour biosolides
 //  (type Biocon Turbo). Zone chaude (Warm Zone, 4 passes) + Zone finale
 //  (End Zone, 4 passes) + pré-chauffeur d'air + condenseur + chauffe-huile.
@@ -1256,7 +1256,7 @@ function buildReportHTML(R, I, t, lang, mode, checks) {
 <title>${esc(t.repTitle)} — ${esc(I.prjName)}</title><style>${css}</style></head><body>
 <div class="noprint"><button onclick="window.print()">${esc(t.repPrint)}</button></div>
 
-<h1>BIOCO — ${esc(t.repTitle)}</h1>
+<h1>Biocon — ${esc(t.repTitle)}</h1>
 <div class="sub">${esc(t.appSub)}</div>
 <div class="meta">
   <div><span>${esc(t.repProject)} :</span> <b>${esc(I.prjName)}</b></div>

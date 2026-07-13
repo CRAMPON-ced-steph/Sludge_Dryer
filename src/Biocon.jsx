@@ -8,7 +8,7 @@ import {
 } from "./Biocon_fonction.jsx";
 
 /* ============================================================================
-   BIOCO — Outil de dimensionnement de sécheur à bande pour biosolides
+   Biocon — Outil de dimensionnement de sécheur à bande pour biosolides
    Portage React de la feuille Google Sheets + Apps Script d'origine.
    Le moteur de calcul ci-dessous est un portage fidèle des 115 fonctions
    du script (psychrométrie, bilans matière/enthalpie, goal-seek imbriqués).
@@ -405,7 +405,7 @@ export default function BiocoDryerSizing() {
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-base font-semibold tracking-tight text-white">
-              BIOCO <span className="font-normal text-slate-400">· {t.appSub}</span>
+              Biocon <span className="font-normal text-slate-400">· {t.appSub}</span>
             </h1>
             <p className="mt-0.5 text-[11px] text-slate-400">{t.appTag}</p>
           </div>
