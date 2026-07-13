@@ -1,7 +1,20 @@
 {
   "name": "sludge-dryer-biocon",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "npx live-server . --port=8081 --no-browser"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.3.2",
+    "vite": "^5.4.11"
   }
 }
