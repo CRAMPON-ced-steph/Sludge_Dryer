@@ -3,8 +3,8 @@ import re
 from pathlib import Path
 
 # Configuration
-SOURCE_DIR = r"c:\Users\Parent\260607_Hazardous\HW_courses\FR"
-TARGET_DIR = r"c:\Users\Parent\260607_Hazardous\src"
+SOURCE_DIR = r"c:\Users\Parent\260713_Sludge_Dryer_Biocon\tex\FR"
+TARGET_DIR = r"c:\Users\Parent\260713_Sludge_Dryer_Biocon\src"
 IMAGE_PATH_PREFIX = "../images"
 
 def convert_latex_to_html(latex_content):

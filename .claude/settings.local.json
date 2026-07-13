@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd 'c:/Users/Parent/260607_Hazardous' && npm run dev & sleep 2 && start http://localhost:8081",
+            "command": "cd 'c:/Users/Parent/260713_Sludge_Dryer_Biocon' && npm run dev & sleep 2 && start http://localhost:8081",
             "async": true,
             "statusMessage": "Lancement du serveur de visualisation..."
           }

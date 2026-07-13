@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const SOURCE_DIR = 'c:\\Users\\Parent\\260607_Hazardous\\HW_courses\\FR';
-const TARGET_DIR = 'c:\\Users\\Parent\\260607_Hazardous\\src';
+const SOURCE_DIR = 'c:\\Users\\Parent\\260713_Sludge_Dryer_Biocon\\tex\\FR';
+const TARGET_DIR = 'c:\\Users\\Parent\\260713_Sludge_Dryer_Biocon\\src';
 
 function getImageDir(filename) {
     // Extract module number from filename (M1, M2, M10, etc.)

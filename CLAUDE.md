@@ -1,6 +1,12 @@
-# CLAUDE.md — 260607_Hazardous
+# CLAUDE.md — 260713_Sludge_Dryer_Biocon
 
-Cours Hazardous Waste : 30 modules HTML dans `src/` (M1.html … M30.html).
+Cours Sludge Dryer Biocon (séchage des boues) : modules HTML dans `src/` (M1.html, M2.html, …).
+
+Projet basé sur la même ossature que le cours Hazardous Waste : `index.html` (page d'accueil + sidebar), `layout.js` (sidebar injectée dans les modules), `nav.js`, `styles.css`, `src/garde.html` (page de garde), `src/toc.html` (sommaire). Les sources LaTeX éventuelles vont dans `tex/FR/` et sont converties via `convertAllTexToHtml.js` ou `convert_latex_to_html.py` ; les images vont dans `images/M<n>/`.
+
+Pour ajouter un module : créer `src/M<n>.html` sur le modèle de `src/M1.html`, puis mettre à jour les listes de modules dans `index.html`, `layout.js` et `src/toc.html`.
+
+Dépôt GitHub : https://github.com/CRAMPON-ced-steph/Sludge_Dryer.git
 
 ## Style des tableaux
 

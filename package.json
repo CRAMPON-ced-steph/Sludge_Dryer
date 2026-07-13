@@ -1,5 +1,5 @@
 {
-  "name": "hazardous-waste-courses",
+  "name": "sludge-dryer-biocon",
   "version": "1.0.0",
   "scripts": {
     "dev": "npx live-server . --port=8081 --no-browser"
