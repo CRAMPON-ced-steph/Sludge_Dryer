@@ -311,6 +311,9 @@ export default function BiocoDryerSizing() {
   // (valeur en cours de saisie), on conserve le dernier résultat valide.
   useEffect(() => {
     if (!R) return;                       // seulement après un premier calcul
+    // setLive(true) est volontairement synchrone : l'indicateur « mise à jour… »
+    // doit apparaître dès la frappe, avant le recalcul différé par le debounce.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLive(true);
     if (liveTimer.current) clearTimeout(liveTimer.current);
     liveTimer.current = setTimeout(() => {
@@ -411,17 +414,26 @@ export default function BiocoDryerSizing() {
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="mr-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500">{t.modeLabel}</span>
+            {/* Les deux états (actif/inactif) portent une bordure de même épaisseur
+                et l'étiquette « Calcul… » est superposée en grille : la largeur des
+                boutons ne varie jamais, donc pas de saut de mise en page. */}
             <button onClick={() => run("auto")} disabled={busy} aria-pressed={mode === "auto"}
-              className={`rounded px-3 py-1.5 text-xs font-semibold disabled:opacity-50 ${mode === "auto"
-                ? "bg-sky-600 text-white ring-2 ring-sky-300 hover:bg-sky-500"
-                : "border border-slate-600 bg-slate-800 text-slate-300 hover:bg-slate-700"}`}>
-              {busy && mode === "auto" ? t.computing : t.runAuto}
+              className={`rounded border px-3 py-1.5 text-xs font-semibold disabled:opacity-50 ${mode === "auto"
+                ? "border-sky-600 bg-sky-600 text-white ring-2 ring-sky-300 hover:bg-sky-500"
+                : "border-slate-600 bg-slate-800 text-slate-300 hover:bg-slate-700"}`}>
+              <span className="grid justify-items-center">
+                <span className={`col-start-1 row-start-1 ${busy && mode === "auto" ? "invisible" : ""}`}>{t.runAuto}</span>
+                <span className={`col-start-1 row-start-1 ${busy && mode === "auto" ? "" : "invisible"}`}>{t.computing}</span>
+              </span>
             </button>
             <button onClick={() => run("user")} disabled={busy} aria-pressed={mode === "user"}
-              className={`rounded px-3 py-1.5 text-xs font-semibold disabled:opacity-50 ${mode === "user"
-                ? "bg-violet-600 text-white ring-2 ring-violet-300 hover:bg-violet-500"
-                : "border border-slate-600 bg-slate-800 text-slate-300 hover:bg-slate-700"}`}>
-              {busy && mode === "user" ? t.computing : t.runUser}
+              className={`rounded border px-3 py-1.5 text-xs font-semibold disabled:opacity-50 ${mode === "user"
+                ? "border-violet-600 bg-violet-600 text-white ring-2 ring-violet-300 hover:bg-violet-500"
+                : "border-slate-600 bg-slate-800 text-slate-300 hover:bg-slate-700"}`}>
+              <span className="grid justify-items-center">
+                <span className={`col-start-1 row-start-1 ${busy && mode === "user" ? "invisible" : ""}`}>{t.runUser}</span>
+                <span className={`col-start-1 row-start-1 ${busy && mode === "user" ? "" : "invisible"}`}>{t.computing}</span>
+              </span>
             </button>
 
             <span className="mx-1 h-5 w-px bg-slate-700" />
@@ -621,8 +633,12 @@ export default function BiocoDryerSizing() {
                       <span className={`h-1.5 w-1.5 rounded-full ${live ? "animate-pulse bg-sky-500" : "bg-emerald-500"}`} />
                       {live ? t.liveUpdating : t.liveOn}
                     </span>
-                    <span className={`rounded px-2 py-0.5 text-[10px] font-semibold ${mode === "auto" ? "bg-sky-100 text-sky-800" : "bg-violet-100 text-violet-800"}`}>
-                      {mode === "auto" ? t.modeAuto : t.modeUser}
+                    {/* Les deux libellés sont superposés (le plus long fixe la
+                        largeur) : le badge ne décale pas ses voisins au changement
+                        de mode. */}
+                    <span className={`grid justify-items-center rounded px-2 py-0.5 text-[10px] font-semibold ${mode === "auto" ? "bg-sky-100 text-sky-800" : "bg-violet-100 text-violet-800"}`}>
+                      <span className={`col-start-1 row-start-1 ${mode === "auto" ? "" : "invisible"}`}>{t.modeAuto}</span>
+                      <span className={`col-start-1 row-start-1 ${mode === "user" ? "" : "invisible"}`}>{t.modeUser}</span>
                     </span>
                   </div>
                 </div>

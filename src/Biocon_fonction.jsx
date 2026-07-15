@@ -12,6 +12,36 @@
 //  Le moteur est PUR : il prend un objet `inputs` et renvoie un objet `results`.
 //  Aucune dépendance à un tableur. Toute la logique itérative (goal-seek) du
 //  script original est reproduite à l'identique.
+//
+//  NUMÉROTATION DES FLUX (héritée du tableur — clé de lecture des tableaux
+//  indexés de l'état S : tA[i], fDA[i], xS[i], …)
+//
+//  Air (0–18) :
+//    0      air chaud entrée ZC (sortie HEX ZC, consigne airTemp0)
+//    1–4    air entre les passes ZC (sortie des passes 1 à 4)
+//    5      air humide sortie ZC (consigne de point de rosée dpTemp5,
+//           T = point de rosée + deltaTemp5)
+//    6      part de 5 recirculée vers le HEX ZC (même état que 5)
+//    7      part de 5 extraite vers le traitement d'air (même état que 5)
+//    8      air extrait refroidi en sortie du pré-chauffeur (consigne airTemp8)
+//    9      air en sortie de condenseur (saturé à airTemp9)
+//    10     air recyclé réchauffé par le pré-chauffeur, retour vers la ZF
+//    11     mélange 10 + 17 à l'entrée du HEX ZF
+//    12     air chaud entrée ZF (sortie HEX ZF, consigne airTemp12)
+//    13–16  air entre les passes ZF
+//    17     air sortie ZF recirculé vers le HEX ZF (T = point de rosée + deltaTemp17)
+//    18     air transféré de la ZF vers la ZC (même état que 15)
+//
+//  Boue (0–8) :
+//    0      alimentation (gâteau déshydraté, siccité feedDS)
+//    1–3    sortie des passes ZC 1 à 3
+//    4      sortie ZC = entrée ZF (siccité 1 − sludgeMC4)
+//    5–7    sortie des passes ZF 1 à 3
+//    8      produit sec final (siccité productDS)
+//
+//  Eau (0–1) : 0 entrée condenseur, 1 sortie condenseur (condensat).
+//  Huile (0–8) : boucle d'huile thermique — 0/4/6 départ chauffe (oilTemp0),
+//    5 retour HEX ZC (oilTemp1), 2 et 3 aller/retour HEX ZF (oilTemp2/3).
 // ============================================================================
 
 // ---------------------------------------------------------------------------
@@ -62,20 +92,20 @@ function airDensity(temp, xh2o) {
   return (1.293 * (1 + xh2o) / (1 + xh2o * 1.6084)) * 273 / (273 + temp);
 }
 
+// Coefficients polynomiaux de viscosité de l'air humide (partagés par
+// airDynVis et airKnVis) : [0..5] air sec en T⁰..T⁵, [6..10] correction vapeur.
+const VISC_COEFF = [17.14237, 0.0463604, -2.74584e-5, 1.81124e-8, -6.74497e-12,
+  1.02775e-15, -9.108949, 0.02654355, -6.43242e-5, 1.30794e-7, -8.19028e-11];
+
 function airDynVis(temp, xh2o) {
-  const c2 = [17.14237, 0.0463604, -2.74584e-5, 1.81124e-8, -6.74497e-12,
-    1.02775e-15, -9.108949, 0.02654355, -6.43242e-5, 1.30794e-7, -8.19028e-11];
+  const c2 = VISC_COEFF;
   const a = c2[0] + c2[1]*temp + c2[2]*temp**2 + c2[3]*temp**3 + c2[4]*temp**4 + c2[5]*temp**5;
   return a + xh2o / (1 + xh2o) * (c2[6] + c2[7]*temp + c2[8]*temp**2 + c2[9]*temp**3 + c2[10]*temp**4);
 }
 
+// Viscosité cinématique = viscosité dynamique / masse volumique
 function airKnVis(temp, xh2o) {
-  const c2 = [17.14237, 0.0463604, -2.74584e-5, 1.81124e-8, -6.74497e-12,
-    1.02775e-15, -9.108949, 0.02654355, -6.43242e-5, 1.30794e-7, -8.19028e-11];
-  const a = c2[0] + c2[1]*temp + c2[2]*temp**2 + c2[3]*temp**3 + c2[4]*temp**4 + c2[5]*temp**5;
-  const b = a + xh2o / (1 + xh2o) * (c2[6] + c2[7]*temp + c2[8]*temp**2 + c2[9]*temp**3 + c2[10]*temp**4);
-  const c = (1.293 * (1 + xh2o) / (1 + xh2o * 1.6084)) * 273 / (273 + temp);
-  return b / c;
+  return airDynVis(temp, xh2o) / airDensity(temp, xh2o);
 }
 
 function airLambda(temp, xh2o) {
@@ -92,11 +122,19 @@ function airCP(temp, xh2o) {
   return a + xh2o / (1 + xh2o) * (c4[6] + c4[7]*temp + c4[8]*temp**2 + c4[9]*temp**3 + c4[10]*temp**4);
 }
 
+// Débit volumique d'air humide (m³/s) par la loi des gaz parfaits à P = 101,3 kPa.
+// Constante des gaz : air sec R = 0,2869 kJ/(kg·K), vapeur R = 0,4615 (écart 0,1746
+// pondéré par la fraction massique de vapeur) ; le terme −0,0746 × 0,03 est une
+// correction empirique reprise telle quelle du tableur d'origine.
 function volAirflow(temp, xh2o, dryAirflow, wvFlow) {
   return (0.2869 - 0.0746 * 0.03 + 0.1746 * xh2o / (1 + xh2o)) * (temp + 273) / 101.3 * (dryAirflow + wvFlow);
 }
 
-// Recherche du ratio vapeur donnant un point de rosée cible (goalSeek_wvRatio)
+// Recherche du ratio vapeur donnant un point de rosée cible (goalSeek_wvRatio).
+// Algorithme à pas adaptatif repris du tableur d'origine. En cas de
+// non-convergence (garde d'itérations épuisée), renvoie NaN : la valeur se
+// propage jusqu'à totalHInput, où l'UI la détecte (test isFinite) et affiche
+// le message d'erreur de convergence au lieu de résultats faux.
 function goalSeek_wvRatio(targetValue, tolerance, initialValue) {
   let result = dptCalc(initialValue);
   let currentValue = initialValue;
@@ -111,6 +149,7 @@ function goalSeek_wvRatio(targetValue, tolerance, initialValue) {
     if ((currentValue - previousValue) * (currentValue - initialValue) < 0) stepSize *= 0.5;
     previousValue = currentValue;
   }
+  if (Math.abs(result - targetValue) > tolerance) return NaN;
   return currentValue;
 }
 
@@ -141,11 +180,51 @@ function newState() {
 }
 
 // ============================================================================
+//  VALIDATION DES ENTRÉES
+//  Vérifie types et bornes physiques avant tout calcul, avec un message
+//  explicite par champ. Évite de lancer les goal-seeks sur des données
+//  absurdes qui produiraient des NaN silencieux ou des boucles inutiles.
+// ============================================================================
+function validateInputs(I, mode) {
+  const bad = (msg) => { throw new Error(`Entrée invalide — ${msg}`); };
+  if (!I || typeof I !== "object") bad("l'objet d'entrées est manquant");
+
+  // Tous les champs numériques scalaires doivent être des nombres finis.
+  for (const k of Object.keys(DEFAULT_INPUTS)) {
+    const dv = DEFAULT_INPUTS[k], v = I[k];
+    if (typeof dv === "number" && !(typeof v === "number" && Number.isFinite(v)))
+      bad(`« ${k} » doit être un nombre`);
+    if (Array.isArray(dv)) {
+      if (!Array.isArray(v) || v.length !== dv.length) bad(`« ${k} » doit compter ${dv.length} valeurs`);
+      if (!v.every((x) => typeof x === "number" && Number.isFinite(x)))
+        bad(`« ${k} » contient une valeur non numérique`);
+    }
+  }
+
+  // Bornes physiques minimales pour que le modèle ait un sens.
+  if (I.avgDSP <= 0) bad("« avgDSP » (production de boue sèche) doit être > 0");
+  if (!(I.feedDS > 0 && I.feedDS < 1)) bad("« feedDS » (siccité d'entrée) doit être une fraction entre 0 et 1");
+  if (!(I.productDS > 0 && I.productDS <= 1)) bad("« productDS » (siccité produit) doit être une fraction entre 0 et 1");
+  if (I.productDS <= I.feedDS) bad("« productDS » doit être supérieure à « feedDS » (le sécheur doit sécher)");
+  if (!(I.sludgeMC4 > 0 && I.sludgeMC4 < 1)) bad("« sludgeMC4 » (humidité mi-parcours) doit être une fraction entre 0 et 1");
+  if (I.dPerW <= 0 || I.dPerW > 7) bad("« dPerW » (jours/semaine) doit être entre 1 et 7");
+  if (I.hPerD <= 0 || I.hPerD > 24) bad("« hPerD » (heures/jour) doit être entre 1 et 24");
+  if (I.minTrainNo < 1) bad("« minTrainNo » (nombre minimal de trains) doit être ≥ 1");
+  if (I.dryerRT <= 0) bad("« dryerRT » (temps de séjour) doit être > 0");
+  if (I.wzUnitBL <= 0) bad("« wzUnitBL » (charge de bande ZC) doit être > 0");
+  if (mode === "user") {
+    if (!DRYER_TYPES.includes(I.userModel)) bad(`« userModel » doit être l'un de : ${DRYER_TYPES.join(", ")}`);
+    if (!(I.trainNoUser >= 1)) bad("« trainNoUser » (nombre de trains imposé) doit être ≥ 1");
+  }
+}
+
+// ============================================================================
 //  SOLVEUR PRINCIPAL
 //  `I` = objet d'entrées consolidé (Design Basis + Setpoints + Equip Sizing)
 //  `mode` : 'auto' (preSelection) ou 'user' (userSelection)
 // ============================================================================
 function runModel(I, mode = 'auto') {
+  validateInputs(I, mode);
   const S = newState();
   const indicator = mode === 'user' ? 2 : 1;
 
@@ -183,8 +262,9 @@ function runModel(I, mode = 'auto') {
   const minTrainNo = I.minTrainNo, dPerW = I.dPerW, hPerD = I.hPerD;
   const sludgeTemp = I.sludgeTemp;
   const hexOpCheck = I.preHeaterYN;
-  const siteElev = I.siteElev, cakeRT = I.cakeRT;
-  const pmRemEff = I.pmRemEff, dryerPM = I.dryerPM;
+  const cakeRT = I.cakeRT;
+  // siteElev, pmRemEff et dryerPM sont saisis et sauvegardés avec le projet
+  // mais, comme dans le tableur d'origine, n'influent pas sur le calcul.
 
   S.xS[0] = feedDS; S.xS[8] = productDS;
 
@@ -322,8 +402,7 @@ function runModel(I, mode = 'auto') {
 // ============================================================================
 function streamsBalance(C) {
   const S = C.S;
-  // round1AirStream7
-  S.dptA[7] = S.dptA[7];
+  // round1AirStream7 — dptA[7] est déjà posé à la consigne dpTemp5 par runModel
   S.yA[7] = goalSeek_wvRatio(S.dptA[7], 0.01 * S.dptA[7], 0.3);
   S.tA[7] = S.dptA[7] + C.deltaT5;
   S.airHv[7] = S.tA[7] + (2500 + 1.93 * S.tA[7]) * S.yA[7];
@@ -1169,7 +1248,18 @@ function tbl(head, rows, opts = {}) {
   return `<table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table>`;
 }
 
+// Enveloppe : fixe la locale du rapport puis restaure celle de l'UI, pour
+// que la génération d'un rapport n'ait aucun effet de bord sur l'affichage.
 function buildReportHTML(R, I, t, lang, mode, checks) {
+  const prevLocale = LOCALE;
+  try {
+    return buildReportBody(R, I, t, lang, mode, checks);
+  } finally {
+    LOCALE = prevLocale;
+  }
+}
+
+function buildReportBody(R, I, t, lang, mode, checks) {
   // Le rapport ne doit pas dépendre de l'ordre de rendu : on fixe la locale ici.
   LOCALE = lang === "fr" ? "fr-FR" : "en-GB";
   const now = new Date().toLocaleString(LOCALE);
@@ -1360,8 +1450,8 @@ ${tbl([t.thQuantity, ...PL, t.thUnit], [
 function openReport(html, filename, onBlocked) {
   const blob = new Blob([html], { type: "text/html;charset=utf-8" });
   const url = URL.createObjectURL(blob);
-  let win = null;
-  try { win = window.open(url, "_blank"); } catch (e) { win = null; }
+  let win;
+  try { win = window.open(url, "_blank"); } catch { win = null; }
   if (!win) {
     // Pop-up bloqué (fréquent en iframe) → repli sur téléchargement
     URL.revokeObjectURL(url);

@@ -10,9 +10,19 @@ Dépôt GitHub : https://github.com/CRAMPON-ced-steph/Sludge_Dryer.git
 npm run dev       # Serveur de dev Vite avec HMR (port 8081)
 npm run build     # Build de production (dist/)
 npm run preview   # Prévisualisation du build
+npm test          # Tests vitest (dont l'étalon Seaview, voir ci-dessous)
+npm run lint      # ESLint (flat config, doit passer sans erreur ni warning)
 ```
 
-Pas de framework de test configuré.
+## Tests — étalon Seaview
+
+`tests/etalon.test.js` fige l'intégralité des résultats de `runModel(DEFAULT_INPUTS)`
+(modes auto et user) dans un snapshot. **Toute modification du moteur doit laisser
+ce test vert** : c'est la preuve que le portage reste fidèle au tableur d'origine.
+Ne régénérer le snapshot (`npx vitest run -u`) que pour une évolution volontaire et
+validée du modèle. `tests/utilitaires.test.js` couvre le formatage, le chargement
+de projet et la validation des entrées (`validateInputs` lève une erreur explicite
+par champ avant tout calcul).
 
 ## Architecture
 
