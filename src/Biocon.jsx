@@ -748,27 +748,33 @@ export default function BiocoDryerSizing() {
                           />
                         </div>
                       ))}
-                      <div className="grid gap-3 lg:grid-cols-2">
-                        <div>
-                          <h3 className="mb-2 text-sm font-semibold text-slate-900">{t.oilStreams}</h3>
-                          <DataTable
-                            head={[t.thQuantity, ...R.oil.tO.map((_, i) => `[${i}]`), t.thUnit]}
-                            rows={[
-                              [t.rMassFlow, ...R.oil.fO.map((v) => fmt(v, 1)), "kg/s"],
-                              [t.rVolFlow, ...R.oil.fOv.map((v) => fmt(v, 1)), "m³/h"],
-                              [t.rTemp, ...R.oil.tO.map((v) => fmt(v, 0)), "°C"],
-                            ]}
-                            firstColWidth="120px"
-                          />
-                        </div>
-                        <div>
-                          <h3 className="mb-2 text-sm font-semibold text-slate-900">{t.condTitle}</h3>
-                          <DataTable head={[t.thQuantity, t.thIn, t.thOut, t.thUnit]} rows={[
-                            [t.rTemp, fmt(R.condenser.tW0, 1), fmt(R.condenser.tW1, 1), "°C"],
+                      <div>
+                        <h3 className="mb-2 text-sm font-semibold text-slate-900">{t.oilStreams}</h3>
+                        <DataTable
+                          head={[t.thQuantity, ...R.oil.tO.map((_, i) => `[${i}]`), t.thUnit]}
+                          rows={[
+                            [t.rMassFlow, ...R.oil.fO.map((v) => fmt(v, 1)), "kg/s"],
+                            [t.rVolFlow, ...R.oil.fOv.map((v) => fmt(v, 1)), "m³/h"],
+                            [t.rTemp, ...R.oil.tO.map((v) => fmt(v, 0)), "°C"],
+                            [t.rEnth, ...R._raw.oilHv.slice(0, 9).map((v) => fmt(v, 0)), "kJ/kg"],
+                            [t.rEnergy, ...R._raw.fOH.slice(0, 9).map((v) => fmt(v, 0)), "kW"],
+                          ]}
+                          firstColWidth="120px"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="mb-2 text-sm font-semibold text-slate-900">{t.condTitle}</h3>
+                        <DataTable
+                          head={[t.thQuantity, "[0]", "[1]", t.thUnit]}
+                          rows={[
                             [t.rMassFlow, fmt(R.condenser.fW0, 2), fmt(R.condenser.fW1, 2), "kg/s"],
                             [t.rVolFlow, fmt(R.condenser.fW0 * 3.6, 1), fmt(R.condenser.fW1 * 3.6, 1), "m³/h"],
-                          ]} firstColWidth="120px" />
-                        </div>
+                            [t.rTemp, fmt(R.condenser.tW0, 1), fmt(R.condenser.tW1, 1), "°C"],
+                            [t.rEnth, fmt(R._raw.waterSHC[0], 0), fmt(R._raw.waterSHC[1], 0), "kJ/kg"],
+                            [t.rEnergy, fmt(R._raw.fWH[0], 0), fmt(R._raw.fWH[1], 0), "kW"],
+                          ]}
+                          firstColWidth="120px"
+                        />
                       </div>
                     </div>
                   )}
