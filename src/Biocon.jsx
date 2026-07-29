@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import bioconBilan from "./BIOCON BILAN.png";
 import { STRINGS } from "./Biocon_traduction.jsx";
 import {
   DRYER_TYPES, DEFAULT_INPUTS, runModel,
@@ -713,6 +714,9 @@ export default function BiocoDryerSizing() {
 
                   {outTab === "balance" && (
                     <div className="space-y-5">
+                      <div>
+                        <img src={bioconBilan} alt="Biocon Bilan" className="w-full rounded-lg" />
+                      </div>
                       <div>
                         <h3 className="mb-2 text-sm font-semibold text-slate-900">{t.sludgeStreams}</h3>
                         <DataTable
