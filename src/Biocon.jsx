@@ -241,7 +241,7 @@ function ProcessDiagram({ R, t }) {
 //  APPLICATION
 // ============================================================================
 export default function BiocoDryerSizing() {
-  const [lang, setLang] = useState("fr");
+  const [lang, setLang] = useState("en");
   const [I, setI] = useState(DEFAULT_INPUTS);
   const [mode, setMode] = useState("auto");
   const [inTab, setInTab] = useState("basis");
